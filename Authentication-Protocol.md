@@ -92,6 +92,8 @@ This is the reverse of the [GetName](#5-getname) method. It looks up the pid tha
 
 All game servers have a bunch of special users. Normally, the password of the guest account is `MMQea3n!fsik`, but Nintendo seems to have changed this password on all Wii U and 3DS servers except for the friend server. It used to be possible to log in as guest on Switch servers as well, but the guest account has been deleted.
 
+Returns 0 if the username does not exist.
+
 #### 3DS / Wii U:
 | PID | Name |
 | --- | --- |
