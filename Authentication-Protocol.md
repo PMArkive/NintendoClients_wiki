@@ -14,7 +14,7 @@ This is the only protocol that's available on the authentication server. Other p
 | 6 | [LoginWithContext](#6-loginwithcontext) | [ValidateAndRequestTicketWithParam](#6-validateandrequestticketwithparam) |
 
 # (1) Login
-Alternative name: ValidateAndRequestTicket
+Usernames are not case sensitive.
 
 ## Request
 | Type | Name | Description |
@@ -39,7 +39,7 @@ Examples of server build names:
 | MK8 | branch:origin/project/wup-amk build:3_5_10_2010_0 |
 
 # (2) LoginEx
-Alternative name: ValidateAndRequestTicketWithCustomData
+Usernames are not case sensitive.
 
 ## Request
 | Type | Name | Description |
@@ -88,9 +88,11 @@ Alternative name: ValidateAndRequestTicketWithCustomData
 | [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
 
 # (4) GetPID
-This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid. Usernames are not case sensitive.
+This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. The username is not the same as the nintendo network id. On all normal accounts the username is the same as the user pid.
 
 All game servers have a bunch of special users. Normally, the password of the guest account is `MMQea3n!fsik`, but Nintendo seems to have changed this password on all Wii U and 3DS servers except for the friend server. It used to be possible to log in as guest on Switch servers as well, but the guest account has been deleted.
+
+Usernames are not case sensitive.
 
 Returns 0 if the username does not exist.
 
