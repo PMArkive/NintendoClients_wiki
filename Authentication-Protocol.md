@@ -127,7 +127,7 @@ All game servers have a bunch of special users. Normally, the password of the gu
 | [PID] | %retval% | PID |
 
 # (5) GetName
-This is the reverse of the [GetPID](#4-getpid) method. It returns the name associated with the given user pid.
+This is the reverse of the [GetPID](#4-getpid) method. It returns the name associated with the given user pid. Returns an empty string if the pid does not exist.
 
 ## Request
 | Type | Name | Description |
