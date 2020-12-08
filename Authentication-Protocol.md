@@ -88,6 +88,7 @@ If the source or target pid is invalid, the `%retval%` field is set to `Core::Ac
 | --- | --- | --- |
 | [PID] | idSource | User pid |
 | [PID] | idTarget | Secure server pid |
+| [String] | pSourceKey | **Only present on Switch.** If this is a non-empty hex string, key derivation is skipped and this string is used as the key to decrypt the ticket instead. |
 
 ## Response
 | Type | Name | Description |
