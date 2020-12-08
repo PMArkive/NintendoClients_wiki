@@ -81,6 +81,8 @@ Wii U servers don't seem to check what's in the extra data.
 | [String] | pSourceKey | **Only present on Switch.** If this is a non-empty hex string, key derivation is skipped and this string is used as the key to decrypt the ticket instead. |
 
 # (3) RequestTicket
+If the source or target pid is invalid, the `%retval%` field is set to `Core::AccessDenied` and the ticket is empty.
+
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
