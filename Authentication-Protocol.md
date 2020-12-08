@@ -36,7 +36,7 @@ Examples of server build names:
 | --- | --- |
 | Friends | branch:origin/feature/45925_FixAutoReconnect build:3_10_11_2006_0 |
 | DKC:TF | branch:origin/release/ngs/3.4.x.3 build:3_4_13_3_0 |
-| MK8 | branch:origin/project/wup-amk build:3_5_10_2010_0 |
+| MK8 | branch:origin/project/wup-amk build:3_5_17_2011_0 |
 
 # (2) LoginEx
 Usernames are not case sensitive.
