@@ -16,6 +16,8 @@ This is the only protocol that's available on the authentication server. Other p
 # (1) Login
 Usernames are not case sensitive.
 
+If the username does not exist, the `%retval%` field is set to `RendezVous::InvalidUsername` and the other fields are left blank.
+
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
@@ -40,6 +42,10 @@ Examples of server build names:
 
 # (2) LoginEx
 Usernames are not case sensitive.
+
+If the username does not exist, the `%retval%` field is set to `RendezVous::InvalidUsername` and the other fields are left blank.
+
+Wii U servers don't seem to check what's in the extra data.
 
 ## Request
 | Type | Name | Description |
