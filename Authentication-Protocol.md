@@ -62,13 +62,9 @@ Wii U servers don't seem to check what's in the extra data.
 | [String] | m_authToken | Token, as received from the account server |
 | Uint32 | m_ngsVersion | Always 3 on Wii U. Always 4 on Switch. |
 | Uint8 | m_authTokenType | Always 1 on Wii U. Always 2 on Switch. |
-| Uint32 | m_serverVersion | See table below |
+| Uint32 | m_serverVersion | See below |
 
-| NEX Version | Server version |
-| --- | --- |
-| 3.4.0 | 3 |
-| 3.5.4AMK (MK8) | 2002 |
-| 3.8.10AMA (SMM) | 3017 |
+The server version is in the build name of the server. If the build name is `3_x_y_z_0` then `z` is the server version. Click [here](https://kinnay.github.io/view.html?page=nexwiiu) for a list of server build names.
 
 ## Response
 | Type | Name | Description |
