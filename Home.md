@@ -24,3 +24,4 @@ Welcome to the NintendoClients wiki!
 * [[Mario Kart 8 Protocol]]
 * [[SMM Code Generation]]
 * [[DDL Parse Trees]]
+* [Capture the flag](https://ctf.ymar.dev)
