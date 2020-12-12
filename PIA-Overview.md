@@ -16,7 +16,7 @@ PIA supports three different network types.
 </table>
 
 ### Protocol
-All peer-to-peer packets are sent through UDP. The packet format is described [here](PIA-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols / services](PIA-Protocols). Most of these are only used internally by PIA to set up and manage the connections. The following protocols may be used to exchange game-specific data:
+All peer-to-peer packets are sent through UDP. The packet format is described [here](PIA-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols](PIA-Protocols). Most of these are only used internally by PIA to set up and manage the connections. The following protocols may be used to exchange game-specific data:
 
 * [[Reliable Protocol]]
 * [[Unreliable Protocol]]
