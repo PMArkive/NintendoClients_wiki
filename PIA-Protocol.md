@@ -175,7 +175,7 @@ Packets are encrypted and signed with the session key.
 | --- | --- |
 | NEX | Obtained from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
 | LDN | ? |
-| LAN | First 16 bytes of the HMAC-SHA256 of the slightly modified [session param](LAN-Protocol#lansessioninfo) (the last byte is incremented by 1), with the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
+| LAN | First 16 bytes of the HMAC-SHA256 of the [session param](LAN-Protocol#lansessioninfo), but slightly modified (the last byte is incremented by 1). The key is the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
 **Wii U and Switch (up to 5.6):**
 
