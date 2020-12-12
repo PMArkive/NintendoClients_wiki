@@ -3,7 +3,7 @@ These packets are sent directly from one console to another, with no server in b
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [packet signature](#encryption).
 
 ## Header
-*Up to 5.3:*
+*Up to 5.6:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
