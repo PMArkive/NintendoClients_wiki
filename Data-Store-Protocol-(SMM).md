@@ -516,7 +516,11 @@ This method does not return anything.
 | Sint8 | slot |
 | Sint32 | minValue |
 | Sint32 | maxValue |
-| __dummy_revision | __dummy_revision1 |
+
+Revision 1:
+
+| Type | Name |
+| --- | --- |
 | Uint32 | minCount |
 | Uint32 | maxCount |
 
