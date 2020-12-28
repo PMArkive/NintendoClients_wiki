@@ -89,8 +89,8 @@ Login phase 0:
 | Bits | Description |
 | --- | --- |
 | 8 | Unknown |
-| 32 | Unknown |
-| 64 | Unknown |
+| 32 | Protocol version |
+| 64 | App protocol version |
 | 32 | Unknown |
 | 8 | Version string size (max 64 bits) |
 | | Version string |
