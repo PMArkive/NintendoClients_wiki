@@ -91,7 +91,7 @@ Login phase 0:
 | 8 | Unknown |
 | 32 | Protocol version |
 | 64 | App protocol version |
-| 32 | Unknown |
+| 32 | DDL hash |
 | 8 | Version string size (max 63 bytes) |
 | | Version string |
 
