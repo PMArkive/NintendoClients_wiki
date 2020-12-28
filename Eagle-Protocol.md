@@ -83,7 +83,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 | Bits | Description |
 | --- | --- |
 | 7 | Login phase (0 or 1) |
-| 1 | Unknown |
+| 1 | Last packet |
 
 Login phase 0:
 | Bits | Description |
