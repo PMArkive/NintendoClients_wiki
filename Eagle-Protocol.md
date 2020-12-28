@@ -92,7 +92,7 @@ Login phase 0:
 | 32 | Protocol version |
 | 64 | App protocol version |
 | 32 | Unknown |
-| 8 | Version string size in bits (max 64 bytes) |
+| 8 | Version string size (max 64 bytes) |
 | | Version string |
 
 Login phase 1:
