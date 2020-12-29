@@ -811,6 +811,11 @@ This method does not return anything.
 | Uint8 | resultOption |
 | Uint32 | minimalRatingFrequency |
 | Bool | useCache |
+
+Only present on Switch:
+
+| Type | Name |
+| --- | --- |
 | Bool | totalCountEnabled |
 | [List]&lt;Uint16&gt; | dataTypes |
 
