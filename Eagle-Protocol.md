@@ -92,7 +92,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 7 | [Unknown](#payload-7) |
 | 8 | [Unknown](#payload-8) |
 | 9 | [Unknown](#payload-9) |
-| 16+ | [Relay message](#relay-message) |
+| 16 - 255 | [Relay message](#relay-message) |
 
 ### Connection Accepted
 The server time is monotonic clock (no timestamp).
