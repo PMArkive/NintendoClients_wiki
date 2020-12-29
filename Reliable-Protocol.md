@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Reliable Protocol
+[[Pia Protocols]] > Reliable Protocol
 ---
 
 This protocol may be used by games to send data packets to other consoles. The reliable protocol ensures that all packets arrive in the correct order by using sequence ids and acknowledgement.
