@@ -86,12 +86,12 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 1 | [Login request](#login-request) |
 | 2 | [Login result](#login-result) |
 | 3 | [Client ready](#client-ready) |
-| 4 | Unknown |
-| 5 | Unknown |
-| 6 | Unknown |
-| 7 | Unknown |
-| 8 | Unknown |
-| 9 | Unknown |
+| 4 | [Unknown](#payload-4) |
+| 5 | [Unknown](#payload-5) |
+| 6 | [Unknown](#payload-6) |
+| 7 | [Unknown](#payload-7) |
+| 8 | [Unknown](#payload-8) |
+| 9 | [Unknown](#payload-9) |
 
 ### Connection Accepted
 The server time is monotonic clock (no timestamp).
@@ -132,6 +132,41 @@ Login phase 1:
 | | Payload |
 
 ### Client Ready
+No payload.
+
+### Payload 4
+| Bits | Description |
+| --- | --- |
+| 64 | Unknown |
+
+### Payload 5
+| Bits | Description |
+| --- | --- |
+| 64 | Unknown |
+| 64 | Unknown |
+
+### Payload 6
+No payload.
+
+### Payload 7
+| Bits | Description |
+| --- | --- |
+| 8 | Unknown |
+| 32 | Unknown |
+| 64 | Unknown |
+| 64 | Unknown |
+| 64 | Unknown |
+| 64 | Unknown |
+| 32 | Unknown |
+
+### Payload 8
+| Bits | Description |
+| --- | --- |
+| 8 | Unknown (0-3) |
+| 16 | Unknown |
+| 64 | Unknown |
+
+### Payload 9
 No payload.
 
 ## Library Versions
