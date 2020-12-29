@@ -127,7 +127,7 @@ Login phase 1:
 ### Login Result
 | Bits | Description |
 | --- | --- |
-| 32 | Unknown |
+| 32 | Error code |
 | 8 | Unknown |
 | 16 | Payload size |
 | | Payload |
