@@ -76,7 +76,7 @@ The remainder of the packet depends on the relay type and payload id.
 | --- | --- |
 | 0 | No relay. |
 | 1 | This packet is relayed to a single node. The header is followed by [N](#library-versions) bits that hold the destination node id. |
-| 2 | This packet is relayed to multiple nodes. The header is followed by 128 bits that hold the destination nodes (one bit per node). |
+| 2 | This packet is relayed to multiple nodes. The header is followed by [M](#library-versions) bits that hold the destination nodes (one bit per node). |
 
 The payload comes after header and relay destination, but the bit stream is first aligned to 8 bits before the payload starts.
 
@@ -134,12 +134,10 @@ Login phase 1:
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
 
-Bits per node id:
-
-| Game | N |
-| --- | --- |
-| Tetris 99 | 9 |
-| Super Mario Bros 35 | 11 |
+| Game | N | M |
+| --- | --- | --- |
+| Tetris 99 | 9 | 128 |
+| Super Mario Bros 35 | 11 | 1024 |
 
 | Game | Version string |
 | --- | --- |
