@@ -1,22 +1,22 @@
-PIA is Nintendo's networking library that provides a framework to set up and maintain peer-to-peer connections.
+Pia is Nintendo's networking library that provides a framework to set up and maintain peer-to-peer connections.
 
 ### Matchmaking
-PIA supports three different network types.
+Pia supports three different network types.
 
 <table>
   <tr>
     <td><b>NEX</b></td><td>Matchmaking is done by game servers (with <a href="NEX-Overview-(Game-Servers)">NEX</a>). This mode often requires NAT traversal.</td>
   </tr>
   <tr>
-    <td><b>LDN</b></td><td>This is the default mode for local multiplayer. PIA uses <a href="https://switchbrew.org/wiki/LDN_services">nn::ldn</a> to find and connect to other consoles. This mode is only available on Nintendo Switch.</td>
+    <td><b>LDN</b></td><td>This is the default mode for local multiplayer. Pia uses <a href="https://switchbrew.org/wiki/LDN_services">nn::ldn</a> to find and connect to other consoles. This mode is only available on Nintendo Switch.</td>
   </tr>
   <tr>
-    <td><b>LAN</b></td><td>This is an alternative mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus. In this mode, PIA uses UDP broadcast packets to find other consoles (see [[LAN Protocol]]). This mode is only available on Nintendo Switch.
+    <td><b>LAN</b></td><td>This is an alternative mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus. In this mode, Pia uses UDP broadcast packets to find other consoles (see [[LAN Protocol]]). This mode is only available on Nintendo Switch.
   </tr>
 </table>
 
 ### Protocol
-All peer-to-peer packets are sent through UDP. The packet format is described [here](PIA-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols](PIA-Protocols). Most of these are only used internally by PIA to set up and manage the connections. The following protocols may be used to exchange game-specific data:
+All peer-to-peer packets are sent through UDP. The packet format is described [here](Pia-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols](Pia-Protocols). Most of these are only used internally by Pia to set up and manage the connections. The following protocols may be used to exchange game-specific data:
 
 * [[Reliable Protocol]]
 * [[Unreliable Protocol]]
@@ -37,7 +37,7 @@ The following steps are performed to join a mesh:
 7. Finally, your console starts sending/receiving data packets to/from the other consoles.
 
 ### Connection establishment
-After acquiring the [StationLocation](PIA-Types#stationlocation) of another console elsewhere (e.g. from [matchmaking](#matchmaking) or the [join response](#joining-a-mesh)), the following steps are performed to establish a connection with the console:
+After acquiring the [StationLocation](Pia-Types#stationlocation) of another console elsewhere (e.g. from [matchmaking](#matchmaking) or the [join response](#joining-a-mesh)), the following steps are performed to establish a connection with the console:
 
 1. If necessary, [NAT traversal](#nat-traversal) is performed.
 2. Your console sends a [connection request](Station-Protocol#connection-request) to the other console.
@@ -52,8 +52,8 @@ The following steps are performed for NAT traversal:
 
 1. Your console calls the [RequestProbeInitiation](NAT-Traversal-Protocol#1-requestprobeinitiation) or [RequestProbeInitiationExt](NAT-Traversal-Protocol#3-requestprobeinitiationext) method on the on the game server.
 2. The server sends an [InitiateProbe](NAT-Traversal-Protocol#2-initiateprobe) request to the other console.
-3. The other console sends a [probe request](NAT-Traversal-Protocol-(PIA)#probe-request) directly to your console. At the same time, it calls [RequestProbeInitiation](NAT-Traversal-Protocol#1-requestprobeinitiation) or [RequestProbeInitiationExt](NAT-Traversal-Protocol#3-requestprobeinitiationext) on the game server.
-4. When your console receives the probe requests, it sends a [probe reply](NAT-Traversal-Protocol-(PIA)#probe-reply) directly to the other console. When the server receives the probe initation request, it sends an [InitiateProbe](NAT-Traversal-Protocol#2-initiateprobe) request to your console.
+3. The other console sends a [probe request](NAT-Traversal-Protocol-(Pia)#probe-request) directly to your console. At the same time, it calls [RequestProbeInitiation](NAT-Traversal-Protocol#1-requestprobeinitiation) or [RequestProbeInitiationExt](NAT-Traversal-Protocol#3-requestprobeinitiationext) on the game server.
+4. When your console receives the probe requests, it sends a [probe reply](NAT-Traversal-Protocol-(Pia)#probe-reply) directly to the other console. When the server receives the probe initation request, it sends an [InitiateProbe](NAT-Traversal-Protocol#2-initiateprobe) request to your console.
 5. When your console receives the InitiateProbe request from the server it sends a probe request directly to the other console.
 6. The other console answers your probe request with a probe reply.
 7. NAT traversal has been completed and the consoles can now [establish a connection](#connection-establishment) using the [station protocol](Station-Protocol).
