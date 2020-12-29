@@ -6,10 +6,10 @@ Welcome to the NintendoClients wiki!
 * [[RMC Protocol]]
 * [NEX Services](NEX-Protocols)
 
-## Peer-to-peer (PIA)
-* [PIA Overview (P2P)](PIA-Overview)
-* [[PIA Protocol]]
-* [PIA Services](PIA-Protocols)
+## Peer-to-peer (Pia)
+* [Pia Overview (P2P)](Pia-Overview)
+* [[Pia Protocol]]
+* [Pia Services](Pia-Protocols)
 * [[LAN Protocol]]
 
 ## Other pages
