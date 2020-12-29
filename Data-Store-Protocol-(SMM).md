@@ -4,6 +4,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 
 | Method ID | Method Name |
 | --- | --- |
+| 45 | [GetObjectInfos](#45-getobjectinfos) |
 | 46 | [GetMetaByOwnerId](#46-getmetabyownerid) |
 | 47 | [CustomSearchObject](#47-customsearchobject) |
 | 48 | [RateCustomRanking](#48-ratecustomranking) |
@@ -46,6 +47,17 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 85 | [ChangePlayablePlatform](#85-changeplayableplatform) |
 | 86 | SearchUnknownPlatformObjects |
 | 87 | ReportCourse |
+
+# (45) GetObjectInfos
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;Uint64&gt; | dataIds |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[DataStoreFileServerObjectInfo](#datastorefileserverobjectinfo-structure)&gt; | pInfos |
 
 # (46) GetMetaByOwnerId
 ## Request
