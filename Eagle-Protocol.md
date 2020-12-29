@@ -92,7 +92,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 7 | [Prof data](#prof-data) |
 | 8 | [Node notice](#node-notice) |
 | 9 | [Disconnected](#disconnected) |
-| 16 - 255 | [Relay message](#relay-message) |
+| 16 - 255 | [RPC](#rpc) |
 
 ### Accepted
 The server time is monotonic clock (no timestamp).
@@ -170,7 +170,7 @@ No payload.
 ### Disconnected
 No payload.
 
-### Relay Message
+### RPC
 | Bits | Description |
 | --- | --- |
 | 64 | Payload size |
