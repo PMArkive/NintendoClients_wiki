@@ -94,6 +94,8 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 9 | Unknown |
 
 ### Connection Accepted
+The server time is monotonic clock (no timestamp).
+
 | Bits | Description |
 | --- | --- |
 | 16 | Node id |
