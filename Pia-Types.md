@@ -1,4 +1,4 @@
-[[PIA Protocols]] > Types
+[[Pia Protocols]] > Types
 ---
 
 | Table of Contents |
@@ -91,7 +91,7 @@ This structure holds fields that are directly taken from a [StationURL](NEX-Comm
 | Uint16 | Extension id. *Only present on Wii U.* |
 
 ## InetAddress
-A new encoding was introduced in PIA 5.11 that's capable of representing IPv6 addresses. Even in games using PIA 5.11 or later, sometimes the old encoding is still used. Which encoding is used depends on the context.
+A new encoding was introduced in Pia 5.11 that's capable of representing IPv6 addresses. Even in games using Pia 5.11 or later, sometimes the old encoding is still used. Which encoding is used depends on the context.
 
 #### Old version
 This structure can only represent IPv4 addresses.
