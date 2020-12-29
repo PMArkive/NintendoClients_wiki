@@ -85,7 +85,7 @@ The payload comes after header and relay destination, but the bit stream is firs
 | 0 | [Connection accepted](#connection-accepted) |
 | 1 | [Login request](#login-request) |
 | 2 | [Login result](#login-result) |
-| 3 | Client ready |
+| 3 | [Client ready](#client-ready) |
 | 4 | Unknown |
 | 5 | Unknown |
 | 6 | Unknown |
@@ -130,6 +130,9 @@ Login phase 1:
 | 8 | Unknown |
 | 16 | Payload size |
 | | Payload |
+
+### Client Ready
+No payload.
 
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
