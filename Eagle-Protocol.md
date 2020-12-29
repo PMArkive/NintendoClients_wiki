@@ -9,7 +9,7 @@ Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay se
 * [Packet Format](#packet-format)
 
 ## Notification Event
-When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a Kurbernetes instance that runs the eagle server. Once the eagle server is ready, it sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
+When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a Kurbernetes instance that runs the eagle server. When the eagle server is ready, the NEX server sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
 
 | Field | Description |
 | --- | --- |
