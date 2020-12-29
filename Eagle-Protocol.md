@@ -1,11 +1,29 @@
 [[Server List]] > Eagle (relay servers)
 ---
 
-Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [PIA](PIA-Overview), which seems to be called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](Notification-Protocol) to the clients, which contains the url of the eagle server and a token.
+Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [PIA](PIA-Overview), which seems to be called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](#notification-event) to the clients, which contains the url of the eagle server and a token.
 
+* [Notification Event](#notification-event)
 * [Server URL](#server-url)
 * [Token Format](#token-format)
 * [Packet Format](#packet-format)
+
+## Notification Event
+When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a Kurbernetes instance that runs the eagle server. Once the eagle server is ready, it sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | 257049437023956657 (Quazal Rendez-Vous) |
+| m_uiType | 200000 |
+| m_uiParam1 | The gathering id |
+| m_mapParam | See table below |
+
+Map param:
+
+| Field | Description |
+| --- | --- |
+| `url` | The url of the eagle server |
+| `token` | Base64 encoded token |
 
 ## Server URL
 The URL is written as follows: `<scheme>://<host>:<port>/<path>`.
