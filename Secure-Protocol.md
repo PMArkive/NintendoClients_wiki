@@ -65,9 +65,9 @@ The client should place the connection id into the RVCID field of its client sta
 | Type | Name | Description |
 | --- | --- | --- |
 | [List]&lt;[StationURL]&gt; | vecMyURLs | Local client urls |
-| [Data]&lt;[NintendoLoginData](#nintendologindata)&gt; | hCustomData | Login data |
+| [Data] | hCustomData | Login data, see below |
 
-### NintendoLoginData
+### NintendoLoginData / AccountExtraInfo
 | Type | Description |
 | --- | --- |
 | [String] | Token (received from the account server) |
