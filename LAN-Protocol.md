@@ -133,7 +133,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | --- | --- |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 
-*In Pia 5.9 and later:*
+*In Pia 5.7 and later:*
 
 | Type | Description |
 | --- | --- |
