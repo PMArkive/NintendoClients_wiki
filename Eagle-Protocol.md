@@ -112,7 +112,7 @@ Login phase 0:
 | Bits | Description |
 | --- | --- |
 | 8 | Unknown |
-| 32 | [Protocol version](#library-versions) |
+| 32 | [Protocol version (P)](#library-versions) |
 | 64 | App protocol version |
 | 32 | DDL hash |
 | 8 | Version string size (max 63 bytes) |
@@ -184,7 +184,7 @@ The eagle library was rewritten almost completely between Tetris 99 and Super Ma
 | Tetris 99 | 9 | 128 |
 | Super Mario Bros 35 | 11 | 1024 |
 
-| Game | Version string | Protocol version |
+| Game | Version string | P |
 | --- | --- | --- |
 | Tetris 99 | release/1.2.14 | 2 |
 | Super Mario Bros 35 | 2.0.4 | 3 |
