@@ -16,7 +16,7 @@ Every packet starts with a single byte that indicates its type.
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
-This packet is sent through UDP broadcast port 30000. It is sent in plain text, and is not encapsulated in a [PIA packet](PIA-Protocol).
+This packet is sent through UDP broadcast port 30000. It is sent in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 
-A crypto challenge was introduced somewhere between PIA 5.4 and 5.9:
+A crypto challenge was introduced somewhere between Pia 5.4 and 5.9:
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ These flags indicate which fields are compared against the active session to det
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
 ## (1) Browse reply
-This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [PIA packet](PIA-Protocol).
+This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
 
 | Type | Description |
 | --- | --- |
@@ -92,13 +92,13 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint16 | Minimum number of participants |
 | Uint16 | Maximum number of participants |
 
-*Up to PIA version 5.2:*
+*Up to Pia version 5.2:*
 
 | Type | Description |
 | --- | --- |
 | Uint32 | Session type |
 
-*In PIA version 5.3 and later:*
+*In Pia version 5.3 and later:*
 
 | Type | Description |
 | --- | --- |
@@ -106,7 +106,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint8 | Application communication version |
 | Uint16 | Session type |
 
-*In any PIA version:*
+*In any Pia version:*
 
 | Type | Description |
 | --- | --- |
@@ -114,28 +114,28 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint32 | Application data size |
 | Bool | Is opened |
 
-*Up to PIA version 5.9:*
+*Up to Pia version 5.9:*
 
 | Type | Description |
 | --- | --- |
-| [StationLocation](PIA-Types#stationlocation) | Host address |
+| [StationLocation](Pia-Types#stationlocation) | Host address |
 
-*In PIA version 5.10 and later:*
+*In Pia version 5.10 and later:*
 
 | Type | Description |
 | --- | --- |
-| [StationAddress](PIA-Types#stationaddress) | Host address |
+| [StationAddress](Pia-Types#stationaddress) | Host address |
 | [PID](NEX-Common-Types#pid) | Host pid |
 | Uint32 | Host cid |
 | Uint32 | Host rvcid |
 
-*In any PIA version:*
+*In any Pia version:*
 
 | Type | Description |
 | --- | --- |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 
-*In PIA 5.9 and later:*
+*In Pia 5.9 and later:*
 
 | Type | Description |
 | --- | --- |
@@ -150,7 +150,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 0x2A | 8 | Station id |
 
 ### System Communication Version
-| Version | PIA Version |
+| Version | Pia Version |
 | --- | --- |
 | 0 | 5.3 |
 | 3 | 5.7 |
@@ -161,7 +161,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 8 | 5.19 - 5.29 |
 
 ## (3) Get Host Request
-This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is encrypted with the session key:
+This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -170,17 +170,17 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0xC | 4 | Session id |
 
 ## (4) Get Host Reply
-This message is encapsulated in a [PIA message](PIA-Protocol) and is encrypted with the session key.
+This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key.
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Message type (4) |
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
-| 0x10 | | [StationConnectionInfo](PIA-Types#stationconnectioninfo) (up to PIA 5.9) or [StationLocation](PIA-Types#stationlocation) (PIA 5.10 and later) for host |
+| 0x10 | | [StationConnectionInfo](Pia-Types#stationconnectioninfo) (up to Pia 5.9) or [StationLocation](Pia-Types#stationlocation) (Pia 5.10 and later) for host |
 
 ## (5) Get Session Request
-This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [PIA message](PIA-Protocol). The message payload contains the following data and is encrypted with the session key:
+This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -189,7 +189,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0xC | 4 | Session id |
 
 ## (6) Get Session Reply
-This message is encapsulated in a [PIA message](PIA-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
+This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -203,7 +203,7 @@ This message is encapsulated in a [PIA message](PIA-Protocol) and is encrypted w
 | 0x18 | | Fragment data |
 
 ## (7) Keep Alive Message
-This packet is sent through UDP broadcast port 49152 and is encapsulated in a [PIA message](PIA-Protocol). This message is sent once every two seconds, even if the console is not participating in a session. If the console is participating in a session, the message payload is encrypted with the session key. Otherwise, the payload is not encrypted. The message payload contains the following data:
+This packet is sent through UDP broadcast port 49152 and is encapsulated in a [Pia message](Pia-Protocol). This message is sent once every two seconds, even if the console is not participating in a session. If the console is participating in a session, the message payload is encrypted with the session key. Otherwise, the payload is not encrypted. The message payload contains the following data:
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -215,7 +215,7 @@ The [browse request](#0-browse-request) contains a cryptographic challenge that 
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Version. If 1, the old [InetAddress](PIA-Types#inetaddress) format is used. If 2, the new format is used. |
+| 0x0 | 1 | Version. If 1, the old [InetAddress](Pia-Types#inetaddress) format is used. If 2, the new format is used. |
 | 0x1 | 1 | Crypto enabled (0 or 1) |
 | 0x2 | 8 | Incrementing counter used for nonce |
 | 0xA | 16 | Challenge key |
