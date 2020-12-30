@@ -22,7 +22,7 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 
-A crypto challenge was introduced somewhere between Pia 5.4 and 5.9:
+In Pia 5.7 and later:
 
 | Offset | Size | Description |
 | --- | --- | --- |
