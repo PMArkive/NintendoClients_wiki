@@ -151,6 +151,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Version | Pia Version |
 | --- | --- |
 | 0 | 5.3 |
+| 2 | 5.6 |
 | 3 | 5.7 |
 | 4 | 5.8 |
 | 5 | 5.9 |
