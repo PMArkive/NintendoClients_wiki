@@ -163,7 +163,7 @@ No payload.
 ### Node Notice
 | Bits | Description |
 | --- | --- |
-| 8 | Type (0-4) |
+| 8 | Type (0 - 4) |
 
 Type 0 - 3:
 | Bits | Description |
