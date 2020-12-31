@@ -106,10 +106,12 @@ The server time is monotonic clock (no timestamp).
 | 64 | Server time (in milliseconds) |
 
 ### Login Request
+If the token does not fit into a single packet, it is split into fragments.
+
 | Bits | Description |
 | --- | --- |
 | 7 | Login phase (0 or 1) |
-| 1 | Last packet |
+| 1 | Last fragment |
 
 Login phase 0:
 | Bits | Description |
