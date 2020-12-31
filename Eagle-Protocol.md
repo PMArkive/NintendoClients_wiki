@@ -163,9 +163,18 @@ No payload.
 ### Node Notice
 | Bits | Description |
 | --- | --- |
-| 8 | Unknown (0-3) |
+| 8 | Type (0-4) |
+
+Type 0 - 3:
+| Bits | Description |
+| --- | --- |
 | 16 | Unknown |
 | 64 | Unknown |
+
+Type 4:
+| Bits | Description |
+| --- | --- |
+| 1024 | Unknown |
 
 ### Disconnected
 No payload.
