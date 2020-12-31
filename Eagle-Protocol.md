@@ -173,7 +173,7 @@ No payload.
 ### RPC
 | Bits | Description |
 | --- | --- |
-| 64 | Payload size |
+| 64 | Unknown |
 | | Payload |
 
 ## Library Versions
