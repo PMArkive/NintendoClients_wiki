@@ -7,6 +7,7 @@ Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay se
 * [Server URL](#server-url)
 * [Token Format](#token-format)
 * [Packet Format](#packet-format)
+* [Protocol Description](#protocol-description)
 
 ## Notification Event
 When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a Kurbernetes instance that runs the eagle server. When the eagle server is ready, the NEX server sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
@@ -186,6 +187,17 @@ No payload.
 | --- | --- |
 | 64 | Unknown |
 | | Payload |
+
+## Protocol Description
+The eagle protocol is surprisingly simple. After the client has received the notification event from the NEX server, the following happens:
+1. The client establishes a connection with the eagle server.
+2. The server sends an Accepted packet to the client.
+3. The client sends a Login Request packet to the server for login phase 0.
+4. The client sends one or more Login Request packets to the server for login phase 1.
+5. The server sends a Login Result packet to the client.
+6. The client sends a Client Ready packet to the server.
+
+Now, the client and server start exchanging RPC packets. If the client sends an RPC packet to the server, the server simply forwards it to the nodes that are specified in the packet header.
 
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
