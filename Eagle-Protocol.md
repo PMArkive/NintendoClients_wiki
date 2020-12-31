@@ -1,7 +1,7 @@
 [[Server List]] > Eagle (relay servers)
 ---
 
-Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [Pia](PIA-Overview), which seems to be called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](#notification-event) to the clients, which contains the url of the eagle server and a token.
+Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [Pia](PIA-Overview), which is called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](#notification-event) to the clients, which contains the url of the eagle server and a token.
 
 * [Notification Event](#notification-event)
 * [Server URL](#server-url)
@@ -30,7 +30,7 @@ The URL is written as follows: `<scheme>://<host>:<port>/<path>`.
 
 The scheme must be either `kdp` (see https://github.com/skywind3000/kcp), `tcp`, `tcps`, `ws` or `wss`.
 
-The port is optional and defaults to 443 if the connection is secured with TLS (`tcps` or `wss`) or 30000 if the connection is not secured with TLS. The path is only required on WebSocket connections (`ws` or `wss`). If TCP is used (`tcp` or `tcps`) packets are prefixed by a 16-bit little-endian integer that indicates the size of the packet.
+The port is optional and defaults to 443 if the connection is secured with TLS (`tcps` or `wss`) or 30000 if the connection is not secured with TLS. The path is only required on WebSocket connections (`ws` or `wss`). If TCP is used (`tcp` or `tcps`) packets are prefixed by a 16-bit little-endian integer that specifies the size of the packet.
 
 The real server always uses the following URL: `wss://<server name>.g.<server env>.e.srv.nintendo.net:443/<game id>/ess-d7d-<server id>`. Sometimes, the suffix `-b` or `-g` is added to the server name.
 
