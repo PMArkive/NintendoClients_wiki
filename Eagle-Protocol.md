@@ -106,7 +106,7 @@ The server time is monotonic clock (no timestamp).
 | 64 | Server time (in milliseconds) |
 
 ### Login Request
-If the token does not fit into a single packet, it is split into fragments.
+If the token does not fit into a single packet, it is split into fragments. The last fragment is terminated with a null byte.
 
 | Bits | Description |
 | --- | --- |
@@ -130,6 +130,8 @@ Login phase 1:
 | | Token string |
 
 ### Login Result
+The payload contains the user id from the token and a null terminator.
+
 | Bits | Description |
 | --- | --- |
 | 32 | Error code |
