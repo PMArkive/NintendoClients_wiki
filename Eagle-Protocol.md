@@ -79,7 +79,7 @@ The remainder of the packet depends on the relay type and payload id.
 | 1 | This packet is relayed to a single node. The header is followed by [N](#library-versions) bits that hold the destination node id. |
 | 2 | This packet is relayed to multiple nodes. The header is followed by [M](#library-versions) bits that hold the destination nodes (one bit per node). |
 
-Only RPC packets are relayed. Other packets should have the relay type set to 0.
+Only RPC packets are relayed to other clients.
 
 The payload comes after header and relay destination, but the bit stream is first aligned to 8 bits before the payload starts.
 
