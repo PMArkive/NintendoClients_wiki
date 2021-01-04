@@ -177,11 +177,11 @@ Packets are encrypted and signed with the session key.
 | LDN | ? |
 | LAN | First 16 bytes of the HMAC-SHA256 of the [session param](LAN-Protocol#lansessioninfo), but slightly modified (the last byte is incremented by 1). The key is the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
-**Wii U and Switch (up to 5.6):**
+*Up to 5.6:*
 
 If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
 
-**Switch (5.9 and later):**
+*5.7 - 5.19:*
 
 If encryption is enabled, the [messages](#messages) are encrypted with AES-GCM. The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
