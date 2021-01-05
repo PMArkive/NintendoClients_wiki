@@ -62,7 +62,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 ### Version
 | Pia Version | Header version |
 | --- | --- |
-| 5.21 | 4 |
+| 5.21 - 5.23 | 4 |
 | 5.24 | 5 |
 | 5.29 | 9 |
 
