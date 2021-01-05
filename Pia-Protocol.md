@@ -48,7 +48,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 16 | Unknown |
 
-*5.28 - 5.29:*
+*5.27 - 5.29:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 5.11 | 3 |
 | 5.21 | 4 |
 | 5.23 - 5.24 | 5 |
-| 5.28 - 5.29 | 9 |
+| 5.27 - 5.29 | 9 |
 
 ### Connection ID
 During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
