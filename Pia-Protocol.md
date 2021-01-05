@@ -38,7 +38,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
 | 0x10 | 16 | [AES-GCM authentication tag](#encryption) |
 
-*5.23 - 5.24:*
+*5.23 - 5.25:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- |
 | 5.11 | 3 |
 | 5.21 | 4 |
-| 5.23 - 5.24 | 5 |
+| 5.23 - 5.25 | 5 |
 | 5.27 - 5.29 | 9 |
 
 ### Connection ID
