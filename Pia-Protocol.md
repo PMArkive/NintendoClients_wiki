@@ -48,7 +48,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 16 | Unknown |
 
-*5.29:*
+*5.28 - 5.29:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
