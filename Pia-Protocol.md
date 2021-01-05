@@ -92,7 +92,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x14 | | Payload (protocol-specific) |
 | | | Padding |
 
-*5.9 and 5.10:*
+*5.6 - 5.10:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
