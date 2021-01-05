@@ -179,7 +179,7 @@ Packets are encrypted and signed with the session key.
 
 *Up to 5.6:*
 
-If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)). The packet signature is always present, even if encryption is disabled.
+If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The packet signature is the HMAC of the whole packet (including the [header](#header)).
 
 *5.7 - 5.19:*
 
