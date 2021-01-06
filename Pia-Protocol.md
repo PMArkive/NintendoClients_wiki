@@ -59,7 +59,8 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x9 | 4 | Unknown |
 | 0xD | 2 | Packet id |
 | 0xF | 1 | Unknown |
-| 0x10 | 16 | Unknown |
+| 0x10 | 8 | [AES-GCM nonce](#encryption) |
+| 0x18 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
 ### Version
 | Pia Version | Header version |
