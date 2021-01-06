@@ -46,7 +46,8 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
 | 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | [Packet id](#packet-id) |
-| 0x8 | 16 | Unknown |
+| 0x8 | 8 | [AES-GCM nonce](#encryption) |
+| 0x10 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
 *5.27 - 5.31:*
 
