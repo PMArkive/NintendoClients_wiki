@@ -58,7 +58,8 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x5 | 4 | Unknown |
 | 0x9 | 4 | Unknown |
 | 0xD | 2 | Packet id |
-| 0xF | 17 | Unknown |
+| 0xF | 1 | Unknown |
+| 0x10 | 16 | Unknown |
 
 ### Version
 | Pia Version | Header version |
