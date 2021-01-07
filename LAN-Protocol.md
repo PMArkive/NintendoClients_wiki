@@ -157,7 +157,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 5 | 5.9 |
 | 6 | 5.10 |
 | 7 | 5.11 - 5.18 |
-| 8 | 5.19 - 5.29 |
+| 8 | 5.19 - 5.31 |
 
 ## (3) Get Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
