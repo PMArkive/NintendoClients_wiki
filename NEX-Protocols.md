@@ -69,3 +69,4 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 71 | [Offline game notifications](Offline-Game-Notification-Protocol) |
 | 72 | User account management |
 | 84 | Siege admin |
+| ? | [Web notifications storage](Web-Notification-Storage-Protocol)
