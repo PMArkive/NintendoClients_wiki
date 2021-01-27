@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Tracking Protocol 3 (36)
+[[NEX Protocols]] > Tracking 3 (36)
 ---
 
 | Method ID | Method Name |
