@@ -53,7 +53,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 29 | [Ubi account management](Ubi-Account-Management-Protocol) |
 | 30 | Geo localization |
 | 31 | [News](News-Protocol) |
-| 35 | Privileges |
+| 35 | [Privileges](Privileges-Protocol) |
 | 36 | [Tracking 3](Tracking-Protocol-3) |
 | 39 | [Localization](Localization-Protocol) |
 | 42 | Game session |
