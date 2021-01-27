@@ -9,7 +9,7 @@ See also: [[RMC Protocol]]
 | --- | --- |
 | 1 | [Remote log device](Remote-Log-Device-Protocol) |
 | 3 | [NAT traversal](NAT-Traversal-Protocol) |
-| 10 | [Authentication](Authentication-Protocol) |
+| 10 | [Ticket granting](Authentication-Protocol) |
 | 11 | [Secure connection](Secure-Protocol) |
 | 14 | [Notification events](Notification-Protocol) |
 | 18 | [Health](Health-Protocol) |
