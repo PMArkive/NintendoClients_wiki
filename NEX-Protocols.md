@@ -43,6 +43,13 @@ See also: [[RMC Protocol]]
 These protocols are only seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX:
 
 * Just Dance 4
+* Know Your Friends
+* Rabbits Land
+* Rayman Legends Challenges App
+* Splinter Cell Blacklist
+* Uplay
+* Your Shape FE 2013
+* ZombiU
 
 | ID | Protocol |
 | --- | --- |
