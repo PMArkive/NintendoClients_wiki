@@ -64,7 +64,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 48 | Skill rating |
 | 49 | Uplay win |
 | 51 | Title storage |
-| 53 | User storage |
+| 53 | [User storage](User-Storage-Protocol) |
 | 55 | Player stats |
 | 71 | [Offline game notifications](Offline-Game-Notification-Protocol) |
 | 72 | [User account management](User-Account-Management-Protocol) |
