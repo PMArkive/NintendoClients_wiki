@@ -66,6 +66,6 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 51 | Title storage |
 | 53 | User storage |
 | 55 | Player stats |
-| 71 | Offline game notifications |
+| 71 | [Offline game notifications](Offline-Game-Notification-Protocol) |
 | 72 | User account management |
 | 84 | Siege admin |
