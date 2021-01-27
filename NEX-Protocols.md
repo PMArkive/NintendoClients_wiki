@@ -70,3 +70,4 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 72 | [User account management](User-Account-Management-Protocol) |
 | 84 | Siege admin |
 | ? | [Web notifications storage](Web-Notification-Storage-Protocol)
+| ? | [User storage admin](User-Storage-Admin-Protocol)
