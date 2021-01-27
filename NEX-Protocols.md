@@ -40,7 +40,9 @@ See also: [[RMC Protocol]]
 | 124 | [Screening](Screening-Protocol) |
 
 ## Not provided by NEX
-These protocols are only seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX.
+These protocols are only seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX:
+
+* Just Dance 4
 
 | ID | Protocol |
 | --- | --- |
@@ -50,7 +52,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 28 | Client settings |
 | 29 | Ubi account management |
 | 30 | Geo localization |
-| 31 | News |
+| 31 | [News](News-Protocol) |
 | 35 | Privileges |
 | 36 | [Tracking 3](Tracking-Protocol-3) |
 | 39 | Localization |
