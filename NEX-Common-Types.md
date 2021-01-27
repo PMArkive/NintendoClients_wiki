@@ -157,12 +157,17 @@ This class can hold any object derived from a given base class (usually [nn::nex
 # RVConnectionData ([Structure])
 Nintendo does not use any special protocols.
 
-| Type | Version | Name | Description |
-| --- | --- | --- | --- |
-| [StationURL](#station-url) | Any | m_urlRegularProtocols | Server address (regular protocols) |
-| [List](#list)&lt;byte&gt; | Any | m_lstSpecialProtocols | Special protocols |
-| [StationURL](#station-url) | Any | m_urlSpecialProtocols | Server address (special protocols) |
-| [DateTime](#date-time) | V1 | m_currentUTCTime | Time |
+| Type | Name | Description |
+| --- | --- | --- |
+| [StationURL](#station-url) | m_urlRegularProtocols | Server address (regular protocols) |
+| [List](#list)&lt;byte&gt; | m_lstSpecialProtocols | Special protocols |
+| [StationURL](#station-url) | m_urlSpecialProtocols | Server address (special protocols) |
+
+Revision 1:
+
+| Type | Name | Description |
+| --- | --- | --- |
+| [DateTime](#date-time) | m_currentUTCTime | Time |
 
 Examples:
 
