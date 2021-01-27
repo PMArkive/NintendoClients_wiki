@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Simple Authentication (0x10)
+[[NEX Protocols]] > Simple Authentication (16)
 ---
 
 Interestingly, this protocol has `Cafe` in some of its method names, even though this protocol is never used by Nintendo.
