@@ -23,7 +23,6 @@ See also: [[RMC Protocol]]
 | 50 | [Match making (extension)](Match-Making-Protocol-Ext) |
 
 ## Nintendo Only
-
 | ID | Protocol |
 | --- | --- |
 | 100 | [Nintendo notification events](Nintendo-Notification-Event-Protocol) |
@@ -40,7 +39,9 @@ See also: [[RMC Protocol]]
 | 123 | [AA user](AA-User-Protocol) |
 | 124 | [Screening](Screening-Protocol) |
 
-## Not provided by Nintendo
+## Not provided by NEX
+These protocols are only seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX.
+
 | ID | Protocol |
 | --- | --- |
 | 12 | Back end management |
