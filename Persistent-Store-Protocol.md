@@ -1,7 +1,7 @@
 [[NEX Protocols]] > Persistent Store (0x18)
 ---
 
-This protocol is implemented on Nintendo game servers, but no game seems to have the code to use this protocol.
+This protocol is implemented on Nintendo game servers, but never used by games.
 
 | Method ID | Method Name |
 | --- | --- |
