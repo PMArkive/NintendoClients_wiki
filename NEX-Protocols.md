@@ -50,7 +50,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 16 | [Simple authentication](Simple-Authentication-Protocol) |
 | 17 | Siege |
 | 28 | Client settings |
-| 29 | Ubi account management |
+| 29 | [Ubi account management](Ubi-Account-Management-Protocol) |
 | 30 | Geo localization |
 | 31 | [News](News-Protocol) |
 | 35 | Privileges |
