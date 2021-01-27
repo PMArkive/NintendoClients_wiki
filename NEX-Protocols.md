@@ -56,7 +56,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 35 | [Privileges](Privileges-Protocol) |
 | 36 | [Tracking 3](Tracking-Protocol-3) |
 | 39 | [Localization](Localization-Protocol) |
-| 42 | Game session |
+| 42 | [Game session](Game-Session-Protocol) |
 | 44 | Sub account management |
 | 45 | IP to location |
 | 46 | IP to location admin |
