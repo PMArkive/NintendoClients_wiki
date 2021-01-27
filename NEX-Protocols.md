@@ -40,7 +40,7 @@ See also: [[RMC Protocol]]
 | 124 | [Screening](Screening-Protocol) |
 
 ## Not provided by NEX
-These protocols are only seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX:
+These protocols aren't implemented by NEX, but may be seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX:
 
 * Just Dance 4
 * Know Your Friends
