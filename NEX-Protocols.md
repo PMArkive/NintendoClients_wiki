@@ -62,7 +62,7 @@ These protocols are only seen in Ubisoft games that use the original Quazal Rend
 | 46 | IP to location admin |
 | 47 | Ubi friends |
 | 48 | Skill rating |
-| 49 | Uplay win |
+| 49 | [Uplay win](Uplay-Win-Protocol) |
 | 51 | Title storage |
 | 53 | [User storage](User-Storage-Protocol) |
 | 55 | Player stats |
