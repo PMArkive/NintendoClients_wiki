@@ -217,13 +217,13 @@ Payload fields:
 
 | Field | Description |
 | --- | --- |
-| `sub` | Client id? |
-| `aud` | Client id? |
-| `bs:sts` | Always [385]? (list) |
-| `nintendo` | [Device information](#device-information-0) |
+| `sub` | Subject |
+| `aud` | Audience |
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
 | `typ` | Always `token` |
-| `bs:grt` | Always 1? |
+| `bs:sts` | Unknown (list of integers) |
+| `bs:grt` | Unknown (integer) |
+| `nintendo` | [Device information](#device-information-0) |
 
 ### Device Information
 | Field | Description |
