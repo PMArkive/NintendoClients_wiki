@@ -290,8 +290,8 @@ Payload fields:
 
 | Field | Description |
 | --- | --- |
-| `aud` | Client id? |
-| `sub` | NEX user id (pid) |
+| `aud` | Audience |
+| `sub` | NEX user id (`%016x`) |
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
 | `nintendo` | [ID token information](#id-token-information) |
 | `typ` | Always `id_token` |
