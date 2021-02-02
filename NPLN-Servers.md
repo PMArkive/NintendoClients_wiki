@@ -8,4 +8,8 @@ Known servers:
 
 | Game | Server ID | User Agent |
 | --- | --- | --- |
-| Monster Hunter Rise Demo | `f124d2cb` | `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)` |
+| Monster Hunter Rise Demo | `f124d2cb` |
+
+| Game | User Agent |
+| --- | --- |
+| Monster Hunter Rise Demo | `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)` |
