@@ -6,8 +6,8 @@ The decompiled protobuf files are uploaded here: https://github.com/kinnay/NPLN-
 
 Known servers:
 
-| Game | Server ID | User Agent |
-| --- | --- | --- |
+| Game | Server ID |
+| --- | --- |
 | Monster Hunter Rise Demo | `f124d2cb` |
 
 | Game | User Agent |
