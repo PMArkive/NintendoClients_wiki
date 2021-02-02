@@ -6,6 +6,6 @@ The decompiled protobuf files are uploaded here: https://github.com/kinnay/NPLN-
 
 Known servers:
 
-| Game | Server ID |
-| --- | --- |
-| Monster Hunter Rise Demo | `f124d2cb` |
+| Game | Server ID | User Agent |
+| --- | --- | --- |
+| Monster Hunter Rise Demo | `f124d2cb` | `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)` |
