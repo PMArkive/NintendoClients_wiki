@@ -1,12 +1,12 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > SSB4
+## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > SSBU
 
-This page describes the methods that are only seen in Super Smash Bros. 4.
-
-Methods 36 - 48 and 51 belong to the TournamentProtocol. The others belong to the CrossProtocol.
+This page describes the methods that are only seen in Super Smash Bros. Ultimate.
 
 | Method ID | Method Name |
 | --- | --- |
 | 54 | ? |
 | 55 | ? |
-| 55 | ? |
-| 55 | ? |
+| 56 | ? |
+| 57 | ? |
+| 58 | ? |
+| 59 | ? |
