@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Utility (0x6E)](Utility-Protocol) > Splatoon 2
+## [[NEX Protocols]] > [Utility](Utility-Protocol) > Splatoon 2 (110)
 
 This page describes the methods that are only seen in Splatoon 2.
 
