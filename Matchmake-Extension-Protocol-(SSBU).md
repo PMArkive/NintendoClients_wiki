@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > SSBU
+## [[NEX Protocols]] > [Matchmake Extension](Matchmake-Extension-Protocol) > SSBU (109)
 
 This page describes the methods that are only seen in Super Smash Bros. Ultimate.
 
