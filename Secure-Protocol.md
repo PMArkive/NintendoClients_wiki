@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Secure Connection (0x0B)
+## [[NEX Protocols]] > Secure Connection (11)
 
 | Method ID | Method Name |
 | --- | --- |
