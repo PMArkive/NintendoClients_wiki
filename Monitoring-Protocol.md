@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Monitoring (0x13)
+## [[NEX Protocols]] > Monitoring (19)
 
 | Method ID | Method Name |
 | --- | --- |
