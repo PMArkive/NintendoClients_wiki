@@ -1,4 +1,4 @@
-[[NEX Protocols]] > NAT Traversal (0x03)
+[[NEX Protocols]] > NAT Traversal (3)
 ---
 
 | Method ID | Method Name |
