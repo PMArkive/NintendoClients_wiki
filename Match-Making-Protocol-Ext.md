@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Match Making Ext (0x32)
+## [[NEX Protocols]] > Match Making Ext (50)
 
 | Method ID | Method Name |
 | --- | --- |
