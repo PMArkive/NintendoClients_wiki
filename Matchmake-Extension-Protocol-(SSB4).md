@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > SSB4
+## [[NEX Protocols]] > [Matchmake Extension](Matchmake-Extension-Protocol) > SSB4 (109)
 
 This page describes the methods that are only seen in Super Smash Bros. 4.
 
