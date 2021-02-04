@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Health (0x12)
+## [[NEX Protocols]] > Health (18)
 
 | Method ID | Method Name |
 | --- | --- |
