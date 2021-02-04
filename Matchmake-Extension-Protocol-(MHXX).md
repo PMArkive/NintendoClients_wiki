@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > Monster Hunter XX
+## [[NEX Protocols]] > [Matchmake Extension](Matchmake-Extension-Protocol) > Monster Hunter XX (109)
 This page describes the methods that are only seen in Monster Hunter XX (3DS).
 
 | Method ID | Method Name |
