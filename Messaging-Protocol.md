@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Messaging (0x17)
+## [[NEX Protocols]] > Messaging (23)
 
 | Method ID | Method Name |
 | --- | --- |
