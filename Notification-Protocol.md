@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Notifications (0x0E)
+## [[NEX Protocols]] > Notifications (14)
 
 | Method ID | Method Name |
 | --- | --- |
