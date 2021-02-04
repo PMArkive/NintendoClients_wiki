@@ -6,6 +6,7 @@ The following games have additional methods in the matchmake extension protocol:
 * [Monster Hunter XX (3DS)](Matchmake-Extension-Protocol-(MHXX))
 * [Super Mario Bros. 35](Matchmake-Extension-Protocol-(SMB35))
 * [Super Smash Bros. 4](Matchmake-Extension-Protocol-(SSB4))
+* [Super Smash Bros. Ultimate](Matchmake-Extension-Protocol-(SSBU))
 
 This remainder of this page describes the methods that are not specific to any game.
 
