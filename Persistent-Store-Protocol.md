@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Persistent Store (0x18)
+[[NEX Protocols]] > Persistent Store (24)
 ---
 
 This protocol is implemented on Nintendo game servers, but never used by games.
