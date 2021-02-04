@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Message Delivery (0x1B)
+## [[NEX Protocols]] > Message Delivery (27)
 
 | Method ID | Method Name |
 | --- | --- |
