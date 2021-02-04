@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Utility (110)](Utility-Protocol) > SSBU
+## [[NEX Protocols]] > [Utility](Utility-Protocol) > SSBU (110)
 
 This page describes the methods that are only seen in SSBU.
 
