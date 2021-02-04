@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Remote Log Device (0x01)
+[[NEX Protocols]] > Remote Log Device (1)
 ---
 
 | Method ID | Method Name |
