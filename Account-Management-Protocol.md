@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Account Management (0x19)
+## [[NEX Protocols]] > Account Management (25)
 
 Most methods cannot be used by normal users.
 
