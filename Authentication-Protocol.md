@@ -1,7 +1,5 @@
-[[NEX Protocols]] > Authentication (0x0A)
+[[NEX Protocols]] > Ticket Granting (10)
 ---
-Official name: TicketGrantingProtocol
-
 This is the only protocol that's available on the authentication server. Other protocols are only available on the secure server.
 
 | Method ID | Name (Wii U) | Name (Switch) |
