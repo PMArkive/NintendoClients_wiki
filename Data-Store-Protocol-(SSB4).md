@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SSB4
+## [[NEX Protocols]] > [Data Store](Data-Store-Protocol) > SSB4 (115)
 
 This page describes the methods that are only seen in Super Smash Bros. 4. The protocol has been renamed from `DataStoreProtocol` to `CrossProtocol`.
 
