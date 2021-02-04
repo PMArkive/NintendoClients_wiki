@@ -1,11 +1,12 @@
-## [[NEX Protocols]] > Data Store (0x73)
+## [[NEX Protocols]] > Data Store (115)
 
 The following games have additional methods in the datastore protocol:
+* [Splatoon 2](Data-Store-Protocol-(Splatoon-2))
 * [Super Mario Maker](Data-Store-Protocol-(SMM))
 * [Super Mario Maker 2](Data-Store-Protocol-(SMM-2))
 * [Super Mario Odyssey](Data-Store-Protocol-(SMO))
 * [Super Smash Bros. 4](Data-Store-Protocol-(SSB4))
-* [Splatoon 2](Data-Store-Protocol-(Splatoon-2))
+* [Super Smash Bros. Ultimate](Data-Store-Protocol-(SSBU))
 
 This remainder of this page describes the methods that are not specific to any game.
 
