@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Matchmake Extension (0x6D)](Matchmake-Extension-Protocol) > MK8 Deluxe
+## [[NEX Protocols]] > [Matchmake Extension](Matchmake-Extension-Protocol) > MK8 Deluxe (109)
 
 This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 
