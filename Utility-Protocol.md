@@ -1,5 +1,9 @@
 ## [[NEX Protocols]] > Utility (0x6E)
-Splatoon 2 extends this protocol with additional methods. See [[Utility Protocol (Splatoon 2)]].
+The following games have additional methods in the utility protocol:
+* [Splatoon 2](Utility Protocol (Splatoon 2))
+* [Super Smash Bros. Ultimate](Matchmake-Extension-Protocol-(SSBU))
+
+This remainder of this page describes the methods that are not specific to any game.
 
 | Method ID | Method Name |
 | --- | --- |
