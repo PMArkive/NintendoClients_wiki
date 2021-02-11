@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Matchmake Referee (0x78)
+## [[NEX Protocols]] > Matchmake Referee (120)
 
 | Method ID | Method Name |
 | --- | --- |
