@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > SMM
+## [[NEX Protocols]] > [Data Store](Data-Store-Protocol) > SMM (115)
 
 This page describes the methods that are only seen in Super Mario Maker. The protocol has been renamed from `DataStoreProtocol` to `DataStoreCustomProtocol`.
 
