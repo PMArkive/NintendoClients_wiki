@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > AA User (0x7B)
+## [[NEX Protocols]] > AA User (123)
 
 | Method ID | Method Name |
 | --- | --- |
