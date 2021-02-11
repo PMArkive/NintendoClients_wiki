@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Ranking (0x70)
+## [[NEX Protocols]] > Ranking (112)
 
 The following games have additional methods in the ranking protocol:
 * [Mario Kart 8](Ranking-Protocol-(MK8))
