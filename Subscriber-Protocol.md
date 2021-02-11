@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Subscriber (0x79)
+## [[NEX Protocols]] > Subscriber (121)
 
 | Method ID | Method Name |
 | --- | --- |
