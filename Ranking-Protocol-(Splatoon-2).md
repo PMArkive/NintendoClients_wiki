@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Ranking Protocol (0x70)](Ranking-Protocol) > Splatoon 2
+## [[NEX Protocols]] > [Ranking Protocol](Ranking-Protocol) > Splatoon 2 (112)
 
 This page describes the methods that are only seen in Splatoon 2.
 
