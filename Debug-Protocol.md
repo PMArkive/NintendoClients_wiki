@@ -1,4 +1,4 @@
-[[NEX Protocols]] > Debug (0x74)
+[[NEX Protocols]] > Debug (116)
 ---
 
 This protocol seems to log your RMC requests.
