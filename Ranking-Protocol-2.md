@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > Ranking 2 (0x7A)
+## [[NEX Protocols]] > Ranking 2 (122)
 
 | Method ID | Method Name |
 | --- | --- |
