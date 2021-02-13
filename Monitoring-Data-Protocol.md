@@ -9,9 +9,9 @@ The message payload is encoded as follows:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | [MonitoringDataHeader](#monitoringdataheader) |
+| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
 
-## MonitoringDataHeader
+## Monitoring Data Header
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Unknown |
