@@ -19,10 +19,30 @@ The message payload is encoded as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. The key is chosen based on the lower nybble of encryption key index in the monitoring data header. See [key table](Key-Table) below. |
 | | | AES-GCM authentication tag |
 
 The content of the payload depends on the version number and data type in the monitoring data header.
+
+## Key Table
+| Index | Key |
+| --- | --- |
+| 0 | c1d494af4a0a956c545d2e41fc1ceb24 |
+| 1 | caf247fb40aa9655e58c2b02bff89e14 |
+| 2 | bc6da24db8c7e22d2e3fdd97a2b5e3d2 |
+| 3 | 3ef3a41d8a2e78518974679562afe5fa |
+| 4 | c0a02f90a2642ea6a64b199e01f46a57 |
+| 5 | 9eb9c98fc889495c7056f2cd8015aac0 |
+| 6 | 632acbe8c6c77246475b577b6b2d8c76 |
+| 7 | 8dafd0578b2d3ff285e0292ce08d25a2 |
+| 8 | cc082ad011d3c38c7b5ed28637f37c1c |
+| 9 | 6cd46046c71362116e36cb96c0098912 |
+| 10 | 54598618dc2a24474a9d5e80f783a145 |
+| 11 | f35eaa5cc8ebc1dc42ada6c3f4130556 |
+| 12 | 127d237973e98688548b5dac5eb6cc7b |
+| 13 | f677ccf32241122aeeece3df23aaa736 |
+| 14 | d7cb0683d251030fc7613b4b2461224b |
+| 15 | c587a79cbac8a2ddcee27409242a8702 |
 
 ## Monitoring Data Header
 | Offset | Size | Description |
