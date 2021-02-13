@@ -10,7 +10,7 @@ The message payload is encoded as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Monitoring data, first zlib compressed, then encrypted with AES-GCM |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM |
 | | | AES-GCM authentication tag |
 
 ## Monitoring Data Header
@@ -20,7 +20,7 @@ The message payload is encoded as follows:
 | 0x1 | 1 | Unknown |
 | 0x2 | 1 | Unknown |
 | 0x3 | 1 | Unknown |
-| 0x4 | 2 | Unknown |
+| 0x4 | 2 | Payload size |
 | 0x6 | 1 | Unknown |
 | 0x7 | 1 | Unknown |
 | 0x8 | 1 | Unknown |
