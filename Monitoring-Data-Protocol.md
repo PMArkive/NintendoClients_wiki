@@ -12,7 +12,7 @@ The message payload is encoded as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-ECB |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-ECB. The key is always: `901edf193dc5ef3c5290647bff20c385`. |
 
 *5.7 and later:*
 
