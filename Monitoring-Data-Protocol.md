@@ -7,6 +7,15 @@ The server is at `g<game server id>-%.p.srv.nintendo.net`, port 34343.
 
 The message payload is encoded as follows:
 
+*Up to 5.6:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-ECB |
+
+*5.7 and later:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
