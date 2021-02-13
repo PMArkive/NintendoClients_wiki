@@ -39,8 +39,8 @@ Replace '%' by one of the following:
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
+| - g&lt;game server id&gt;-%.r.n.srv.nintendo.net | P2P relay |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | P2P monitoring |
-| - g&lt;game server id&gt;-%.r.srv.nintendo.net | P2P relay |
 | - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check server](NAT-Check-Server) |
 | - api-%.znc.srv.nintendo.net | Coral (voice chat) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
