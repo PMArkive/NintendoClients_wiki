@@ -30,6 +30,15 @@ The message payload is encoded as follows:
 | 0x2 | 1 | Unknown |
 | 0x3 | 1 | Unknown |
 | 0x4 | 2 | Payload size |
+
+*Up to 5.6:*
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x6 | 10 | Padding (filled with 0xFF) |
+
+*5.7 and later:*
+| Offset | Size | Description |
+| --- | --- | --- |
 | 0x6 | 1 | Unknown |
 | 0x7 | 1 | Unknown |
 | 0x8 | 1 | Unknown |
@@ -38,5 +47,5 @@ The message payload is encoded as follows:
 | 0xB | 1 | Unknown |
 | 0xC | 1 | Unknown |
 | 0xD | 1 | Unknown |
-| 0xE | 1 | Unknown |
+| 0xE | 1 | Encryption key index (chosen randomly) |
 | 0xF | 1 | Unknown |
