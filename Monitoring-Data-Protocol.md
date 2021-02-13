@@ -19,7 +19,7 @@ The message payload is encoded as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. The key is chosen based on the lower nybble of encryption key index in the monitoring data header. See [key table](Key-Table) below. |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. The key is chosen based on the lower nybble of encryption key index in the monitoring data header. See [key table](#key-table) below. |
 | | | AES-GCM authentication tag |
 
 The content of the payload depends on the version number and data type in the monitoring data header.
