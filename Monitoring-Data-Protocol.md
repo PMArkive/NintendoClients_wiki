@@ -25,7 +25,7 @@ The message payload is encoded as follows:
 ## Monitoring Data Header
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown |
+| 0x0 | 1 | Version number |
 | 0x1 | 1 | Unknown |
 | 0x2 | 1 | Unknown |
 | 0x3 | 1 | Unknown |
