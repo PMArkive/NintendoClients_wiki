@@ -342,7 +342,7 @@ Version 18:
 | Uint32 | Always `PiaM` |
 
 ### Thread Mode
-| Mode | Name |
+| Mode | Description |
 | --- | --- |
 | 0 | ThreadModeUndefined |
 | 1 | ThreadModeSafeTransportBuffer |
