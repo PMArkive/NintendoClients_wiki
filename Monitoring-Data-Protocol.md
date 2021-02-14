@@ -59,7 +59,7 @@ The nonce is constructed as follows:
 | 0x0 | 1 | Version number |
 | 0x1 | 1 | Data type |
 | 0x2 | 1 | Unknown |
-| 0x3 | 1 | Unknown |
+| 0x3 | 1 | Always 0xFF |
 | 0x4 | 2 | Payload size |
 
 *Up to 5.6:*
