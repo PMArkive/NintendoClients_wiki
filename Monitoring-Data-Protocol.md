@@ -114,10 +114,28 @@ This part is only relevant in the first monitoring data header. In all other mon
 | 0xF | 1 | Always 0xFF |
 
 ## Session Begin Monitoring Content
+All fields are initialized to 0xFF.
+
+Version 18:
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| ... | ... | ... |
+| 0x10 | 4 | Pia version |
+| 0x14 | 4 | SDK version |
+| 0x18 | 4 | NEX version |
+| 0x1C | 1 | Unknown |
+| 0x1D | 1 | Unknown |
+| 0x1E | 1 | Unknown |
+| 0x1F | 1 | Unknown |
+| 0x20 | 1 | Unknown |
+| 0x21 | 4 | Unknown |
+| 0x25 | 4 | Unknown |
+| 0x29 | 8 | Unknown |
+| 0x31 | 1 | Unknown |
+| 0x32 | 4 | Unknown |
+| 0x36 | 4 | Unknown |
+| 0x3A | 0x764 | Unknown |
 
 ## Session End Monitoring Data
 | Offset | Size | Description |
