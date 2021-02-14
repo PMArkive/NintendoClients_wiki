@@ -297,18 +297,8 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 (x6) | Attribute range min |
+| Uint32 (x6) | Attribute range max |
 | Uint8 | Session type |
 | Uint8 | Flags:<br>1: exclude user password set<br>2: exclude non host pid<br>4: opened only<br>8: vacant only |
 | Uint8 | Random session selection method |
