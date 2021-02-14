@@ -322,8 +322,8 @@ Version 18:
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint8[15] | Unknown |
-| Uint32 | Unknown |
-| Uint16 | Unknown |
+| Uint32 | NAT relay server address |
+| Uint16 | NAT relay server port |
 | Uint8[67] | Unknown |
 | Uint8[150] | Unknown |
 | Uint8[150] | Unknown |
