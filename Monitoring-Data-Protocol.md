@@ -127,7 +127,7 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | Language |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
@@ -339,7 +339,7 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Always `PiaM` |
 
 ## Session End Monitoring Data
 | Offset | Size | Description |
