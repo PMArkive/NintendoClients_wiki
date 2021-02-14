@@ -60,9 +60,10 @@ The nonce is constructed as follows:
 | 0x8 | 4 | Always `5bd085fa` |
 
 ## Version Number
-| Pia version | Monitoring data |
+| Pia | M |
 | --- | --- |
 | 4.9 | 11 |
+| 5.9 | 18 |
 
 ## Monitoring Data Header
 As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
