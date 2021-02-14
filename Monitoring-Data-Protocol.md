@@ -3,7 +3,7 @@
 
 This protocol is used for the P2P monitoring server on the Switch. The messages wrapped in unencrypted [Pia packets](Pia-Protocol) and sent to `g<game server id>-%.p.srv.nintendo.net` through UDP port 34343.
 
-Wii U games send the monitoring data to the NEX server instead, through the [SendReport](https://github.com/kinnay/NintendoClients/wiki/Secure-Protocol#8-sendreport) method of the [secure connection protocol](https://github.com/kinnay/NintendoClients/wiki/Secure-Protocol).
+Wii U games send the monitoring data to the NEX server instead, through the [SendReport](Secure-Protocol#8-sendreport) method of the [secure connection protocol](Secure-Protocol).
 
 The message payload is encoded as follows:
 
@@ -23,6 +23,12 @@ The message payload is encoded as follows:
 | | | AES-GCM authentication tag |
 
 The content of the payload depends on the version number and data type in the monitoring data header.
+
+| Data Type | Payload content |
+| --- | --- |
+| 0 | [Session begin monitoring content](#session-begin-monitoring-content) |
+| 1 | [Session end monitoring data](#session-end-monitoring-data) |
+| 2 | [Session end monitoring data](#session-end-monitoring-data) |
 
 ## AES-GCM Encryption
 The key is chosen based on the lower nybble of the encryption key id in the monitoring data header:
@@ -54,11 +60,15 @@ The nonce is constructed as follows:
 | 0x8 | 4 | Always `5bd085fa` |
 
 ## Monitoring Data Header
+As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
+
+In the first monitoring data header, the payload size indicates the size of the compressed payload. In all other monitoring data headers, the payload size indicates the size of the structure, including the monitoring data header itself.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Version number |
 | 0x1 | 1 | Data type |
-| 0x2 | 1 | Unknown |
+| 0x2 | 1 | Flags |
 | 0x3 | 1 | Always 0xFF |
 | 0x4 | 2 | Payload size |
 
@@ -68,8 +78,18 @@ The nonce is constructed as follows:
 | 0x6 | 10 | Padding (filled with 0xFF) |
 
 *5.7 and later:*
+
+This part is only relevant in the first monitoring data header. In all other monitoring data headers, it is filled with 0xFF.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x6 | 8 | AES-GCM nonce (random number) |
 | 0xE | 1 | Encryption key id (random number) |
 | 0xF | 1 | Always 0xFF |
+
+## Session Begin Monitoring Content
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
+
+## Session End Monitoring Data
