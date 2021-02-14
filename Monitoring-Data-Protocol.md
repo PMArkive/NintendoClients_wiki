@@ -149,7 +149,7 @@ Version 18:
 | Uint32 | Unknown |
 | Uint32 | MD5 hash of pid |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Game server id |
 | Uint8 | [Thread mode](#thread-mode) |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
