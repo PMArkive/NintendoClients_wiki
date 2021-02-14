@@ -118,24 +118,228 @@ All fields are initialized to 0xFF.
 
 Version 18:
 
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | 4 | Pia version |
-| 0x14 | 4 | SDK version |
-| 0x18 | 4 | NEX version |
-| 0x1C | 1 | Unknown |
-| 0x1D | 1 | Unknown |
-| 0x1E | 1 | Unknown |
-| 0x1F | 1 | Unknown |
-| 0x20 | 1 | Unknown |
-| 0x21 | 4 | Unknown |
-| 0x25 | 4 | Unknown |
-| 0x29 | 8 | Unknown |
-| 0x31 | 1 | Unknown |
-| 0x32 | 4 | Unknown |
-| 0x36 | 4 | Unknown |
-| 0x3A | 0x764 | Unknown |
+| Type | Description |
+| --- | --- |
+| [MonitoringDataHeader](#monitoring-data-header) | Monitoring data header |
+| Uint32 | Pia version |
+| Uint32 | SDK version |
+| Uint32 | NEX version |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint64 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint32[75] | Unknown |
+| Uint8[62] | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint16 | Unknown |
+| Uint8[15] | Unknown |
+| Uint32 | Unknown |
+| Uint16 | Unknown |
+| Uint8[67] | Unknown |
+| Uint8[150] | Unknown |
+| Uint8[150] | Unknown |
+| Uint8[32] | Unknown |
+| Uint8[150] | Unknown |
+| Uint8[176] | Unknown |
+| Uint8[300] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
 
 ## Session End Monitoring Data
 | Offset | Size | Description |
