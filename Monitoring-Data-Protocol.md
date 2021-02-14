@@ -126,10 +126,10 @@ Version 18:
 | Uint32 | NEX version |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | Platform id (3=Wii U, 4=Switch) |
 | Uint8 | Language |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Pia heap size |
 | Uint32 | Unknown |
 | Uint64 | Unknown |
 | Uint8 | Unknown |
