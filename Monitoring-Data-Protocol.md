@@ -144,7 +144,7 @@ Version 18:
 | Uint8 | NAT port increment |
 | Uint8 | NAT mode flags |
 | Uint16 | Unknown |
-| Uint16 | Unknown |
+| Uint16 | Time required to look up address of NAT check server (milliseconds) |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | MD5 hash of pid |
