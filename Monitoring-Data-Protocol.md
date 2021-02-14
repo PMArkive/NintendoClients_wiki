@@ -144,7 +144,7 @@ Version 18:
 | Uint8 | NAT port increment |
 | Uint8 | NAT mode flags |
 | Uint16 | Unknown |
-| Uint16 | Time required to look up address of NAT check server (milliseconds) |
+| Uint16 | Time required to resolve address of NAT check server (milliseconds) |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | MD5 hash of pid |
@@ -229,71 +229,13 @@ Version 18:
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint16 | Unknown |
-| Uint32 | Unknown |
+| [NexSessionSearchCriteria](#nexsessionsearchcriteria) | Search criteria 1 |
+| [NexSessionSearchCriteria](#nexsessionsearchcriteria) | Search criteria 2 |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| [NexSessionPlayerSearchCriteria](#nexsessionplayersearchcriteria) | Player search criteria 1 |
+| [NexSessionPlayerSearchCriteria](#nexsessionplayersearchcriteria) | Player search criteria 2 |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
@@ -340,6 +282,45 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Always `PiaM` |
+
+### NexSessionSearchCriteria
+| Type | Description |
+| --- | --- |
+| Uint32 | Game mode |
+| Uint8 | Min participants num range (min) |
+| Uint8 | Min participants num range (max) |
+| Uint8 | Max participants num range (min) |
+| Uint8 | Max participants num range (max) |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Session type |
+| Uint8 | Flags:<br>1: exclude user password set<br>2: exclude non host pid<br>4: opened only<br>8: vacant only |
+| Uint8 | Random session selection method |
+
+### NexSessionPlayerSearchCriteria
+| Type | Description |
+| --- | --- |
+| Uint32 | Rating value |
+| Uint32 | Violation rate |
+| Uint32 | Disconnection rate |
+| Uint8 | Unknown |
+| Uint8 | Use geo ip |
 
 ### Thread Mode
 | Mode | Description |
