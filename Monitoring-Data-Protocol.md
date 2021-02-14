@@ -160,8 +160,8 @@ Version 18:
 | Uint32 | Unknown |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
-| Uint16 | Unknown |
-| Uint16 | Unknown |
+| Uint16 | Relay route rtt max |
+| Uint16 | Relay route num max |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
