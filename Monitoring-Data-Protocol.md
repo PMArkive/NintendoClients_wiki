@@ -60,9 +60,19 @@ The nonce is constructed as follows:
 | 0x8 | 4 | Always `5bd085fa` |
 
 ## Version Number
+Monitoring was added to Pia in version 3.4.
+
 | Pia | M |
 | --- | --- |
+| 3.4 | 1 |
+| 3.5 | 2 |
+| 3.6 | 3 |
+| 3.7 | 4 |
+| 3.8 | 5 |
+| 3.9 | 6 |
+| 3.10 | 7 |
 | 4.9 | 11 |
+| 5.3 | 15 |
 | 5.9 | 18 |
 
 ## Monitoring Data Header
