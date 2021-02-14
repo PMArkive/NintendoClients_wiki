@@ -139,8 +139,8 @@ Version 18:
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | NAT mapping |
+| Uint8 | NAT filtering |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint16 | Unknown |
@@ -208,7 +208,7 @@ Version 18:
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 | Uint16 | Unknown |
-| Uint16 | Unknown |
+| Uint16 | NAT port number |
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
