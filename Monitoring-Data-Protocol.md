@@ -19,12 +19,14 @@ The message payload is encoded as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. The key is chosen based on the lower nybble of encryption key index in the monitoring data header. See [key table](#key-table) below. |
+| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. See [AES-GCM encryption](#aes-gcm-encryption) below. |
 | | | AES-GCM authentication tag |
 
 The content of the payload depends on the version number and data type in the monitoring data header.
 
-## Key Table
+## AES-GCM Encryption
+The key is chosen based on the lower nybble of the encryption key id in the monitoring data header:
+
 ```
  0: c1d494af4a0a956c545d2e41fc1ceb24
  1: caf247fb40aa9655e58c2b02bff89e14
@@ -44,6 +46,13 @@ The content of the payload depends on the version number and data type in the mo
 15: c587a79cbac8a2ddcee27409242a8702
 ```
 
+The nonce is constructed as follows:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Nonce from monitoring data header |
+| 0x8 | 4 | Always `5bd085fa` |
+
 ## Monitoring Data Header
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -61,13 +70,6 @@ The content of the payload depends on the version number and data type in the mo
 *5.7 and later:*
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x6 | 1 | Unknown |
-| 0x7 | 1 | Unknown |
-| 0x8 | 1 | Unknown |
-| 0x9 | 1 | Unknown |
-| 0xA | 1 | Unknown |
-| 0xB | 1 | Unknown |
-| 0xC | 1 | Unknown |
-| 0xD | 1 | Unknown |
-| 0xE | 1 | Encryption key index (chosen randomly) |
+| 0x6 | 8 | AES-GCM nonce |
+| 0xE | 1 | Encryption key id (chosen randomly) |
 | 0xF | 1 | Unknown |
