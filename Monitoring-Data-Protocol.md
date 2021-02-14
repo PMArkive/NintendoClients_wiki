@@ -130,7 +130,7 @@ Version 18:
 | Uint8 | Language |
 | Uint8 | Unknown |
 | Uint32 | Pia heap size |
-| Uint32 | Unknown |
+| Uint32 | Bitmask that describes which [protocols](Pia-Protocols) are created. |
 | Uint64 | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
