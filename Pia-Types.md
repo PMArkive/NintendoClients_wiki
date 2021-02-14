@@ -33,7 +33,7 @@
 | [StationLocation](#stationlocation) | Local station location |
 
 ## StationLocation
-This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#station-url).
+This structure holds fields that are directly taken from a [StationURL](NEX-Common-Types#stationurl).
 
 *Wii U and Switch (up to 5.9):*
 
