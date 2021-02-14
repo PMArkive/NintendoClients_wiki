@@ -31,7 +31,7 @@ The content of the payload depends on the version number and data type in the mo
 | 2 | [Session end monitoring data](#session-end-monitoring-data) |
 
 ## AES-GCM Encryption
-The key is chosen based on the lower nybble of the encryption key id in the monitoring data header:
+The key is chosen by the lower nybble of the encryption key id in the monitoring data header:
 
 ```
  0: c1d494af4a0a956c545d2e41fc1ceb24
@@ -75,8 +75,15 @@ Monitoring was added to Pia in version 3.4.
 | 4.6 | 10 |
 | 4.9 | 11 |
 | 4.10 | 12 |
-| 5.3 | 15 |
-| 5.8 - 5.9 | 18 |
+| 5.2 - 5.4 | 15 |
+| 5.5 | 16 |
+| 5.6 | 17 |
+| 5.7 - 5.9 | 18 |
+| 5.10 - 5.12 | 19 |
+| 5.14 | 20 |
+| 5.17 - 5.19 | 22 |
+| 5.20 | 23 |
+| 5.21 - 5.31 | 24 |
 
 ## Monitoring Data Header
 As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
