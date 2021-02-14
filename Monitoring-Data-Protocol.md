@@ -59,6 +59,11 @@ The nonce is constructed as follows:
 | 0x0 | 8 | Nonce from monitoring data header |
 | 0x8 | 4 | Always `5bd085fa` |
 
+## Version Number
+| Pia version | Monitoring data |
+| --- | --- |
+| 4.9 | 11 |
+
 ## Monitoring Data Header
 As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
 
@@ -66,7 +71,7 @@ In the first monitoring data header, the payload size indicates the size of the 
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Version number |
+| 0x0 | 1 | [Version number](#version-number) |
 | 0x1 | 1 | Data type |
 | 0x2 | 1 | Flags |
 | 0x3 | 1 | Always 0xFF |
@@ -91,5 +96,10 @@ This part is only relevant in the first monitoring data header. In all other mon
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
+| ... | ... | ... |
 
 ## Session End Monitoring Data
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
+| ... | ... | ... |
