@@ -70,6 +70,6 @@ The nonce is constructed as follows:
 *5.7 and later:*
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x6 | 8 | AES-GCM nonce |
-| 0xE | 1 | Encryption key id (chosen randomly) |
-| 0xF | 1 | Unknown |
+| 0x6 | 8 | AES-GCM nonce (random number) |
+| 0xE | 1 | Encryption key id (random number) |
+| 0xF | 1 | Always 0xFF |
