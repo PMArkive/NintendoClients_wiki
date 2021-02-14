@@ -137,20 +137,20 @@ Version 18:
 | Uint32 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | External client address |
+| Uint32 | Local client address |
 | Uint8 | NAT mapping |
 | Uint8 | NAT filtering |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | NAT port increment |
+| Uint8 | NAT mode flags |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
+| Uint32 | MD5 hash of pid |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | [Thread mode](#thread-mode) |
 | Uint16 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
@@ -208,8 +208,8 @@ Version 18:
 | Uint16 | Unknown |
 | Uint8 | Unknown |
 | Uint16 | Unknown |
-| Uint16 | NAT port number |
-| Uint16 | Unknown |
+| Uint16 | External client port |
+| Uint16 | Local client port |
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
@@ -340,6 +340,17 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Always `PiaM` |
+
+### Thread Mode
+| Mode | Name |
+| --- | --- |
+| 0 | ThreadModeUndefined |
+| 1 | ThreadModeSafeTransportBuffer |
+| 2 | ThreadModeUnsafeTransportBuffer |
+| 3 | ThreadModeUnsafeUser |
+| 4 | ThreadModeSafeUser |
+| 5 | ThreadModeInternal |
+| 6 | ThreadModeInternalTransportBuffer |
 
 ## Session End Monitoring Data
 | Offset | Size | Description |
