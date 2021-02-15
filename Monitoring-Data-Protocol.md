@@ -215,7 +215,7 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Joint session gathering id |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
