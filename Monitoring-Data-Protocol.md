@@ -220,7 +220,7 @@ Version 18:
 | Uint32 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | Time required to create or join matchmake session (milliseconds) |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
