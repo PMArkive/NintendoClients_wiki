@@ -236,7 +236,7 @@ Version 18:
 | Uint8 | Unknown |
 | [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 1 |
 | [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 2 |
-| Uint8 | Unknown |
+| Uint8 | Total number of NAT traversal failures |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
@@ -257,7 +257,9 @@ Version 18:
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint32[75] | Unknown |
-| Uint8[62] | Unknown |
+| Uint8[60] | Unknown |
+| Uint8 | Last [result](#nat-traversal-result) of starting NAT traversal |
+| Uint8 | Last [result](#nat-traversal-result) of completing NAT traversal |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
@@ -317,6 +319,13 @@ Version 18:
 | 4 | ThreadModeSafeUser |
 | 5 | ThreadModeInternal |
 | 6 | ThreadModeInternalTransportBuffer |
+
+### NAT Traversal Result
+| Value | Description |
+| --- | --- |
+| 0 | Reliable |
+| 1 | Unreliable |
+| 2 | Failure or very unreliable |
 
 ## Session End Monitoring Data
 | Offset | Size | Description |
