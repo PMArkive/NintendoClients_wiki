@@ -263,7 +263,7 @@ Version 18:
 | Uint16 | Unknown |
 | Uint16 | Unknown |
 | Uint16 | Unknown |
-| Uint16 | Unknown |
+| Uint16 | Time required to resolve address of monitoring server (milliseconds) |
 | Uint16 | Unknown |
 | Uint8[15] | Unknown |
 | Uint32 | NAT relay server address |
