@@ -211,7 +211,7 @@ Version 18:
 | Uint16 | External client port |
 | Uint16 | Local client port |
 | Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint32 | MD5 hash of pid of session host |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
