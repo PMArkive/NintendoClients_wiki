@@ -231,7 +231,7 @@ Version 18:
 | Uint16 | Unknown |
 | [NexSessionSearchCriteria](#nexsessionsearchcriteria) | Search criteria 1 |
 | [NexSessionSearchCriteria](#nexsessionsearchcriteria) | Search criteria 2 |
-| Uint8 | Unknown |
+| Uint8 | Number of session join attempts |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 1 |
