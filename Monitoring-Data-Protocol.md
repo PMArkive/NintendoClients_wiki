@@ -234,8 +234,8 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
-| [NexSessionPlayerSearchCriteria](#nexsessionplayersearchcriteria) | Player search criteria 1 |
-| [NexSessionPlayerSearchCriteria](#nexsessionplayersearchcriteria) | Player search criteria 2 |
+| [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 1 |
+| [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 2 |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
@@ -291,19 +291,14 @@ Version 18:
 | Uint8 | Min participants num range (max) |
 | Uint8 | Max participants num range (min) |
 | Uint8 | Max participants num range (max) |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 (x6) | Attribute array size |
 | Uint32 (x6) | Attribute range min |
 | Uint32 (x6) | Attribute range max |
 | Uint8 | Session type |
 | Uint8 | Flags:<br>1: exclude user password set<br>2: exclude non host pid<br>4: opened only<br>8: vacant only |
 | Uint8 | Random session selection method |
 
-### NexSessionPlayerSearchCriteria
+### NexSessionSearchCriteriaExtra
 | Type | Description |
 | --- | --- |
 | Uint32 | Rating value |
