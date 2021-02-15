@@ -236,12 +236,12 @@ Version 18:
 | Uint8 | Unknown |
 | [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 1 |
 | [NexSessionSearchCriteriaExtra](#nexsessionsearchcriteriaextra) | Extra search criteria 2 |
-| Uint8 | Total number of NAT traversal failures |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
-| Uint8 | Unknown |
+| Uint8 | Number of NAT traversal failures |
+| Uint8 | Number of session join failures because the connection with the host could not be established |
+| Uint8 | Number of session join failures because of an error receiving the join response |
+| Uint8 | Number of session join failures because the session started host migration before a connection was established with all clients |
+| Uint8 | Number of session join failures because the session started host migration before the join was completed |
+| Uint8 | Number of session join failures because the join request was denied |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint8 | Unknown |
