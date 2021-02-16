@@ -84,6 +84,7 @@ Monitoring was added to Pia in version 3.4.
 | 5.17 - 5.19 | 22 |
 | 5.20 | 23 |
 | 5.21 - 5.31 | 24 |
+| 5.32 | 25 |
 
 ## Monitoring Data Header
 As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
