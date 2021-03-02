@@ -1,7 +1,7 @@
 [[Server List]] > OLSC Servers
 ---
 
-### Storage server
+### Storage servers
 | URL |
 | --- |
 | `/api/nx/v1/component_files/<id>/finish_upload` |
