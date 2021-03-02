@@ -1,21 +1,3 @@
-## Wii U
-| Server | Description |
-| --- | --- |
-| - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
-| - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>- mii-images.cdn.nintendo.net<br>- game-dev-mii-images.cdn.nintendo.net<br>- system-dev-mii-images.cdn.nintendo.net<br>- library-dev-mii-images.cdn.nintendo.net<br>- staging-mii-images.cdn.nintendo.net | Mii images |
-| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | [NAT check server](NAT-Check-Server) |
-| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
-| - discovery.olv.nintendo.net | Miiverse |
-| - tagaya.wup.shop.nintendo.net | [Title version list](Tagaya-Server) |
-| - ninja.wup.shop.nintendo.net | [eShop api](Ninja-Server)
-| - geisha-wup.cdn.nintendo.net | eShop website |
-| - cas.wup.shop.nintendo.net<br>- ecs.wup.shop.nintendo.net<br>- ias.wup.shop.nintendo.net<br>- nus.wup.shop.nintendo.net | [eShop services](SOAP-Services) |
-| - ccs.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- ccs.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net<br>- samurai.wup.shop.nintendo.net<br>- samurai-wup.cdn.nintendo.net<br>- kanzashi-wup.cdn.nintendo.net<br>- kanzashi-movie-wup.cdn.nintendo.net<br>- samuraicdndev1-wup.cdn.nintendo.net<br>- geishacdndev1-wup.cdn.nintendo.net<br>- gw.sgks.shop.nintendo.net | eShop |
-| - npns-dev.c.app.nintendowifi.net<br>- npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net<br>- nppl.app.nintendo.net | BOSS |
-| - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | [Icon data](IDBE-Server) |
-| - m1.nintendo.net | [VC Manuals](VC-Manual-Server) |
-| - nintendojp.d1.sc.omtrdc.net<br>- wiiu-ssl-static.ubi.com | |
-
 ## Switch
 Replace '%' by one of the following:
 
@@ -46,6 +28,8 @@ Replace '%' by one of the following:
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - d7d-&lt;server name&gt;.g.%.e.srv.nintendo.net | [Eagle (relay servers)](Eagle-Protocol) |
 | - t-&lt;game id&gt;-%.%.t.npln.srv.nintendo.net | [gRPC services](NPLN-Servers) |
+| - storage.%.scsi.srv.nintendo.net | Online save storage |
+| - storage.%.sata.srv.nintendo.net<br>permission.%.sata.srv.nintendo.net | [Save data repairing](SATA-Servers) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net | E-Shop |
 | - api-%.frs.srv.nintendo.net | Friends |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
@@ -59,9 +43,26 @@ Replace '%' by one of the following:
 | - api.sect.srv.nintendo.net | |
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
 | - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net | |
-| - storage.%.scsi.srv.nintendo.net | |
 | - capi.%.op2.nintendo.net | |
 | - app.%.five.nintendo.net | |
+
+## Wii U
+| Server | Description |
+| --- | --- |
+| - account.nintendo.net<br>- game-dev.account.nintendo.net<br>- system-dev.account.nintendo.net<br>- library-dev.account.nintendo.net<br>- staging.account.nintendo.net | [[Account server]] |
+| - mii-secure.account.nintendo.net<br>- mii-secure.cdn.nintendo.net<br>- mii-images.cdn.nintendo.net<br>- game-dev-mii-images.cdn.nintendo.net<br>- system-dev-mii-images.cdn.nintendo.net<br>- library-dev-mii-images.cdn.nintendo.net<br>- staging-mii-images.cdn.nintendo.net | Mii images |
+| - nncs1.app.nintendowifi.net<br>- nncs2.app.nintendowifi.net | [NAT check server](NAT-Check-Server) |
+| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
+| - discovery.olv.nintendo.net | Miiverse |
+| - tagaya.wup.shop.nintendo.net | [Title version list](Tagaya-Server) |
+| - ninja.wup.shop.nintendo.net | [eShop api](Ninja-Server)
+| - geisha-wup.cdn.nintendo.net | eShop website |
+| - cas.wup.shop.nintendo.net<br>- ecs.wup.shop.nintendo.net<br>- ias.wup.shop.nintendo.net<br>- nus.wup.shop.nintendo.net | [eShop services](SOAP-Services) |
+| - ccs.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- ccs.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net<br>- samurai.wup.shop.nintendo.net<br>- samurai-wup.cdn.nintendo.net<br>- kanzashi-wup.cdn.nintendo.net<br>- kanzashi-movie-wup.cdn.nintendo.net<br>- samuraicdndev1-wup.cdn.nintendo.net<br>- geishacdndev1-wup.cdn.nintendo.net<br>- gw.sgks.shop.nintendo.net | eShop |
+| - npns-dev.c.app.nintendowifi.net<br>- npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net<br>- nppl.app.nintendo.net | BOSS |
+| - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | [Icon data](IDBE-Server) |
+| - m1.nintendo.net | [VC Manuals](VC-Manual-Server) |
+| - nintendojp.d1.sc.omtrdc.net<br>- wiiu-ssl-static.ubi.com | |
 
 ## Other
 | Server | Description |
