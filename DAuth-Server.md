@@ -76,9 +76,10 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 ### Known Client IDs
 | Client ID | Description |
 | --- | --- |
-| `146c8ac7b8a0db52` | ? |
+| `146c8ac7b8a0db52` | SCSI storage |
 | `41f4a6491028e3c4` | Pushmo and Tagaya |
 | `67bf9945b45248c6` | BCAT |
+| `6ac5a6873fe5f68c` | SATA storage |
 | `81333c548b2e876d` | [Account server](Account-Server-(Switch)) |
 | `83b72b05dc3278d7` | NPNS |
 | `8f849b5d34778d8e` | [AAuth](AAuth-Server) and [BaaS](BAAS-Server) |
