@@ -19,6 +19,13 @@ This server takes form-encoded requests and responds with json-encoding.
 | --- | --- |
 | GET | `/2.0.0/users/me` |
 
+**c-lp1.accounts.nintendo.com:**
+
+| Method | URL |
+| --- | --- |
+| GET | `/v1/apps/<id>/catalog.json` |
+| GET | `/v1/apps/<id>/nx.jpg` |
+
 ## Errors
 On error, the server sends the following response:
 
