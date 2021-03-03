@@ -44,7 +44,7 @@ Replace '%' by one of the following:
 | - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net | |
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
 | - app.%.five.nintendo.net | |
-| - idbe-hac.cdn.nintendo.net | [Icon Data](IDBE-Server) |
+| - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
 
 ## Wii U
 | Server | Description |
