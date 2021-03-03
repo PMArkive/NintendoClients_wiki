@@ -43,7 +43,7 @@ Replace '%' by one of the following:
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
 | - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net | |
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
-| - app.%.five.nintendo.net | |
+| - app.%.five.nintendo.net | [Invitations](Invitation-Server) |
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
 
 ## Wii U
