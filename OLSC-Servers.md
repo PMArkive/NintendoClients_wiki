@@ -35,3 +35,11 @@
 | --- |
 | `/api/nx/v1/application_policy/<id>/<id>` |
 | `/api/nx/v1/save_data_migration_policy/<id>/<id>` |
+
+### SCSI migration server
+| URL |
+| --- |
+| `/api/nx/v1/save_data_migrations/gen_key` |
+| `/api/nx/v1/save_data_migrations/get_key` |
+| `/api/nx/v1/account_migrations/gen_key` |
+| `/api/nx/v1/account_migrations/get_key` |
