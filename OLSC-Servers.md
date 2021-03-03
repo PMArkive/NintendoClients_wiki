@@ -34,3 +34,4 @@
 | URL |
 | --- |
 | `/api/nx/v1/application_policy/<id>/<id>` |
+| `/api/nx/v1/save_data_migration_policy/<id>/<id>` |
