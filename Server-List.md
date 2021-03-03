@@ -33,7 +33,7 @@ Replace '%' by one of the following:
 | - api-%.frs.srv.nintendo.net | Friends |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
 | - aqua.hac.%.d4c.nintendo.net<br>- sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net |
-| - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | |
+| - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | [Telemetry](Telemetry-Servers) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | [News](BCAT-Servers) |
 | - Service-status-%.cdn.nintendo.net | Game server availability |
 | - api-%.pctl.srv.nintendo.net | Parental control |
