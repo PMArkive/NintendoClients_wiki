@@ -27,6 +27,7 @@ This server takes form-encoded requests and responds with json-encoding. Also, t
 ## Methods
 | Method | URL |
 | --- | --- |
+| GET | `/v1/time` |
 | POST | <code><a href="#post-v3challenge">/v3/challenge</a></code> |
 | POST | <code><a href="#post-v3application_auth_token">/v3/application_auth_token</a></code> |
 
