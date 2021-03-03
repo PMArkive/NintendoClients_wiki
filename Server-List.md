@@ -46,6 +46,7 @@ Replace '%' by one of the following:
 | - app.%.five.nintendo.net | [Invitations](Invitation-Server) |
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
 | - %.nso.nintendo.net | NSO applet |
+| - mii-secure-%.cdn.nintendo.net | Mii images |
 
 ## Wii U
 | Server | Description |
