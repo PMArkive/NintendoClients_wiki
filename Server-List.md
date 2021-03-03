@@ -24,7 +24,7 @@ Replace '%' by one of the following:
 | - g&lt;game server id&gt;-%.r.n.srv.nintendo.net | P2P relay |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | [P2P monitoring](Monitoring-Data-Protocol) |
 | - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check server](NAT-Check-Server) |
-| - api-%.znc.srv.nintendo.net | Coral (voice chat) |
+| - api-%.znc.srv.nintendo.net<br>- web-%.znc.srv.ninendo.net | Coral (voice chat) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - d7d-&lt;server name&gt;.g.%.e.srv.nintendo.net | [Eagle (relay servers)](Eagle-Protocol) |
 | - t-&lt;game id&gt;-%.%.t.npln.srv.nintendo.net | [gRPC services](NPLN-Servers) |
@@ -45,6 +45,7 @@ Replace '%' by one of the following:
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
 | - app.%.five.nintendo.net | [Invitations](Invitation-Server) |
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
+| - %.nso.nintendo.net | NSO applet |
 
 ## Wii U
 | Server | Description |
