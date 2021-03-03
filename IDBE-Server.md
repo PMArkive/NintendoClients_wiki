@@ -1,11 +1,12 @@
 ## [[Server List]] > IDBE Server
 
-This server provides icon data for Wii U and 3DS titles.
+This server provides icon data for 3DS, Wii U and Switch titles.
 
 | Platform | Server |
 | --- | --- |
 | 3DS | https://idbe-ctr.cdn.nintendo.net |
 | Wii U | https://idbe-wup.cdn.nintendo.net |
+| Switch | https://idbe-hac.cdn.nintendo.net |
 
 An icon file can be retrieved by sending a GET request to one of the following URLs:
 
