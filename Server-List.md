@@ -28,7 +28,7 @@ Replace '%' by one of the following:
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - d7d-&lt;server name&gt;.g.%.e.srv.nintendo.net | [Eagle (relay servers)](Eagle-Protocol) |
 | - t-&lt;game id&gt;-%.%.t.npln.srv.nintendo.net | [gRPC services](NPLN-Servers) |
-| - storage.%.scsi.srv.nintendo.net<br>- migration.%.scsi.srv.nintendo.net<br>- storage.%.sata.srv.nintendo.net<br>- permission.%.sata.srv.nintendo.net<br>- scsi-policy-%.cdn.nintendo.net | [Online save storage](OLSC-Servers) |
+| - storage.%.scsi.srv.nintendo.net<br>- migration.%.scsi.srv.nintendo.net<br>- storage.%.sata.srv.nintendo.net<br>- permission.%.sata.srv.nintendo.net<br>- pp.%.sata.srv.nintendo.net<br>- scsi-policy-%.cdn.nintendo.net | [Online save storage](OLSC-Servers) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net | [eShop services](REST-Services) |
 | - bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net | eShop applet |
 | - api-%.frs.srv.nintendo.net | [Friends](Friends-API) |
