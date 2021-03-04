@@ -1,5 +1,7 @@
-[[Server List]] > OLSC Servers
+[[Server List]] > Online Save Storage
 ---
+
+The SCSI servers are for account migration. The SATA servers are for repairing save data.
 
 ### Storage servers
 | URL |
@@ -40,13 +42,28 @@
 | `/api/nx/v2/save_data_archives/start_upload` |
 
 ### SATA permission server
-
 | URL |
 | --- |
 | `/api/nx/v1/customer_operations` |
 | `/api/nx/v1/customer_operations/update_action_completed` |
 | `/api/nx/v1/save_data_sets` |
 | `/api/nx/v1/save_data_sets/generate_key_package` |
+
+### SATA privacy policy
+| URL |
+| --- |
+| `/noa/en_US.html` |
+| `/noa/es_LA.html` |
+| `/noa/fr_CA.html` |
+| `/noa/pt_BR.html` |
+| `/noe/de_DE.html` |
+| `/noe/en_GB.html` |
+| `/noe/es_ES.html` |
+| `/noe/fr_FR.html` |
+| `/noe/it_IT.html` |
+| `/noe/nl_NL.html` |
+| `/noe/pt_PT.html` |
+| `/noe/ru_RU.html` |
 
 ### SCSI policy server
 
