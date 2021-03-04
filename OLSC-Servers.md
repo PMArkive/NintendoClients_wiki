@@ -19,6 +19,22 @@
 | `/api/nx/v1/save_data_archives/<id>/start_download` |
 | `/api/nx/v1/save_data_archives/<id>/start_upload` |
 | `/api/nx/v1/save_data_archives/start_upload` |
+| `/api/nx/v2/component_files/<id>/finish_upload` |
+| `/api/nx/v2/component_files/<id>/signed_uri` |
+| `/api/nx/v2/component_files/<id>/update` |
+| `/api/nx/v2/network_service_accounts/<id>/notification_tokens` |
+| `/api/nx/v2/permissions` |
+| `/api/nx/v2/save_data_archives/` |
+| `/api/nx/v2/save_data_archives/<id>` |
+| `/api/nx/v2/save_data_archives/<id>/component_files/create` |
+| `/api/nx/v2/save_data_archives/<id>/delete` |
+| `/api/nx/v2/save_data_archives/<id>/extend_upload_timeout` |
+| `/api/nx/v2/save_data_archives/<id>/finish_download` |
+| `/api/nx/v2/save_data_archives/<id>/finish_upload` |
+| `/api/nx/v2/save_data_archives/<id>/generate_key_seed_package` |
+| `/api/nx/v2/save_data_archives/<id>/start_download` |
+| `/api/nx/v2/save_data_archives/<id>/start_upload` |
+| `/api/nx/v2/save_data_archives/start_upload` |
 
 ### SATA permission server
 
