@@ -1,5 +1,7 @@
-[[Server List]] > Parental Control
+[[Server List]] > Parental Controls
 ---
+
+The API is provided at: https://api-lp1.pctl.srv.nintendo.net
 
 | URL |
 | --- |
@@ -11,6 +13,12 @@
 | `/moon/v1/devices/<id>/parental_control_setting` |
 | `/moon/v1/devices/<id>/parental_control_setting/whitelisted_applications` |
 | `/moon/v1/devices/<id>/players/<id>` |
+
+The movies are provided at: https://parentalcontrols-movie-lp1.cdn.nintendo.net
+
+| URL |
+| --- |
+| `/default/switchpc_en.mp4` |
 
 ## Errors
 | Error |
