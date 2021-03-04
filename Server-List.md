@@ -34,6 +34,7 @@ Replace '%' by one of the following:
 | - api-%.frs.srv.nintendo.net | [Friends](Friends-API) |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | Push notifications |
 | - aqua.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net<br>- atumn.hac.%.d4c.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- pearljam.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net<br> - sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net | [Title installation](NIM-Servers) |
+| - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net<br>- tigers.hac.%.dragons.nintendo.net | [Title tickets](Dragons-Servers) |
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | [Telemetry](Telemetry-Servers) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | [News](BCAT-Servers) |
 | - Service-status-%.cdn.nintendo.net | [Game server availability](Service-Status-Server) |
@@ -42,7 +43,6 @@ Replace '%' by one of the following:
 | - web-%.share.srv.nintendo.net | |
 | - api.sect.srv.nintendo.net | |
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
-| - dragons.hac.%.dragons.nintendo.net<br>- dragonst.hac.%.dragons.nintendo.net | |
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
 | - app.%.five.nintendo.net | [Invitations](Invitation-Server) |
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
