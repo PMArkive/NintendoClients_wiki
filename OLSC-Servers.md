@@ -19,6 +19,9 @@
 | `/api/nx/v1/save_data_archives/<id>/start_download` |
 | `/api/nx/v1/save_data_archives/<id>/start_upload` |
 | `/api/nx/v1/save_data_archives/start_upload` |
+
+| URL |
+| --- |
 | `/api/nx/v2/component_files/<id>/finish_upload` |
 | `/api/nx/v2/component_files/<id>/signed_uri` |
 | `/api/nx/v2/component_files/<id>/update` |
