@@ -38,7 +38,7 @@ Replace '%' by one of the following:
 | - receive-%.dg.srv.nintendo.net<br>- receive-%.er.srv.nintendo.net | [Telemetry](Telemetry-Servers) |
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | [News](BCAT-Servers) |
 | - Service-status-%.cdn.nintendo.net | [Game server availability](Service-Status-Server) |
-| - api-%.pctl.srv.nintendo.net | [Parental control](Moon-Server) |
+| - api-%.pctl.srv.nintendo.net<br>- parentalcontrols-movie-%.cdn.nintendo.net | [Parental controls](Parental-Controls) |
 | - e03a97819c9711e59510d820a52f298a-sb.accounts.nintendo.com | |
 | - web-%.share.srv.nintendo.net | |
 | - api.sect.srv.nintendo.net | |
