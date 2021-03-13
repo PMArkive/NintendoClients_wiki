@@ -15,7 +15,7 @@ Known servers:
 | Monster Hunter Rise Demo | `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)` |
 
 
-| Game | SDK Version |
-| --- | --- |
-| Monster Hunter Rise Demo (v0) | `0.20.4` |
-| Monster Hunter Rise Demo (v2) | `0.20.7` |
+| Game | Ver | SDK Version |
+| --- | --- | --- |
+| Monster Hunter Rise Demo | v0 | `0.20.4` |
+| Monster Hunter Rise Demo | v2 | `0.20.7` |
