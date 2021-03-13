@@ -17,4 +17,5 @@ Known servers:
 
 | Game | SDK Version |
 | --- | --- |
-| Monster Hunter Rise Demo | `0.20.4` |
+| Monster Hunter Rise Demo (v0) | `0.20.4` |
+| Monster Hunter Rise Demo (v2) | `0.20.7` |
