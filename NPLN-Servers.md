@@ -8,6 +8,7 @@ Known servers:
 
 | Game | Server ID |
 | --- | --- |
+| Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
 
 | Game | User Agent |
@@ -17,5 +18,7 @@ Known servers:
 
 | Game | Ver | SDK Version |
 | --- | --- | --- |
+| Monster Hunter Rise | v0 | `0.20.4` |
+| Monster Hunter Rise | v2 | `0.21.10` |
 | Monster Hunter Rise Demo | v0 | `0.20.4` |
 | Monster Hunter Rise Demo | v2 | `0.20.7` |
