@@ -14,7 +14,7 @@ Replace '%' by one of the following:
 
 | Server | Description |
 | --- | --- |
-| - ctest.cdn.nintendo.net | Connection test |
+| - ctest.cdn.nintendo.net | [Connection test](Connection-Test) |
 | - dauth-%.ndas.srv.nintendo.net | [Device authentication](DAuth-Server) |
 | - aauth-%.ndas.srv.nintendo.net | [Application authentication](AAuth-Server) |
 | - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
