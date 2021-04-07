@@ -39,6 +39,7 @@ The real server always uses the following URL: `wss://<server name>.g.<server en
 | --- | --- | --- |
 | Tetris 99 | `d7d-arzn` | `EA3nJiq9BKyoxmBjJ2TkfzcRHwQe88FJ` |
 | Super Mario Bros. 35 | `d7d-ayam` | `EGrCObHITxTtIa3O1A01uw2WHSEypGYb` |
+| PAC-MAN 99 | `d7d-ayqv` | `EGrCObHITxTtIa3O1A01uw2WHSEypGYb` |
 
 Example: `wss://d7d-arzn.g.lp1.e.srv.nintendo.net:443/EA3nJiq9BKyoxmBjJ2TkfzcRHwQe88FJ/ess-d7d-btb4mnggg9q5k2kdqb8g`
 
