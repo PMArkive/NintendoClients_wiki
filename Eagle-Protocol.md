@@ -211,8 +211,10 @@ The eagle library was rewritten almost completely between Tetris 99 and Super Ma
 | --- | --- | --- |
 | Tetris 99 | 9 | 128 |
 | Super Mario Bros 35 | 11 | 1024 |
+| PAC-MAN 99 | 11 | 1024 |
 
 | Game | Version string | P |
 | --- | --- | --- |
 | Tetris 99 | release/1.2.14 | 2 |
 | Super Mario Bros 35 | 2.0.4 | 3 |
+| PAC-MAN 99 | 2.0.4 | 3 |
