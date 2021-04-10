@@ -162,19 +162,19 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 
 # (6) ValidateAndRequestTicketWithParam
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [ValidateAndRequestTicketParam](#validateandrequestticketparam-structure) | Param |
+| [ValidateAndRequestTicketParam](#validateandrequestticketparam-structure) | param |
 
 ### ValidateAndRequestTicketParam ([Structure])
-| Type | Description |
-| --- | --- |
-| Uint32 | Platform type (always 3) |
-| [String] | Username |
-| [Any] | [NullData](#nulldata-structure) or [AuthenticationInfo](#authenticationinfo-structure) |
-| Bool | Unknown |
-| Uint32 | NEX version (e.g. 40601) |
-| Uint32 | Client version |
+| Type | Name | Description |
+| --- | --- | --- |
+| Uint32 | platformType | Always 3 |
+| [String] | userName | Username (your pid) |
+| [Any] | extraData | [NullData](#nulldata-structure) or [AuthenticationInfo](#authenticationinfo-structure) |
+| Bool | ignoreApiVersionCheck | |
+| Uint32 | apiVersionGeneral | NEX version (e.g. 40601) |
+| Uint32 | apiVersionCustom | Client version |
 
 ### NullData ([Structure])
 | This structure inherits from [Data] |
@@ -183,19 +183,19 @@ This is the reverse of the [GetPID](#4-getpid) method. It returns the name assoc
 This struct does not have any fields.
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
 | [ValidateAndRequestTicketResult](#validateandrequestticketparam-structure) | result |
 
 ### ValidateAndRequestTicketResult ([Structure])
-| Type | Description |
-| --- | --- |
-| [PID] | User id |
-| [Buffer] | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
-| [StationURL] | Secure server location |
-| [DateTime] | Server time |
-| [String] | Server build name |
-| [String] | Kerberos key. If present, key derivation is skipped and this key is used to decrypt the ticket instead. |
+| Type | Name | Description |
+| --- | --- | --- |
+| [PID] | sourcePid | User id |
+| [Buffer] | bufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [StationURL] | serviceNodeUrl | Secure server location |
+| [DateTime] | currentUtcTime | Server time |
+| [String] | returnMsg | Server build name |
+| [String] | sourceKey | Kerberos key. If present, key derivation is skipped and this key is used to decrypt the ticket instead. |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
