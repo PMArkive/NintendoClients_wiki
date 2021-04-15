@@ -12,12 +12,17 @@ This server takes form-encoded requests and responds with json-encoding.
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only present in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
 
 #### User Agents
+The user agents below are taken from the account sysmodule. If the request is made by the friends sysmodule replace `nnAccount` by `nnFriends`.
+
 | System Version | User agent |
 | --- | --- |
 | 9.0.0 - 9.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
 | 10.0.0 - 10.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 10.4.0.0; Add-on 10.4.0.0)` |
 | 11.0.0 - 11.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 11.4.0.0; Add-on 11.4.0.0)` |
 | 12.0.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 12.3.0.0; Add-on 12.3.0.0)`
+
+#### User Agents (friends)
+libcurl (nnFriends; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 11
 
 ## Methods
 | Method | URL |
