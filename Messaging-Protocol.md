@@ -9,6 +9,7 @@
 | 5 | [RetrieveMessages](#5-retrievemessages) |
 | 6 | [DeleteMessages](#6-deletemessages) |
 | 7 | [DeleteAllMessages](#7-deleteallmessages) |
+| 8 | DeliverMessageMultiTarget |
 
 # (1) DeliverMessage
 ## Request
