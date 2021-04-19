@@ -1,6 +1,6 @@
 ## [[NEX Protocols]] > Message Delivery (27)
 
-For message types, see [[Messaging Protocol]].
+For message types, see [Messaging Protocol](Messaging-Protocol#types).
 
 | Method ID | Method Name |
 | --- | --- |
