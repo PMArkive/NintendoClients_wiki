@@ -146,13 +146,13 @@ No payload.
 ### Ping
 | Bits | Description |
 | --- | --- |
-| 64 | Unknown |
+| 64 | Client time (milliseconds) |
 
 ### Pong
 | Bits | Description |
 | --- | --- |
-| 64 | Unknown |
-| 64 | Unknown |
+| 64 | Server time (milliseconds) |
+| 64 | Client time (milliseconds) |
 
 ### Prof Request
 No payload.
