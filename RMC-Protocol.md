@@ -30,3 +30,12 @@ This is a simple remote method call protocol that lies on top of the [[PRUDP pro
 | --- | --- | --- |
 | 0x6 | 4 | Error code, see [errors.py](https://github.com/Kinnay/NintendoClients/blob/master/nintendo/nex/errors.py) |
 | 0xA | 4 | Call id |
+
+## Remarks
+The following services never send an RMC response, even if an error occurred:
+
+* [[Notification Protocol]]
+* [[Nintendo Notification Event Protocol]]
+* [[Message Delivery Protocol]]
+
+Other services always send an RMC response.
