@@ -1,13 +1,18 @@
 [[Server List]] > Eagle (relay servers)
 ---
 
-Unlike most multiplayer games, Tetris 99 and Super Mario Bros. 35 use a relay server instead of [Pia](PIA-Overview), which is called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](#notification-event) to the clients, which contains the url of the eagle server and a token.
+Unlike most multiplayer games, a handful of games uses a relay server instead of [Pia](Pia-Overview), which is called eagle. Match making is still done with [NEX](NEX-Overview-(Game-Servers)), but when the session is ready, the server sends a [notification event](#notification-event) to the clients, which contains the url of the eagle server and a token.
 
 * [Notification Event](#notification-event)
 * [Server URL](#server-url)
 * [Token Format](#token-format)
 * [Packet Format](#packet-format)
 * [Protocol Description](#protocol-description)
+
+The following games use libeagle:
+* Tetris 99
+* Super Mario Bros. 35
+* PAC-MAN 99
 
 ## Notification Event
 When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a container that runs the eagle server. When the eagle server is ready, the NEX server sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
