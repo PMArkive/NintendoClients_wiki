@@ -1,6 +1,8 @@
 ## [[NEX Protocols]] > Nintendo Notifications (100)
 
-Method 2 is only implemented by the friend server and client. There is no known difference between them, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
+This protocol is used by the 3DS / Wii U friend server for notifications about friends.
+
+There is no known difference between the two methods, except that the server sends some events through method 1 and others through method 2. The client treats them exactly the same.
 
 | Method ID | Method Name |
 | --- | --- |
