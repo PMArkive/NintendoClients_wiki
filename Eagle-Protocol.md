@@ -204,7 +204,7 @@ The eagle protocol is surprisingly simple. After the client has received the not
 
 Now, the client and server start exchanging RPC packets. If the client sends an RPC packet to the server, the server simply forwards it to the nodes that are specified in the packet header.
 
-The client may also call RPC functions on the server itself. In that case, it sends an RPC packet to node id 0.
+If node is 0 is specified in the packet header, the server also processes the RPC packet itself.
 
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
