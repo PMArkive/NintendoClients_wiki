@@ -16,7 +16,7 @@ There is no known difference between the two methods, except that the server sen
 | [NintendoNotificationEvent](#nintendonotificationevent-structure) | Event object |
 
 ## Response
-This method does not return anything.
+No RMC response is sent.
 
 # Types
 ## NintendoNotificationEvent ([Structure])
