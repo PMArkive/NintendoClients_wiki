@@ -196,13 +196,15 @@ No payload.
 ## Protocol Description
 The eagle protocol is surprisingly simple. After the client has received the notification event from the NEX server, the following happens:
 1. The client establishes a connection with the eagle server.
-2. The server sends an Accepted packet to the client.
-3. The client sends a Login Request packet to the server for login phase 0.
-4. The client sends one or more Login Request packets to the server for login phase 1.
-5. The server sends a Login Result packet to the client.
-6. The client sends a Client Ready packet to the server.
+2. The server assigns a node id to the client and sends an [Accepted](#accepted) packet to the client.
+3. The client sends a [Login Request](#login-request) packet to the server for login phase 0.
+4. The client sends one or more [Login Request](#login-request) packets to the server for login phase 1.
+5. The server sends a [Login Result](#login-result) packet to the client.
+6. The client sends a [Client Ready](#client-ready) packet to the server.
 
 Now, the client and server start exchanging RPC packets. If the client sends an RPC packet to the server, the server simply forwards it to the nodes that are specified in the packet header.
+
+The client may also call RPC functions on the server itself. In that case, it sends an RPC packet to node id 0.
 
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
