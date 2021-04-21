@@ -33,7 +33,7 @@
 | [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
 ## Response
-This method does not return anything.
+No RMC response is sent.
 
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
