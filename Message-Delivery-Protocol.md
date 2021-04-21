@@ -13,6 +13,6 @@ For message types, see [Messaging Protocol](Messaging-Protocol#types).
 | [Data] | oUserMessage |
 
 ## Response
-This method does not return anything.
+No RMC response is sent.
 
 [Data]: NEX-Common-Types#anydataholder
