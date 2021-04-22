@@ -1,18 +1,8 @@
-[Eagle Servers](Eagle-Protocol) > PAC-MAN 99
+[Eagle Servers](Eagle-Protocol) > [RPC](Eagle-RPC) > PAC-MAN 99
 ---
 
 | RPC | Name |
 | --- | --- |
-| 16 | ? |
-| 17 | ? |
-| 18 | ? |
-| 19 | ? |
-| 20 | ? |
-| 21 | ? |
-| 22 | ? |
-| 23 | ? |
-| 24 | ? |
-| 25 | ? |
 | 26 | ? |
 | 27 | ? |
 | 28 | ? |
