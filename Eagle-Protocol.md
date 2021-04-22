@@ -12,7 +12,7 @@ Unlike most multiplayer games, a handful of games uses a relay server instead of
 The following games use libeagle:
 * [Tetris 99](Eagle-RPC-(Tetris-99))
 * [Super Mario Bros. 35](Eagle-RPC-(SMB35))
-* PAC-MAN 99
+* [PAC-MAN 99](Eagle-RPC-(PAC-MAN-99))
 
 ## Notification Event
 When a [matchmake session](Matchmake-Extension-Protocol) is created, the server spawns a container that runs the eagle server. When the eagle server is ready, the NEX server sends a [notification event](Notification-Protocol) to everyone in the matchmake session. The notification event has the following fields set:
