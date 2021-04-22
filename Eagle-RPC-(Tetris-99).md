@@ -18,3 +18,12 @@
 | 28 | ? |
 | 29 | ? |
 | 30 | ? |
+| 31 | ? |
+| 32 | ? |
+| 33 | FixBlock |
+| 34 | ChangeTarget |
+| 35 | SendAttack |
+| 36 | Dead |
+| 37 | Rising |
+| 38 | Profile |
+| 39 | Like |
