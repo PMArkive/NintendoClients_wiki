@@ -6,7 +6,7 @@
 | 16 | [NotifyServerCounter](#16-notifyservercounter) |
 | 17 | ? |
 | 18 | ? |
-| 19 | [?](#19-unknown) |
+| 19 | [IncreaseServerCounter](#19-increaseservercounter) |
 | 20 | ? |
 | 21 | ? |
 | 22 | ? |
@@ -36,11 +36,11 @@
 | 64 | Value |
 | 16 | Unknown |
 
-# (19) Unknown
+# (19) IncreaseServerCounter
 | Bits | Description |
 | --- | --- |
-| 8 | Unknown |
-| 64 | Unknown |
+| 8 | Counter index |
+| 64 | Value |
 | 1 | Unknown |
 
 # (32) ChangeTarget
