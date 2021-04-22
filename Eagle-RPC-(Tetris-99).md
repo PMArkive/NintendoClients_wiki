@@ -1,18 +1,8 @@
-[Eagle Servers](Eagle-Protocol) > Tetris 99
+[Eagle Servers](Eagle-Protocol) > [RPC](Eagle-RPC) > Tetris 99
 ---
 
 | RPC | Name |
 | --- | --- |
-| 16 | NotifyServerCounter |
-| 17 | ? |
-| 18 | ? |
-| 19 | ? |
-| 20 | ? |
-| 21 | ? |
-| 22 | ? |
-| 23 | ? |
-| 24 | ? |
-| 25 | ? |
 | 26 | JoinMatch |
 | 27 | AcceptMatch |
 | 28 | RefuseMatch |
