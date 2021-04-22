@@ -3,7 +3,7 @@
 
 | RPC | Name |
 | --- | --- |
-| 16 | [?](#16-unknown) |
+| 16 | [NotifyServerCounter](#16-notifyservercounter) |
 | 17 | ? |
 | 18 | ? |
 | 19 | [?](#19-unknown) |
@@ -29,11 +29,11 @@
 | 39 | Feat |
 | 40 | ChangeWatch |
 
-# (16) Unknown
+# (16) NotifyServerCounter
 | Bits | Description |
 | --- | --- |
-| 8 | Unknown |
-| 64 | Unknown |
+| 8 | Counter index |
+| 64 | Value |
 | 16 | Unknown |
 
 # (19) Unknown
