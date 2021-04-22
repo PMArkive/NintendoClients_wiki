@@ -6,7 +6,7 @@
 | 16 | [?](#16-unknown) |
 | 17 | ? |
 | 18 | ? |
-| 19 | ? |
+| 19 | [?](#19-unknown) |
 | 20 | ? |
 | 21 | ? |
 | 22 | ? |
@@ -35,6 +35,13 @@
 | 8 | Unknown |
 | 64 | Unknown |
 | 16 | Unknown |
+
+# (19) Unknown
+| Bits | Description |
+| --- | --- |
+| 8 | Unknown |
+| 64 | Unknown |
+| 1 | Unknown |
 
 # (32) ChangeTarget
 | Bits | Description |
