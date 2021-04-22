@@ -10,7 +10,7 @@ Unlike most multiplayer games, a handful of games uses a relay server instead of
 * [Protocol Description](#protocol-description)
 
 The following games use libeagle:
-* Tetris 99
+* [Tetris 99](Eagle-RPC-(Tetris-99))
 * [Super Mario Bros. 35](Eagle-RPC-(SMB35))
 * PAC-MAN 99
 
