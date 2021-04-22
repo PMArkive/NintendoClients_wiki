@@ -4,8 +4,8 @@
 | RPC | Name |
 | --- | --- |
 | 16 | [NotifyServerCounter](#16-notifyservercounter) |
-| 17 | ? |
-| 18 | ? |
+| 17 | [SetServerCounter](#17-setservercounter) |
+| 18 | [GetServerCounter](#18-getservercounter) |
 | 19 | [IncreaseServerCounter](#19-increaseservercounter) |
 | 20 | ? |
 | 21 | ? |
@@ -35,6 +35,18 @@
 | 8 | Counter index |
 | 64 | Value |
 | 16 | Unknown |
+
+# (17) SetServerCounter
+| Bits | Description |
+| --- | --- |
+| 8 | Counter index |
+| 64 | Value |
+| 1 | Unknown |
+
+# (18) GetServerCounter
+| Bits | Description |
+| --- | --- |
+| 8 | Counter index |
 
 # (19) IncreaseServerCounter
 | Bits | Description |
