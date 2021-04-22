@@ -3,7 +3,7 @@
 
 | RPC | Name |
 | --- | --- |
-| 16 | ? |
+| 16 | [?](#16-?) |
 | 17 | ? |
 | 18 | ? |
 | 19 | ? |
@@ -28,3 +28,10 @@
 | 38 | Dead |
 | 39 | Feat |
 | 40 | ChangeWatch |
+
+## (1) ?
+| Bits | Description |
+| --- | --- |
+| 8 | Unknown |
+| 64 | Unknown |
+| 16 | Unknown |
