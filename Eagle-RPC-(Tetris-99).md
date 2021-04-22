@@ -3,7 +3,7 @@
 
 | RPC | Name |
 | --- | --- |
-| 16 | ? |
+| 16 | NotifyServerCounter |
 | 17 | ? |
 | 18 | ? |
 | 19 | ? |
