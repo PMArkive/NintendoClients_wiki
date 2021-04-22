@@ -195,7 +195,7 @@ No payload.
 ### RPC
 | Bits | Description |
 | --- | --- |
-| 64 | Unknown |
+| 64 | Server time (milliseconds) |
 | | Payload |
 
 ## Protocol Description
