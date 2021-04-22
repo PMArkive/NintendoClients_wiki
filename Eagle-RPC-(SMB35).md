@@ -19,7 +19,7 @@
 | 29 | ? |
 | 30 | ? |
 | 31 | InputKey |
-| 32 | ChangeTarget |
+| 32 | [ChangeTarget](#32-changetarget) |
 | 33 | Attack |
 | 34 | PopEnemy |
 | 35 | UseRoulette |
