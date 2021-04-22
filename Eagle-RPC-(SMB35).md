@@ -29,9 +29,17 @@
 | 39 | Feat |
 | 40 | ChangeWatch |
 
-# (1) Unknown
+# (16) Unknown
 | Bits | Description |
 | --- | --- |
 | 8 | Unknown |
 | 64 | Unknown |
 | 16 | Unknown |
+
+# (32) ChangeTarget
+| Bits | Description |
+| --- | --- |
+| 7 | Unknown |
+| 8 | Unknown |
+| 35 | Unknown |
+| 5 | Unknown |
