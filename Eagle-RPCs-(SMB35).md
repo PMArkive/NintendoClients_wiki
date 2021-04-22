@@ -1,4 +1,4 @@
-[[Eagle Servers]] > Super Mario Bros. 35
+[Eagle Servers](Eagle-Protocol) > Super Mario Bros. 35
 ---
 
 | RPC | Name |
