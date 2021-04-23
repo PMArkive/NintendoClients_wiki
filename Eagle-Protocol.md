@@ -184,7 +184,7 @@ No payload.
 | 0 | Node added |
 | 1 | Unknown |
 | 2 | Unknown |
-| 3 | Unknown |
+| 3 | Node removed |
 | 4 | All nodes |
 
 Type 0 - 3:
