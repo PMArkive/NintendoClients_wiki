@@ -182,12 +182,13 @@ Type 0 - 3:
 | Bits | Description |
 | --- | --- |
 | 16 | Unknown |
-| 64 | Unknown |
+| 64 | Server time (milliseconds) |
 
 Type 4:
 | Bits | Description |
 | --- | --- |
 | 1024 | Unknown |
+| 64 | Server time (milliseconds) |
 
 ### Disconnected
 No payload.
