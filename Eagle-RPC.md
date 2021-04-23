@@ -23,7 +23,7 @@ The server keeps track of 32 global counters.
 | --- | --- |
 | 8 | Counter index |
 | 64 | Value |
-| 16 | Unknown |
+| 16 | Node id |
 
 # (17) SetServerCounter
 | Bits | Description |
