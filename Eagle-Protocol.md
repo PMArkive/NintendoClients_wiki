@@ -177,6 +177,7 @@ No payload.
 | Bits | Description |
 | --- | --- |
 | 8 | Type (0 - 4) |
+| ... | Depends on type |
 
 | Type | Description |
 | --- | --- |
