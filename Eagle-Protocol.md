@@ -182,10 +182,10 @@ No payload.
 | Type | Description |
 | --- | --- |
 | 0 | Node added |
-| 1 | Unknown |
-| 2 | Unknown |
+| 1 | Unknown (version 1.x) |
+| 2 | Unknown (version 1.x) |
 | 3 | Node removed |
-| 4 | All nodes |
+| 4 | All nodes (version 2.x) |
 
 Type 0 - 3:
 | Bits | Description |
@@ -194,8 +194,6 @@ Type 0 - 3:
 | 64 | Server time (milliseconds) |
 
 Type 4:
-
-This type was introduced in eagle version 2.
 
 | Bits | Description |
 | --- | --- |
