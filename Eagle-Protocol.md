@@ -178,16 +178,24 @@ No payload.
 | --- | --- |
 | 8 | Type (0 - 4) |
 
+| Type | Description |
+| --- | --- |
+| 0 | Node added |
+| 1 | Unknown |
+| 2 | Unknown |
+| 3 | Unknown |
+| 4 | All nodes |
+
 Type 0 - 3:
 | Bits | Description |
 | --- | --- |
-| 16 | Unknown |
+| 16 | Node id |
 | 64 | Server time (milliseconds) |
 
 Type 4:
 | Bits | Description |
 | --- | --- |
-| 1024 | Unknown |
+| 1024 | Active nodes (one bit per node) |
 | 64 | Server time (milliseconds) |
 
 ### Disconnected
@@ -200,13 +208,15 @@ No payload.
 | | Payload |
 
 ## Protocol Description
-The eagle protocol is surprisingly simple. After the client has received the notification event from the NEX server, the following happens:
+After the client has received the notification event from the NEX server, the following happens:
 1. The client establishes a connection with the eagle server.
 2. The server assigns a node id to the client and sends an [Accepted](#accepted) packet to the client.
 3. The client sends a [Login Request](#login-request) packet to the server for login phase 0.
 4. The client sends one or more [Login Request](#login-request) packets to the server for login phase 1.
 5. The server sends a [Login Result](#login-result) packet to the client.
 6. The client sends a [Client Ready](#client-ready) packet to the server.
+7. The server sends [Node Notice](#node-notice) type 4 to inform it about the session state.
+8. The server sends [Node Notice](#node-notice) type 0 to all other clients to tell them that a new node is ready.
 
 Now, the client and server start exchanging RPC packets. If the client sends an RPC packet to the server, the server simply forwards it to the nodes that are specified in the packet header.
 
