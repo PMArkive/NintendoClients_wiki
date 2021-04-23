@@ -176,8 +176,8 @@ No payload.
 ### Node Notice
 | Bits | Description |
 | --- | --- |
-| 8 | Type (0 - 4) |
-| ... | Depends on type |
+| 8 | Type |
+| ... | ... |
 
 | Type | Description |
 | --- | --- |
@@ -194,9 +194,12 @@ Type 0 - 3:
 | 64 | Server time (milliseconds) |
 
 Type 4:
+
+This type was introduced in eagle version 2.
+
 | Bits | Description |
 | --- | --- |
-| 1024 | Active nodes (one bit per node) |
+| [M](#library-versions) | Active nodes (one bit per node) |
 | 64 | Server time (milliseconds) |
 
 ### Disconnected
@@ -216,6 +219,14 @@ After the client has received the notification event from the NEX server, the fo
 4. The client sends one or more [Login Request](#login-request) packets to the server for login phase 1.
 5. The server sends a [Login Result](#login-result) packet to the client.
 6. The client sends a [Client Ready](#client-ready) packet to the server.
+
+Version 1.x:
+
+7. The server sends [Node Notice](#node-notice) type 0 to all clients to tell them that a new node is ready.
+8. Maybe something with node notice type 1?
+
+Version 2.x:
+
 7. The server sends [Node Notice](#node-notice) type 4 to inform it about the session state.
 8. The server sends [Node Notice](#node-notice) type 0 to all other clients to tell them that a new node is ready.
 
