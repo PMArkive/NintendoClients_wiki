@@ -22,6 +22,9 @@
 | [String] | m_strParam | String parameter |
 
 **Switch:**
+
+The following fields are always present (revision 0 and 1):
+
 | Type | Name |
 | --- | --- |
 | [PID] | m_pidSource |
@@ -30,6 +33,11 @@
 | Uint64 | m_uiParam2 |
 | [String] | m_strParam |
 | Uint64 | m_uiParam3 |
+
+The following field is only present in revision 1:
+
+| Type | Name |
+| --- | --- |
 | [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
 ## Response
