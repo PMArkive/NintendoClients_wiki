@@ -52,6 +52,7 @@ The following field is only present in revision 1:
 | 3002 | Participation cancelled |
 | 3007 | Participant disconnected |
 | 3008 | Participation ended |
+| 4000 | Ownership change |
 | 109000 | Gathering unregistered |
 
 | Field | Description |
