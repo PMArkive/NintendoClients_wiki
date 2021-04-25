@@ -13,9 +13,16 @@ Since the match making methods are split across several protocols, this page doc
 | Uint16 | m_uiMaxParticipants | Maximum number of participants |
 | Uint32 | m_uiParticipationPolicy | Participation policy |
 | Uint32 | m_uiPolicyArgument | Policy argument |
-| Uint32 | m_uiFlags | Flags |
+| Uint32 | m_uiFlags | [Flags](#flags) |
 | Uint32 | m_uiState | State |
 | [String] | m_strDescription | Description |
+
+### Flags
+| Flag | Description |
+| --- | --- |
+| 0x10 | Controls what happens when the owner leaves the gathering. If set, the server chooses a new owner. If not set, the gathering is deleted. |
+
+Many games also use flag 0x200, but it's purpose is unknown.
 
 ## PersistentGathering ([Structure])
 | This structure inherits from [Gathering](#gathering-structure) |
