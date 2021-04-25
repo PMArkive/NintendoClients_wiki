@@ -1,7 +1,5 @@
 ## [[NEX Protocols]] > Notifications (14)
 
-Most notification types are predefined. However, some games also implement their own notification types (see [libeagle](Eagle-Protocol) for example).
-
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [ProcessNotificationEvent](#1-processnotificationevent) |
@@ -12,16 +10,21 @@ Most notification types are predefined. However, some games also implement their
 | --- | --- | --- |
 | [NotificationEvent](#notificationevent-structure) | oEvent | Event object |
 
-### NotificationEvent ([Structure])
+## Response
+No RMC response is sent.
+
+# NotificationEvent ([Structure])
+Most notification types are predefined. However, some games also implement their own notification types (see [libeagle](Eagle-Protocol) for example).
+
 **Wii U:**
 
-| Type | Name | Description 
-| --- | --- | --- |
-| [PID] | m_pidSource | Source pid |
-| Uint32 | m_uiType | Type |
-| Uint32 | m_uiParam1 | Parameter 1 |
-| Uint32 | m_uiParam2 | Parameter 2 |
-| [String] | m_strParam | String parameter |
+| Type | Name |
+| --- | --- |
+| [PID] | m_pidSource |
+| Uint32 | m_uiType |
+| Uint32 | m_uiParam1 |
+| Uint32 | m_uiParam2 |
+| [String] | m_strParam |
 
 **Switch:**
 
@@ -42,8 +45,13 @@ The following field is only present in revision 1:
 | --- | --- |
 | [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
-## Response
-No RMC response is sent.
+## Notification Types
+| Type | Description |
+| --- | --- |
+| 3001 | New participant |
+| 3002 | Participation cancelled |
+| 3007 | Participant disconnected |
+| 3008 | Participation ended |
 
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
