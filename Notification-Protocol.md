@@ -53,6 +53,12 @@ The following field is only present in revision 1:
 | 3007 | Participant disconnected |
 | 3008 | Participation ended |
 
+| Field | Description |
+| --- | --- |
+| m_uiParam1 | Gathering id |
+| m_uiParam2 | Principal id |
+| m_strParam | Message |
+
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
