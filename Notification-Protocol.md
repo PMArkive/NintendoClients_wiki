@@ -1,5 +1,7 @@
 ## [[NEX Protocols]] > Notifications (14)
 
+Most notification types are predefined. However, some games also implement their own notification types (see [libeagle](Eagle-Protocol) for example).
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [ProcessNotificationEvent](#1-processnotificationevent) |
