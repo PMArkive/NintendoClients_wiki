@@ -55,11 +55,23 @@ The following field is only present in revision 1:
 | 4000 | Ownership change |
 | 109000 | Gathering unregistered |
 
+Most notifications use the following fields:
+
 | Field | Description |
 | --- | --- |
+| m_pidSource | Principal id |
 | m_uiParam1 | Gathering id |
 | m_uiParam2 | Principal id |
 | m_strParam | Message |
+
+The ownership change event uses the following fields:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | Previous owner |
+| m_uiParam1 | Gathering id |
+| m_uiParam2 | New owner |
+| m_strParam | Unknown |
 
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
