@@ -57,7 +57,17 @@ Notification types 3001 - 3008 are only sent to the owner of the gathering. The 
 | 4000 | Ownership change |
 | 109000 | Gathering unregistered |
 
-Most notifications use the following fields:
+Notification type 3001:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | Principal id |
+| m_uiParam1 | Gathering id |
+| m_uiParam2 | Principal id |
+| m_strParam | Message |
+| m_uiParam3 | Number of participants |
+
+Notification type 3002, 3007 and 3008:
 
 | Field | Description |
 | --- | --- |
@@ -66,7 +76,7 @@ Most notifications use the following fields:
 | m_uiParam2 | Principal id |
 | m_strParam | Message |
 
-The ownership change event uses the following fields:
+Notification type 4000:
 
 | Field | Description |
 | --- | --- |
@@ -74,6 +84,14 @@ The ownership change event uses the following fields:
 | m_uiParam1 | Gathering id |
 | m_uiParam2 | New owner |
 | m_strParam | Unknown |
+
+
+Notification type 109000:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | Principal id |
+| m_uiParam1 | Gathering id |
 
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
