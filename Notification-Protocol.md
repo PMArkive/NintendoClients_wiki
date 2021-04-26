@@ -46,6 +46,8 @@ The following field is only present in revision 1:
 | [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
 ## Notification Types
+Notification types 3001 - 3008 are only sent to the owner of the gathering. The others are sent to all participants.
+
 | Type | Description |
 | --- | --- |
 | 3001 | New participant |
