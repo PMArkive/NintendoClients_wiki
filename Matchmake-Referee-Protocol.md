@@ -173,7 +173,7 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | uniqueId |
 | Uint32 | category |
-| Uint64 | pid |
+| [PID] | pid |
 | Uint32 | recentDisconnection |
 | Uint32 | recentViolation |
 | Uint32 | recentMismatch |
@@ -193,12 +193,12 @@ This method does not return anything.
 | --- | --- |
 | Uint32 | personalDataCategory |
 | Uint32 | gid |
-| [List]&lt;Uint64&gt; | pids |
+| [List]&lt;[PID]&gt; | pids |
 
 ## MatchmakeRefereeStatsTarget ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | pid |
+| [PID] | pid |
 | Uint32 | category |
 
 ## MatchmakeRefereeStatsInitParam ([Structure])
@@ -210,7 +210,7 @@ This method does not return anything.
 ## MatchmakeRefereePersonalRoundResult ([Structure])
 | Type | Name |
 | --- | --- |
-| Uint64 | pid |
+| [PID] | pid |
 | Uint32 | personalRoundResultFlag |
 | Uint32 | roundWinLoss |
 | Sint32 | ratingValueChange |
@@ -218,6 +218,7 @@ This method does not return anything.
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
+[PID]: NEX-Common-Types#pid
 [Buffer]: NEX-Common-Types#buffer
 [qBuffer]: NEX-Common-Types#qbuffer
 [List]: NEX-Common-Types#list
