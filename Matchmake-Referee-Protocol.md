@@ -1,5 +1,9 @@
 ## [[NEX Protocols]] > Matchmake Referee (120)
 
+Games that use [libeagle](Eagle-Protocol) use a [customized matchmake referee protocol](Matchmake-Referee-Protocol-(Eagle)).
+
+The remainder of this page describe the standard matchmake referee protocol.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [StartRound](#1-startround) |
