@@ -21,7 +21,8 @@ The remainder of this page describe the standard matchmake referee protocol.
 | 13 | [ResetStats](#13-resetstats) |
 
 # (1) StartRound
-Raises `Core::InvalidArgument` if the list of pids is empty.
+* Raises `Core::InvalidArgument` if the list of pids is empty.
+* Raises `MatchmakeReferee::NotParticipatedGathering` if the gathering does not exist or at least one of the pids is not a participant of the gathering.
 
 ## Request
 | Type | Name |
