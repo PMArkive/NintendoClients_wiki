@@ -21,6 +21,8 @@ The remainder of this page describe the standard matchmake referee protocol.
 | 13 | [ResetStats](#13-resetstats) |
 
 # (1) StartRound
+Raises `Core::InvalidArgument` if the list of pids is empty.
+
 ## Request
 | Type | Name |
 | --- | --- |
