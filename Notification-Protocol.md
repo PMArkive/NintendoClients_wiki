@@ -46,7 +46,9 @@ The following field is only present in revision 1:
 | [Map]&lt;[String], [Variant]&gt; | m_mapParam |
 
 ## Notification Types
-Notification types 3001 - 3008 are only sent to the owner of the gathering. The others are sent to all participants.
+* Type 3001 - 3008 are sent to the owner of the gathering.
+* Type 4000 and 109000 are sent to all participants of the gathering.
+* Type 116000 is sent to all participants of the round.
 
 | Type | Description |
 | --- | --- |
@@ -56,6 +58,7 @@ Notification types 3001 - 3008 are only sent to the owner of the gathering. The 
 | 3008 | Participation ended |
 | 4000 | Ownership change |
 | 109000 | Gathering unregistered |
+| 116000 | Matchmake referee round started |
 
 Notification type 3001:
 
@@ -85,13 +88,19 @@ Notification type 4000:
 | m_uiParam2 | New owner |
 | m_strParam | Unknown |
 
-
 Notification type 109000:
 
 | Field | Description |
 | --- | --- |
 | m_pidSource | Principal id |
 | m_uiParam1 | Gathering id |
+
+Notification type 116000:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | Principal that started the round |
+| m_uiParam1 | Round id |
 
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
