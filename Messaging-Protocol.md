@@ -101,6 +101,13 @@ This method does not return anything.
 | [PID] | m_principalId |
 | Uint32 | m_gatheringId |
 
+Recipient type:
+
+| Type | Description |
+| --- | --- |
+| 1 | Principal id |
+| 2 | Gathering id |
+
 ## UserMessage ([Structure])
 | This structure inherits from [Data] |
 | --- |
