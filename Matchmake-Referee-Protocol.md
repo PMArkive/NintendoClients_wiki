@@ -5,110 +5,143 @@
 | 1 | [StartRound](#1-startround) |
 | 2 | [GetStartRoundParam](#2-getstartroundparam) |
 | 3 | [EndRound](#3-endround) |
-| 4 | [EndRoundWithPartialReport](#4-endroundwithpartialreport) |
-| 5 | [EndRoundWithoutReport](#5-endroundwithoutreport) |
-| 6 | [GetRoundParticipants](#6-getroundparticipants) |
-| 7 | [GetNotSummarizedRound](#7-getnotsummarizedround) |
-| 8 | [GetRound](#8-getround) |
-| 9 | [GetStatsPrimary](#9-getstatsprimary) |
-| 10 | GetStatsPrimaries |
-| 11 | GetStatsAll |
-| 12 | CreateStats |
-| 13 | GetOrCreateStats |
-| 14 | [ResetStats](#14-resetstats) |
-| 15 | GetEventPoint |
-| 16 | ResetEventPoint |
+| 4 | [EndRoundWithoutReport](#4-endroundwithoutreport) |
+| 5 | [GetRoundParticipants](#5-getroundparticipants) |
+| 6 | [GetNotSummarizedRound](#6-getnotsummarizedround) |
+| 7 | [GetRound](#7-getround) |
+| 8 | [GetStatsPrimary](#8-getstatsprimary) |
+| 9 | [GetStatsPrimaries](#9-getstatsprimaries) |
+| 10 | [GetStatsAll](#10-getstatsall) |
+| 11 | [CreateStats](#11-createstats) |
+| 12 | [GetOrCreateStats](#12-getorcreatestats) |
+| 13 | [ResetStats](#13-resetstats) |
 
 # (1) StartRound
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [MatchmakeRefereeStartRoundParam](#matchmakerefereestartroundparam-structure) | Param |
+| [MatchmakeRefereeStartRoundParam] | param |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
+| Uint64 | roundId |
 
 # (2) GetStartRoundParam
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
+| Uint64 | roundId |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [MatchmakeRefereeStartRoundParam](#matchmakerefereestartroundparam-structure) | Param |
+| [MatchmakeRefereeStartRoundParam] | param |
 
 # (3) EndRound
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [MatchmakeRefereeEndRoundParam](#matchmakerefereeendroundparam-structure) | Param |
+| [MatchmakeRefereeEndRoundParam] | endRoundParam |
 
 ## Response
 This method does not return anything.
 
-# (4) EndRoundWithPartialReport
+# (4) EndRoundWithoutReport
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [MatchmakeRefereeEndRoundParam](#matchmakerefereeendroundparam-structure) | Param |
+| Uint64 | roundId |
 
 ## Response
 This method does not return anything.
 
-# (5) EndRoundWithoutReport
+# (5) GetRoundParticipants
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
+| Uint64 | roundId |
 
 ## Response
-This method does not return anything.
-
-# (6) GetRoundParticipants
-## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
+| [List]&lt;Uint64&gt; | pids |
 
-## Response
-| Type | Description |
-| --- | --- |
-| [List]&lt;[PID]&gt; | Participants |
-
-# (7) GetNotSummarizedRound
+# (6) GetNotSummarizedRound
 ## Request
 This method does not take any parameters.
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [List]&lt;[RoundInfo](#roundinfo-structure)&gt; | Rounds in which you are participating |
+| [List]&lt;[MatchmakeRefereeRound]&gt; | rounds |
 
-# (8) GetRound
+# (7) GetRound
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
+| Uint64 | roundId |
 
 ## Response
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [RoundInfo](#roundinfo-structure) | Round info |
+| [MatchmakeRefereeRound] | round |
 
-# (9) GetStatsPrimary
+# (8) GetStatsPrimary
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [GetStatsParam](#getstatsparam-structure) | Param |
+| [MatchmakeRefereeStatsTarget] | target |
 
 ## Response
-Unknown.
+| Type | Name |
+| --- | --- |
+| [MatchmakeRefereeStats] | stats |
 
-# (14) ResetStats
+# (9) GetStatsPrimaries
+## Request
+| Type | Name |
+| --- | --- |
+| [List]&lt;[MatchmakeRefereeStatsTarget]&gt; | targets |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[MatchmakeRefereeStats]&gt; | stats |
+| [List]&lt;[Result]&gt; | results |
+
+# (10) GetStatsAll
+## Request
+| Type | Name |
+| --- | --- |
+| [MatchmakeRefereeStatsTarget] | target |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [List]&lt;[MatchmakeRefereeStats]&gt; | stats |
+
+# (11) CreateStats
+## Request
+| Type | Name |
+| --- | --- |
+| [MatchmakeRefereeStatsInitParam] | param |
+
+## Response
+This method does not return anything.
+
+# (12) GetOrCreateStats
+## Request
+| Type | Name |
+| --- | --- |
+| [MatchmakeRefereeStatsInitParam] | param |
+
+## Response
+| Type | Name |
+| --- | --- |
+| [MatchmakeRefereeStats] | stats |
+
+# (13) ResetStats
 ## Request
 This method does not take any parameters.
 
@@ -117,48 +150,67 @@ This method does not return anything.
 
 # Types
 ## MatchmakeRefereeEndRoundParam ([Structure])
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
-| [List]&lt;[EndRoundReport](#endroundreport-structure)&gt; | Reports |
+| Uint64 | roundId |
+| [List]&lt;[MatchmakeRefereePersonalRoundResult]&gt; | personalRoundResults |
 
-## EndRoundReport ([Structure])
-| Type | Description |
+## MatchmakeRefereeRound ([Structure])
+| Type | Name |
 | --- | --- |
-| Uint64 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [qBuffer] | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
+| Uint64 | roundId |
+| Uint32 | gid |
+| Uint32 | state |
+| Uint32 | personalDataCategory |
+| [List]&lt;[MatchmakeRefereePersonalRoundResult]&gt; | normalizedPersonalRoundResults |
 
-## GetStatsParam ([Structure])
-| Type | Description |
+## MatchmakeRefereeStats ([Structure])
+| Type | Name |
 | --- | --- |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
+| Uint64 | uniqueId |
+| Uint32 | category |
+| Uint64 | pid |
+| Uint32 | recentDisconnection |
+| Uint32 | recentViolation |
+| Uint32 | recentMismatch |
+| Uint32 | recentWin |
+| Uint32 | recentLoss |
+| Uint32 | recentDraw |
+| Uint32 | totalDisconnect |
+| Uint32 | totalViolation |
+| Uint32 | totalMismatch |
+| Uint32 | totalWin |
+| Uint32 | totalLoss |
+| Uint32 | totalDraw |
+| Uint32 | ratingValue |
 
 ## MatchmakeRefereeStartRoundParam ([Structure])
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint32 | Personal data category |
-| Uint32 | Gathering id |
-| [List]&lt;[PID]&gt; | Participants |
-| Uint8 | Report summary mode |
-| Uint32 | Event id |
+| Uint32 | personalDataCategory |
+| Uint32 | gid |
+| [List]&lt;Uint64&gt; | pids |
 
-## RoundInfo ([Structure])
-| Type | Description |
+## MatchmakeRefereeStatsTarget ([Structure])
+| Type | Name |
 | --- | --- |
-| Uint64 | Round id |
-| Uint32 | Gathering id |
-| Uint32 | Unknown |
-| Uint32 | Personal data category |
-| Uint32 | Unknown |
-| Uint8 | Report summary mode |
-| Uint32 | Event id |
+| Uint64 | pid |
+| Uint32 | category |
+
+## MatchmakeRefereeStatsInitParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | category |
+| Uint32 | initialRatingValue |
+
+## MatchmakeRefereePersonalRoundResult ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | pid |
+| Uint32 | personalRoundResultFlag |
+| Uint32 | roundWinLoss |
+| Sint32 | ratingValueChange |
+| [qBuffer] | buffer |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
@@ -169,5 +221,13 @@ This method does not return anything.
 [DateTime]: NEX-Common-Types#datetime
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#anydataholder
-[PID]: NEX-Common-Types#pid
-[ResultRange]: NEX-Common-Types#resultrange-structure
+[StationURL]: NEX-Common-Types#stationurl
+[Variant]: NEX-Common-Types#variant
+
+[MatchmakeRefereeStartRoundParam]: #matchmakerefereestartroundparam-structure
+[MatchmakeRefereeEndRoundParam]: #matchmakerefereeendroundparam-structure
+[MatchmakeRefereeRound]: #matchmakerefereeround-structure
+[MatchmakeRefereeStatsTarget]: #matchmakerefereestatstarget-structure
+[MatchmakeRefereeStats]: #matchmakerefereestats-structure
+[MatchmakeRefereeStatsInitParam]: #matchmakerefereestatsinitparam-structure
+[MatchmakeRefereePersonalRoundResult]: #matchmakerefereepersonalroundresult-structure
