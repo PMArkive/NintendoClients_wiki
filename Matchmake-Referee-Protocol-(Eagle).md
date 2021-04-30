@@ -12,6 +12,17 @@ Games that use [libeagle](Eagle-Protocol) use a customized matchmake referee pro
 | Uint8 | reportSummaryMode |
 | Uint32 | eventId |
 
+## MatchmakeRefereePersonalRoundResult ([Structure])
+| Type | Name |
+| --- | --- |
+| [PID] | pid |
+| Uint32 | personalRoundResultFlag |
+| Uint32 | roundWinLoss |
+| Sint32 | ratingValueChange |
+| [qBuffer] | buffer |
+| Uint8 | reportSummaryMode |
+| Uint32 | eventId |
+
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
