@@ -35,6 +35,8 @@ The remainder of this page describe the standard matchmake referee protocol.
 | Uint64 | roundId |
 
 # (2) GetStartRoundParam
+* Raises `MatchmakeReferee::RoundNotFound` if the round id is invalid.
+
 ## Request
 | Type | Name |
 | --- | --- |
