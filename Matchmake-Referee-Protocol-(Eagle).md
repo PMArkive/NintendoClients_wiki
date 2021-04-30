@@ -18,8 +18,8 @@ Games that use [libeagle](Eagle-Protocol) use a customized matchmake referee pro
 | 12 | [CreateStats](#12-createstats) |
 | 13 | [GetOrCreateStats](#13-getorcreatestats) |
 | 14 | [ResetStats](#14-resetstats) |
-| 15 | [GetEventPoint](#15-geteventpoint) |
-| 16 | [ResetEventPoint](#16-reseteventpoint) |
+| 15 | GetEventPoint |
+| 16 | ResetEventPoint |
 
 # (1) StartRound
 ## Request
