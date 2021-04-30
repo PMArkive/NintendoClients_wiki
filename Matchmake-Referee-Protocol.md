@@ -143,11 +143,11 @@ This method does not return anything.
 ## MatchmakeRefereeStartRoundParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown (X) |
+| Uint32 | Personal data category |
 | Uint32 | Gathering id |
 | [List]&lt;[PID]&gt; | Participants |
-| Uint8 | Unknown (Y) |
-| Uint32 | Unknown (Z) |
+| Uint8 | Report summary mode |
+| Uint32 | Event id |
 
 ## RoundInfo ([Structure])
 | Type | Description |
@@ -155,10 +155,10 @@ This method does not return anything.
 | Uint64 | Round id |
 | Uint32 | Gathering id |
 | Uint32 | Unknown |
-| Uint32 | Unknown (X) |
+| Uint32 | Personal data category |
 | Uint32 | Unknown |
-| Uint8 | Unknown (Y) |
-| Uint32 | Unknown (Z) |
+| Uint8 | Report summary mode |
+| Uint32 | Event id |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
