@@ -233,8 +233,8 @@ Now, the client and server start exchanging RPC packets. If the client sends an 
 If node is 0 is specified in the packet header, the server also processes the RPC packet itself.
 
 Eagle also provides two special node ids:
-* 128 or 1024: The packet is relayed to all clients except for the source node.
-* 129 or 1025: The packet is relayed to all clients including the source node.
+* [M]: The packet is relayed to all clients except for the source node.
+* [M] + 1: The packet is relayed to all clients including the source node.
 
 ## Library Versions
 The eagle library was rewritten almost completely between Tetris 99 and Super Mario Bros 35.
@@ -250,3 +250,5 @@ The eagle library was rewritten almost completely between Tetris 99 and Super Ma
 | Tetris 99 | release/1.2.14 | 2 |
 | Super Mario Bros 35 | 2.0.4 | 3 |
 | PAC-MAN 99 | 2.0.4 | 3 |
+
+[M]: #library-versions
