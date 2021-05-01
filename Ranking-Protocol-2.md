@@ -1,5 +1,12 @@
 ## [[NEX Protocols]] > Ranking 2 (122)
 
+The following games have additional methods in the ranking 2 protocol:
+
+* [Super Mario Bros. 35](Ranking-Protocol-2-(Eagle))
+* [PAC-MAN 99](Ranking-Protocol-2-(Eagle))
+
+This remainder of this page describes the methods that are not specific to any game.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [PutScore](#1-putscore) |
@@ -12,7 +19,6 @@
 | 8 | [GetRankingChart](#8-getrankingchart) |
 | 9 | [GetRankingCharts](#9-getrankingcharts) |
 | 10 | [GetEstimateScoreRank](#10-getestimatescorerank) |
-| 11 | GetEstimateMyScoreRank |
 
 # (1) PutScore
 ## Request
