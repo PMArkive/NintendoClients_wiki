@@ -36,4 +36,4 @@ This page describes the methods that are only seen in Super Mario Bros. 35 and P
 [PID]: NEX-Common-Types#pid
 
 [Ranking2EstimateMyScoreRankInput]: #ranking2estimatemyscorerankinput-structure
-[Ranking2EstimateScoreRankOutput]: Ranking-2-Protocol#ranking2estimatescorerankoutput-structure
+[Ranking2EstimateScoreRankOutput]: Ranking-Protocol-2#ranking2estimatescorerankoutput-structure
