@@ -22,11 +22,11 @@
 # (26) Unknown
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 8 | Unknown |
 | 32 | Unknown |
 | 1 | Unknown |
-| 64 | Unknown |
+| 64 | Principal id |
 | 8 x 33 | Unknown |
 | 16 | Unknown |
 | 16 | Unknown |
