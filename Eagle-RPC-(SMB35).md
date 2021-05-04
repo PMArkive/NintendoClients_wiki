@@ -14,9 +14,9 @@
 | 34 | [PopEnemy](#34-popenemy) |
 | 35 | [UseRoulette](#35-useroulette) |
 | 36 | [UseItem](#36-useitem) |
-| 37 | HurryUp |
-| 38 | Dead |
-| 39 | Feat |
+| 37 | [HurryUp](#37-hurryup) |
+| 38 | [Dead](#38-dead) |
+| 39 | [Feat](#39-feat) |
 | 40 | [ChangeWatch](#40-changewatch) |
 
 # (26) Unknown
@@ -109,6 +109,29 @@
 | --- | --- |
 | 7 | Player id |
 | 8 | Unknown |
+| 5 | Unknown |
+
+# (37) HurryUp
+| Bits | Description |
+| --- | --- |
+| 7 | Player id |
+| 5 | Unknown |
+
+# (38) Dead
+| Bits | Description |
+| --- | --- |
+| 7 | Player id |
+| 7 | Unknown |
+| 32 | Unknown |
+| 16 | Unknown |
+| 5 | Unknown |
+
+# (39) Feat
+| Bits | Description |
+| --- | --- |
+| 7 | Player id |
+| 32 | Unknown |
+| 16 | Unknown |
 | 5 | Unknown |
 
 # (40) ChangeWatch
