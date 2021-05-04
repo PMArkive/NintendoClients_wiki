@@ -17,7 +17,7 @@
 | 37 | HurryUp |
 | 38 | Dead |
 | 39 | Feat |
-| 40 | ChangeWatch |
+| 40 | [ChangeWatch](#40-changewatch) |
 
 # (26) Unknown
 | Bits | Description |
@@ -69,14 +69,14 @@
 # (31) InputKey
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 5 | Unknown |
 | 6 x 30 | Unknown |
 
 # (32) ChangeTarget
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 8 | Unknown |
 | 35 | Unknown |
 | 5 | Unknown |
@@ -84,7 +84,7 @@
 # (33) Attack
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 35 | Unknown |
 | 32 | Unknown |
 | 5 | Unknown |
@@ -92,7 +92,7 @@
 # (34) PopEnemy
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 7 | Unknown |
 | 32 | Unknown |
 | 5 | Unknown |
@@ -100,13 +100,19 @@
 # (35) UseRoulette
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 8 | Unknown |
 | 5 | Unknown |
 
 # (36) UseItem
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
 | 8 | Unknown |
 | 5 | Unknown |
+
+# (40) ChangeWatch
+| Bits | Description |
+| --- | --- |
+| 7 | Player id |
+| 7 | Unknown |
