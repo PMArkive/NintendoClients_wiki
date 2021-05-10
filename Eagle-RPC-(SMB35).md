@@ -24,7 +24,7 @@
 | --- | --- |
 | 7 | Player id |
 | 8 | Level id |
-| 32 | Unknown |
+| 32 | Number of coins |
 | 1 | Unknown |
 | 64 | Principal id |
 | 8 x 33 | Unknown |
