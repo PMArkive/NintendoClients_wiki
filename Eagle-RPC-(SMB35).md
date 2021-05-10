@@ -39,7 +39,7 @@
 | 7 | Player id |
 | 8 | Requested level |
 | 32 | Number of coins |
-| 1 | Unknown |
+| 1 | Is Luigi |
 
 # (28) StartMatch
 | Bits | Description |
