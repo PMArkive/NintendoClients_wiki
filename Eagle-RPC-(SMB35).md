@@ -25,7 +25,7 @@
 | 7 | Player id |
 | 8 | Requested level |
 | 32 | Number of coins |
-| 1 | Is luigi |
+| 1 | Is Luigi |
 | 64 | Principal id |
 | 8 x 33 | Player name |
 | 16 | Coin level |
