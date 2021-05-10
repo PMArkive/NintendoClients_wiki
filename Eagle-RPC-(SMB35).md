@@ -23,12 +23,12 @@
 | Bits | Description |
 | --- | --- |
 | 7 | Player id |
-| 8 | Level id |
+| 8 | Requested level |
 | 32 | Number of coins |
 | 1 | Unknown |
 | 64 | Principal id |
 | 8 x 33 | Player name |
-| 16 | Unknown |
+| 16 | Coin level |
 | 16 | Unknown |
 | 2 | Unknown |
 | 1 | Unknown |
