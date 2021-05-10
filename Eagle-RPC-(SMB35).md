@@ -45,7 +45,7 @@
 | Bits | Description |
 | --- | --- |
 | 32 | Unknown |
-| 8 x 35 | Unknown |
+| 8 x 35 | Requested levels |
 | 1 x 35 | Unknown |
 
 # (29) Unknown
