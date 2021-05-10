@@ -30,7 +30,7 @@
 | 8 x 33 | Player name |
 | 16 | Coin level |
 | 16 | Unknown |
-| 2 | Unknown |
+| 2 | Item |
 | 1 | Unknown |
 
 # (27) Unknown
