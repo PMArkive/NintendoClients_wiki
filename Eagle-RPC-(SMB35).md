@@ -57,13 +57,13 @@
 # (30) Unknown
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
+| 7 | Player id |
+| 16 | Node id |
+| 64 | Principal id |
+| 8 x 33 | Player name |
+| 16 | Coin level |
 | 16 | Unknown |
-| 64 | Unknown |
-| 8 x 33 | Unknown |
-| 16 | Unknown |
-| 16 | Unknown |
-| 2 | Unknown |
+| 2 | Item |
 | 1 | Unknown |
 
 # (31) InputKey
