@@ -27,7 +27,7 @@
 | 32 | Number of coins |
 | 1 | Unknown |
 | 64 | Principal id |
-| 8 x 33 | Unknown |
+| 8 x 33 | Player name |
 | 16 | Unknown |
 | 16 | Unknown |
 | 2 | Unknown |
