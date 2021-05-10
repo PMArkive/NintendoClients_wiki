@@ -23,7 +23,7 @@
 | Bits | Description |
 | --- | --- |
 | 7 | Player id |
-| 8 | Unknown |
+| 8 | Level id |
 | 32 | Unknown |
 | 1 | Unknown |
 | 64 | Principal id |
