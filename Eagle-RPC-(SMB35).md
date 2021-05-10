@@ -3,8 +3,8 @@
 
 | RPC | Name |
 | --- | --- |
-| 26 | [?](#26-unknown) |
-| 27 | [?](#27-unknown) |
+| 26 | [JoinMatch](#26-joinmatch) |
+| 27 | [AcceptMatch](#27-acceptmatch) |
 | 28 | [?](#28-unknown) |
 | 29 | [?](#29-unknown) |
 | 30 | [?](#30-unknown) |
@@ -19,7 +19,7 @@
 | 39 | [Feat](#39-feat) |
 | 40 | [ChangeWatch](#40-changewatch) |
 
-# (26) Unknown
+# (26) JoinMatch
 | Bits | Description |
 | --- | --- |
 | 7 | Player id |
@@ -33,12 +33,12 @@
 | 2 | Item |
 | 1 | Unknown |
 
-# (27) Unknown
+# (27) AcceptMatch
 | Bits | Description |
 | --- | --- |
-| 7 | Unknown |
-| 8 | Unknown |
-| 32 | Unknown |
+| 7 | Player id |
+| 8 | Requested level |
+| 32 | Number of coins |
 | 1 | Unknown |
 
 # (28) Unknown
