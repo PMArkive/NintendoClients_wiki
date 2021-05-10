@@ -5,9 +5,9 @@
 | --- | --- |
 | 26 | [JoinMatch](#26-joinmatch) |
 | 27 | [AcceptMatch](#27-acceptmatch) |
-| 28 | [?](#28-unknown) |
+| 28 | [StartMatch](#28-startmatch) |
 | 29 | [?](#29-unknown) |
-| 30 | [?](#30-unknown) |
+| 30 | [AddPlayer](#30-addplayer) |
 | 31 | [InputKey](#31-inputkey) |
 | 32 | [ChangeTarget](#32-changetarget) |
 | 33 | [Attack](#33-attack) |
@@ -41,7 +41,7 @@
 | 32 | Number of coins |
 | 1 | Unknown |
 
-# (28) Unknown
+# (28) StartMatch
 | Bits | Description |
 | --- | --- |
 | 32 | Unknown |
@@ -54,7 +54,7 @@
 | 8 | Size |
 | | Payload |
 
-# (30) Unknown
+# (30) AddPlayer
 | Bits | Description |
 | --- | --- |
 | 7 | Player id |
