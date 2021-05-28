@@ -1,8 +1,6 @@
 The NPLN servers provide game services through [gRPC](https://grpc.io/).
 
-The decompiled protobuf files are uploaded here: https://github.com/kinnay/NPLN-Protocols.
-
-A list of games and their NPLN SDK version can be found here: https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1.
+The decompiled protobuf files are uploaded [here](https://github.com/kinnay/NPLN-Protocols) and a list of games and their NPLN SDK version can be found [here](https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1).
 
 The servers are at: `https://t-<server id>-lp1.lp1.t.npln.srv.nintendo.net`.
 
