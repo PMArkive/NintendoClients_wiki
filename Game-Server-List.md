@@ -36,4 +36,5 @@ See https://kinnay.github.io/view.html?page=nexwiiu
 | Cave Story | 2BA73000 | c2a631ad |
 | Dragon Quest Builders | 2CD9DB00 | e720a303 |
 | PAC-MAN 99 | 2E471600 | 1e6b25ec |
+| Game Studio Garage | 2E99DD00 | 97b08aad |
 | Animal Crossing: New Horizons | 2EE2E300 | v43a10em |
