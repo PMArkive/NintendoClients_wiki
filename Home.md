@@ -22,6 +22,6 @@ Welcome to the NintendoClients wiki!
 * [[DKC:TF Level IDs]]
 * [[Mario Kart 8 Track IDs]]
 * [[Mario Kart 8 Protocol]]
-* [[SMM Code Generation]]
+* [[Data Store Codes]]
 * [[DDL Parse Trees]]
 * [Capture the flag](https://ctf.ymar.dev)
