@@ -15,7 +15,7 @@ To obtain the data id from a game or programmer code, first obtain an integer us
 Let's walk through an example. We will calculate the data id that belongs to `G 006 TR2 9JK` and verify that its checksum is correct.
 
 ```python
->>> chars = "0123456789BCDFGHJKLMNPRTVWXY"
+>>> charset = "0123456789BCDFGHJKLMNPRTVWXY"
 >>> code = "G 006 TR2 9JK".replace(" ", "")[1:]
 >>> number = 0
 >>> for char in code:
