@@ -732,6 +732,12 @@ This method does not return anything.
 | Uint8 | resultOption |
 | Uint64 | accessPassword |
 
+Result option flags:
+
+| Flag | Field |
+| --- | --- |
+| 0x4 | metaBinary |
+
 ## DataStoreRatingInfo ([Structure])
 | Type | Name |
 | --- | --- |
