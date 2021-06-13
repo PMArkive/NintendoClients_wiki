@@ -40,7 +40,7 @@ Now, let's verify the checksum. We first generate a single-byte key based on the
 '0x22'
 ```
 
-Then, combine all bytes of the number that we obtained from the code and our key. If the result is 0, the checksum is correct.
+Then, combine all bytes of the number that we obtained from the code and our key by XOR. If the result is 0, the checksum is correct.
 
 ```python
 >>> 0x1A ^ 0x10 ^ 0x1C ^ 0x34 ^ 0x22
