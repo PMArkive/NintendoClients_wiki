@@ -109,5 +109,3 @@ The data/user id can be obtained from field C and field F as follows:
 3. Convert the number back to decimal: the data id of the example code is 6635842.
 
 Field B contains a simple checksum: `(id - 31) % 64`. In our example, this would be `(6635842 - 31) % 64 = 35`, which is `100011` in binary.
-
-## Game Builder Garage
