@@ -4,25 +4,25 @@
 Since the match making methods are split across several protocols, this page documents all match making related structures in one place.
 
 ## Gathering ([Structure])
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | m_idMyself | Gathering id |
-| [PID] | m_pidOwner | Owner pid |
-| [PID] | m_pidHost | Host pid |
-| Uint16 | m_uiMinParticipants | Minimum number of participants |
-| Uint16 | m_uiMaxParticipants | Maximum number of participants |
-| Uint32 | m_uiParticipationPolicy | Participation policy |
-| Uint32 | m_uiPolicyArgument | Policy argument |
-| Uint32 | m_uiFlags | [Flags](#flags) |
-| Uint32 | m_uiState | State |
-| [String] | m_strDescription | Description |
+| Type | Name |
+| --- | --- |
+| Uint32 | m_idMyself |
+| [PID] | m_pidOwner |
+| [PID] | m_pidHost |
+| Uint16 | m_uiMinParticipants |
+| Uint16 | m_uiMaxParticipants |
+| Uint32 | m_uiParticipationPolicy |
+| Uint32 | m_uiPolicyArgument |
+| Uint32 | [m_uiFlags](#flags) |
+| Uint32 | m_uiState |
+| [String] | m_strDescription |
 
 ### Flags
 | Flag | Description |
 | --- | --- |
 | 0x10 | Controls what happens when the owner leaves the gathering. If set, the server chooses a new owner. If not set, the gathering is deleted. |
 
-Many games also use flag 0x200, but it's purpose is unknown.
+Many games also use flag 0x200, but its purpose is unknown.
 
 ## PersistentGathering ([Structure])
 | This structure inherits from [Gathering](#gathering-structure) |
