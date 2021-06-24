@@ -1,14 +1,10 @@
-The NPLN servers provide game services through [gRPC](https://grpc.io/).
+The NPLN servers provide game services through [gRPC](https://grpc.io/). The decompiled protobuf files are uploaded [here](https://github.com/kinnay/NPLN-Protocols) and a list of games and their NPLN SDK version can be found [here](https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1). The official library sets the user agent to `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)`.
 
-The decompiled protobuf files are uploaded [here](https://github.com/kinnay/NPLN-Protocols) and a list of games and their NPLN SDK version can be found [here](https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1).
-
-The servers are at: `https://t-<server id>-lp1.lp1.t.npln.srv.nintendo.net`.
-
-The user agent is: `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)`
-
-Known servers:
+The NPLN server is at `https://<tenant id>.lp1.t.npln.srv.nintendo.net`. The tenant id is always `t-<server id>-lp1`. The following server ids are known:
 
 | Game | Server ID |
 | --- | --- |
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
+
+In the metadata, `npln-tenant-id` must be set to the tenant id (for example `t-e1c218b5-lp1`). If the tenant id is invalid, the server returns status code 12 (Unimplemented).
