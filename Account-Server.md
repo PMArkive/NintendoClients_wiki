@@ -323,7 +323,7 @@ The device certificate consists of 384 base64-encoded bytes:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x4 | Signature type (debug: `0x00010002`, retail: `0x00010005`) |
+| 0x0 | 0x4 | Signature type:<br>`0x00010002`: SHA-1 (debug)<br>`0x00010005`: SHA-256 (retail) |
 | 0x4 | 0x3C | Signature |
 | 0x40 | 0x40 | Padding |
 | 0x80 | 0x40 | `Root-CA<%08X>-MS<%08X>` |
