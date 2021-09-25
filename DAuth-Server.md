@@ -26,11 +26,21 @@ The dauth server takes form-encoded requests and responds with json-encoding. Al
 | 12.0.0 - 12.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 12.3.0.0)` |
 
 ## Methods
+9.0.0 - 12.1.0:
+
 | Method | URL |
 | --- | --- |
 | POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
 | POST | `/v6/edge_token` |
+
+13.0.0:
+
+| Method | URL |
+| --- | --- |
+| POST | `/v7/challenge` |
+| POST | `/v7/device_auth_token` |
+| POST | `/v7/edge_token` |
 
 ### POST /v6/challenge
 | Param | Description |
