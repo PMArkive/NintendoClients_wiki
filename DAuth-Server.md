@@ -1,11 +1,15 @@
 [[Server List]] > DAuth Server
 ---
 
-This server is at: https://dauth-lp1.ndas.srv.nintendo.net
+URL: https://dauth-lp1.ndas.srv.nintendo.net
 
-Most Switch servers can only be accessed after acquiring a device authentication token from the dauth server. The dauth server only accepts requests with a valid client certificate. Every Switch has its own certificate, which stored in [PRODINFO](https://switchbrew.org/wiki/Calibration).
+Most Switch servers can only be accessed after obtaining a token from the dauth server. The dauth server only accepts requests with a valid client certificate. Every Switch has its own client certificate, which stored in [PRODINFO](https://switchbrew.org/wiki/Calibration).
 
-The dauth server takes form-encoded requests and responds with json-encoding. Also, the urlsafe base64 table is used (with '-' and '_' instead of '+' and '/'), and the client does not add any padding characters.
+![](https://www.dropbox.com/s/cwubnhmd5neum9k/dauth.png?raw=1)
+
+Because the certificate is signed by Nintendo there is only one way to get a valid certificate: buy a Switch and dump it.
+
+The dauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
 ## Headers
 | Header | Description |
@@ -39,8 +43,8 @@ The dauth server takes form-encoded requests and responds with json-encoding. Al
 
 | Method | URL |
 | --- | --- |
-| POST | `/v7/challenge` |
-| POST | `/v7/device_auth_token` |
+| POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
+| POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
 | POST | `/v7/edge_token` |
 
 ### POST /v6/challenge
@@ -100,6 +104,12 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | `d5b6cac2c1514c56` | Dragons |
 | `dc656ea03b63cf68` | Parental controls |
 | `df51c436bc01c437` | Prepo |
+
+## POST /v7/challenge
+This is the same as <code><a href="#post-v6challenge">/v6/challenge</a></code>.
+
+## POST /v7/device_auth_token
+This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
 
 ## Errors
 On error, the server sends the following response:
