@@ -84,6 +84,7 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | --- | --- |
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
+| 13.0.0 | 13 |
 
 ### Known Client IDs
 | Client ID | Description |
