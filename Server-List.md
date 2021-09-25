@@ -41,6 +41,7 @@ Replace '%' by one of the following:
 | - api-%.pctl.srv.nintendo.net<br>- parentalcontrols-movie-%.cdn.nintendo.net | [Parental controls](Parental-Controls) |
 | - e03a97819c9711e59510d820a52f298a-sb.accounts.nintendo.com | |
 | - web-%.share.srv.nintendo.net | |
+| - bvc-hac-%.cdn.nintendo.net<br>- bvc-hac-%.cdn.n.nintendoswitch.cn | |
 | - api.sect.srv.nintendo.net | |
 | - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
