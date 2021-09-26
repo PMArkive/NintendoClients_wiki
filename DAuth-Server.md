@@ -60,6 +60,8 @@ Response:
 | data | Base64-encoded AES key required for MAC calculation |
 
 ### POST /v6/device_auth_token
+This method returns a device token as JWT.
+
 | Param | Description |
 | --- | --- |
 | challenge | Base64-encoded challenge |
@@ -83,6 +85,35 @@ The key for the AES-CMAC is calculated as follows:
 
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 
+### POST /v6/edge_token
+This method returns a different kind of device token. It takes the same parameters as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| dtoken | Device token |
+
+### POST /v7/challenge
+This is the same as <code><a href="#post-v6challenge">/v6/challenge</a></code>.
+
+### POST /v7/device_auth_token
+This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
+
+### POST /v7/edge_token
+This method is similar to <code><a href="#post-v7edge_token">/v7/edge_token</a></code>. The only difference is that a `vendor_id` parameter was added:
+
+| Param | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge |
+| client_id | Application-specific [client id](#known-client-ids) |
+| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| vendor_id | `akamai`, `llnw` or `lumen` |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
 ### Master Key Revisions
 | System version | Key generation |
 | --- | --- |
@@ -104,12 +135,6 @@ The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 | `d5b6cac2c1514c56` | Dragons |
 | `dc656ea03b63cf68` | Parental controls |
 | `df51c436bc01c437` | Prepo |
-
-## POST /v7/challenge
-This is the same as <code><a href="#post-v6challenge">/v6/challenge</a></code>.
-
-## POST /v7/device_auth_token
-This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
 
 ## Errors
 On error, the server sends the following response:
