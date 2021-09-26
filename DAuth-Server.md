@@ -11,6 +11,11 @@ Because the certificate is signed by Nintendo there is only one way to get a val
 
 The dauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
+* [Headers](#headers)
+* [Methods](#methods)
+* [Errors](#errors)
+* [Examples](#examples)
+
 ## Headers
 | Header | Description |
 | --- | --- |
@@ -178,3 +183,66 @@ Every error is encoded like this:
 | 0029 | 2181-4029 | ? |
 | 0030 | 2181-4030 | ? |
 | 0031 | 2181-4031 | ? |
+
+## Examples
+Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a valid certificate, the nginx server rejects the request:
+
+```http
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sun, 26 Sep 2021 19:21:43 GMT
+Content-Type: text/html
+Content-Length: 246
+Connection: close
+
+<html>
+<head><title>400 No required SSL certificate was sent</title></head>
+<body bgcolor="white">
+<center><h1>400 Bad Request</h1></center>
+<center>No required SSL certificate was sent</center>
+<hr><center>nginx</center>
+</body>
+</html>
+```
+
+Before anything else, one must obtain a challenge:
+
+```http
+POST /v7/challenge HTTP/1.1
+Host: dauth-lp1.ndas.srv.nintendo.net
+User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
+Accept: */*
+X-Nintendo-PowerState: FA
+Content-Length: 17
+Content-Type: application/x-www-form-urlencoded
+
+key_generation=13
+```
+
+```http
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 26 Sep 2021 19:21:43 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+...
+X-Nintendo-Used-Directive: global auth
+X-Nintendo-Request-Host-Header: dauth-lp1.ndas.srv.nintendo.net
+X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
+Connection: keep-alive
+
+{"challenge":"mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=","data":"1OikFLkHptkhDpqy7VHb3g=="}
+```
+
+Then, one can obtain a device token or edge token. For more details, read the documentation about these [methods](#methods).
+
+```http
+POST /v7/device_auth_token HTTP/1.1
+Host: dauth-lp1.ndas.srv.nintendo.net
+User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
+Accept: */*
+X-Nintendo-PowerState: FA
+Content-Length: 211
+Content-Type: application/x-www-form-urlencoded
+
+challenge=mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=&client_id=8f849b5d34778d8e&ist=false&key_generation=13&system_version=CusHY#000d0000#r1xneESd4PiTRYIhVIl0bK1ST5L5BUmv_uGPLqc4PPo=&mac=AW9LE1TSN0xrzY1FfHHXwg
