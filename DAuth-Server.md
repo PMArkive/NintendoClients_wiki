@@ -37,7 +37,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | --- | --- |
 | POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
-| POST | `/v6/edge_token` |
+| POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
 
 13.0.0:
 
@@ -45,7 +45,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | --- | --- |
 | POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
-| POST | `/v7/edge_token` |
+| POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
 
 ### POST /v6/challenge
 | Param | Description |
