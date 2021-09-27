@@ -107,7 +107,7 @@ This is the same as <code><a href="#post-v6challenge">/v6/challenge</a></code>.
 This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
 
 ### POST /v7/edge_token
-This method is similar to <code><a href="#post-v7edge_token">/v7/edge_token</a></code>. The only difference is that a `vendor_id` parameter was added:
+This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a></code>. The only difference is that a `vendor_id` parameter was added:
 
 | Param | Description |
 | --- | --- |
