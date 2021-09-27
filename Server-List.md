@@ -5,12 +5,7 @@ Replace '%' by one of the following:
 | --- | --- |
 | lp1 | Live production |
 | dd1 | Development |
-| jd1 | ? |
-| sd1 | ? |
-| sp1 | ? |
-| dp1 | ? |
-| td1 | ? |
-| xd1 | ? |
+| jd1, sd1, sp1, dp1, td1, xd1 | ? |
 
 | Server | Description |
 | --- | --- |
