@@ -61,15 +61,15 @@ Response:
 
 | Field | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge |
-| data | Base64-encoded AES key required for MAC calculation |
+| challenge | Base64-encoded challenge (32 bytes) |
+| data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
 ### POST /v6/device_auth_token
 This method returns a device token as JWT.
 
 | Param | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge |
+| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
 | client_id | Application-specific [client id](#known-client-ids) |
 | ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
 | key_generation | [Master key revision](#master-key-revisions) |
