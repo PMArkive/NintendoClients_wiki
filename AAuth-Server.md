@@ -24,7 +24,7 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 | 10.0.0 - 10.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 10.4.0.0; Add-on 10.4.0.0)` |
 | 11.0.0 - 11.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 11.4.0.0; Add-on 11.4.0.0)` |
 | 12.0.0 - 12.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 12.3.0.0; Add-on 12.3.0.0)` |
-| 13.0.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)` |
+| 13.0.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)` |
 
 ## Methods
 | Method | URL |
@@ -38,7 +38,9 @@ This request is only required if the media type is `GAMECARD`.
 
 | Param | Description |
 | --- | --- |
-| device_auth_token | Device token from [dauth server](DAuth-Server) |
+| &device_auth_token | Device token from [dauth server](DAuth-Server) |
+
+Note that the device_auth_token parameter is preceded by an ampersand, even though it is the first and only parameter in the request.
 
 Response on success:
 
