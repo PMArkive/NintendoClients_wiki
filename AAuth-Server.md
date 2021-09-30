@@ -69,15 +69,27 @@ The following parameters are always present:
 | application_id | Title id (`%016x`) |
 | application_version | Title version (`%08x`) |
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
-| media_type | `GAMECARD`, `DIGITAL`, `SYSTEM` or `NO_CERT` |
+| media_type | <code><a href="gamecard">GAMECARD</a></code>, <code><a href="digital">DIGITAL</a></code>, `SYSTEM` or <code><a href="no_cert">NO_CERT</a></code> |
 
-The following parameters depend on the media type of the game:
+Depending on the media type, additional parameters may be included in the request (see below).
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| application_auth_token | Application authorization token |
+| settings | Unknown (list) |
+| online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
+| policy_handler | `SYSTEM` or `GAME_SERVER` |
 
 #### GAMECARD
 | Param | Description |
 | --- | --- |
 | gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> (88 bytes) |
-| cert | Base64-encoded gamecard certificate (stored on game card itself) |
+| cert | Base64-encoded game card certificate (stored on game card itself) |
+
+The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
 
 #### DIGITAL
 The certificate is read from ES save data (`escommon` or `espersonalized`). First the index of the ticket is looked up in `ticket_list.bin` by rights id. Then the certificate itself is read from `ticket.bin`.
@@ -105,15 +117,8 @@ Public modulus:
 98870089661523253199182993983393803812441
 ```
 
-#### Response on success:
-
-| Field | Description |
-| --- | --- |
-| expires_in | Expiration in seconds (86400) |
-| application_auth_token | Application authorization token |
-| settings | Unknown (list) |
-| online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
-| policy_handler | `SYSTEM` or `GAME_SERVER` |
+#### NO_CERT
+This media type is used if the Switch does not have a valid ticket for a digital title. This can only happen if the title was installed through unofficial means, which is usually a piracy attempt. Using `NO_CERT` will ban your device.
 
 ## Errors
 On error, the server sends the following response:
