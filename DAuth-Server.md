@@ -234,7 +234,7 @@ X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
 {"challenge":"mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=","data":"1OikFLkHptkhDpqy7VHb3g=="}
 ```
 
-Then, one can obtain a device token or edge token. For more details, read the documentation about these [methods](#methods).
+Then, one can obtain a device token:
 
 ```http
 POST /v7/device_auth_token HTTP/1.1
@@ -261,6 +261,35 @@ X-Nintendo-Request-Host-Header: dauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
 
 {"expires_in":86400,"device_auth_token":"eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMTg4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJlODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmODQ5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRlMS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSEFDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQlNVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQpBYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4DEbSwdle5tph-ur01K91FhXhI6BA"}
+```
+
+Or an edge token:
+
+```http
+POST /v7/edge_token HTTP/1.1
+Host: dauth-dd1.ndas.srv.nintendo.net
+User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
+Accept: */*
+X-Nintendo-PowerState: FA
+Content-Length: 228
+Content-Type: application/x-www-form-urlencoded
+
+challenge=mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=&client_id=67bf9945b45248c6&ist=false&key_generation=13&system_version=CusHY#000d0000#r1xneESd4PiTRYIhVIl0bK1ST5L5BUmv_uGPLqc4PPo=&vendor_id=akamai&mac=8HKiiCC5Zqp3zxut8sSWZw
+```
+
+```http
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 26 Sep 2021 19:21:43 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+...
+X-Nintendo-Used-Directive: global auth
+X-Nintendo-Request-Host-Header: dauth-dd1.ndas.srv.nintendo.net
+X-Nintendo-Request-SNI: dauth-dd1.ndas.srv.nintendo.net
+
+{"expires_in": 86400, "dtoken": "exp=1632763301~acl=%2F%2A~data=sub=e8337aca28815cbb.sn=XAW10012345678.id=a73ff2b9-e772-4dc6-a01e-0861227bd202~hmac=bb7c0f27edddeb50777ec6a2fba6deacd8b8fc04faeaaaa864027c54767dea6c"}
 ```
 
 Example of an error response:
