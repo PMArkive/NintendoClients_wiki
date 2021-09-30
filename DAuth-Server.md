@@ -185,7 +185,7 @@ Every error is encoded like this:
 | 0031 | 2181-4031 | ? |
 
 ## Examples
-Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a valid certificate, the nginx server rejects the request:
+Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server rejects the request:
 
 ```http
 HTTP/1.1 400 Bad Request
