@@ -78,10 +78,19 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expires_in | Expiration in seconds (86400) |
-| application_auth_token | Application authorization token |
-| settings | Unknown (list) |
+| application_auth_token | Application token |
+| settings | Settings (see below) |
 | online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
 | policy_handler | `SYSTEM` or `GAME_SERVER` |
+
+The settings field contains a list of objects with the following fields:
+
+| Field | Description |
+| --- | --- |
+| nas:client_id | Unknown |
+| nas:redirect_uri | Unknown |
+
+The purpose of these fields is unknown. I have only seen an empty list so far.
 
 #### GAMECARD
 | Param | Description |
