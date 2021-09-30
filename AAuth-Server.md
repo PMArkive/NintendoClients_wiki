@@ -29,9 +29,16 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 ## Methods
 | Method | URL |
 | --- | --- |
-| GET | `/v1/time` |
+| GET | <code><a href="#post-v1admin">/v1/time</a></code> |
 | POST | <code><a href="#post-v3challenge">/v3/challenge</a></code> |
 | POST | <code><a href="#post-v3application_auth_token">/v3/application_auth_token</a></code> |
+
+### GET /v1/time
+This method is unrelated to aauth. It returns a `text/plain` document that contains two lines:
+1. The current server time in milliseconds
+2. The external IP address of the client
+
+It also returns this information in the `X-NINTENDO-UNIXTIME` and `X-NINTENDO-GLOBAL-IP` headers.
 
 ### POST /v3/challenge
 This request is only required if the media type is `GAMECARD`.
@@ -133,3 +140,25 @@ Every error is encoded like this:
 | 0118 | 2124-4618 | Invalid parameter in request. |
 | 0120 | 2124-4620 | ? |
 | 0121 | 2124-4621 | ? |
+
+## Examples
+Example of `/v1/time` response:
+
+```http
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 30 Sep 2021 14:02:21 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+...
+X-NINTENDO-UNIXTIME: 1633003341066
+X-NINTENDO-GLOBAL-IP: 93.184.216.34
+...
+X-Nintendo-Used-Directive: global auth
+X-Nintendo-Request-Host-Header: aauth-lp1.ndas.srv.nintendo.net
+X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
+
+1633003341066
+93.184.216.34
+```
