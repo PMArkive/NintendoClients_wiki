@@ -81,7 +81,7 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expires_in | Expiration in seconds (86400) |
-| device_auth_token | Device authorization token |
+| device_auth_token | Device token |
 
 The key for the AES-CMAC is calculated as follows:
 1. The `aes_kek_generation_source` is decrypted with the master key.
