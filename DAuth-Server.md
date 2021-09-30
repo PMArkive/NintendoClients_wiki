@@ -225,11 +225,11 @@ Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
+Connection: keep-alive
 ...
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: dauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
-Connection: keep-alive
 
 {"challenge":"mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=","data":"1OikFLkHptkhDpqy7VHb3g=="}
 ```
@@ -254,11 +254,25 @@ Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
+Connection: keep-alive
 ...
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: dauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
-Connection: keep-alive
 
 {"expires_in":86400,"device_auth_token":"eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMTg4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJlODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmODQ5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRlMS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSEFDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQlNVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQpBYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4DEbSwdle5tph-ur01K91FhXhI6BA"}
+```
+
+Example of an error response:
+
+```http
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 30 Sep 2021 09:41:16 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+...
+
+{"errors": [{"code": "0014", "message": "Invalid parameter in request."}]}
 ```
