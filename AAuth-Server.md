@@ -69,7 +69,7 @@ The following parameters are always present:
 | application_id | Title id (`%016x`) |
 | application_version | Title version (`%08x`) |
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
-| media_type | <code><a href="gamecard">GAMECARD</a></code>, <code><a href="digital">DIGITAL</a></code>, `SYSTEM` or <code><a href="no_cert">NO_CERT</a></code> |
+| media_type | <code><a href="gamecard">GAMECARD</a></code>, <code><a href="#digital">DIGITAL</a></code>, <code><a href="#system">SYSTEM</a></code> or <code><a href="#no_cert">NO_CERT</a></code> |
 
 Depending on the media type, additional parameters may be included in the request (see below).
 
@@ -116,6 +116,9 @@ Public modulus:
 4782505679727111312756904637828438785474471375120478991907979820
 98870089661523253199182993983393803812441
 ```
+
+#### SYSTEM
+This media type is used for system titles. It does not include any additional parameters.
 
 #### NO_CERT
 This media type is used if the Switch does not have a valid ticket for a digital title. This can only happen if the title was installed through unofficial means, which is usually a piracy attempt. Using `NO_CERT` will ban your device.
