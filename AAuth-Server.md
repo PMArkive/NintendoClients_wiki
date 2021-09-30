@@ -7,6 +7,11 @@ The aauth server provides application authorization tokens. These are required t
 
 The aauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
+* [Headers](#headers)
+* [Methods](#methods)
+* [Errors](#errors)
+* [Examples](#examples)
+
 ## Headers
 | Header | Description |
 | --- | --- |
@@ -169,4 +174,32 @@ X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
 
 1633003341066
 93.184.216.34
+```
+
+To authenticate game cards one must first obtain a challenge:
+
+```http
+POST /v3/challenge HTTP/1.1
+Host: aauth-lp1.ndas.srv.nintendo.net
+User-Agent: libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)
+Accept: */*
+Content-Length: 857
+Content-Type: application/x-www-form-urlencoded
+
+&device_auth_token=eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMTg4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmODQ5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRlMS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSEFDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQlNVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQpBYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4DEbSwdle5tph-ur01K91FhXhI6BA
+```
+
+```http
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 26 Sep 2021 19:21:50 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+...
+X-Nintendo-Used-Directive: global auth
+X-Nintendo-Request-Host-Header: aauth-lp1.ndas.srv.nintendo.net
+X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
+Connection: keep-alive
+
+{"value":"XLYSEWCMMwSUlU4wJC3VBA==","seed":"wLJ0JZCC3cu5KSU8bLbe"}
 ```
