@@ -142,6 +142,14 @@ Every error is encoded like this:
 | 0121 | 2124-4621 | ? |
 
 ## Examples
+The `/v1/time` request is very simple:
+
+```http
+GET /v1/time HTTP/1.1
+Host: aauth-lp1.ndas.srv.nintendo.net
+Accept: */*
+```
+
 Example of `/v1/time` response:
 
 ```http
