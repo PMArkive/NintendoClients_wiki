@@ -103,7 +103,7 @@ Certificates can be dumped with [nxdumptool](https://github.com/DarkMatterCore/n
 The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
 
 #### DIGITAL
-Tickets can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool). Dump the BASE ticket, and do not remove console specific data.
+Tickets can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool). Always dump the base ticket, and do not remove console specific data.
 
 The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA-OAEP with SHA256.
 
