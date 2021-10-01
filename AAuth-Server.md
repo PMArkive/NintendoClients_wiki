@@ -98,7 +98,7 @@ Certificates can be dumped with [nxdumptool](https://github.com/DarkMatterCore/n
 | Param | Description |
 | --- | --- |
 | gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> (88 bytes) |
-| cert | Base64-encoded game card certificate (512 bytes) |
+| cert | Base64-encoded gamecard certificate (512 bytes) |
 
 The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
 
@@ -195,7 +195,7 @@ X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
 93.184.216.34
 ```
 
-To authenticate game cards one must first obtain a challenge:
+To authenticate gamecards one must first obtain a challenge:
 
 ```http
 POST /v3/challenge HTTP/1.1
