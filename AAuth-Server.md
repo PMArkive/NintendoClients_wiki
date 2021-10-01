@@ -93,21 +93,23 @@ The settings field contains a list of objects with the following fields:
 The purpose of these fields is unknown. I have only seen an empty list so far.
 
 #### GAMECARD
+Certificates can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool).
+
 | Param | Description |
 | --- | --- |
 | gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> (88 bytes) |
-| cert | Base64-encoded game card certificate (stored on game card itself) |
+| cert | Base64-encoded game card certificate (512 bytes) |
 
 The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
 
 #### DIGITAL
-The certificate is read from ES save data (`escommon` or `espersonalized`). First the index of the ticket is looked up in `ticket_list.bin` by rights id. Then the certificate itself is read from `ticket.bin`.
+Tickets can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool). Dump the BASE ticket, and do not remove console specific data.
 
 The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA-OAEP with SHA256.
 
 | Param | Description |
 | --- | --- |
-| cert | Encrypted certificate (base64) |
+| cert | Encrypted ticket (base64) |
 | cert_key | Encrypted key (base64) |
 
 Public exponent: `65537`
