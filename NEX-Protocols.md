@@ -40,16 +40,7 @@ See also: [[RMC Protocol]]
 | 124 | [Screening](Screening-Protocol) |
 
 ## Not provided by NEX
-These protocols aren't implemented by NEX, but may be seen in Ubisoft games that use the original Quazal Rendez-Vous library instead of NEX:
-
-* Just Dance 4
-* Know Your Friends
-* Rabbits Land
-* Rayman Legends Challenges App
-* Splinter Cell Blacklist
-* Uplay
-* Your Shape FE 2013
-* ZombiU
+Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX. The following are not implemented by NEX, but may seen in Ubisoft games:
 
 | ID | Protocol |
 | --- | --- |
