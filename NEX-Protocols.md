@@ -40,7 +40,7 @@ See also: [[RMC Protocol]]
 | 124 | [Screening](Screening-Protocol) |
 
 ## Not provided by NEX
-Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX. The following are not implemented by NEX, but may seen in Ubisoft games:
+Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX. The following protocols are not implemented by NEX, but may seen in Ubisoft games:
 
 | ID | Protocol |
 | --- | --- |
