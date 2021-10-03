@@ -43,7 +43,7 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | --- | --- |
 | POST | <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> |
 | POST | <code><a href="#post-100login">/1.0.0/login</a></code> |
-| POST | `/1.0.0/federation` |
+| POST | <code><a href="#post-100federation">/1.0.0/federation</a></code> |
 | POST | <code><a href="#post-100users">/1.0.0/users</a></code> |
 | GET | `/1.0.0/users` |
 | GET | `/1.0.0/users/<id>` |
@@ -82,6 +82,26 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expiresIn | Expiration in seconds (10800) |
+| accessToken | Authorization token for further requests |
+| tokenType | Authorization token type ("Bearer") |
+
+### POST /1.0.0/federation
+| Param | Description |
+| --- | --- |
+| id | |
+| password | |
+| idp | nintendoAccount |
+| idToken | |
+| appAuthNToken | [AAuth token](AAuth-Server) optional |
+| skipOp2Verification | Unknown (optional) |
+
+Response on success:
+
+| Param | Description |
+| --- | --- |
+| expiresIn | Expiration in seconds (10800) |
+| user | [User information](#user-information) |
+| idToken | ID token (for game servers) |
 | accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
 
