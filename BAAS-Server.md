@@ -1,15 +1,21 @@
 [[Server List]] > BAAS Server
 ---
 
-Server: https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
+URL: https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
+
+The baas server manages user accounts and friendships on the Nintendo Switch.
 
 This server takes form-encoded requests and responds with json-encoding.
 
 ## Headers
 | Header | Description |
 | --- | --- |
+| Host | `e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` |
 | User-Agent | [User agent](#user-agents) |
+| Accept | `*/*` |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only present in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
+| Content-Length | Content length |
+| Content-Type | `application/x-www-form-urlencoded` |
 
 #### User Agents
 The user agents below are taken from the account sysmodule. If the request is made by the friends sysmodule replace `nnAccount` by `nnFriends`.
