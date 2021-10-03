@@ -7,6 +7,10 @@ The baas server manages user accounts and friendships on the Nintendo Switch.
 
 This server takes form-encoded requests and responds with json-encoding.
 
+* [Headers](#headers)
+* [Methods](#methods)
+* [Errors](#errors)
+
 ## Headers
 | Header | Description |
 | --- | --- |
