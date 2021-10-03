@@ -236,7 +236,7 @@ The following fields are stored in each of the [extras](#extras).
 | lastPlayedAt | Timestamp |
 
 ### GET /1.0.0/certificates
-This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code>.
+This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
 
 ### GET /1.0.0/internal_certificates
 This method returns the JWK set for the session token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>.
