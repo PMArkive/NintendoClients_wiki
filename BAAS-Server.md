@@ -17,7 +17,13 @@ This server takes form-encoded requests and responds with json-encoding.
 | Host | `e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` |
 | User-Agent | [User agent](#user-agents) |
 | Accept | `*/*` |
-| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only present in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
+| Authorization | Depends on method |
+
+POST and PATCH requests include two more headers:
+
+| Header | Description |
+| --- | --- |
 | Content-Length | Content length |
 | Content-Type | `application/x-www-form-urlencoded` |
 
