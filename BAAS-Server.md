@@ -27,7 +27,7 @@ POST and PATCH requests include two more headers:
 | Content-Length | Content length |
 | Content-Type | `application/x-www-form-urlencoded` |
 
-#### User Agents
+### User Agents
 The user agents below are taken from the account sysmodule. If the request is made by the friends sysmodule replace `nnAccount` by `nnFriends`.
 
 | System Version | User agent |
