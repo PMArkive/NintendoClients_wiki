@@ -307,7 +307,7 @@ Example of an error response:
 ```http
 HTTP/1.1 400 Bad Request
 Server: nginx
-Date: Thu, 30 Sep 2021 09:41:16 GMT
+Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
