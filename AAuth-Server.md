@@ -183,10 +183,19 @@ Date: Thu, 30 Sep 2021 14:02:21 GMT
 Content-Type: text/plain; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-...
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
 X-NINTENDO-UNIXTIME: 1633003341066
 X-NINTENDO-GLOBAL-IP: 93.184.216.34
-...
+Vary: Accept
+ETag: W/"7c7283f8b06feb54a9d29b679a4ca0af"
+Cache-Control: max-age=0, private, must-revalidate
+X-RequestId: 297b792a-f6f2-456b-a3ca-66c6e73620b7
+X-Runtime: 0.000683
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: aauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
@@ -214,7 +223,17 @@ Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
-...
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Vary: Accept
+ETag: W/"eff6fe99a35dd733bdb7e43956f9db16"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b782a5a4-739a-47d6-b061-aa2cbfa4bea2
+X-Runtime: 0.005265
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: aauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
@@ -275,11 +294,11 @@ Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
+Connection: keep-alive
 ...
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: aauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: aauth-lp1.ndas.srv.nintendo.net
-Connection: keep-alive
 
 {"expires_in":86400,"application_auth_token":"eyJqa3UiOiJodHRwczovL2FjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjZiMjVhNGU4LTRiOWItNDJhMy1hZDJiLWVhYzRiZGJjOWQ0NiIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIwMTAwYWJmMDA4OTY4MDAwIiwiZXhwIjoxNjMyNzYzMzAxLCJpYXQiOjE2MzI2NzY5MDEsImlzcyI6ImFhdXRoLWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQiLCJqdGkiOiI4MmRmNjY3Yi0wZGExLTQzODEtODdlNC0xYWU0MDNjOGI1NjgiLCJuaW50ZW5kbyI6eyJhaSI6IjAxMDBhYmYwMDg5NjgwMDAiLCJhdiI6IjAwMDciLCJhdCI6MTYzMjY3NjkwMSwiZWRpIjoiYjQ2YmRhNGUxZGQ1ZTdjZTAwMjQzMGE2OGIyYzZkNGUiLCJvcHAiOiJNRU1CRVJTSElQX1JFUVVJUkVEIiwicGgiOiJHQU1FX1NFUlZFUiJ9fQ.bVRnffmMbfN3Q-XAEHAt8qa-QPQf-jOBQMwhhMu0hWOUK3UGviDiG4fti_ws6-0vaYxsAisiong051wUhDi0MyzN9BSsJ1nTA0mB6rRfCeqdsdbgRz6hWP4lRgeuzeyVSX6NTIQvdIJTYsqd800i1tkpR2ynTBVwUHwcle9vqNWuIkzZgl-osk439AP70vV2okLSFoSP49EGH6UW7ocgstto9xwy39DiY93y8Di0uX-GvYQK_inAxaIgMUCLBcKJzZ8iwUKV8E1MeD-yWNWGJ9nW9F5kPa6mvDFBOdzcvIYYTjnKh2JSJLS2-nlNyTZoN8t3OfTVLwd3KlDj0HhzZA","settings":[],"online_play_policy":"MEMBERSHIP_REQUIRED","policy_handler":"GAME_SERVER"}
 ```
@@ -293,7 +312,16 @@ Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-...
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Vary: Accept
+Cache-Control: no-cache
+X-Request-Id: ae8b948d-a0ca-4073-a41a-2393a69f12c6
+X-Runtime: 0.006897
 
 {"errors": [{"code": "0118", "message": "Invalid parameter in request."}]}
 ```
