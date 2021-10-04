@@ -30,7 +30,7 @@ Example:
 ```
 
 ### Payload
-The second part contains a set of "claims": the information that's stored in the JWT, such as the user id. The content of the payload depends on the type of token, but the following fields are always present:
+The second part contains the information that's stored in the JWT, such as the user id. The content of the payload depends on the type of token, but the following fields are always present:
 
 | Field | Description |
 | --- | --- |
@@ -53,13 +53,11 @@ Each JWK contains the following fields:
 | Field | Description |
 | --- | --- |
 | `kty` | **Key Type:** Always `RSA`. |
-| `e` | **Exponent:** The public exponent of the RSA key. |
-| `n` | **Modulus:** The public modulus of the RSA key. |
+| `e` | **Exponent:** The public exponent of the RSA key (base64url). |
+| `n` | **Modulus:** The public modulus of the RSA key (base64url). |
 | `alg` | **Algorithm:** Always `RS256`. |
 | `use` | **Public Key Use:** Always `sig`. |
 | `kid` | **Key ID:** A unique id that identifies the key. This id is also specified in the [JWT header](#header). |
-
-`e` and `n` are encoded with the url-safe base64 table.
 
 The baas server also returns the following fields:
 
@@ -70,11 +68,12 @@ The baas server also returns the following fields:
 
 JWKs are described formally in [RFC 7517](https://tools.ietf.org/html/rfc7517) and [RFC 7518](https://tools.ietf.org/html/rfc7518).
 
+Most JWK sets are regenerated every 24 hours. The only exception is the JWK set for [baas session tokens](#baas-session-tokens), which never changes.
+
 ## DAuth Tokens
 | Field | Value |
 | --- | --- |
 | `jku` | https://dcert-lp1.ndas.srv.nintendo.net/keys |
-| `kid` | `2567fb65-eacb-48ba-9eb0-ed815a9f1a06` |
 
 <details><summary>JWK set (click to show)</summary>
 
@@ -131,7 +130,6 @@ Payload fields:
 | Field | Value |
 | --- | --- |
 | `jku` | https://acert-lp1.ndas.srv.nintendo.net/keys |
-| `kid` | `13e1e19b-2b3c-4dec-99aa-1a99c228990c` |
 
 <details><summary>JWK set (click to show)</summary>
 
@@ -238,7 +236,6 @@ Payload fields:
 | Field | Value |
 | --- | --- |
 | `jku` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com/1.0.0/certificates |
-| `kid` | `b99d46d3-1568-4f08-9597-111b481eccae` |
 
 <details><summary>JWK set (click to show)</summary>
 
