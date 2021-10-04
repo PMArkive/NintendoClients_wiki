@@ -13,7 +13,7 @@ Replace '%' by one of the following:
 | - dauth-%.ndas.srv.nintendo.net | [Device authentication](DAuth-Server) |
 | - aauth-%.ndas.srv.nintendo.net | [Application authentication](AAuth-Server) |
 | - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
-| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
+| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
 | - accounts.nintendo.com<br>- api.accounts.nintendo.com<br>- c-%.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - g&lt;game server id&gt;-%.r.n.srv.nintendo.net | P2P relay |
@@ -34,11 +34,10 @@ Replace '%' by one of the following:
 | - bcat-topics-%.cdn.nintendo.net<br>- bcat-list-%.cdn.nintendo.net<br>- bcat-data-%.cdn.nintendo.net | [News](BCAT-Servers) |
 | - Service-status-%.cdn.nintendo.net | [Game server availability](Service-Status-Server) |
 | - api-%.pctl.srv.nintendo.net<br>- parentalcontrols-movie-%.cdn.nintendo.net | [Parental controls](Parental-Controls) |
-| - e03a97819c9711e59510d820a52f298a-sb.accounts.nintendo.com | |
 | - web-%.share.srv.nintendo.net | |
 | - bvc-hac-%.cdn.nintendo.net<br>- bvc-hac-%.cdn.n.nintendoswitch.cn | |
 | - api.sect.srv.nintendo.net | |
-| - e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
+| - e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | |
 | - capi.%.op2.nintendo.net | [NSO membership verification](NSO-Verification-Server) |
 | - app.%.five.nintendo.net | [Invitations](Invitation-Server) |
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
