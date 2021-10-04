@@ -311,7 +311,16 @@ Date: Thu, 30 Sep 2021 09:41:16 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-...
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Vary: Accept
+Cache-Control: no-cache
+X-Request-Id: 84a8a661-a312-480a-b389-35cf83106b51
+X-Runtime: 0.007699
 
 {"errors": [{"code": "0014", "message": "Invalid parameter in request."}]}
 ```
