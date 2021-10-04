@@ -226,7 +226,17 @@ Date: Sun, 26 Sep 2021 19:21:43 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-...
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Vary: Accept
+ETag: W/"eb797bb39b7f70a033c7bbd5020bf9f0"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b1afb7d0-b6d9-4eff-8561-0159c97cdf58
+X-Runtime: 0.009675
 X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: dauth-lp1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
