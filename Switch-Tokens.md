@@ -215,12 +215,12 @@ Payload fields:
 
 | Field | Description |
 | --- | --- |
-| `sub` | Subject |
-| `aud` | Audience |
+| `sub` | `ed9e2f05d286f7b8` |
+| `aud` | `ed9e2f05d286f7b8` |
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
 | `typ` | Always `token` |
-| `bs:sts` | Unknown (list of integers) |
-| `bs:grt` | Unknown (integer) |
+| `bs:sts` | Unknown: `[385]` |
+| `bs:grt` | Unknown: `1` |
 | `nintendo` | [Device information](#device-information-0) |
 
 ### Device Information
