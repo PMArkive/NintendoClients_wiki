@@ -37,6 +37,10 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | `/connect/1.0.0/authorize` |
 | GET | `/profile` |
 
+**cdn.accounts.nintendo.com:**
+
+This server provides javascript files for `accounts.nintendo.com`.
+
 **api.accounts.nintendo.com:**
 
 | Method | URL |
