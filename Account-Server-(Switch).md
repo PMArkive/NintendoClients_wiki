@@ -1,13 +1,21 @@
 [[Server List]] > Account Server (Switch)
 ---
 
-This server is responsible for Nintendo accounts.
+This server is responsible for Nintendo accounts. Nintendo accounts are created off-device, and are required to use Nintendo Switch online services, including the eShop. For more information on Nintendo accounts, check out [Nintendo's support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/16005/).
 
-This server takes form-encoded requests and responds with json-encoding.
+To access online services on a Nintendo Switch, one must link a Nintendo account to a [Nintendo Switch user](BAAS-Server). This wiki page briefly describes the structure of the Nintendo account website, but mainly focuses on the API that may be used by Nintendo Switch games.
 
+The API takes form-encoded requests and responds with json-encoding.
+
+* [Website](#website)
 * [Headers](#headers)
 * [Methods](#methods)
 * [Errors](#errors)
+
+## Website
+The website can be visited in a web browser at https://accounts.nintendo.com. Static assets, such as css and javascript files are hosted on https://cdn.accounts.nintendo.com.
+
+On this website, one can either create a Nintendo account directly, or create a Nintendo account from a Facebook, Google, Twitter or Apple account. A Nintendo account contains basic profile information, such as nickname and birthday, but also many more advanced features such as two-factor authentication and [family groups](https://en-americas-support.nintendo.com/app/answers/detail/a_id/28815/).
 
 ## Headers
 | Header | Description |
@@ -36,10 +44,6 @@ This server takes form-encoded requests and responds with json-encoding.
 | POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
 | POST | `/connect/1.0.0/authorize` |
 | GET | `/profile` |
-
-**cdn.accounts.nintendo.com:**
-
-This server provides css and javascript files for `accounts.nintendo.com`.
 
 **api.accounts.nintendo.com:**
 
