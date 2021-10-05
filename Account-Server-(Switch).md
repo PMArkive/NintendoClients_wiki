@@ -39,7 +39,7 @@ This server takes form-encoded requests and responds with json-encoding.
 
 **cdn.accounts.nintendo.com:**
 
-This server provides javascript files for `accounts.nintendo.com`.
+This server provides css and javascript files for `accounts.nintendo.com`.
 
 **api.accounts.nintendo.com:**
 
