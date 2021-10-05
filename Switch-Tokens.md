@@ -334,7 +334,7 @@ Payload fields:
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
 | `typ` | Always `id_token` |
 | `bs:did` | Device account id (`%016x`) |
-| `nintendo` | [Application information](#application-information-0) (only present if an aauth token is provided) |
+| `nintendo` | [Application information](#application-information-1) (only present if an aauth token is provided) |
 
 ### Application Information
 | Field | Description |
