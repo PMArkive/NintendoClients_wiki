@@ -13,8 +13,8 @@ Replace '%' by one of the following:
 | - dauth-%.ndas.srv.nintendo.net | [Device authentication](DAuth-Server) |
 | - aauth-%.ndas.srv.nintendo.net | [Application authentication](AAuth-Server) |
 | - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
-| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com | [Accounts (api)](BAAS-Server) |
-| - accounts.nintendo.com<br>- api.accounts.nintendo.com<br>- c-%.accounts.nintendo.com | [Accounts (web)](Account-Server-(Switch)) |
+| - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com | [Switch accounts](BAAS-Server) |
+| - accounts.nintendo.com<br>- api.accounts.nintendo.com<br>- c-%.accounts.nintendo.com | [Nintendo accounts](Account-Server-(Switch)) |
 | - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
 | - g&lt;game server id&gt;-%.r.n.srv.nintendo.net | P2P relay |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | [P2P monitoring](Monitoring-Data-Protocol) |
