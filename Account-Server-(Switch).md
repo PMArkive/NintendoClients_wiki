@@ -50,6 +50,7 @@ This server takes form-encoded requests and responds with json-encoding.
 
 ### POST /connect/1.0.0/api/token
 | Param | Description |
+| --- | --- |
 | grant_Type | `refresh_token` |
 | client_id | Client id |
 | code_verifier | |
