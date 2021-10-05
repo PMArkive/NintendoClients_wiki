@@ -1,6 +1,8 @@
 [[Server List]] > Account Server (Switch)
 ---
 
+This server is responsible for Nintendo accounts.
+
 This server takes form-encoded requests and responds with json-encoding.
 
 * [Headers](#headers)
