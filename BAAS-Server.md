@@ -139,7 +139,7 @@ Response on success:
 | tokenType | Authorization token type ("Bearer") |
 
 ### POST /1.0.0/login
-This request can be used to log in on a device account that was registered with <code><a href="#post-100users">/1.0.0/users</a></code>. If an application token is provided, the server checks if the device account is linked against a Nintendo account, and if the account has a Nintendo Switch Online membership.
+This method can be used to log in on a device account that was registered with <code><a href="#post-100users">/1.0.0/users</a></code>. If an application token is provided, the server checks if the device account is linked against a Nintendo account, and if the account has a Nintendo Switch Online membership.
 
 | Param | Description |
 | --- | --- |
@@ -159,7 +159,7 @@ Response on success:
 | tokenType | Authorization token type ("Bearer") |
 
 ### POST /1.0.0/users
-This request registers a new user on the server. This request does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
+This method registers a new user on the server. This method does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
 
 <details><summary>Examples (click to show)</summary>
 
