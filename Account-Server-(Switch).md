@@ -3,7 +3,7 @@
 
 This server is responsible for Nintendo accounts. Nintendo accounts are created off-device, and are required to use Nintendo Switch online services, including the eShop. For more information on Nintendo accounts, check out [Nintendo's support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/16005/).
 
-To access online services on a Nintendo Switch, one must link a Nintendo account to a [Nintendo Switch user](BAAS-Server). This wiki page briefly describes the structure of the Nintendo account website, but mainly focuses on the API that may be used by Nintendo Switch games.
+This wiki page briefly describes the structure of the Nintendo account website, but mainly focuses on the API that may be used by Nintendo Switch games.
 
 The API takes form-encoded requests and responds with json-encoding.
 
