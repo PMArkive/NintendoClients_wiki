@@ -53,6 +53,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | --- | --- |
 | grant_type | `refresh_token` |
 | client_id | Client id |
+| scope | Scope (optional) |
 | code_verifier | |
 | refresh_token | |
 | device_authentication_token | [Device token](DAuth-Server) |
