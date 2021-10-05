@@ -161,7 +161,46 @@ Response on success:
 ### POST /1.0.0/users
 This request registers a new user on the server. This request does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
 
-### User information
+<details><summary>Examples (click to show)</summary>
+
+```http
+POST /1.0.0/users HTTP/1.1
+Host: e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
+User-Agent: libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)
+Accept: */*
+Authorization: Bearer eyJqa3UiOiJodHRwczovL2UwZDY3YzUwOWZiMjAzODU4ZWJjYjJmZTNmODhjMmFhLmJhYXMubmludGVuZG8uY29tLzEuMC4wL2ludGVybmFsX2NlcnRpZmljYXRlcyIsImFsZyI6IlJTMjU2Iiwia2lkIjoiMzA4M2MxYjItNWQ2OC00MzRiLWJlMzItMTFmOTE1NTcwNTAwIn0.eyJzdWIiOiJlZDllMmYwNWQyODZmN2I4IiwiYXVkIjoiZWQ5ZTJmMDVkMjg2ZjdiOCIsImJzOnN0cyI6WzM4NV0sIm5pbnRlbmRvIjp7ImR0IjoiTlggUHJvZCAxIiwicGMiOiJIQUMiLCJkaSI6IjY4MzM3YWNhMjg4MTVjYmIiLCJzbiI6IlhBVzEwMDEyMzQ1Njc4IiwiaXN0IjpmYWxzZX0sImlzcyI6Imh0dHBzOi8vZTBkNjdjNTA5ZmIyMDM4NThlYmNiMmZlM2Y4OGMyYWEuYmFhcy5uaW50ZW5kby5jb20iLCJ0eXAiOiJ0b2tlbiIsImJzOmdydCI6MSwiZXhwIjoxNjMyNjg3NzAxLCJpYXQiOjE2MzI2NzY5MDEsImp0aSI6Ijg3OGQwNzM1LTU3MWEtNGI5NC04MmE2LTJiZjE4MzExNGRiMSJ9.oVn3eE81TJwApnNzhoUJTWhvJJasP5OpURctjSw-evHZVGXSnNbEcNHAGMHQu5QHU7IMiDlBaIM4hb0BU_l7h4EIPtZzZxys0tb4IbyHUD8SQdqjrA7GPadmfuJkIQYMJUUVikTIbAfmVuZ0asM1HjBUEpUjn9JzJgF6355oOePqrcQtWTWtsmthwPpfLj7RfPeGuXlc_89Yj6wBplDkpS3NQGrVULxLXoRBgi_cnhZpgnauorOkynby2EZC2UNfaMxpPXa5yNXPM2HQIiAlnd78Zk4Knl2ZH5xhKbtI6Fzeo0CmCCgzQYfYoh2xhR7WowVPpDNfZiwZ7XX0a3hZLw
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+```
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 835
+Last-Modified: Sun, 26 Sep 2021 19:21:43 GMT
+Location: /1.0.0/users/f09c3d45cc3432c6
+Cache-Control: no-store, no-cache
+Pragma: no-cache
+X-Cloud-Trace-Context: 7ce4b7892458ab7cb2b59ad859885437
+Date: Sun, 26 Sep 2021 19:21:43 GMT
+Server: Google Frontend
+X-Cache: Miss from cloudfront
+Via: 1.1 b2d8ce5eb7a72ad5dc65a8cc007a854d.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: AMS1-C1
+X-Amz-Cf-Id: 4uJpXHc1kKroh8tdpjO-x55dJLYyzudJ5VWnYdir2csFTjh5C7t3xA==
+Connection: keep-alive
+
+{"id":"f09c3d45cc3432c6","etag":"\"4d20053b9c0fcf9a\"","nickname":"","country":"","birthday":"0000-00-00","thumbnailUrl":"","deviceAccounts":[{"id":"7c23fd7c9b37b0cb","password":"0mr1prbsNFzRs0dRCHXRUNECGd1kJVg3Lq6zn0nR"}],"links":{},"permissions":{"personalAnalytics":true,"personalNotification":true,"friendRequestReception":true,"friends":"EVERYONE","presence":"FRIENDS","presenceUpdatedAt":1633432210,"personalAnalyticsUpdatedAt":1633432210,"personalNotificationUpdatedAt":1633432210},"extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"presence":{"state":"OFFLINE","extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"updatedAt":1632676901,"logoutAt":0},"deleted":false,"blocksUpdatedAt":1632676901,"friendsUpdatedAt":1632676901,"createdAt":1632676901,"updatedAt":1632676901}
+```
+</details>
+
+### GET /1.0.0/certificates
+This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
+
+### GET /1.0.0/internal_certificates
+This method returns the JWK set for the session token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>.
+
+## User information
 | Field | Description |
 | --- | --- |
 | id | User id (16 hex digits) |
@@ -173,7 +212,7 @@ This request registers a new user on the server. This request does not take any 
 | deviceAccounts | List of [device accounts](#device-account) |
 | links | [Linked accounts](#linked-accounts) |
 | permissions | [Privacy settings](#privacy-settings) |
-| extras | [Extras](#user-extras) |
+| extras | [Extras](#extras) |
 | presence | [Online status](#online-status) |
 | deleted | Bool |
 | blocksUpdatedAt | Timestamp |
@@ -185,7 +224,7 @@ This request registers a new user on the server. This request does not take any 
 | Field | Description |
 | --- | --- |
 | id | Device account id (16 hex digits) |
-| password | Device account password (30 random bytes, base64-encoded) |
+| password | Device account password (40 random alphanumeric characters) |
 
 #### Linked accounts
 | Field | Description |
@@ -235,11 +274,11 @@ This request registers a new user on the server. This request does not take any 
 #### Extras
 | Field | Description |
 | --- | --- |
-| self | Extras visible by no one |
-| favoriteFriends | Extras visible by best friends |
-| friends | Extras visible by all friends |
-| foaf | Extras visible by friends of a friend |
-| everyone | Extras visible by everyone |
+| self | [Extras](#user-extras) visible by no one |
+| favoriteFriends | [Extras](#user-extras) visible by best friends |
+| friends | [Extras](# visible by all friends |
+| foaf | [Extras](#user-extras) visible by friends of a friend |
+| everyone | [Extras](#user-extras) visible by everyone |
 
 #### User extras
 The following fields are stored in each of the [extras](#extras).
@@ -267,12 +306,6 @@ The following fields are stored in each of the [extras](#extras).
 | totalPlayTime | Total play time in minutes |
 | firstPlayedAt | Timestamp |
 | lastPlayedAt | Timestamp |
-
-### GET /1.0.0/certificates
-This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
-
-### GET /1.0.0/internal_certificates
-This method returns the JWK set for the session token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>.
 
 ## Errors
 On error, the server sends the following response:
