@@ -49,13 +49,15 @@ This server takes form-encoded requests and responds with json-encoding.
 | GET | `/v1/apps/<id>/nx.jpg` |
 
 ### POST /connect/1.0.0/api/token
+This method provides two grant types: `refresh_token` and `authorization_code`.
+
 | Param | Description |
 | --- | --- |
 | grant_type | `refresh_token` |
 | client_id | Client id |
 | scope | Scope (optional) |
 | code_verifier | |
-| refresh_token | |
+| refresh_token | Refresh token |
 | device_authentication_token | [Device token](DAuth-Server) |
 
 Response on success:
