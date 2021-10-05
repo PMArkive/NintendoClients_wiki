@@ -329,17 +329,21 @@ Payload fields:
 
 | Field | Description |
 | --- | --- |
-| `aud` | Audience |
-| `sub` | NEX user id (`%016x`) |
+| `aud` | Always `ed9e2f05d286f7b8` |
+| `sub` | User id (`%016x`) |
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
-| `nintendo` | [ID token information](#id-token-information) |
 | `typ` | Always `id_token` |
-| `bs:did` | BaaS device account id (`%016x`) |
+| `bs:did` | Device account id (`%016x`) |
+| `nintendo` | [Application information](#application-information-0) (only present if an aauth token is provided) |
 
-### ID Token Information
+### Application Information
 | Field | Description |
 | --- | --- |
 | `ai` | Application id (`%016x`) |
 | `av` | Application version (`%04x`) |
 | `at` | Application time (current timestamp) |
+| `di` | Device id (`%016x`) |
+| `dt` | Device type: `NX Prod 1` |
+| `pc` | Product code: `HAC` |
+| `sn` | Serial number |
 | `edi` | Unique id (32 hex digits) |
