@@ -20,7 +20,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
 | Authorization | Access token received from <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> or <code><a href="#post-100federation">/1.0.0/federation</a></code>, prefixed with `Bearer `. The only method that does not require this header is <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>. |
 
-The following headers are only sent if the request has a body:
+The following headers are only sent in POST, PUT, PATCH and DELETE requests.
 
 | Header | Description |
 | --- | --- |
