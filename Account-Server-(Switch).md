@@ -69,6 +69,7 @@ This method provides two grant types: `refresh_token` and `authorization_code`.
 | code_verifier | |
 | code | |
 | device_authentication_token | [Device token](DAuth-Server) |
+| redirect_uri | |
 
 The Nintendo Switch always requests the following scopes: `openid+offline+napps+urn:oauth:init-sso+user+user.birthday+user.email+user.links+user.links[].id+user.loginId+user.screenName+user.terms`.
 
