@@ -51,13 +51,6 @@ On this website, one can either create a Nintendo account directly, or create a 
 | --- | --- |
 | GET | `/2.0.0/users/me` |
 
-**c-lp1.accounts.nintendo.com:**
-
-| Method | URL |
-| --- | --- |
-| GET | `/v1/apps/<id>/catalog.json` |
-| GET | `/v1/apps/<id>/nx.jpg` |
-
 ### POST /connect/1.0.0/api/token
 This method provides two grant types: `refresh_token` and `authorization_code`.
 
