@@ -5,7 +5,8 @@ JWTs are described formally in [RFC 7515](https://tools.ietf.org/html/rfc7515), 
 Details on specific kinds of token:
 * [Device auth tokens](#dauth-tokens)
 * [Application auth tokens](#aauth-tokens)
-* [BaaS session tokens](#baas-session-tokens)
+* [BaaS access tokens](#baas-access-tokens)
+* [BaaS user tokens](#baas-user-tokens)
 * [ID tokens](#id-tokens)
 
 ### Header
@@ -183,7 +184,7 @@ Payload fields:
 | `opp` | Online play policy: `MEMBERSHIP_REQUIRED` or `FREE` |
 | `ph` | Policy handler: `SYSTEM` or `GAME_SERVER` |
 
-## BaaS Session Tokens
+## BaaS Access Tokens
 | Field | Value |
 | --- | --- |
 | `jku` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com/1.0.0/internal_certificates |
@@ -219,8 +220,8 @@ Payload fields:
 | `aud` | `ed9e2f05d286f7b8` |
 | `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
 | `typ` | Always `token` |
-| `bs:sts` | Unknown: `[385]` |
-| `bs:grt` | Unknown: `1` |
+| `bs:sts` | Status (always `[385]`) |
+| `bs:grt` | Grant type (always 1) |
 | `nintendo` | [Device information](#device-information-0) |
 
 ### Device Information
@@ -231,6 +232,47 @@ Payload fields:
 | `di` | Device id |
 | `sn` | Serial number |
 | `ist` | IsT (bool) |
+
+## BaaS User Tokens
+| Field | Value |
+| --- | --- |
+| `jku` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com/1.0.0/internal_certificates |
+| `kid` | `3083c1b2-5d68-434b-be32-11f915570500` |
+
+<details><summary>JWK set (click to show)</summary>
+
+```json
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "3083c1b2-5d68-434b-be32-11f915570500",
+      "usage": "internal",
+      "n": "8Cn3PfASZ_yF1XFZpGucwaRtxZUPsDTuq8WM2yTvB9pIOdP7dePd_O0_-TloEdAJa6hJwFqBdjp3NcBwu3pWfqUBTr69muULi5ZFh-krlkpYJWsUTM_wEcnnSG96B4HqPP--wn5MnxlsNi6pZRysi_UNOfq4GuFqOSZTXJe-kLDb8IiMQogd4SZNS_IF23tjycRnuKmXceUasNXptzO6LWs7t9D9yIc8IL960RnZVPu5uJD7V5998Lwh_wIp8VK7DiW8X9fMPwA08kXAk4JAkq9Y9H58t2v5NX-hMaEK2iRpVbiZM4eoaQBcFhX67WCLHMU6iMK3uvgvPWnYlTgLdQ",
+      "e": "AQAB",
+      "x5c": [
+        "MIICuTCCAaGgAwIBAgIHBUF8hd6nbzANBgkqhkiG9w0BAQUFADAdMRswGQYDVQQDExIuYmFhcy5uaW50ZW5kby5jb20wHhcNMTUxMTE4MDAwMDAwWhcNMTcxMTE3MDAwMDAwWjAdMRswGQYDVQQDExIuYmFhcy5uaW50ZW5kby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDwKfc98BJn/IXVcVmka5zBpG3FlQ+wNO6rxYzbJO8H2kg50/t149387T/5OWgR0AlrqEnAWoF2Onc1wHC7elZ+pQFOvr2a5QuLlkWH6SuWSlglaxRMz/ARyedIb3oHgeo8/77CfkyfGWw2LqllHKyL9Q05+rga4Wo5JlNcl76QsNvwiIxCiB3hJk1L8gXbe2PJxGe4qZdx5Rqw1em3M7otazu30P3Ihzwgv3rRGdlU+7m4kPtXn33wvCH/AinxUrsOJbxf18w/ADTyRcCTgkCSr1j0fny3a/k1f6ExoQraJGlVuJkzh6hpAFwWFfrtYIscxTqIwre6+C89adiVOAt1AgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAKH9cGhvmj5O+SFKQdw15I+Jxl7vBhUX2lH1Ds0n4WXqtqopv2QCJfBu0r7ZHCkF2QWzQzoR54nO6SUsd8DaL3gVpsahhCAHRMS8Tm78pNoBUdY6wuJjRmeMa/b250gz1csjIs7/YiujM3KXhRlWtY/yIo1eprrtiJ/pE+H0Z3n4phEYyycQ6Rd6COVL3f7c6thg9tTMH5TxcIPDTYkFVppspXGQTMO6RJjnP1xBZtXIjvSJqPC9gcuQ8Q87m+YGrgxxm/wGhfO6Mc2dAwkDVep3C5JsKcxSQcLctX0wzS4iXx2/BB92A/sYAqNF5kk7RxNnVA4br6PaIxCe4tBGjKo="
+      ]
+    }
+  ]
+}
+```
+</details>
+
+Payload fields:
+
+| Field | Description |
+| --- | --- |
+| `sub` | User id |
+| `aud` | `ed9e2f05d286f7b8` |
+| `iss` | https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com |
+| `typ` | Always `token` |
+| `bs:sts` | Status (unknown list of 7 integers) |
+| `bs:grt` | Grant type (always 2) |
+| `bs:did` | Device account id |
+
 
 ## ID Tokens
 | Field | Value |
