@@ -346,4 +346,4 @@ Payload fields:
 | `dt` | Device type: `NX Prod 1` |
 | `pc` | Product code: `HAC` |
 | `sn` | Serial number |
-| `edi` | Unique id (32 hex digits) |
+| `edi` | Unique id (copied from aauth token) |
