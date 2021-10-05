@@ -31,7 +31,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | Method | URL |
 | --- | --- |
 | GET | `/api/1.0.0/users/<id>/qrcode_param` |
-| POST | `/connect/1.0.0/api/token` |
+| POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
 | POST | `/connect/1.0.0/authorize` |
 | GET | `/profile` |
 
@@ -47,6 +47,23 @@ This server takes form-encoded requests and responds with json-encoding.
 | --- | --- |
 | GET | `/v1/apps/<id>/catalog.json` |
 | GET | `/v1/apps/<id>/nx.jpg` |
+
+### POST /connect/1.0.0/api/token
+| Param | Description |
+| grant_Type | `refresh_token` |
+| client_id | Client id |
+| code_verifier | |
+| refresh_token | |
+| device_authentication_token | [Device token](DAuth-Server) |
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| token_type | `Bearer` |
+| expires_in | 900 |
+| scope | List of scopes |
+| access_token | Access token |
 
 ## Errors
 On error, the server sends the following response:
