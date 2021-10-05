@@ -10,7 +10,6 @@ This server takes form-encoded requests and responds with json-encoding.
 * [Headers](#headers)
 * [Methods](#methods)
 * [Errors](#errors)
-* [Examples](#examples)
 
 ## Headers
 | Header | Description |
@@ -71,7 +70,7 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | GET | <code><a href="#get-100internal_certificates">/1.0.0/internal_certificates</a></code> |
 
 ### POST /1.0.0/application/token
-This request provides an authorization token that's required for all other requests.
+This method provides an access token that's required for all other methods.
 
 | Param | Description |
 | --- | --- |
@@ -85,6 +84,39 @@ Response on success:
 | expiresIn | Expiration in seconds (10800) |
 | accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
+
+<details><summary>Examples (click to show)</summary>
+
+```http
+POST /1.0.0/application/token HTTP/1.1
+Host: e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
+User-Agent: libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)
+Accept: */*
+X-Nintendo-PowerState: FA
+Content-Length: 872
+Content-Type: application/x-www-form-urlencoded
+
+grantType=public_client&assertion=eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMTg4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmODQ5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRlMS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSEFDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQlNVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQpBYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4DEbSwdle5tph-ur01K91FhXhI6BA
+```
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1061
+Connection: keep-alive
+Cache-Control: no-store, no-cache
+Pragma: no-cache
+X-Cloud-Trace-Context: d6b433b5122481d45b61aa4379d547f2
+Date: Sun, 26 Sep 2021 19:21:43 GMT
+Server: Google Frontend
+X-Cache: Miss from cloudfront
+Via: 1.1 9608d1fa3f5912724e10840925944987.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: AMS1-C1
+X-Amz-Cf-Id: WGSd3qu043Y9Co4sredK7gclrF4BMYPKQXytykkQfwEez4HYJmIbDw==
+
+{"accessToken": "eyJqa3UiOiJodHRwczovL2UwZDY3YzUwOWZiMjAzODU4ZWJjYjJmZTNmODhjMmFhLmJhYXMubmludGVuZG8uY29tLzEuMC4wL2ludGVybmFsX2NlcnRpZmljYXRlcyIsImFsZyI6IlJTMjU2Iiwia2lkIjoiMzA4M2MxYjItNWQ2OC00MzRiLWJlMzItMTFmOTE1NTcwNTAwIn0.eyJzdWIiOiJlZDllMmYwNWQyODZmN2I4IiwiYXVkIjoiZWQ5ZTJmMDVkMjg2ZjdiOCIsImJzOnN0cyI6WzM4NV0sIm5pbnRlbmRvIjp7ImR0IjoiTlggUHJvZCAxIiwicGMiOiJIQUMiLCJkaSI6IjY4MzM3YWNhMjg4MTVjYmIiLCJzbiI6IlhBVzEwMDEyMzQ1Njc4IiwiaXN0IjpmYWxzZX0sImlzcyI6Imh0dHBzOi8vZTBkNjdjNTA5ZmIyMDM4NThlYmNiMmZlM2Y4OGMyYWEuYmFhcy5uaW50ZW5kby5jb20iLCJ0eXAiOiJ0b2tlbiIsImJzOmdydCI6MSwiZXhwIjoxNjMyNjg3NzAxLCJpYXQiOjE2MzI2NzY5MDEsImp0aSI6Ijg3OGQwNzM1LTU3MWEtNGI5NC04MmE2LTJiZjE4MzExNGRiMSJ9.oVn3eE81TJwApnNzhoUJTWhvJJasP5OpURctjSw-evHZVGXSnNbEcNHAGMHQu5QHU7IMiDlBaIM4hb0BU_l7h4EIPtZzZxys0tb4IbyHUD8SQdqjrA7GPadmfuJkIQYMJUUVikTIbAfmVuZ0asM1HjBUEpUjn9JzJgF6355oOePqrcQtWTWtsmthwPpfLj7RfPeGuXlc_89Yj6wBplDkpS3NQGrVULxLXoRBgi_cnhZpgnauorOkynby2EZC2UNfaMxpPXa5yNXPM2HQIiAlnd78Zk4Knl2ZH5xhKbtI6Fzeo0CmCCgzQYfYoh2xhR7WowVPpDNfZiwZ7XX0a3hZLw", "tokenType": "Bearer", "expiresIn": 10800}
+```
+</details>
 
 ### POST /1.0.0/federation
 | Param | Description |
@@ -285,36 +317,3 @@ On error, the server sends the following response:
 | 500 | internal_server_error | ? | ? |
 | 502 | could_not_confirm_membership | ? | ? |
 | 503 | under_maintenance | ? | ? |
-
-## Examples
-Before anything else, one must obtain a session token:
-
-```http
-POST /1.0.0/application/token HTTP/1.1
-Host: e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
-User-Agent: libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)
-Accept: */*
-X-Nintendo-PowerState: FA
-Content-Length: 872
-Content-Type: application/x-www-form-urlencoded
-
-grantType=public_client&assertion=eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMTg4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2ODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmODQ5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRlMS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSEFDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQlNVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQpBYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4DEbSwdle5tph-ur01K91FhXhI6BA
-```
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-Content-Length: 1061
-Connection: keep-alive
-Cache-Control: no-store, no-cache
-Pragma: no-cache
-X-Cloud-Trace-Context: d6b433b5122481d45b61aa4379d547f2
-Date: Sun, 26 Sep 2021 19:21:43 GMT
-Server: Google Frontend
-X-Cache: Miss from cloudfront
-Via: 1.1 9608d1fa3f5912724e10840925944987.cloudfront.net (CloudFront)
-X-Amz-Cf-Pop: AMS1-C1
-X-Amz-Cf-Id: WGSd3qu043Y9Co4sredK7gclrF4BMYPKQXytykkQfwEez4HYJmIbDw==
-
-{"accessToken": "eyJqa3UiOiJodHRwczovL2UwZDY3YzUwOWZiMjAzODU4ZWJjYjJmZTNmODhjMmFhLmJhYXMubmludGVuZG8uY29tLzEuMC4wL2ludGVybmFsX2NlcnRpZmljYXRlcyIsImFsZyI6IlJTMjU2Iiwia2lkIjoiMzA4M2MxYjItNWQ2OC00MzRiLWJlMzItMTFmOTE1NTcwNTAwIn0.eyJzdWIiOiJlZDllMmYwNWQyODZmN2I4IiwiYXVkIjoiZWQ5ZTJmMDVkMjg2ZjdiOCIsImJzOnN0cyI6WzM4NV0sIm5pbnRlbmRvIjp7ImR0IjoiTlggUHJvZCAxIiwicGMiOiJIQUMiLCJkaSI6IjY4MzM3YWNhMjg4MTVjYmIiLCJzbiI6IlhBVzEwMDEyMzQ1Njc4IiwiaXN0IjpmYWxzZX0sImlzcyI6Imh0dHBzOi8vZTBkNjdjNTA5ZmIyMDM4NThlYmNiMmZlM2Y4OGMyYWEuYmFhcy5uaW50ZW5kby5jb20iLCJ0eXAiOiJ0b2tlbiIsImJzOmdydCI6MSwiZXhwIjoxNjMyNjg3NzAxLCJpYXQiOjE2MzI2NzY5MDEsImp0aSI6Ijg3OGQwNzM1LTU3MWEtNGI5NC04MmE2LTJiZjE4MzExNGRiMSJ9.oVn3eE81TJwApnNzhoUJTWhvJJasP5OpURctjSw-evHZVGXSnNbEcNHAGMHQu5QHU7IMiDlBaIM4hb0BU_l7h4EIPtZzZxys0tb4IbyHUD8SQdqjrA7GPadmfuJkIQYMJUUVikTIbAfmVuZ0asM1HjBUEpUjn9JzJgF6355oOePqrcQtWTWtsmthwPpfLj7RfPeGuXlc_89Yj6wBplDkpS3NQGrVULxLXoRBgi_cnhZpgnauorOkynby2EZC2UNfaMxpPXa5yNXPM2HQIiAlnd78Zk4Knl2ZH5xhKbtI6Fzeo0CmCCgzQYfYoh2xhR7WowVPpDNfZiwZ7XX0a3hZLw", "tokenType": "Bearer", "expiresIn": 10800}
-```
