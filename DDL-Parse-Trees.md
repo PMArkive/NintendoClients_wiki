@@ -33,11 +33,11 @@ You may be surprised to see the real names of parameter and structure members on
 | 8 | RMC |
 | 9 | Action |
 | 10 | AdapterDeclaration |
-| 11 | PropertyDeclaration |
+| 11 | [PropertyDeclaration] |
 | 12 | ProtocolDeclaration |
 | 13 | Parameter |
 | 14 | ReturnValue |
-| 15 | ClassDeclaration |
+| 15 | [ClassDeclaration] |
 | 16 | TemplateDeclaration |
 | 17 | SimpleTypeDeclaration |
 | 18 | [TemplateInstance] |
@@ -50,6 +50,12 @@ You may be surprised to see the real names of parameter and structure members on
 | Uint32 | Length (N) |
 | Bytes (N) | String (without null terminator) |
 
+## NameSpaceRef
+| Type | Description |
+| --- | --- |
+| [String] | Name |
+| [NameSpace] | Namespace |
+
 ## ParseTreeItem
 | Type | Description |
 | --- | --- |
@@ -60,13 +66,13 @@ The second parse tree item is always the same as the first parse tree item. I do
 
 | Type | Description |
 | --- | --- |
-| [ParseTreeItem](#parsetreeitem) | Parse tree item |
-| [ParseTreeItem](#parsetreeitem) | Parse tree item |
+| [ParseTreeItem] | Parse tree item |
+| [ParseTreeItem] | Parse tree item |
 
 ## Declaration
 | Type | Description |
 | --- | --- |
-| [NameSpaceItem](#namespaceitem) | Name space item |
+| [NameSpaceItem] | Name space item |
 | [String] | DDL unit name |
 | [Namespace] | Properties |
 
@@ -74,6 +80,19 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Type | Description |
 | --- | --- |
 | [Declaration] | Declaration |
+
+## PropertyDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| Uint32 | Category mask |
+| Uint32 | Allowed target mask |
+
+## ClassDeclaration
+| Type | Description |
+| --- | --- |
+| [TypeDeclaration] | Type declaration |
+| [NameSpaceRef] | Namespace ref |
 
 ## TemplateInstance
 | Type | Description |
@@ -90,10 +109,14 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [String] | Unit name |
 | [String] | Unit dir |
 
+[ClassDeclaration]: #classdeclaration
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
 [NameSpace]: #namespace
 [NameSpaceItem]: #namespaceitem
+[NameSpaceRef]: #namespaceref
+[ParseTreeItem]: #parsetreeitem
+[PropertyDeclaration]: #propertydeclaration
 [String]: #string
 [TemplateInstance]: #templateinstance
 [TypeDeclaration]: #typedeclaration
