@@ -29,13 +29,13 @@ You may be surprised to see the real names of parameter and structure members on
 | 3 | DOClassDeclaration |
 | 4 | DatasetDeclaration |
 | 5 | [TypeDeclaration] |
-| 6 | Variable |
-| 8 | RMC |
+| 6 | [Variable] |
+| 8 | [RMC] |
 | 9 | Action |
 | 10 | AdapterDeclaration |
 | 11 | [PropertyDeclaration] |
-| 12 | ProtocolDeclaration |
-| 13 | Parameter |
+| 12 | [ProtocolDeclaration] |
+| 13 | [Parameter] |
 | 14 | ReturnValue |
 | 15 | [ClassDeclaration] |
 | 16 | TemplateDeclaration |
@@ -50,11 +50,19 @@ You may be surprised to see the real names of parameter and structure members on
 | Uint32 | Length (N) |
 | Bytes (N) | String (without null terminator) |
 
-## NameSpaceRef
+## DeclarationUse
 | Type | Description |
 | --- | --- |
-| [String] | Name |
-| [NameSpace] | Namespace |
+| Uint8 | Declaration type (see [element](#element)) |
+| [String] | Type name |
+
+Only if declaration type is [TemplateInstance]:
+
+| Type | Description |
+| --- | --- |
+| [String] | Base type name |
+| Uint8 | Number of arguments (N) |
+| [DeclarationUse] (N) | Argument declaration use |
 
 ## ParseTreeItem
 | Type | Description |
@@ -72,7 +80,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 ## Declaration
 | Type | Description |
 | --- | --- |
-| [NameSpaceItem] | Name space item |
+| [NameSpaceItem] | Namespace item |
 | [String] | DDL unit name |
 | [Namespace] | Properties |
 
@@ -81,6 +89,25 @@ The second parse tree item is always the same as the first parse tree item. I do
 | --- | --- |
 | [Declaration] | Declaration |
 
+## MethodDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| [NameSpace] | Parameters |
+
+## Variable
+| Type | Description |
+| --- | --- |
+| [NameSpaceItem] | Namespace item |
+| [DeclarationUse] | Declaration use |
+| Uint32 | Array size |
+
+## RMC
+| Type | Description |
+| --- | --- |
+| [MethodDeclaration] | Method declaration |
+| [NameSpace] | Return values |
+
 ## PropertyDeclaration
 | Type | Description |
 | --- | --- |
@@ -88,11 +115,26 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Uint32 | Category mask |
 | Uint32 | Allowed target mask |
 
+## ProtocolDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| [NameSpace] | Methods |
+
+## Parameter
+| Type | Description |
+| --- | --- |
+| [Variable] | Variable |
+| [DeclarationUse] | Declaration use |
+| Uint32 | Array size |
+| Uint8 | Type (1=parameter, 2=return value) |
+
 ## ClassDeclaration
 | Type | Description |
 | --- | --- |
 | [TypeDeclaration] | Type declaration |
-| [NameSpaceRef] | Namespace ref |
+| [String] | Parent class name |
+| [NameSpace] | Class members |
 
 ## TemplateInstance
 | Type | Description |
@@ -112,11 +154,17 @@ The second parse tree item is always the same as the first parse tree item. I do
 [ClassDeclaration]: #classdeclaration
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
+[DeclarationUse]: #declarationuse
+[MethodDeclaration]: #methoddeclaration
 [NameSpace]: #namespace
 [NameSpaceItem]: #namespaceitem
 [NameSpaceRef]: #namespaceref
+[Parameter]: #parameter
 [ParseTreeItem]: #parsetreeitem
 [PropertyDeclaration]: #propertydeclaration
+[ProtocolDeclaration]: #protocoldeclaration
+[RMC]: #rmc
 [String]: #string
 [TemplateInstance]: #templateinstance
 [TypeDeclaration]: #typedeclaration
+[Variable]: #variable
