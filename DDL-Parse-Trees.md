@@ -24,11 +24,11 @@ You may be surprised to see the real names of parameter and structure members on
 
 | ID | Type |
 | --- | --- |
-| 1 | [NameSpaceItem](#namespaceitem) |
-| 2 | [Declaration](#declaration) |
+| 1 | [NameSpaceItem] |
+| 2 | [Declaration] |
 | 3 | DOClassDeclaration |
 | 4 | DatasetDeclaration |
-| 5 | TypeDeclaration |
+| 5 | [TypeDeclaration] |
 | 6 | Variable |
 | 8 | RMC |
 | 9 | Action |
@@ -40,8 +40,8 @@ You may be surprised to see the real names of parameter and structure members on
 | 15 | ClassDeclaration |
 | 16 | TemplateDeclaration |
 | 17 | SimpleTypeDeclaration |
-| 18 | TemplateInstance |
-| 19 | [DDLUnitDeclaration](#ddlunitdeclaration) |
+| 18 | [TemplateInstance] |
+| 19 | [DDLUnitDeclaration] |
 | 20 | DupSpaceDeclaration |
 
 ## String
@@ -70,6 +70,19 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [String] | DDL unit name |
 | [Namespace] | Properties |
 
+## TypeDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+
+## TemplateInstance
+| Type | Description |
+| --- | --- |
+| [TypeDeclaration] | Type declaration |
+| [String] | Base type name |
+| Uint32 | Number of template arguments (N) |
+| [String] (N) | Template arguments |
+
 ## DDLUnitDeclaration
 | Type | Description |
 | --- | --- |
@@ -77,6 +90,10 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [String] | Unit name |
 | [String] | Unit dir |
 
-[NameSpace]: #namespace
+[DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
+[NameSpace]: #namespace
+[NameSpaceItem]: #namespaceitem
 [String]: #string
+[TemplateInstance]: #templateinstance
+[TypeDeclaration]: #typedeclaration
