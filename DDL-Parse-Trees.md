@@ -1,4 +1,4 @@
-You may be surprised to see the real names of parameter and structure members on many of the pages that describe NEX protocols. NEX has automatically generated the code that encodes/decodes method parameters and structures from a data definition language (DDL), and many games contain the parse tree of the DDL declarations in their data segment. It's encoded in big-endian byte order (regardless of the platform) and looks as follows:
+You may be surprised to see the real names of parameter and structure members on many of the wiki pages. NEX has automatically generated the code that encodes/decodes method parameters and structures from a data definition language (DDL), and many games contain the parse tree of the DDL declarations in their data segment. It's encoded in big-endian byte order (regardless of the platform) and looks as follows:
 
 | Type | Description |
 | --- | --- |
