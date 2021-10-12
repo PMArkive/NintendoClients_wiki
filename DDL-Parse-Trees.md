@@ -54,7 +54,7 @@ You may be surprised to see the real names of parameter and structure members on
 | Type | Description |
 | --- | --- |
 | Uint8 | Declaration type (see [element](#element)) |
-| [String] | Type name |
+| [String] | Full type name |
 
 Only if declaration type is [TemplateInstance]:
 
