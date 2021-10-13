@@ -106,7 +106,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Type | Description |
 | --- | --- |
 | [MethodDeclaration] | Method declaration |
-| [NameSpace] | Return values |
+| [NameSpace] | Parameters |
 
 ## PropertyDeclaration
 | Type | Description |
