@@ -39,7 +39,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 14 | ReturnValue |
 | 15 | [ClassDeclaration] |
 | 16 | [TemplateDeclaration] |
-| 17 | SimpleTypeDeclaration |
+| 17 | [SimpleTypeDeclaration] |
 | 18 | [TemplateInstance] |
 | 19 | [DDLUnitDeclaration] |
 | 20 | DupSpaceDeclaration |
@@ -142,6 +142,11 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [TypeDeclaration] | Type declaration |
 | Uint32 | Number of template arguments |
 
+## SimpleTypeDeclaration
+| Type | Description |
+| --- | --- |
+| [TypeDeclaration] | Type declaration |
+
 ## TemplateInstance
 | Type | Description |
 | --- | --- |
@@ -170,6 +175,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 [PropertyDeclaration]: #propertydeclaration
 [ProtocolDeclaration]: #protocoldeclaration
 [RMC]: #rmc
+[SimpleTypeDeclaration]: #simpletypedeclaration
 [String]: #string
 [TemplateDeclaration]: #templatedeclaration
 [TemplateInstance]: #templateinstance
