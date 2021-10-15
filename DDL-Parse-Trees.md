@@ -140,7 +140,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Type | Description |
 | --- | --- |
 | [TypeDeclaration] | Type declaration |
-| Uint32 | Number of parameters |
+| Uint32 | Number of template arguments |
 
 ## TemplateInstance
 | Type | Description |
