@@ -1,4 +1,4 @@
-## NEX Protocols > Internal Protocols
+## [[NEX Protocols]] > Internal Protocols
 
 There seem to be some protocols that are used internally by the server and can only be observed through the [debug protocol](Debug-Protocol).
 
