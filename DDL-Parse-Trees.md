@@ -36,7 +36,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 11 | [PropertyDeclaration] |
 | 12 | [ProtocolDeclaration] |
 | 13 | [Parameter] |
-| 14 | ReturnValue |
+| 14 | [ReturnValue] |
 | 15 | [ClassDeclaration] |
 | 16 | [TemplateDeclaration] |
 | 17 | [SimpleTypeDeclaration] |
@@ -129,6 +129,11 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Uint32 | Array size |
 | Uint8 | Type (1=parameter, 2=return value) |
 
+## ReturnValue
+| Type | Description |
+| --- | --- |
+| [Variable] | Variable |
+
 ## ClassDeclaration
 | Type | Description |
 | --- | --- |
@@ -174,6 +179,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 [ParseTreeItem]: #parsetreeitem
 [PropertyDeclaration]: #propertydeclaration
 [ProtocolDeclaration]: #protocoldeclaration
+[ReturnValue]: #returnvalue
 [RMC]: #rmc
 [SimpleTypeDeclaration]: #simpletypedeclaration
 [String]: #string
