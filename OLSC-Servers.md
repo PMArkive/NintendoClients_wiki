@@ -4,6 +4,9 @@
 The SCSI servers are for account migration. The SATA servers are for repairing save data.
 
 ### Storage servers
+https://storage.lp1.scsi.srv.nintendo.net<br>
+https://storage.lp1.sata.srv.nintendo.net
+
 | URL |
 | --- |
 | `/api/nx/v1/component_files/<id>/finish_upload` |
@@ -42,6 +45,8 @@ The SCSI servers are for account migration. The SATA servers are for repairing s
 | `/api/nx/v2/save_data_archives/start_upload` |
 
 ### SATA permission server
+https://permission.lp1.sata.srv.nintendo.net
+
 | URL |
 | --- |
 | `/api/nx/v1/customer_operations` |
@@ -50,6 +55,8 @@ The SCSI servers are for account migration. The SATA servers are for repairing s
 | `/api/nx/v1/save_data_sets/generate_key_package` |
 
 ### SATA privacy policy
+https://pp.lp1.sata.srv.nintendo.net
+
 | URL |
 | --- |
 | `/noa/en_US.html` |
@@ -66,6 +73,7 @@ The SCSI servers are for account migration. The SATA servers are for repairing s
 | `/noe/ru_RU.html` |
 
 ### SCSI policy server
+https://scsi-policy-lp1.cdn.nintendo.net
 
 | URL |
 | --- |
@@ -73,6 +81,8 @@ The SCSI servers are for account migration. The SATA servers are for repairing s
 | `/api/nx/v1/save_data_migration_policy/<id>/<id>` |
 
 ### SCSI migration server
+https://migration.lp1.scsi.srv.nintendo.net
+
 | URL |
 | --- |
 | `/api/nx/v1/save_data_migrations/gen_key` |
