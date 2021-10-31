@@ -31,7 +31,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 5 | [TypeDeclaration] |
 | 6 | [Variable] |
 | 8 | [RMC] |
-| 9 | Action |
+| 9 | [Action] |
 | 10 | AdapterDeclaration |
 | 11 | [PropertyDeclaration] |
 | 12 | [ProtocolDeclaration] |
@@ -90,7 +90,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [Declaration] | Declaration |
 | [String] | Parent class name |
 | Uint32 | Class id |
-| [Namespace] | Class members |
+| [Namespace] | Actions |
 
 ## TypeDeclaration
 | Type | Description |
@@ -111,6 +111,12 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Uint32 | Array size |
 
 ## RMC
+| Type | Description |
+| --- | --- |
+| [MethodDeclaration] | Method declaration |
+| [NameSpace] | Parameters |
+
+## Action
 | Type | Description |
 | --- | --- |
 | [MethodDeclaration] | Method declaration |
@@ -177,6 +183,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [String] | Unit name |
 | [String] | Unit dir |
 
+[Action]: #action
 [ClassDeclaration]: #classdeclaration
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
