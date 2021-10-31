@@ -46,7 +46,7 @@ This page describes the methods that are only seen in Super Mario Maker. The pro
 | 84 | [DeleteCachedRanking](#84-deletecachedranking) |
 | 85 | [ChangePlayablePlatform](#85-changeplayableplatform) |
 | 86 | SearchUnknownPlatformObjects |
-| 87 | ReportCourse |
+| 87 | [ReportCourse](#87-reportcourse) |
 
 # (45) GetObjectInfos
 ## Request
@@ -502,6 +502,15 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+# (87) ReportCourse
+## Request
+| Type | Name |
+| --- | --- |
+| [DataStoreReportCourseParam] | Param |
+
+## Response
+This method does not return anything.
+
 # Types
 ## BufferQueueParam ([Structure])
 | Type | Name |
@@ -604,6 +613,14 @@ Revision 1:
 | Uint8 | slot |
 | Sint32 | score |
 
+## DataStoreReportCourseParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Data id |
+| [String] | Mii name |
+| Uint8 | Report category |
+| [String] | Report reason |
+
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
 [DataStoreCompletePostParam]: Data-Store-Protocol#datastorecompletepostparam-structure
@@ -628,6 +645,8 @@ Revision 1:
 [DataStoreGetMetaByOwnerIdParam]: #datastoregetmetabyowneridparam-structure
 [DataStoreRateCustomRankingParam]: #datastoreratecustomrankingparam-structure
 [DataStoreUploadCourseRecordParam]: #datastoreuploadcourserecordparam-structure
+
+[DataStoreReportCourseParam]: #datastorereportcourseparam-structure
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
