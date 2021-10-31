@@ -82,9 +82,9 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| [PID] | Pid |
 | Uint8 | Unknown |
-| [String] | Unknown |
+| [String] | Message |
 | Uint8 | Unknown |
 | [String] | Unknown |
 | [GameKey] | Game key |
@@ -281,7 +281,7 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | Uint64 | Friend request id |
-| Uint8 | Unknown |
+| Uint8 | Is received |
 | Uint8 | Unknown |
 | [String] | Message |
 | Uint8 | Unknown |
@@ -369,9 +369,9 @@ Specifies which fields changed their value recently.
 ## PrincipalPreference
 | Type | Description |
 | --- | --- |
-| Bool | Unknown |
-| Bool | Unknown |
-| Bool | Unknown |
+| Bool | Show online presence |
+| Bool | Show currently playing title |
+| Bool | Block friend requests |
 
 ## PrincipalRequestBlockSetting
 | Type | Description |
