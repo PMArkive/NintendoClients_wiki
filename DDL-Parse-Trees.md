@@ -32,7 +32,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 6 | [Variable] |
 | 8 | [RMC] |
 | 9 | [Action] |
-| 10 | AdapterDeclaration |
+| 10 | [AdapterDeclaration] |
 | 11 | [PropertyDeclaration] |
 | 12 | [ProtocolDeclaration] |
 | 13 | [Parameter] |
@@ -42,7 +42,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 17 | [SimpleTypeDeclaration] |
 | 18 | [TemplateInstance] |
 | 19 | [DDLUnitDeclaration] |
-| 20 | DupSpaceDeclaration |
+| 20 | [DupSpaceDeclaration] |
 
 ## String
 | Type | Description |
@@ -128,6 +128,11 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [MethodDeclaration] | Method declaration |
 | [NameSpace] | Parameters |
 
+## AdapterDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+
 ## PropertyDeclaration
 | Type | Description |
 | --- | --- |
@@ -189,13 +194,20 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [String] | Unit name |
 | [String] | Unit dir |
 
+## DupSpaceDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+
 [Action]: #action
+[AdapterDeclaration]: #adapterdeclaration
 [ClassDeclaration]: #classdeclaration
 [DatasetDeclaration]: #datasetdeclaration
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
 [DeclarationUse]: #declarationuse
 [DOClassDeclaration]: #doclassdeclaration
+[DupSpaceDeclaration]: #dupspacedeclaration
 [MethodDeclaration]: #methoddeclaration
 [NameSpace]: #namespace
 [NameSpaceItem]: #namespaceitem
