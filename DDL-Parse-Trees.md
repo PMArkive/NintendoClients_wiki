@@ -90,7 +90,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [Declaration] | Declaration |
 | [String] | Parent class name |
 | Uint32 | Class id |
-| [Namespace] | Actions and datasets |
+| [Namespace] | Namespace |
 
 ## DatasetDeclaration
 | Type | Description |
