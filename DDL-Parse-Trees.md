@@ -26,7 +26,7 @@ You may be surprised to see the real names of parameter and structure members on
 | --- | --- |
 | 1 | [NameSpaceItem] |
 | 2 | [Declaration] |
-| 3 | DOClassDeclaration |
+| 3 | [DOClassDeclaration] |
 | 4 | DatasetDeclaration |
 | 5 | [TypeDeclaration] |
 | 6 | [Variable] |
@@ -83,6 +83,13 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [NameSpaceItem] | Namespace item |
 | [String] | DDL unit name |
 | [Namespace] | Properties |
+
+## DOClassDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| [String] | Parent class name |
+| [Namespace] | Class members |
 
 ## TypeDeclaration
 | Type | Description |
@@ -173,6 +180,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
 [DeclarationUse]: #declarationuse
+[DOClassDeclaration]: #doclassdeclaration
 [MethodDeclaration]: #methoddeclaration
 [NameSpace]: #namespace
 [NameSpaceItem]: #namespaceitem
