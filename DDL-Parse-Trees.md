@@ -27,7 +27,7 @@ You may be surprised to see the real names of parameter and structure members on
 | 1 | [NameSpaceItem] |
 | 2 | [Declaration] |
 | 3 | [DOClassDeclaration] |
-| 4 | DatasetDeclaration |
+| 4 | [DatasetDeclaration] |
 | 5 | [TypeDeclaration] |
 | 6 | [Variable] |
 | 8 | [RMC] |
@@ -90,7 +90,13 @@ The second parse tree item is always the same as the first parse tree item. I do
 | [Declaration] | Declaration |
 | [String] | Parent class name |
 | Uint32 | Class id |
-| [Namespace] | Actions |
+| [Namespace] | Actions and datasets |
+
+## DatasetDeclaration
+| Type | Description |
+| --- | --- |
+| [Declaration] | Declaration |
+| [Namespace] | Variables |
 
 ## TypeDeclaration
 | Type | Description |
@@ -185,6 +191,7 @@ The second parse tree item is always the same as the first parse tree item. I do
 
 [Action]: #action
 [ClassDeclaration]: #classdeclaration
+[DatasetDeclaration]: #datasetdeclaration
 [DDLUnitDeclaration]: #ddlunitdeclaration
 [Declaration]: #declaration
 [DeclarationUse]: #declarationuse
