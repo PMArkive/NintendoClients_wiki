@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (0x73)](Data-Store-Protocol) > Splatoon 2
+## [[NEX Protocols]] > [Data Store (115)](Data-Store-Protocol) > Splatoon 2
 
 This page describes the methods that are only seen in Splatoon 2.
 | Method ID | Method Name |
