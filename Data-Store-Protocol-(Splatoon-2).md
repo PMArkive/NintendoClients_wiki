@@ -1,6 +1,7 @@
 ## [[NEX Protocols]] > [Data Store (115)](Data-Store-Protocol) > Splatoon 2
 
 This page describes the methods that are only seen in Splatoon 2.
+
 | Method ID | Method Name |
 | --- | --- |
 | 47 | [CoconutRegisterMeta](#47-coconutregistermeta) |
