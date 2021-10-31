@@ -133,6 +133,8 @@ The second parse tree item is always the same as the first parse tree item. I do
 | Type | Description |
 | --- | --- |
 | [Variable] | Variable |
+| [DeclarationUse] | Declaration use |
+| Uint32 | Array size |
 
 ## ClassDeclaration
 | Type | Description |
