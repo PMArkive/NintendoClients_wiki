@@ -194,7 +194,7 @@ This method does not return anything.
 ## Response
 | Type | Description |
 | --- | --- |
-| [DateTime] | Unknown |
+| [DateTime] | Update time |
 
 # (16) UpdatePreference
 ## Request
