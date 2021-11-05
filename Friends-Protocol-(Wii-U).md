@@ -247,6 +247,9 @@ This method does not take any parameters.
 
 # Types
 ## BlacklistedPrincipal
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [PrincipalBasicInfo] | Principal basic info |
@@ -254,6 +257,9 @@ This method does not take any parameters.
 | [DateTime] | Blacklisted since |
 
 ## Comment
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Unknown |
@@ -271,6 +277,8 @@ This method does not take any parameters.
 | Uint64 | Unknown |
 
 ## FriendRequest
+| This structure inherits from [Data] |
+| --- |
 | Type | Description |
 | --- | --- |
 | [PrincipalBasicInfo] | Principal basic info |
