@@ -246,7 +246,7 @@ This method does not take any parameters.
 | [List]&lt;[PrincipalRequestBlockSetting]&gt; | Settings |
 
 # Types
-## BlacklistedPrincipal
+## BlacklistedPrincipal ([Structure])
 | This structure inherits from [Data] |
 | --- |
 
@@ -256,7 +256,7 @@ This method does not take any parameters.
 | [GameKey] | Game key |
 | [DateTime] | Blacklisted since |
 
-## Comment
+## Comment ([Structure])
 | This structure inherits from [Data] |
 | --- |
 
@@ -266,7 +266,10 @@ This method does not take any parameters.
 | [String] | Status message |
 | [DateTime] | Last changed on |
 
-## FriendInfo
+## FriendInfo ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [NNAInfo] | NNA Info |
@@ -276,7 +279,10 @@ This method does not take any parameters.
 | [DateTime] | Last online |
 | Uint64 | Unknown |
 
-## FriendRequest
+## FriendRequest ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | This structure inherits from [Data] |
 | --- |
 | Type | Description |
@@ -285,7 +291,10 @@ This method does not take any parameters.
 | [FriendRequestMessage] | Message |
 | [DateTime] | Sent on |
 
-## FriendRequestMessage
+## FriendRequestMessage ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint64 | Friend request id |
@@ -298,13 +307,19 @@ This method does not take any parameters.
 | [DateTime] | Unknown |
 | [DateTime] | Expires on |
 
-## GameKey
+## GameKey ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint64 | Title id |
 | Uint16 | Title version |
 
-## MiiV2
+## MiiV2 ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [String] | Name |
@@ -313,7 +328,10 @@ This method does not take any parameters.
 | [Buffer] | Mii data (FFLStoreData) |
 | [DateTime] | Unknown |
 
-## NintendoPresenceV2
+## NintendoPresenceV2 ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint32 | [Changed flags](#changed-flags) |
@@ -345,14 +363,20 @@ Specifies which fields changed their value recently.
 | 0x80 | Gathering id |
 | 0x100 | Application data |
 
-## NNAInfo
+## NNAInfo ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [PrincipalBasicInfo] | Principal basic info |
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 
-## PersistentNotification
+## PersistentNotification ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint64 | Unknown |
@@ -361,12 +385,18 @@ Specifies which fields changed their value recently.
 | Uint32 | Unknown |
 | [String] | Unknown |
 
-## PersistentNotificationList
+## PersistentNotificationList ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PersistentNotification]&gt; | Notifications |
 
-## PrincipalBasicInfo
+## PrincipalBasicInfo ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | [PID] | Pid |
@@ -374,14 +404,20 @@ Specifies which fields changed their value recently.
 | [MiiV2] | Mii |
 | Uint8 | Unknown |
 
-## PrincipalPreference
+## PrincipalPreference ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Bool | Show online presence |
 | Bool | Show currently playing title |
 | Bool | Block friend requests |
 
-## PrincipalRequestBlockSetting
+## PrincipalRequestBlockSetting ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
@@ -406,3 +442,5 @@ Specifies which fields changed their value recently.
 [String]: NEX-Common-Types#string
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
+[Data]: NEX-Common-Types#data-structure
+[Structure]: NEX-Common-Types#structure
