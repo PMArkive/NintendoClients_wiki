@@ -27,6 +27,9 @@ No RMC response is sent.
 | [Data] | m_dataholder | Information about the event (depends on the event type) |
 
 ## NintendoNotificationEventGeneral ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Name |
 | --- | --- |
 | Uint32 | m_u32Param |
@@ -35,6 +38,9 @@ No RMC response is sent.
 | [String] | m_strParam |
 
 ## NintendoNotificationEventProfile ([Structure])
+| This structure inherits from [Data] |
+| --- |
+
 | Type | Name |
 | --- | --- |
 | Uint8 | m_region |
