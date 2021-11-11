@@ -375,4 +375,5 @@ On error, the server sends the following response:
 | 400 | `lib` | 3000 | Bad request |
 | 404 | `lib` | 3004 | Page not found or wrong http method |
 | 404 | `lib` | 3005 | User not found |
+| 500 | `lib` | 3997 | Maintenance mode (the http reason is set to `Maintenance Mode` as well) |
 | 401 | `lib` | 4001 | Invalid authorization header |
