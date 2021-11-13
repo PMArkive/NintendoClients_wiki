@@ -7,9 +7,9 @@
 
 # (1) Log
 ## Request
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| [String] | Message |
+| [String] | strLine |
 
 ## Response
 This method does not return anything.
