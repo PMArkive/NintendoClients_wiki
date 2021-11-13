@@ -403,3 +403,4 @@ This method does not return anything.
 [DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
 [DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
+[DataStoreCompletePostParam]: Data-Store-Protocol#datastorecompletepostparam-structure
