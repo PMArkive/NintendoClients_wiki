@@ -399,3 +399,7 @@ This method does not return anything.
 [DataStoreFightingPowerChart]: #datastorefightingpowerchart-structure
 [DataStoreReplayPlayer]: #datastorereplayplayer-structure
 [DataStoreFileServerObjectInfo]: #datastorefileserverobjectinfo-structure
+
+[DataStoreReqGetInfo]: Data-Store-Protocol#datastorereqgetinfo-structure
+[DataStoreReqPostInfo]: Data-Store-Protocol#datastorereqpostinfo-structure
+[DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
