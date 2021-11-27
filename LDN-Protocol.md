@@ -2,4 +2,4 @@ This page describes the protocol that is used to communicate with nearby console
 
 Because LDN operates at the data link layer, it requires a good understanding of the [IEEE 802.11 specification](https://ieeexplore.ieee.org/document/9363693).
 
-The host of the session broadcast a custom action frame every 100 milliseconds. To find nearby consoles, the console scans for these action frames.
+The host of the session broadcasts a custom action frame every 100 milliseconds. To find nearby consoles, the console scans for these action frames.
