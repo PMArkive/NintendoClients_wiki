@@ -1,0 +1,1 @@
+This page describes the protocol that is used to communicate with nearby consoles in LDN mode, which is the default mode for local multiplayer.
