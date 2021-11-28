@@ -80,7 +80,7 @@ void process_ieee80211_packet(const uint8_t *data, size_t size) {
 
     // Ignore packets with an invalid version number
     int version = (frame_control >> 8) & 3;
-    if (version != 0) return true;
+    if (version != 0) return;
 
     // Check if we received an action frame
     int type = (frame_control >> 10) & 3;
