@@ -4,6 +4,8 @@ Because LDN operates at the data link layer, it requires a good understanding of
 
 The host of the session broadcasts a custom action frame every 100 milliseconds. To find nearby consoles, the console scans for these action frames.
 
+Also see: [[Local Wireless Communication on PC]].
+
 ### Action Frame Format
 Defined by IEEE 802.11 specification:
 
