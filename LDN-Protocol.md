@@ -18,6 +18,7 @@ Nintendo-specific action frame format:
 
 | Offset | Size | Description | Value |
 | --- | --- | --- | --- |
-| 0x4 | 2 | Protocol id | 4 (LDN) |
+| 0x4 | 1 | Protocol id | 4 (LDN) |
+| 0x5 | 1 | Padding | Always 0 |
 | 0x6 | 2 | Packet type | 257 (advertisement) |
 | 0x8 | | Advertisement frame | |
