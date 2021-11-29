@@ -9,16 +9,30 @@ Also see: [[Local Wireless Communication on PC]].
 ### Action Frame Format
 Defined by IEEE 802.11 specification:
 
-| Offset | Size | Description | Value |
-| --- | --- | --- | --- |
-| 0x0 | 1 | Category | 127 (vendor-specific) |
-| 0x1 | 3 | OUI | `00:22:AA` (Nintendo) |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Category (127 = vendor-specific) |
+| 0x1 | 3 | OUI (`00:22:AA`) |
 
-Nintendo-specific action frame format:
+Defined by Nintendo:
 
-| Offset | Size | Description | Value |
-| --- | --- | --- | --- |
-| 0x4 | 1 | Protocol id | 4 (LDN) |
-| 0x5 | 1 | Padding | Always 0 |
-| 0x6 | 2 | Packet type | 257 (advertisement) |
-| 0x8 | | Advertisement frame | |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x4 | 1 | Protocol id (4 = LDN) |
+| 0x5 | 1 | Padding (always 0) |
+| 0x6 | 2 | Packet type (257 = advertisement) |
+| 0x8 | 2 | Must be 0 |
+| 0xA | 2 | Padding (always 0) |
+| 0xC | | [Advertisement frame](#advertisement-frame) |
+
+#### Advertisement Frame
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 32 | Encryption key source |
+| 0x20 | 1 | Unknown |
+| 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
+| 0x22 | 6 | Unknown |
+| 0x28 | 32 | SHA-256 hash |
+| 0x48 | | [Advertisement data](#advertisement-data) |
+
+#### Advertisement Data
