@@ -50,6 +50,8 @@ If encryption is enabled, the SHA-256 hash and advertisement data are encrypted 
 #### Advertisement Data
 
 ### Key Derivation
+This section needs some work: is the below algorithm correct?
+
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
 
 1. The `aes_kek_generation_source` is decrypted with master key generation 0.
