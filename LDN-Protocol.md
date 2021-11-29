@@ -32,7 +32,7 @@ Defined by Nintendo:
 | 0x20 | 1 | Unknown |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
-| 0x24 | 4 | Unknown |
+| 0x24 | 4 | Counter for AES-CTR algorithm |
 | 0x28 | 32 | SHA-256 hash, calculated over the whole decrypted advertisement frame with the hash set to zero |
 | 0x48 | | [Advertisement data](#advertisement-data) |
 
