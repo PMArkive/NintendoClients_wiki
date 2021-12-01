@@ -43,11 +43,31 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | --- | --- | --- |
 | 0x0 | 8 | Local communication id (usually the title id) |
 | 0x8 | 2 | Always 0 |
-| 0xA | 2 | Game mode (used for filtering) |
+| 0xA | 2 | Game mode |
 | 0xC | 4 | Padding (always 0) |
 | 0x10 | 16 | Random bytes for key generation |
 
 #### Advertisement Data
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 18 | Unknown |
+| 0x12 | 1 | Is session closed |
+| 0x13 | 3 | Unknown |
+| 0x16 | 1 | Maximum number of participants |
+| 0x17 | 1 | Current number of participants |
+| 0x18 | 56 x 8 | [Participant](#participant-info) list |
+| 0x1D8 | 2 | Unknown |
+| 0x1DA | 2 | Beacon data size |
+| 0x1DC | 384 | Beacon data |
+| 0x35C | 420 | Unknown |
+
+#### Participant Info
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | IP address |
+| 0x4 | 6 | MAC address |
+| 0xA | 1 | Is connected |
+| 0xB | 0x2D | Unknown |
 
 ### Key Derivation
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
