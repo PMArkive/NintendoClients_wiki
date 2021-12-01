@@ -32,11 +32,11 @@ Defined by Nintendo:
 | 0x20 | 1 | Unknown |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
-| 0x24 | 4 | Counter for AES-CTR algorithm |
+| 0x24 | 4 | Nonce for AES-CTR algorithm |
 | 0x28 | 32 | SHA-256 hash, calculated over the whole decrypted advertisement frame with the hash set to zero |
 | 0x48 | | [Advertisement data](#advertisement-data) |
 
-If encryption is enabled, the SHA-256 hash and advertisement data are encrypted with AES-CTR. The input buffer for [key derivation](#key-derivation) is the [advertisement header](#advertisement-header), and the input key is `c3c078fa13206a7bf569d5194f83e199`.
+If encryption is enabled, the SHA-256 hash and advertisement data are encrypted with AES-CTR. The input buffer for [key derivation](#key-derivation) is the [advertisement header](#advertisement-header), and the input key is `191884743e24c77d87c69e4207d0c438`.
 
 #### Advertisement Header
 | Offset | Size | Description |
@@ -50,12 +50,8 @@ If encryption is enabled, the SHA-256 hash and advertisement data are encrypted 
 #### Advertisement Data
 
 ### Key Derivation
-This section needs some work: is the below algorithm correct?
-
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
 
-1. The `aes_kek_generation_source` is decrypted with master key generation 0.
+1. `aes_kek_generation_source` is decrypted with master key generation 0.
 2. The first 16 bytes of the SHA-256 hash of the input buffer are decrypted with the key from step 1.
-3. The input key is XORed with the LDN key mask, and the result is decrypted with the key from step 2.
-
-The LDN key mask is: `dad8fc8e2d04ad0672af4b5b485325a1`
+3. The input key is decrypted with the key from step 2.
