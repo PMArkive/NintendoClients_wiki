@@ -33,10 +33,10 @@ Defined by Nintendo:
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
 | 0x24 | 4 | Nonce for AES-CTR algorithm |
-| 0x28 | 32 | SHA-256 hash, calculated over the whole decrypted advertisement frame with the hash set to zero |
+| 0x28 | 32 | SHA-256 hash, calculated over the whole advertisement frame with the hash set to zero |
 | 0x48 | | [Advertisement data](#advertisement-data) |
 
-If encryption is enabled, the SHA-256 hash and advertisement data are encrypted with AES-CTR. The input buffer for [key derivation](#key-derivation) is the [advertisement header](#advertisement-header), and the input key is `191884743e24c77d87c69e4207d0c438`.
+If encryption is enabled, the hash and advertisement data are encrypted with AES-CTR. The input buffer for [key derivation](#key-derivation) is the [advertisement header](#advertisement-header), and the input key is `191884743e24c77d87c69e4207d0c438`.
 
 #### Advertisement Header
 | Offset | Size | Description |
