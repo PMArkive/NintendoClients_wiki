@@ -42,7 +42,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Local communication id (usually the title id) |
-| 0x8 | 2 | Always 0 |
+| 0x8 | 2 | Padding (Always 0) |
 | 0xA | 2 | Game mode |
 | 0xC | 4 | Padding (always 0) |
 | 0x10 | 16 | Random bytes for key generation |
