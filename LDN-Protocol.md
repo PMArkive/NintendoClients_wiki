@@ -73,7 +73,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | System version | LDN version |
 | --- | --- |
 | 3.0.0 | 2 |
-| 12.0.0 - 13.1.0 | 3 |
+| 6.0.0 - 13.1.0 | 3 |
 
 ### Key Derivation
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
