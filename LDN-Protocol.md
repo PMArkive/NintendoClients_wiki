@@ -29,7 +29,7 @@ Defined by Nintendo:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | [Advertisement header](#advertisement-header) |
-| 0x20 | 1 | Unknown |
+| 0x20 | 1 | [LDN version](#ldn-version) |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
 | 0x24 | 4 | Nonce for AES-CTR algorithm |
@@ -68,6 +68,12 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x4 | 6 | MAC address |
 | 0xA | 1 | Is connected |
 | 0xB | 0x2D | Unknown |
+
+#### LDN Version
+| System version | LDN version |
+| --- | --- |
+| 3.0.0 | 2 |
+| 12.0.0 - 13.1.0 | 3 |
 
 ### Key Derivation
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
