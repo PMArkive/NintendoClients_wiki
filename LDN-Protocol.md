@@ -50,7 +50,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 #### Advertisement Data
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Session key |
+| 0x0 | 16 | Network key |
 | 0x10 | 2 | Unknown |
 | 0x12 | 1 | Is session closed |
 | 0x13 | 3 | Unknown |
