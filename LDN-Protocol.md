@@ -72,7 +72,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 #### LDN Version
 | System version | LDN version |
 | --- | --- |
-| 3.0.0 | 2 |
+| 3.0.0 - 5.1.0 | 2 |
 | 6.0.0 - 13.1.0 | 3 |
 
 ### Key Derivation
