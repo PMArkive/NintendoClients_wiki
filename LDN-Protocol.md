@@ -53,14 +53,15 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x0 | 16 | Network key |
 | 0x10 | 2 | Security level |
 | 0x12 | 1 | Is session closed |
-| 0x13 | 3 | Unknown |
+| 0x13 | 3 | Padding (always 0) |
 | 0x16 | 1 | Maximum number of participants |
 | 0x17 | 1 | Current number of participants |
 | 0x18 | 56 x 8 | [Participant](#participant-info) list |
-| 0x1D8 | 2 | Unknown |
+| 0x1D8 | 2 | Padding (always 0) |
 | 0x1DA | 2 | Beacon data size |
 | 0x1DC | 384 | Beacon data |
-| 0x35C | 420 | Unknown |
+| 0x35C | 412 | Padding (always 0) |
+| 0x4F8 | 8 | Unknown |
 
 #### Participant Info
 | Offset | Size | Description |
