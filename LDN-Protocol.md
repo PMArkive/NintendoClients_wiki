@@ -69,7 +69,10 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x0 | 4 | IP address |
 | 0x4 | 6 | MAC address |
 | 0xA | 1 | Is connected |
-| 0xB | 0x2D | Unknown |
+| 0xB | 1 | Padding (always 0) |
+| 0xC | 32 | Username |
+| 0x2C | 2 | Application communication version |
+| 0x2E | 2 | Padding (always 0) |
 
 #### LDN Version
 | System version | LDN version |
