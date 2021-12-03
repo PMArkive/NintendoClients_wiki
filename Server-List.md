@@ -43,6 +43,7 @@ Replace '%' by one of the following:
 | - idbe-hac.cdn.nintendo.net | [Icon data](IDBE-Server) |
 | - %.nso.nintendo.net | NSO applet |
 | - mii-secure-%.cdn.nintendo.net | Mii images |
+| - sprofile-%.cdn.nintendo.net | |
 
 ## Wii U
 | Server | Description |
