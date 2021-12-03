@@ -52,7 +52,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | --- | --- | --- |
 | 0x0 | 16 | Network key |
 | 0x10 | 2 | Security level |
-| 0x12 | 1 | Is session closed |
+| 0x12 | 1 | Station accept policy |
 | 0x13 | 3 | Padding (always 0) |
 | 0x16 | 1 | Maximum number of participants |
 | 0x17 | 1 | Current number of participants |
