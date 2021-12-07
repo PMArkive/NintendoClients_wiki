@@ -179,8 +179,8 @@ Based on system version 13.2.0.
 | `omm` | `am` | |
 | `ovln:rcv` | `psc` | |
 | `ovln:snd` | `psc` | |
-| `pcie` | | |
-| `pcie:log` | | |
+| `pcie` | `pcie` | |
+| `pcie:log` | `pcie` | |
 | `pctl` | `pctl` | nn::pctl::detail::ipc::IParentalControlServiceFactory |
 | `pctl:a` | `pctl` | nn::pctl::detail::ipc::IParentalControlServiceFactory |
 | `pctl:r` | `pctl` | nn::pctl::detail::ipc::IParentalControlServiceFactory |
