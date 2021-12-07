@@ -145,7 +145,7 @@ Based on system version 13.2.0.
 | `nifm:a` | `nifm` | nn::nifm::detail::IStaticService |
 | `nifm:s` | `nifm` | nn::nifm::detail::IStaticService |
 | `nifm:u` | `nifm` | nn::nifm::detail::IStaticService |
-| `nim` | | |
+| `nim` | `nim` | |
 | `nim:eca` | `nim` | nn::nim::detail::IShopServiceAccessServerInterface |
 | `nim:ecas` | `nim` | nn::nim::detail::IShopServiceAccessSytemInterface |
 | `nim:shp` | `nim` | |
