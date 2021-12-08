@@ -106,6 +106,14 @@ Notification type 116000:
 | m_pidSource | Principal that started the round |
 | m_uiParam1 | Round id |
 
+Notifiation type 122000:
+
+| Field | Description |
+| --- | --- |
+| m_pidSource | Host pid |
+| m_uiParam1 | New gathering id |
+| m_uiParam2 | Client pid |
+
 [PID]: NEX-Common-Types#pid
 [String]: NEX-Common-Types#string
 [Structure]: NEX-Common-Types#structure
