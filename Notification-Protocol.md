@@ -56,9 +56,13 @@ The following field is only present in revision 1:
 | 3002 | Participation cancelled |
 | 3007 | Participant disconnected |
 | 3008 | Participation ended |
-| 4000 | Ownership change |
+| 4000 | Ownership changed |
 | 109000 | Gathering unregistered |
+| 110000 | Host changed |
 | 116000 | Matchmake referee round started |
+| 120000 | System password changed |
+| 121000 | System password cleared |
+| 122000 | Switch gathering |
 
 Notification type 3001:
 
