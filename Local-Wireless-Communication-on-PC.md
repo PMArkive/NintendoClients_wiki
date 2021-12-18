@@ -17,7 +17,7 @@ In monitor mode, the network interface receives all packets that are sent throug
 
 ![](https://www.dropbox.com/s/md7v0ip370i1a3e/enable_monitor_mode.png?raw=1)
 
-If you start wireshark now, you will probably see a huge number of packets, maybe even thousands of packets per seconds, because we are capturing ALL packets that are sent through the air.
+If you start wireshark now, you will probably see a huge number of packets, maybe even thousands of packets per second, because we are capturing ALL packets that are sent through the air.
 
 ### Disabling monitor mode
 Because we had to disable the network-manager service, you cannot access the internet while in monitor mode. To disable monitor mode, run the following commands:
