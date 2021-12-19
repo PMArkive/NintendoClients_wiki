@@ -6,6 +6,16 @@ The host of the session broadcasts a custom action frame every 100 milliseconds.
 
 Also see: [[Local Wireless Communication on PC]].
 
+### WLAN Channels
+The channel on which LDN operates can be specified by games. Allowed channels are:
+
+| Band | Channels |
+| --- | --- |
+| 2.4 GHz | 1, 6, 11 |
+| 5 GHz | 36, 40, 44, 48 |
+
+By default, LDN seems to operate on one of the channels on the 2.4 GHz band.
+
 ### LDN Versions
 
 | System version | LDN version | Changes |
