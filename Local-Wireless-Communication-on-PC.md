@@ -11,18 +11,49 @@ This guide is written for Linux users and was tested on a system running Ubuntu.
 ### Enabling monitor mode
 By default, the network interface is in managed mode, which means that it only accepts packets that are intended for your PC:
 
-![](https://www.dropbox.com/s/ef3rijbwos9hsos/iwconfig_managed.png?raw=1)
+```console
+yannik@yannik:~$ iwconfig
+wlp2s0    IEEE 802.11  ESSID:"Lothlorien"  
+          Mode:Managed  Frequency:5.5 GHz  Access Point: 94:A7:B7:49:F6:F9   
+          Bit Rate=520 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=31/70  Signal level=-79 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:165   Missed beacon:0
+```
 
 In monitor mode, the network interface receives all packets that are sent through the air:
 
-![](https://www.dropbox.com/s/md7v0ip370i1a3e/enable_monitor_mode.png?raw=1)
+```console
+yannik@yannik:~$ sudo service network-manager stop
+yannik@yannik:~$ sudo iw wlp2s0 set type monitor
+yannik@yannik:~$ sudo ip link set wlp2s0 up
+yannik@yannik:~$ iwconfig
+wlp2s0    IEEE 802.11  Mode:Monitor  Frequency:2.462 GHz  Tx-Power=-2147483648 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+```
 
 If you start wireshark now, you will probably see a huge number of packets, maybe even thousands of packets per second, because we are capturing ALL packets that are sent through the air.
 
 ### Disabling monitor mode
 Because we had to disable the network-manager service, you cannot access the internet while in monitor mode. To disable monitor mode, run the following commands:
 
-![](https://www.dropbox.com/s/xxbu81kpe6aseur/enable_managed_mode.png?raw=1)
+```console
+yannik@yannik:~$ sudo ip link set wlp2s0 up
+yannik@yannik:~$ sudo iw wlp2s0 set type managed
+yannik@yannik:~$ sudo service network-manager start
+yannik@yannik:~$ iwconfig
+wlp2s0    IEEE 802.11  ESSID:"Lothlorien"  
+          Mode:Managed  Frequency:5.5 GHz  Access Point: 94:A7:B7:49:F6:F9   
+          Bit Rate=520 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=33/70  Signal level=-77 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:17   Missed beacon:0
+```
 
 ### Receiving packets with libpcap
 Libpcap provides low-level networking functions. Here's an example that scans for action frames sent by Nintendo devices in LDN mode. Make sure that the wireless interface is in monitor mode before running this.
