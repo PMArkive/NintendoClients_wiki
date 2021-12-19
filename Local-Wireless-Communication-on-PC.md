@@ -5,8 +5,9 @@ This page is intended to provide a simple guide to get started with local wirele
 This guide is written for Linux users and was tested on a system running Ubuntu. If you are using a different operating system, this guide is probably less useful for you.
 
 1. [Enabling monitor mode](#enabling-monitor-mode)
-2. [Disabling monitor mode](#disabling-monitor-mode)
-3. [Receiving packets with libpcap](#receiving-packets-with-libpcap)
+2. [Switching channels](#switching-channels)
+3. [Disabling monitor mode](#disabling-monitor-mode)
+4. [Receiving packets with libpcap](#receiving-packets-with-libpcap)
 
 ### Enabling monitor mode
 By default, the network interface is in managed mode, which means that it only accepts packets that are intended for your PC:
@@ -36,6 +37,15 @@ wlp2s0    IEEE 802.11  Mode:Monitor  Frequency:2.462 GHz  Tx-Power=-2147483648 d
 ```
 
 If you start wireshark now, you will probably see a huge number of packets, maybe even thousands of packets per second, because we are capturing ALL packets that are sent through the air.
+
+### Switching channels
+You can only capture packets on a specific channel, but LDN may operate on one out of [seven different channels](LDN-Protocol#wlan-channels). The following command changes the channel of your device:
+
+```console
+yannik@yannik:~$ sudo iw wlp2s0 set channel <channel>
+```
+
+This command can even be used while Wireshark is running (there is no need to turn it off).
 
 ### Disabling monitor mode
 Because we had to disable the network-manager service, you cannot access the internet while in monitor mode. To disable monitor mode, run the following commands:
