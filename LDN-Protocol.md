@@ -14,7 +14,7 @@ The channel on which LDN operates can be specified by games. Allowed channels ar
 | 2.4 GHz | 1, 6, 11 |
 | 5 GHz | 36, 40, 44, 48 |
 
-By default, LDN operates on one of the channels on the 2.4 GHz band.
+By default, LDN operates on one of the channels on the 2.4 GHz band (chosen arbitrarily).
 
 ### LDN Versions
 
