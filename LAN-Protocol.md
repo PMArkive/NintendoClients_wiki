@@ -1,7 +1,7 @@
 [[PIA Overview]] > LAN Protocol
 ---
 
-This page describes the protocol that's used to find nearby consoles in LAN mode. In this mode, UDP broadcast packets are used to discover other consoles. LAN mode is not the default mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus.
+This page describes the protocol that's used to find nearby consoles in LAN mode. In this mode, UDP broadcast packets are used to discover other consoles. LAN mode is not the default mode for local multiplayer and not all games support it. It can usually be enabled by pressing L + R + Left Stick in one of the menus.
 
 Every packet starts with a single byte that indicates its type.
 
