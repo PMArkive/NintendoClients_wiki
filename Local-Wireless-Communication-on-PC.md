@@ -8,6 +8,7 @@ This guide is written for Linux users and was tested on a system running Ubuntu.
 2. [Switching channels](#switching-channels)
 3. [Disabling monitor mode](#disabling-monitor-mode)
 4. [Receiving packets with libpcap](#receiving-packets-with-libpcap)
+5. [Emulating LDN with NL80211](#emulating-ldn-with-nl80211)
 
 ### Enabling monitor mode
 By default, the network interface is in managed mode, which means that it only accepts packets that are intended for your PC:
@@ -200,3 +201,8 @@ int main() {
     return 0;
 }
 ```
+
+### Emulating LDN with NL80211
+While libpcap is useful for basic packet sniffing, it is not practical for full LDN emulation because it would require you to implement your own network stack including 802.11, IPv4 and UDP. For full LDN emulation it is probably better to use a different library such as [NL80211](https://wireless.wiki.kernel.org/en/developers/documentation/nl80211), which gives fine grained control over your WLAN hardware. Unfortunately, there is little documentation on how to use NL80211, but a good place to get started is the [source code of the iw tool](https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git).
+
+With NL80211 it is possible to become part of a LDN network like a regular WLAN network, after which one can use normal UDP sockets to communicate with other Switches.
