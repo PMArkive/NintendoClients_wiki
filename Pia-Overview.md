@@ -8,10 +8,10 @@ Pia supports three different network types.
     <td><b><a href="NEX-Overview-(Game-Servers)">NEX</a></b></td><td>Matchmaking is done by game servers. This mode often requires NAT traversal.</td>
   </tr>
   <tr>
-    <td><b><a href="LDN-Protocol">LDN</a></b></td><td>This is the default mode for local multiplayer. Pia uses custom data link layer packets to communicate with nearby consoles. This mode is only available on Nintendo Switch.</td>
+    <td><b><a href="LDN-Protocol">LDN</a></b></td><td>This is the default mode for local multiplayer. Pia creates a custom 802.11 network to communicate with nearby consoles. This mode is only available on Nintendo Switch.</td>
   </tr>
   <tr>
-    <td><b><a href="LAN-Protocol">LAN</a></b></td><td>This is an alternative mode for local multiplayer. It can usually be enabled by pressing L + R + Left Stick in one of the menus. In this mode, Pia uses UDP broadcast packets to find other consoles. This mode is only available on Nintendo Switch.</td>
+    <td><b><a href="LAN-Protocol">LAN</a></b></td><td>This is an alternative mode for local multiplayer. In this mode, Pia uses UDP broadcast packets to find other consoles. This mode is only available on Nintendo Switch.</td>
   </tr>
 </table>
 
