@@ -205,6 +205,6 @@ int main() {
 ### Emulating LDN with NL80211
 While libpcap is useful for basic packet sniffing, it is not practical for full LDN emulation because it would require you to implement your own network stack including 802.11, IPv4 and UDP.
 
-For full LDN emulation it is probably better to use a different library such as [NL80211](https://wireless.wiki.kernel.org/en/developers/documentation/nl80211), which gives fine grained control over your WLAN hardware. Unfortunately, there is little documentation on how to use NL80211, but a good place to get started is the [source code of the iw tool](https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git).
+For full LDN emulation it is probably better to use a different library such as [NL80211](https://wireless.wiki.kernel.org/en/developers/documentation/nl80211), which gives fine grained control over your WLAN hardware. Unfortunately, there is little documentation on using NL80211, but a good place to get started is the [source code of the iw tool](https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git).
 
 With NL80211 it is possible to become part of a LDN network like a normal wireless network, after which one can use normal UDP sockets to communicate with other Switches.
