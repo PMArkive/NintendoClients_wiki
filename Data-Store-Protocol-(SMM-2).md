@@ -1240,6 +1240,7 @@ Revision 3:
 [CommentPictureReqGetInfoWithoutHeaders]: #commentpicturereqgetinfowithoutheaders-structure
 [MiiClothes]: #miiclothes-structure
 [BattleModeRating]: #battlemoderating-structure
+[DeathPositionInfo]: #deathpositioninfo-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
