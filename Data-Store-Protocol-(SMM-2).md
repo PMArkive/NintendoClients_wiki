@@ -62,7 +62,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 100 | PostPlayResultBattleModeEntire |
 | 101 | PostPlayResultMultiClear |
 | 102 | PostPlayResultEventCourse |
-| 103 | GetDeathPositions |
+| 103 | [GetDeathPositions](#103-getdeathpositions) |
 | 104 | PostRatingInfo |
 | 105 | PostRatingInfos|
 | 106 | PostRatingInfoBattleModePersonal |
@@ -458,6 +458,17 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[CommentInfo]&gt; | Comments |
 
+# (103) GetDeathPositions
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Data id |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[DeathPositionInfo]&gt; | Death positions |
+
 # (108) GetEndlessModeStatus
 ## Request
 This method does not take any parameters.
@@ -741,6 +752,14 @@ This method does not return anything.
 | [PID] | User id of world record holder |
 | Uint32 | World record (milliseconds) |
 | Uint32 | Time of uploader (milliseconds) |
+
+## DeathPositionInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Data id |
+| Uint32 | X |
+| Uint32 | Y |
+| Bool | Is subworld |
 
 ## DebugUploadEventCourseGhostParam ([Structure])
 | Type | Description |
