@@ -729,7 +729,7 @@ This method does not return anything.
 ## Response
 | Type | Description |
 | --- | --- |
-| [EventCourseHistogram](#eventcoursehistogram) | Histogram info |
+| [EventCourseHistogram](#eventcoursehistogram-structure) | Histogram info |
 
 # (157) GetEventCourseGhost
 ## Request
