@@ -23,7 +23,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
 | 62 | [UpdateMiiClothes](#62-updatemiiclothes) |
 | 63 | [GetMiiClothes](#63-getmiiclothes) |
-| 64 | PostActivityQuest |
+| 64 | [PostActivityQuest](#64-postactivityquest) |
 | 65 | [GetUserNameNgType](#65-getusernamengtype) |
 | 66 | [PreparePostObjectCourse](#66-preparepostobjectcourse) |
 | 67 | CompletePostObjectCourse |
@@ -31,18 +31,18 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 69 | [UpdateCourseTag](#69-updatecoursetag) |
 | 70 | [GetCourses](#70-GetCourses) |
 | 71 | [SearchCoursesPointRanking](#71-searchcoursespointranking) |
-| 72 | SearchCoursesAdvanced |
+| 72 | [SearchCoursesAdvanced](#72-searchcoursesadvanced) |
 | 73 | [SearchCoursesLatest](#73-searchcourseslatest) |
 | 74 | [SearchCoursesPostedBy](#74-searchcoursespostedby) |
-| 75 | SearchCoursesPositiveRatedBy |
-| 76 | SearchCoursesPlayedBy |
-| 77 | SearchCoursesBattleMode |
-| 78 | SearchCoursesBattleModeByDifficulty |
+| 75 | [SearchCoursesPositiveRatedBy](#75-searchcoursespositiveratedby) |
+| 76 | [SearchCoursesPlayedBy](#76-searchcoursesplayedby) |
+| 77 | [SearchCoursesBattleMode](#77-searchcoursesbattlemode) |
+| 78 | [SearchCoursesBattleModeByDifficulty](#78-searchcoursesbattlemodebydifficulty) |
 | 79 | [SearchCoursesEndlessMode](#79-searchcoursesendlessmode) |
-| 80 | SearchCoursesFirstClear |
-| 81 | SearchCoursesBestTime |
-| 82 | SearchCoursesFolloweePostedBy |
-| 83 | SearchCoursesTermsRanking |
+| 80 | [SearchCoursesFirstClear](#80-searchcoursesfirstclear) |
+| 81 | [SearchCoursesBestTime](#81-searchcoursesbesttime) |
+| 82 | [SearchCoursesFolloweePostedBy](#82-searchcoursesfolloweepostedby) |
+| 83 | [SearchCoursesTermsRanking](#83-searchcoursestermsranking) |
 | 84 | [SearchCoursesPickUp](#84-searchcoursespickup) |
 | 85 | [GetCoursesEvent](#85-getcoursesevent) |
 | 86 | [SearchCoursesEvent](#86-searchcoursesevent) |
@@ -53,7 +53,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 91 | PostCommentText |
 | 92 | PostCommentStamp |
 | 93 | DeleteComment |
-| 94 | SearchCommentsInOrder |
+| 94 | [SearchCommentsInOrder](#94-searchcommentsinorder) |
 | 95 | [SearchComments](#95-searchcomments) |
 | 96 | PostPlayResult |
 | 97 | PostPlayResults |
@@ -77,8 +77,8 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 115 | GetEndlessModePlayInfo |
 | 116 | GetEndlessModeRank |
 | 117 | [GetBattleModeRating](#117-getbattlemoderating) |
-| 118 | StartBattleMode |
-| 119 | EndBattleMode |
+| 118 | [StartBattleMode](#118-startbattlemode) |
+| 119 | [EndBattleMode](#119-endbattlemode) |
 | 120 | ForceEndBattleMode |
 | 121 | StartMultiClear |
 | 122 | EndMultiClear |
@@ -318,6 +318,15 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[MiiClothes]&gt; | Mii clothes |
 
+# (64) PostActivityQuest
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## Response
+This method does not return anything.
+
 # (65) GetUserNameNgType
 ## Request
 This method does not take any parameters.
@@ -381,6 +390,18 @@ This method does not return anything.
 | [List]&lt;Uint32&gt; | Ranks |
 | Bool | Result |
 
+# (72) SearchCoursesAdvanced
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesAdvancedParam](#searchcoursesadvancedparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Course info |
+| Bool | Result |
+
 # (73) SearchCoursesLatest
 ## Request
 | Type | Description |
@@ -405,6 +426,50 @@ This method does not return anything.
 | [List]&lt;[CourseInfo]&gt; | Courses |
 | Bool | Result |
 
+# (75) SearchCoursesPositiveRatedBy
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesPositiveRatedByParam](#searchcoursespositiveratedbyparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (76) SearchCoursesPlayedBy
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesPlayedByParam](#searchcoursesplayedbyparam-structure-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (77) SearchCoursesBattleMode
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesBattleModeParam](#searchcoursesbattlemodeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (78) SearchCoursesBattleModeByDifficulty
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesBattleModeByDifficultyParam](#searchcoursesbattlemodebydifficultyparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+
 # (79) SearchCoursesEndlessMode
 ## Request
 | Type | Description |
@@ -415,6 +480,55 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[CourseInfo]&gt; | Courses |
+
+# (80) SearchCoursesFirstClear
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesFirstClearParam](#searchcoursesfirstclearparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| Bool | Result |
+
+# (81) SearchCoursesBestTime
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesBestTimeParam](#searchcoursesbesttimeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| Bool | Result |
+
+# (82) SearchCoursesFolloweePostedBy
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesFolloweePostedByParam](#searchcoursesfolloweepostedbyparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| Bool | Result |
+
+# (83) SearchCoursesTermsRanking
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCoursesTermsRankingParam](#searchcoursestermsrankingparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CourseInfo]&gt; | Courses |
+| [List]&lt;Uint32&gt; | Ranks |
+| Bool | Result |
 
 # (84) SearchCoursesPickUp
 ## Request
@@ -460,6 +574,18 @@ This method does not return anything.
 ## Response
 This method does not return anything.
 
+# (94) SearchCommentsInOrder
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchCommentsInOrderParam](#searchcommentsinorderparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CommentInfo]&gt; | Comments |
+| Bool | Unknown |
+
 # (95) SearchComments
 ## Request
 | Type | Description |
@@ -499,6 +625,27 @@ This method does not take any parameters.
 | Type | Description |
 | --- | --- |
 | Bool | Unknown |
+| [BattleModeRating] | Rating 1 |
+| [BattleModeRating] | Rating 2 |
+
+# (118) StartBattleMode
+## Request
+| Type | Description |
+| --- | --- |
+| [StartBattleModeParam](#startbattlemodeparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
+# (119) EndBattleMode
+## Request
+| Type | Description |
+| --- | --- |
+| [EndBattleModeParam](#endbattlemodeparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
 | [BattleModeRating] | Rating 1 |
 | [BattleModeRating] | Rating 2 |
 
@@ -781,6 +928,16 @@ This method does not return anything.
 | Uint32 | Unknown |
 | [String] | Unknown |
 
+## EndBattleModeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [Map]&lt;Uint64, Uint8&gt; | battleResults |
+| Uint32 | killCount |
+| Uint32 | killedCount |
+| Uint32 | glicko2Rate |
+| Uint32 | glicko2Deviation |
+| Uint32 | glicko2Volatility |
+
 ## EndlessModeStatus ([Structure])
 | Type | Description |
 | --- | --- |
@@ -966,6 +1123,44 @@ This structure is empty.
 | [List]&lt;[DataStoreKeyValue]&gt; | Headers |
 | Uint32 | Expiration (seconds) |
 
+## SearchCommentsInOrderParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| [ResultRange] | resultRange |
+
+## SearchCoursesAdvancedParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+| Uint8 | preferCourseDifficulty |
+| Uint8 | preferGameSkinId |
+| Uint8 | preferSceneSetId |
+| [List]&lt;Uint8&gt; | preferTagIds |
+| [List]&lt;Uint8&gt; | rejectRegionIds |
+| Uint8 | sortType |
+
+## SearchCoursesBattleModeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| Uint32 | count |
+
+## SearchCoursesBattleModeByDifficultyParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Result option |
+| Uint32 | Count |
+| Uint8 | Difficulty |
+
+## SearchCoursesBestTimeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| [PID] | pid |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+
 ## SearchCoursesEndlessModeParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -977,6 +1172,19 @@ This structure is empty.
 | Type | Description |
 | --- | --- |
 | Uint32 | Result option |
+
+## SearchCoursesFirstClearParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+| [ResultRange] | Result range |
+
+## SearchCoursesFolloweePostedByParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
 
 ## SearchCoursesLatestParam ([Structure])
 | Type | Name |
@@ -991,6 +1199,13 @@ This structure is empty.
 | Uint32 | Unknown |
 | Uint8 | [Difficulty](#difficulty) |
 
+## SearchCoursesPlayedByParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| Uint32 | count |
+| [PID] | playerPID |
+
 ## SearchCoursesPointRankingParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -999,12 +1214,27 @@ This structure is empty.
 | Uint8 | preferCourseDifficulty |
 | [List]&lt;Uint8&gt; | rejectRegionIds |
 
+## SearchCoursesPositiveRatedByParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| Uint32 | count |
+| [PID] | raterPID |
+
 ## SearchCoursesPostedByParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint32 | resultOption |
+| [ResultRange] | resultRange |
+| [List]&lt;[PID]&gt; | ownerPIDs |
+
+## SearchCoursesTermsRankingParam ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [ResultRange] | Result range |
-| [List]&lt;Uint64&gt; | Unknown |
+| [ResultRange] | Unknown |
+| Uint8 | Unknown |
+| [Buffer] | Unknown |
 
 ## SearchUsersBattleModeParam ([Structure])
 | Type | Description |
@@ -1070,6 +1300,13 @@ This structure is empty.
 | [ResultRange] | Result range |
 | [Buffer] | Unknown |
 
+## StartBattleModeParam ([Structure])
+| Type | Name |
+| --- | --- |
+| Uint64 | dataId |
+| Uint32 | gid |
+| [List]&lt;[PID]&gt; | pids |
+
 ## SyncUserProfileParam ([Structure])
 | Type | Description |
 | --- | --- |
@@ -1134,11 +1371,11 @@ This structure is empty.
 | Uint32 | Unknown |
 
 ## UpdateCourseTagParam ([Structure])
-| Type | Description |
+| Type | Name |
 | --- | --- |
-| Uint64 | Data id |
-| Uint8 | [First tag](#course-tag) |
-| Uint8 | [Second tag](#course-tag) |
+| Uint64 | dataId |
+| Uint8 | [tagId1](#course-tag) |
+| Uint8 | [tagId2](#course-tag) |
 
 ## UpdateMiiClothesParam ([Structure])
 | Type | Description |
