@@ -17,7 +17,7 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 55 | [SearchUsersPositiveRatedCourse](#55-searchuserspositiveratedcourse) |
 | 56 | [SearchUsersFollowee](#56-searchusersfollowee) |
 | 57 | [SearchUsersClearRanking](#57-searchusersclearranking) |
-| 58 | SearchUsersTermsRanking |
+| 58 | [SearchUsersTermsRanking](#58-searchuserstermsranking) |
 | 59 | [UpdateLastLoginTime](#59-updatelastlogintime) |
 | 60 | [CanPostCourse](#60-canpostcourse) |
 | 61 | [CanPostRatingAndComment](#61-canpostratingandcomment) |
@@ -251,6 +251,19 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [SearchUsersClearRankingParam](#searchusersclearrankingparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[UserInfo]&gt; | Users |
+| [List]&lt;Uint32&gt; | Unknown |
+| Bool | Unknown |
+
+# (58) SearchUsersTermsRanking
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchUsersTermsRankingParam](#searchuserstermsrankingparam-structure) | Param |
 
 ## Response
 | Type | Description |
@@ -1049,6 +1062,13 @@ This structure is empty.
 | Uint32 | Result option |
 | [Buffer] | Unknown |
 | [ResultRange] | Result range |
+
+## SearchUsersTermsRankingParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Result option |
+| [ResultRange] | Result range |
+| [Buffer] | Unknown |
 
 ## SyncUserProfileParam ([Structure])
 | Type | Description |
