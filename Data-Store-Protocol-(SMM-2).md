@@ -94,10 +94,10 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 132 | [PreparePostRelationObject](#132-preparepostrelationobject) |
 | 133 | CompletePostRelationObject |
 | 134 | [GetReqGetInfoHeadersInfo](#134-getreqgetinfoheadersinfo) |
-| 135 | CanReportFromCourseInfo |
-| 136 | CanReportFromCommentInfo |
-| 137 | CanReportFromUserInfo |
-| 138 | CanReportFromBugDetection |
+| 135 | [CanReportFromCourseInfo](#135-canreportfromcourseinfo) |
+| 136 | [CanReportFromCommentInfo](#136-canreportfromcommentinfo) |
+| 137 | [CanReportFromUserInfo](#137-canreportfromuserinfo) |
+| 138 | [CanReportFromBugDetection](#138-canreportfrombugdetection) |
 | 139 | ReportFromCourseInfo |
 | 140 | ReportFromCommentInfo |
 | 141 | ReportFromUserInfo |
@@ -118,14 +118,14 @@ Some methods take a `resultOption` parameter. This parameter controls which fiel
 | 156 | [GetEventCourseHistogram](#156-geteventcoursehistogram) |
 | 157 | [GetEventCourseGhost](#157-geteventcourseghost) |
 | 158 | [DebugUploadEventCourseGhost](#158-debuguploadeventcourseghost) |
-| 159 | RegisterWorldMap |
-| 160 | GetWorldMap |
-| 161 | SearchWorldMapPlayedBy |
-| 162 | SearchWorldMapPickUp |
-| 163 | GetWorldMapProgress |
-| 164 | DeleteWorldMap |
-| 165 | InitializeWorldMapProgress |
-| 166 | UpdateWorldMapProgress |
+| 159 | [RegisterWorldMap](#159-registerworldmap) |
+| 160 | [GetWorldMap](#160-getworldmap) |
+| 161 | [SearchWorldMapPlayedBy](#161-searchworldmapplayedby) |
+| 162 | [SearchWorldMapPickUp](#162-searchworldmappickup) |
+| 163 | [GetWorldMapProgress](#163-getworldmapprogress) |
+| 164 | [DeleteWorldMap](#164-deleteworldmap) |
+| 165 | [InitializeWorldMapProgress](#165-initializeworldmapprogress) |
+| 166 | [UpdateWorldMapProgress](#166-updateworldmapprogress) |
 | 167 | GetUsersFriend |
 | 168 | SearchUsersFolloweeV2 |
 | 169 | GetEventCourseFriendGhost |
@@ -693,6 +693,51 @@ This method returns headers that can be used to download relation files from the
 | --- | --- |
 | [ReqGetInfoHeadersInfo](#reqgetinfoheadersinfo-structure) | Info |
 
+# (135) CanReportFromCourseInfo
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+# (136) CanReportFromCommentInfo
+## Request
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+# (137) CanReportFromUserInfo
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| [String] | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+# (138) CanReportFromBugDetection
+## Request
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
 # (153) GetEventCourseStamp
 ## Request
 This method does not take any parameters.
@@ -747,6 +792,85 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [DebugUploadEventCourseGhostParam](#debuguploadeventcourseghostparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
+# (159) RegisterWorldMap
+## Request
+| Type | Description |
+| --- | --- |
+| [RegisterWorldMapParam](#registerworldmapparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
+# (160) GetWorldMap
+## Request
+| Type | Description |
+| --- | --- |
+| [GetWorldMapParam](#getworldmapparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[WorldMapInfo]&gt; | World maps |
+| [List]&lt;[Result]&gt; | Results |
+
+# (161) SearchWorldMapPlayedBy
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchWorldMapPlayedByParam](#searchworldmapplayedbyparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[WorldMapInfo]&gt; | World maps |
+
+# (162) SearchWorldMapPickUp
+## Request
+| Type | Description |
+| --- | --- |
+| [SearchWorldMapPickUpParam](#searchworldmappickupparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[WorldMapInfo]&gt; | World maps |
+
+# (163) GetWorldMapProgress
+## Request
+| Type | Description |
+| --- | --- |
+| [GetWorldMapProgressParam](#getworldmapprogressparam-structure) | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [WorldMapProgressInfo](#worldmapprogressinfo-structure) | Progress info |
+
+# (164) DeleteWorldMap
+## Request
+This method does not take any parameters.
+
+## Response
+This method does not return anything.
+
+# (165) InitializeWorldMapProgress
+## Request
+| Type | Description |
+| --- | --- |
+| [InitializeWorldMapProgressParam](#initializeworldmapprogressparam-structure) | Param |
+
+## Response
+This method does not return anything.
+
+# (166) UpdateWorldMapProgress
+## Request
+| Type | Description |
+| --- | --- |
+| [UpdateWorldMapProgressParam](#updateworldmapprogressparam-structure) | Param |
 
 ## Response
 This method does not return anything.
@@ -1044,6 +1168,23 @@ This structure is empty.
 | [List]&lt;[PID]&gt; | userPIDs |
 | Uint32 | resultOption |
 
+## GetWorldMapParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [List]&lt;[String]&gt; | Ids |
+| Uint32 | Result option |
+
+## GetWorldMapProgressParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Id |
+
+## InitializeWorldMapProgressParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Id |
+| Uint32 | Unknown |
+
 ## MiiClothes ([Structure])
 | Type | Description |
 | --- | --- |
@@ -1098,6 +1239,16 @@ This structure is empty.
 | Uint8 | Region id |
 | [String] | Country code |
 | [String] | Pseudo device id |
+
+## RegisterWorldMapParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [qBuffer] | Unknown |
+| [List]&lt;Uint64&gt; | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
 
 ## RelationObjectReqGetInfo ([Structure])
 | Type | Description |
@@ -1300,6 +1451,33 @@ This structure is empty.
 | [ResultRange] | Result range |
 | [Buffer] | Unknown |
 
+## SearchWorldMapPickUpParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## SearchWorldMapPlayedByParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+
+## UpdateWorldMapProgressParam ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Id |
+| Uint64 | Unknown |
+| Uint64 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [qBuffer] | Unknown |
+
 ## StartBattleModeParam ([Structure])
 | Type | Name |
 | --- | --- |
@@ -1452,6 +1630,40 @@ Revision 3:
 | 10 | Coop plays |
 | 11 | Coop wins |
 
+## WorldMapInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Id |
+| [PID] | Owner pid |
+| [qBuffer] | Unknown |
+| [RelationObjectReqGetInfo] | Thumbnail |
+| Uint8 | Worlds |
+| Uint8 | Levels |
+| Uint8 | Unknown |
+| [DateTime] | Unknown |
+| [List]&lt;Uint64&gt; | Data ids |
+| [Map]&lt;Uint8, Uint32&gt; | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+
+## WorldMapProgressInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [String] | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint32 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint8 | Unknown |
+| Uint64 | Unknown |
+| Uint64 | Unknown |
+| [qBuffer] | Unknown |
+| Uint32 | Unknown |
+
 # Enums
 ### Course Tag
 | Value | Description |
@@ -1498,6 +1710,7 @@ Revision 3:
 [MiiClothes]: #miiclothes-structure
 [BattleModeRating]: #battlemoderating-structure
 [DeathPositionInfo]: #deathpositioninfo-structure
+[WorldMapInfo]: #worldmapinfo-structure
 
 [DataStoreGetMetaParam]: Data-Store-Protocol#datastoregetmetaparam-structure
 [DataStorePreparePostParam]: Data-Store-Protocol#datastorepreparepostparam-structure
