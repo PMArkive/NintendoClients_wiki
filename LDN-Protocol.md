@@ -45,6 +45,8 @@ Defined by Nintendo:
 | 0xA | 2 | Padding (always 0) |
 | 0xC | | [Advertisement frame](#advertisement-frame) |
 
+Everything is encoded in big-endian byte order.
+
 #### Advertisement Frame
 | Offset | Size | Description |
 | --- | --- | --- |
