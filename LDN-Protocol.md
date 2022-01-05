@@ -49,7 +49,7 @@ Defined by Nintendo:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | [Session info](#session-info) |
-| 0x20 | 1 | [LDN version](#ldn-version) |
+| 0x20 | 1 | [LDN version](#ldn-versions) |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
 | 0x24 | 4 | Nonce for AES-CTR algorithm |
