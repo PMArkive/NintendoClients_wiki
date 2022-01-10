@@ -423,19 +423,19 @@ Specifies which fields changed their value recently.
 | Uint32 | Unknown |
 | Bool | Unknown |
 
-[BlacklistedPrincipal]: #blacklistedprincipal
-[Comment]: #comment
-[FriendInfo]: #friendinfo
-[FriendRequest]: #friendrequest
-[FriendRequestMessage]: #friendrequestmessage
-[GameKey]: #gamekey
-[MiiV2]: #miiv2
-[NintendoPresenceV2]: #nintendopresencev2
-[NNAInfo]: #nnainfo
-[PersistentNotification]: #persistentnotification
-[PrincipalBasicInfo]: #principalbasicinfo
-[PrincipalPreference]: #principalpreference
-[PrincipalRequestBlockSetting]: #principalrequestblocksetting
+[BlacklistedPrincipal]: #blacklistedprincipal-structure
+[Comment]: #comment-structure
+[FriendInfo]: #friendinfo-structure
+[FriendRequest]: #friendrequest-structure
+[FriendRequestMessage]: #friendrequestmessage-structure
+[GameKey]: #gamekey-structure
+[MiiV2]: #miiv2-structure
+[NintendoPresenceV2]: #nintendopresencev2-structure
+[NNAInfo]: #nnainfo-structure
+[PersistentNotification]: #persistentnotification-structure
+[PrincipalBasicInfo]: #principalbasicinfo-structure
+[PrincipalPreference]: #principalpreference-structure
+[PrincipalRequestBlockSetting]: #principalrequestblocksetting-structure
 
 [DateTime]: NEX-Common-Types#datetime
 [List]: NEX-Common-Types#list
