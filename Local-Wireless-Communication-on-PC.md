@@ -1,4 +1,4 @@
-This page is intended to provide a simple guide to get started with local wireless communication.
+This page is intended to provide a simple guide to get started with local wireless communication on PC (for [LDN](LDN-Protocol)).
 
 It is written for Linux users and was tested on a system running Ubuntu. If you are using a different operating system, this guide is probably less useful for you.
 
