@@ -71,8 +71,8 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x17 | 1 | Current number of participants |
 | 0x18 | 56 x 8 | [Participant](#participant-info) list |
 | 0x1D8 | 2 | Padding (always 0) |
-| 0x1DA | 2 | Beacon data size |
-| 0x1DC | 384 | Beacon data |
+| 0x1DA | 2 | Application data size |
+| 0x1DC | 384 | Application data |
 | 0x35C | 412 | Padding (always 0) |
 | 0x4F8 | 8 | Authentication nonce (random) |
 
