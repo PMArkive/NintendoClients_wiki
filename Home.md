@@ -11,6 +11,7 @@ Welcome to the NintendoClients wiki!
 * [[Pia Protocol]]
 * [Pia Services](Pia-Protocols)
 * [[LAN Protocol]]
+* [[LDN Protocol]]
 
 ## Other pages
 * [[Server List]]
