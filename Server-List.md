@@ -70,7 +70,7 @@ Replace '%' by one of the following:
 | - nasc.nintendowifi.net | Account server |
 | - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
 | - ccs.c.shop.nintendowifi.net<br>- nus.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net | eShop |
-| - l-npns.app.nintendowifi.net<br>- npns-dev.c.app.nintendowifi.net<br>nppl.c.app.nintendowifi.net<br>npul.c.app.nintendowifi.net<br>- npvk.app.nintendowifi.net | SpotPass |
+| - l-npns.app.nintendowifi.net<br>- npns-dev.c.app.nintendowifi.net<br>- nppl.c.app.nintendowifi.net<br>- npul.c.app.nintendowifi.net<br>- npvk.app.nintendowifi.net | SpotPass |
 | - ctr-o2fgs.cdn.nintendo.net |
 
 ## Other
