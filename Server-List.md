@@ -57,11 +57,21 @@ Replace '%' by one of the following:
 | - ninja.wup.shop.nintendo.net | [eShop api](Ninja-Server)
 | - geisha-wup.cdn.nintendo.net | eShop website |
 | - cas.wup.shop.nintendo.net<br>- ecs.wup.shop.nintendo.net<br>- ias.wup.shop.nintendo.net<br>- nus.wup.shop.nintendo.net | [eShop services](SOAP-Services) |
-| - ccs.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- ccs.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net<br>- samurai.wup.shop.nintendo.net<br>- samurai-wup.cdn.nintendo.net<br>- kanzashi-wup.cdn.nintendo.net<br>- kanzashi-movie-wup.cdn.nintendo.net<br>- samuraicdndev1-wup.cdn.nintendo.net<br>- geishacdndev1-wup.cdn.nintendo.net<br>- gw.sgks.shop.nintendo.net | eShop |
-| - npns-dev.c.app.nintendowifi.net<br>- npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net<br>- nppl.app.nintendo.net | BOSS |
+| - ccs.wup.shop.nintendo.net<br>- pls.wup.shop.nintendo.net<br>- pushmo.wup.shop.nintendo.net<br>- pushmore.wup.shop.nintendo.net<br>- samurai.wup.shop.nintendo.net<br>- samurai-wup.cdn.nintendo.net<br>- kanzashi-wup.cdn.nintendo.net<br>- kanzashi-movie-wup.cdn.nintendo.net<br>- samuraicdndev1-wup.cdn.nintendo.net<br>- geishacdndev1-wup.cdn.nintendo.net<br>- gw.sgks.shop.nintendo.net | eShop |
+| - npvk.app.nintendo.net<br>- npvk-dev.app.nintendo.net<br>- npts.app.nintendo.net<br>- nppl.app.nintendo.net | BOSS |
 | - idbe-wup.cdn.nintendo.net<br>- idbe-ctr.cdn.nintendo.net | [Icon data](IDBE-Server) |
 | - m1.nintendo.net | [VC Manuals](VC-Manual-Server) |
 | - nintendojp.d1.sc.omtrdc.net<br>- wiiu-ssl-static.ubi.com | |
+
+## 3DS
+| Server | Description |
+| --- | --- |
+| - conntest.nintendowifi.net | Connection test |
+| - nasc.nintendowifi.net | Account server |
+| - hpp-&lt;game server id&gt;-&lt;environment&gt;.n.app.nintendo.net | [Hpp server](Hpp-Server) |
+| - ccs.c.shop.nintendowifi.net<br>- nus.c.shop.nintendowifi.net<br>- pls.c.shop.nintendowifi.net | eShop |
+| - l-npns.app.nintendowifi.net<br>- npns-dev.c.app.nintendowifi.net<br>nppl.c.app.nintendowifi.net<br>npul.c.app.nintendowifi.net<br>- npvk.app.nintendowifi.net | SpotPass |
+| - ctr-o2fgs.cdn.nintendo.net |
 
 ## Other
 | Server | Description |
