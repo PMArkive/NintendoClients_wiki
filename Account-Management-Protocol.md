@@ -343,7 +343,9 @@ This method does not return anything.
 | [String] | [strKey](#key-derivation) |
 | Uint32 | uiGroups |
 | [String] | strEmail |
-| [Data]&lt;[NintendoCreateAccountData](#nintendocreateaccountdata-structure)&gt; | oAuthData |
+| [Data] | oAuthData |
+
+oAuthData is either [NintendoCreateAccountData](#nintendocreateaccountdata-structure) (Wii U) or [AccountExtraInfo](#accountextrainfo-structure) (3DS).
 
 ## Response
 | Type | Name |
@@ -413,6 +415,13 @@ Some functions take a key string. This is a hex string derived from the password
 | [String] | m_strNotEffectiveMsg |
 | [DateTime] | m_dtExpiryDate |
 | [String] | m_strExpiredMsg |
+
+## AccountExtraInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint64 | Unknown |
+| Uint32 | Unknown |
+| [String] | NEX token |
 
 ## NintendoCreateAccountData ([Structure])
 | Type | Description |
