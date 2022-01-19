@@ -7,7 +7,7 @@ To connect to a game server, you first need to find it. Every platform has its o
 
 <table>
   <tr>
-    <td><b>3DS</b></td><td>The game server location is requested from the NASC server</td>
+    <td><b>3DS</b></td><td>The game server location is requested from the [NASC server](NASC-Server)</td>
   </tr>
   <tr>
     <td><b>Wii U</b></td><td>The game server location is requested from the [[account server]] (/provider/nex_token/@me)</td>
