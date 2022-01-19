@@ -119,9 +119,37 @@ On error, the server sends the following response:
 | `125` | Game id is invalid |
 
 ## Examples
+LOGIN request:
+
+```
+POST /ac HTTP/1.1
+Host: nasc.nintendowifi.net
+X-GameId: 00030600
+User-Agent: CTR FPD/000F
+Content-Type: application/x-www-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 876
+
+gameid=MDAwMzA2MDA%2A&sdkver=MDAwMDAw&titleid=MDAwNDAwMDAwMDAzMDcwMA%2A%2A&gamecd=QU1LUA%2A%2A&gamever=MDAwMQ%2A%2A&mediatype=Mg%2A%2A&romid=KJJ3Tnsrdw0qZH0UZQX-VDg%2A&makercd=MDE%2A&unitcd=Mg%2A%2A&macadr=MDQxZDY3ZWQ4YmYw&bssid=NmM4ODUwYzJiYTdh&apinfo=MDE6MDAwMDAwMDAwMA%2A%2A&fcdcert=eGKuWyeaY08jt6Z8T9VzJKRtVk3k212--NVn1UmjsSMKDLzyEC0PvOIM6qVpKNQq3qcVvtlX542KrzTZ5UdxqZiCkaAMEZ0r8y5ygU8F-NBmFo30JFMHWz-JvQWzbNMBXYncbSayAbREdf9CjGOFp1sUGEpu-OCkbOPHyqgCloGo9iIWVIMzNzapjhuNsZSv3bPMkcXyf8KvLwAk-831y4JfPlu4DZKrCR3KNYt.jzZ-MGZFXSiElFSlCinlCnmpJR7UWvYHJOjxAAu0W9ShlbymJOPuTQJB-PzpVouSrQ3lcq7lQexJQ7l1znK1IoVssn0.XDCzDAPtCG9piIam6wAAAAAAAAAAIPX9AQAAAAA%2A&devname=aABlAGwAbABvAHcAbwByAGwAZAA%2A&servertype=TDE%2A&fpdver=MDAwRg%2A%2A&devtime=MTgwNjIzMjEwMTQ1&lang=MDM%2A&region=MDI%2A&csnum=Q0VGMTEwNTQ2OTI%2A&uidhmac=ZThhMmE5MWU%2A&userid=MTAwMDg5NDY0&action=TE9HSU4%2A&ingamesn=
+```
+
+LOGIN response:
+
+```
+HTTP/1.1 200 OK
+NODE: pd42wfiap02
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 248
+Date: Tue, 18 Jan 2022 10:50:37 GMT
+Server: Nintendo Wii (http)
+Connection: keep-alive
+
+locator=MzUuMTYzLjIuODk6NDA0NjA*&retry=MA**&returncd=MDAx&token=CJyBSE-auxaKzdxCnvLJoRicRYB0OnFLoA1wk7Kc34yHTItFZRx.44-DvizdksgEZf-BRyqNeHtUkjqzR3b69XftWqNdg7mZDg-P2rz0jqTTkujbTXwEXsDuqnYx30K2DrcY97F7m52HXBiJCCKnmQ**&datetime=MjAyMjAxMTgxMDUwMzc*
+```
+
 Example error response:
 
-```http
+```
 HTTP/1.1 200 OK
 NODE: pd42wfiap01
 Content-Type: text/plain;charset=ISO-8859-1
@@ -134,7 +162,7 @@ retry=MA**&returncd=MDA5&datetime=MjAyMjAxMTkwOTIxNDE*
 
 Redirect to http://www.nintendo.com
 
-```http
+```
 HTTP/1.0 302 Moved Temporarily
 Location: http://www.nintendo.com
 Server: BigIP
