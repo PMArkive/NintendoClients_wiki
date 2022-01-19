@@ -9,7 +9,7 @@ The authentication server only provides a single service: the [authentication se
 
 <table>
   <tr>
-    <td><b>3DS</b></td><td>Username and password are requested from the account server (when a NNID is linked), or from the NASC server the first time you go online without NNID.</td>
+    <td><b>3DS</b></td><td>A game server account is created with <a href="https://github.com/kinnay/NintendoClients/wiki/Account-Management-Protocol#27-nintendocreateaccount">NintendoCreateAccount</a> the first time you go online.</td>
   </tr>
   <tr>
     <td><b>Wii U</b></td><td>Username and password are requested from the [[account server]] (/provider/nex_token/@me)</td>
