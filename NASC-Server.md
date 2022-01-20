@@ -35,7 +35,7 @@ Note that the Content-Type header is included twice.
 ## Actions
 All form values are encoded with a custom base64 character set, where `+/=` are replaced by `.-*` respectively. This applies to both the request and the response.
 
-The type of request is specified by the `action` parameter. Other parameters depend on the type of action. The action name in case insensitive.
+The type of request is specified by the `action` parameter. Other parameters depend on the type of action. The action name is case insensitive.
 
 * [LOGIN](#login)
 * SVCLOC
