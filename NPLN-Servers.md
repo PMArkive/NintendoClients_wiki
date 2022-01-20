@@ -7,6 +7,7 @@ The NPLN server is at `https://<tenant id>.lp1.t.npln.srv.nintendo.net`. The ten
 
 | Game | Server ID |
 | --- | --- |
+| Pokemon Legends Arceus | `e047112f` |
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
 
