@@ -1,7 +1,7 @@
 [[Server List]] > NASC Server
 ---
 
-This is the account server of the 3DS. A single endpoint (`ac`) is used for all requests. Other requests are redirected to http://www.nintendo.com.
+This is the authentication server of the 3DS. A single endpoint (`ac`) is used for all requests. Other requests are redirected to http://www.nintendo.com.
 
 * [General](#general)
 * [Headers](#headers)
