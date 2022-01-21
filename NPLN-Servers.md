@@ -11,6 +11,6 @@ The NPLN server is at `https://<tenant id>.lp1.t.npln.srv.nintendo.net`. The ten
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
 
-In the metadata, `npln-tenant-id` must be set to the tenant id (for example `t-e1c218b5-lp1`). If the tenant id is invalid, the server returns status code 12 (Unimplemented).
+In the metadata, `npln-tenant-id` must be set to the tenant id (for example `t-e1c218b5-lp1`). If the tenant id is invalid, the server returns status code 14 (Unavailable).
 
 The official library sets the user agent to `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)`.
