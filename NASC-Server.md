@@ -60,7 +60,7 @@ This action provides the location of the game server and a token.
 | `macadr` | MAC address of the 3DS |
 | `bssid` | BSSID of active wifi network |
 | `apinfo` | Not sure, looks like `01:0000000000` |
-| `fcdcert` | Device certificate |
+| `fcdcert` | See [LocalFriendCodeSeed_B](https://www.3dbrew.org/wiki/Nandrw/sys/LocalFriendCodeSeed_B) |
 | `devname` | Device name (UTF-16-LE) |
 | `servertype` | Environment (`L1` for production) |
 | `fpdver` | FPD version. Always `000F`, this is also included in the user agent. |
@@ -80,14 +80,14 @@ or:
 
 | Param | Description |
 | --- | --- |
-| `passwd` | Unknown, the server seems to accept anything |
+| `passwd` | Password for new account |
 
 Finally, the following parameters are always present:
 
 | Param | Description |
 | --- | --- |
 | `action` | `LOGIN` |
-| `ingamesn` | Unknown (empty string in my traffic dumps) |
+| `ingamesn` | Nickname provided by game (usually empty) |
 
 On success, the server sends the following response:
 
@@ -107,6 +107,8 @@ On error, the server sends the following response:
 | `retry` | 0 or 1 |
 | `returncd` | Error code (see below) |
 | `datetime` | Current server time (`%Y%m%d%H%M%S`) |
+
+Sometimes, `returncd` is set to `null` instead of an error code.
 
 ### Known Errors
 | Code | Description |
