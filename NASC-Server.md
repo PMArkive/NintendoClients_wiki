@@ -78,8 +78,8 @@ Then, either:
 
 | Param | Description |
 | --- | --- |
-| `uidhmac` | PID HMAC, received during [account creation](https://github.com/kinnay/NintendoClients/wiki/Account-Management-Protocol#27-nintendocreateaccount)) |
-| `userid` | PID, received during [account creation](https://github.com/kinnay/NintendoClients/wiki/Account-Management-Protocol#27-nintendocreateaccount)) |
+| `uidhmac` | PID HMAC, received during [account creation](https://github.com/kinnay/NintendoClients/wiki/Account-Management-Protocol#27-nintendocreateaccount) |
+| `userid` | PID, received during [account creation](https://github.com/kinnay/NintendoClients/wiki/Account-Management-Protocol#27-nintendocreateaccount) |
 
 or:
 
