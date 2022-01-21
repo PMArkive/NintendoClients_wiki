@@ -25,12 +25,17 @@ The common client certificate (`ctr-common-1`) is required to access these serve
 | --- | --- |
 | Host | `nasc.nintendowifi.net` |
 | X-GameId | The current game id (`%08X`) |
-| User-Agent | `CTR FPD/000F` |
+| User-Agent | `CTR FPD/%04X` (see [FPD version](#fpd-version)) |
 | Content-Type | `application/x-www-form-urlencoded` |
 | Content-Type | `application/x-www-form-urlencoded` |
 | Content-Length | Content length |
 
 Note that the Content-Type header is included twice.
+
+## FPD Version
+| System version | FPD version |
+| --- | --- |
+| 11.15.0 | 15 |
 
 ## Actions
 All form values are encoded with a custom base64 character set, where `+/=` are replaced by `.-*` respectively. This applies to both the request and the response.
@@ -63,7 +68,7 @@ This action provides the location of the game server and a token.
 | `fcdcert` | See [LocalFriendCodeSeed_B](https://www.3dbrew.org/wiki/Nandrw/sys/LocalFriendCodeSeed_B) |
 | `devname` | Device name (UTF-16-LE) |
 | `servertype` | Environment (`L1` for production) |
-| `fpdver` | FPD version. Always `000F`, this is also included in the user agent. |
+| `fpdver` | [FPD version](#fpd-version) (`%04X`). This is also included in the user agent. |
 | `devtime` | Current device time (`%y%m%d%H%M%S`) |
 | `lang` | Language code (`%02X`) |
 | `region` | Region code (`%02X`) |
