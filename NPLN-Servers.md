@@ -1,1 +1,1 @@
-Here: https://github.com/kinnay/NPLN-Protocols/wiki/NPLN-Overview
+Please go here: https://github.com/kinnay/NPLN-Protocols/wiki/NPLN-Overview
