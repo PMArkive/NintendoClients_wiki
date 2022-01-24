@@ -145,5 +145,6 @@ LDN version 3 and later, if enabled:
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
 
 1. `aes_kek_generation_source` is decrypted with master key generation 0.
-2. The first 16 bytes of the SHA-256 hash of the input buffer are decrypted with the key from step 1.
-3. The input key is decrypted with the key from step 2.
+2. The input key is decrypted with the key from step 1.
+3. `aes_key_generation_source` is decrypted with the key from step 2.
+4. The first 16 bytes of the SHA-256 hash of the input buffer are decrypted with the key from step 3.
