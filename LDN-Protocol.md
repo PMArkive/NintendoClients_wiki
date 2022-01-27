@@ -92,7 +92,7 @@ The authentication challenge was added in LDN version 3. In previous versions it
 ### Authentication Frame Format
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [LDN version](#ldn-version) |
+| 0x0 | 1 | [LDN version](#ldn-versions) |
 | 0x1 | 1 | Payload size (`size & 0xFF`) |
 | 0x2 | 2 | Unknown |
 | 0x4 | 1 | Payload size (`size >> 8`) |
