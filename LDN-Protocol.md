@@ -87,7 +87,7 @@ The authentication challenge was added in LDN version 3. In previous versions it
 | 0xB | 1 | Padding (always 0) |
 | 0xC | 32 | Username |
 | 0x2C | 2 | Application communication version |
-| 0x2E | 2 | Padding (always 0) |
+| 0x2E | 10 | Padding (always 0) |
 
 ### Authentication Frame Format
 | Offset | Size | Description |
