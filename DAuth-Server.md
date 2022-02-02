@@ -188,7 +188,7 @@ Every error is encoded like this:
 ## Examples
 Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server rejects the request:
 
-```http
+```
 HTTP/1.1 400 Bad Request
 Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
@@ -208,7 +208,7 @@ Connection: close
 
 Before anything else, one must obtain a challenge:
 
-```http
+```
 POST /v7/challenge HTTP/1.1
 Host: dauth-lp1.ndas.srv.nintendo.net
 User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
@@ -220,7 +220,7 @@ Content-Type: application/x-www-form-urlencoded
 key_generation=13
 ```
 
-```http
+```
 HTTP/1.1 200 OK
 Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
@@ -247,7 +247,7 @@ X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
 
 Then, one can obtain a device token:
 
-```http
+```
 POST /v7/device_auth_token HTTP/1.1
 Host: dauth-lp1.ndas.srv.nintendo.net
 User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
@@ -259,7 +259,7 @@ Content-Type: application/x-www-form-urlencoded
 challenge=mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=&client_id=8f849b5d34778d8e&ist=false&key_generation=13&system_version=CusHY#000d0000#r1xneESd4PiTRYIhVIl0bK1ST5L5BUmv_uGPLqc4PPo=&mac=AW9LE1TSN0xrzY1FfHHXwg
 ```
 
-```http
+```
 HTTP/1.1 200 OK
 Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
@@ -276,7 +276,7 @@ X-Nintendo-Request-SNI: dauth-lp1.ndas.srv.nintendo.net
 
 Or an edge token:
 
-```http
+```
 POST /v7/edge_token HTTP/1.1
 Host: dauth-dd1.ndas.srv.nintendo.net
 User-Agent: libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)
@@ -288,7 +288,7 @@ Content-Type: application/x-www-form-urlencoded
 challenge=mtAvqNqzYSoCEixxL_rjWoHfdDjAH51h5XcKZ6ksq2s=&client_id=67bf9945b45248c6&ist=false&key_generation=13&system_version=CusHY#000d0000#r1xneESd4PiTRYIhVIl0bK1ST5L5BUmv_uGPLqc4PPo=&vendor_id=akamai&mac=8HKiiCC5Zqp3zxut8sSWZw
 ```
 
-```http
+```
 HTTP/1.1 200 OK
 Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
@@ -305,7 +305,7 @@ X-Nintendo-Request-SNI: dauth-dd1.ndas.srv.nintendo.net
 
 Example of an error response:
 
-```http
+```
 HTTP/1.1 400 Bad Request
 Server: nginx
 Date: Sun, 26 Sep 2021 19:21:43 GMT
