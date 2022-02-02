@@ -34,7 +34,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | 11.0.0 - 11.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 11.4.0.0)` |
 | 12.0.0 - 12.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 12.3.0.0)` |
 | 13.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)` |
-| 13.1.0 - 13.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.4.0.0)` |
+| 13.1.0 - 13.2.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.4.0.0)` |
 
 ## Methods
 9.0.0 - 12.1.0:
@@ -45,7 +45,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
 | POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
 
-13.0.0 - 13.2.0:
+13.0.0 - 13.2.1:
 
 | Method | URL |
 | --- | --- |
@@ -125,7 +125,7 @@ This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a><
 | --- | --- |
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
-| 13.0.0 - 13.2.0 | 13 |
+| 13.0.0 - 13.2.1 | 13 |
 
 ### Known Client IDs
 | Client ID | Description |
