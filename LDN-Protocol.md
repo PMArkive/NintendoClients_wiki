@@ -24,7 +24,7 @@ By default, LDN operates on one of the channels on the 2.4 GHz band (chosen arbi
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
-| 6.0.0 - 13.2.0 | 3 | Authentication challenge was added |
+| 6.0.0 - 13.2.1 | 3 | Authentication challenge was added |
 
 ### Action Frame Format
 Defined by IEEE 802.11 specification:
