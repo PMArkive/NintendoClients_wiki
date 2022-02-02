@@ -57,7 +57,7 @@ This method provides two grant types: `refresh_token` and `authorization_code`.
 
 | Param | Description |
 | --- | --- |
-| grant_type | `refresh_token` |
+| grant_type | `authorization_code` |
 | client_id | Client id |
 | scope | Requested scope |
 | code_verifier | |
