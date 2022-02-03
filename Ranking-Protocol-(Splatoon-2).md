@@ -85,6 +85,13 @@ This method does not return anything.
 | [List]&lt;Uint32&gt; | teamScores |
 | [DateTime] | updatedTime |
 
+Revision 1:
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [List]&lt;Uint64&gt; | Team scores (64-bit) |
+
 ## FestivalUploadScoreParam ([Structure])
 | Type | Name |
 | --- | --- |
