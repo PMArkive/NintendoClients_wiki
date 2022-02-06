@@ -32,17 +32,10 @@ By default, LDN operates on one of the channels on the 2.4 GHz band (chosen arbi
 | 6.0.0 - 13.2.1 | 3 | Authentication challenge was added |
 
 ## Action Frame Format
-Defined by IEEE 802.11 specification:
-
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Category (127 = vendor-specific) |
 | 0x1 | 3 | OUI (`00:22:AA`) |
-
-Defined by Nintendo:
-
-| Offset | Size | Description |
-| --- | --- | --- |
 | 0x4 | 1 | Protocol id (4 = LDN) |
 | 0x5 | 1 | Padding (always 0) |
 | 0x6 | 2 | Packet type (257 = advertisement) |
@@ -97,16 +90,9 @@ The authentication challenge was added in LDN version 3. In previous versions it
 ## Authentication Frame Format
 This is a data frame with ethertype 0x88B7 (OUI extended).
 
-Defined by IEEE 802.11 specification:
-
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 3 | OUI (`00:22:AA`) |
-
-Defined by Nintendo:
-
-| Offset | Size | Description |
-| --- | --- | --- |
 | 0x3 | 2 | Packet type (258 = authentication) |
 | 0x5 | | [Authentication frame](#authentication-frame) |
 
