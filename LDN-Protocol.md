@@ -9,7 +9,12 @@ The host of the session acts as an access point and broadcasts a custom action f
 
 Also see: [[Local Wireless Communication on PC]].
 
-### WLAN Channels
+## Table of Contents
+* [WLAN channels](#wlan-channels)
+* [Advertisement frame](#action-frame-format)
+* [Authentication frame](#authentication-frame-format)
+
+## WLAN Channels
 The channel on which LDN operates can be specified by games. Allowed channels are:
 
 | Band | Channels |
@@ -19,14 +24,14 @@ The channel on which LDN operates can be specified by games. Allowed channels ar
 
 By default, LDN operates on one of the channels on the 2.4 GHz band (chosen arbitrarily).
 
-### LDN Versions
+## LDN Versions
 
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
 | 6.0.0 - 13.2.1 | 3 | Authentication challenge was added |
 
-### Action Frame Format
+## Action Frame Format
 Defined by IEEE 802.11 specification:
 
 | Offset | Size | Description |
@@ -89,7 +94,7 @@ The authentication challenge was added in LDN version 3. In previous versions it
 | 0x2C | 2 | Application communication version |
 | 0x2E | 10 | Padding (always 0) |
 
-### Authentication Frame Format
+## Authentication Frame Format
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [LDN version](#ldn-versions) |
@@ -132,7 +137,7 @@ LDN version 3 and later, if enabled:
 | 0x48 | 8 | Device id |
 | 0x50 | 0x2B0 | Unknown |
 
-### Session Info
+## Session Info
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Local communication id (usually the title id) |
@@ -141,7 +146,7 @@ LDN version 3 and later, if enabled:
 | 0xC | 4 | Padding (always 0) |
 | 0x10 | 16 | SSID (random bytes) |
 
-### Key Derivation
+## Key Derivation
 Given a 16-byte input key and an input buffer of arbitrary size, the LDN sysmodule derives encryption keys as follows:
 
 1. `aes_kek_generation_source` is decrypted with master key generation 0.
