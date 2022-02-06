@@ -146,7 +146,7 @@ LDN version 3 and later:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0 | 0x84 | Unknown |
+| 0x0 | 0x84 | Unknown |
 
 LDN version 3 and later, if enabled:
 
