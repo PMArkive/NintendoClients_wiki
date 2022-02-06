@@ -11,6 +11,7 @@ Also see: [[Local Wireless Communication on PC]].
 
 ## Table of Contents
 * [WLAN channels](#wlan-channels)
+* [LDN versions](#ldn-versions)
 * [Advertisement frame](#action-frame-format)
 * [Authentication frame](#authentication-frame-format)
 
@@ -25,11 +26,10 @@ The channel on which LDN operates can be specified by games. Allowed channels ar
 By default, LDN operates on one of the channels on the 2.4 GHz band (chosen arbitrarily).
 
 ## LDN Versions
-
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
-| 6.0.0 - 13.2.1 | 3 | Authentication challenge was added |
+| 6.0.0 - 13.2.1 | 3 | Authentication frame was updated |
 
 ## Action Frame Format
 | Offset | Size | Description |
@@ -105,18 +105,18 @@ This is a data frame with ethertype 0x88B7 (OUI extended).
 | 0x2 | 1 | Status code |
 | 0x3 | 1 | 0 = request, 1 = response |
 | 0x4 | 1 | Payload size (`size >> 8`) |
-| 0x5 | 3 | Unknown |
+| 0x5 | 3 | Padding (always 0) |
 | 0x8 | 32 | [Session info](#session-info) |
 | 0x28 | 16 | Network key |
 | 0x38 | 16 | Authentication key (random bytes) |
-| 0x48 | | Authentication payload |
+| 0x48 | | Authentication payload ([request](#authentication-request) or [response](#authentication-response)) |
 
-#### Authentication Payload
+#### Authentication Request
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | Username |
 | 0x20 | 2 | Application communication version |
-| 0x22 | 30 | Unknown |
+| 0x22 | 30 | Padding (always 0) |
 
 LDN version 3 and later:
 
@@ -140,6 +140,19 @@ LDN version 3 and later, if enabled:
 | 0x40 | 8 | Authentication nonce (random) |
 | 0x48 | 8 | Device id |
 | 0x50 | 0x2B0 | Unknown |
+
+#### Authentication Response
+LDN version 3 and later:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0 | 0x84 | Unknown |
+
+LDN version 3 and later, if enabled:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x84 | 0x100 | Authentication challenge response |
 
 ## Session Info
 | Offset | Size | Description |
