@@ -102,7 +102,8 @@ This is a data frame with ethertype 0x88B7 (OUI extended).
 | --- | --- | --- |
 | 0x0 | 1 | [LDN version](#ldn-versions) |
 | 0x1 | 1 | Payload size (`size & 0xFF`) |
-| 0x2 | 2 | Unknown |
+| 0x2 | 1 | Status code |
+| 0x3 | 1 | 0 = request, 1 = response |
 | 0x4 | 1 | Payload size (`size >> 8`) |
 | 0x5 | 3 | Unknown |
 | 0x8 | 32 | [Session info](#session-info) |
