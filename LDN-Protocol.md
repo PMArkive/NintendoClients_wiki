@@ -94,7 +94,8 @@ This is a data frame with ethertype 0x88B7 (OUI extended).
 | --- | --- | --- |
 | 0x0 | 3 | OUI (`00:22:AA`) |
 | 0x3 | 2 | Packet type (258 = authentication) |
-| 0x5 | | [Authentication frame](#authentication-frame) |
+| 0x5 | 1 | Padding (always 0) |
+| 0x6 | | [Authentication frame](#authentication-frame) |
 
 ### Authentication Frame
 | Offset | Size | Description |
