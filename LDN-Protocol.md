@@ -95,6 +95,22 @@ The authentication challenge was added in LDN version 3. In previous versions it
 | 0x2E | 10 | Padding (always 0) |
 
 ## Authentication Frame Format
+This is a data frame with ethertype 0x88B7 (OUI extended).
+
+Defined by IEEE 802.11 specification:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 3 | OUI (`00:22:AA`) |
+
+Defined by Nintendo:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x3 | 2 | Packet type (258 = authentication) |
+| 0x5 | | [Authentication frame](#authentication-frame) |
+
+### Authentication Frame
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [LDN version](#ldn-versions) |
