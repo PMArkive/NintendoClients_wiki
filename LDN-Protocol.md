@@ -183,11 +183,15 @@ LDN version 3 and later:
 | --- | --- | --- |
 | 0x0 | 4 | Unknown |
 | 0x4 | 32 | HMAC-SHA256 |
-| 0x24 | 20 | Unknown |
+| 0x24 | 12 | Unknown |
+| 0x30 | 1 | Always 0 |
+| 0x31 | 7 | Unknown |
 | 0x38 | 8 | Authentication token (see [advertisement frame](#advertisement-frame)) |
 | 0x40 | 8 | Authentication nonce (random) |
 | 0x48 | 8 | Device id |
 | 0x50 | 0x2B0 | Unknown |
+
+The HMAC is calculated over bytes 0x30 - 0x300 and the key is `f84b487fb37251c263bf11609036589266af70ca79b44c93c7370c5769c0f602`.
 
 #### Challenge Response
 | Offset | Size | Description |
