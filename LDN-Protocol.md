@@ -194,9 +194,8 @@ LDN version 3 and later:
 | 0x40 | 8 | Authentication nonce (random) |
 | 0x48 | 8 | Device id |
 | 0x50 | 0x70 | Always 0 |
-| 0xC0 | 8*P | Unknown |
-| 0x100 | 8*Q | Unknown |
-| 0x140 | 0x1C0 | Unknown |
+| 0xC0 | 0x40 | Unknown (8*P bytes) |
+| 0x100 | 0x200 | Unknown (8*Q bytes) |
 
 The HMAC is calculated over bytes 0x30 - 0x300 and the key is `f84b487fb37251c263bf11609036589266af70ca79b44c93c7370c5769c0f602`.
 
