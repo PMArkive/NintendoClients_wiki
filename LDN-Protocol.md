@@ -115,9 +115,9 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x1DA | 2 | Application data size |
 | 0x1DC | 384 | Application data |
 | 0x35C | 412 | Padding (always 0) |
-| 0x4F8 | 8 | Authentication nonce (random) |
+| 0x4F8 | 8 | Authentication token (random) |
 
-The authentication nonce was added in LDN version 3. In previous versions it is set to 0.
+The authentication token was added in LDN version 3. In previous versions it is set to 0.
 
 #### Participant Info
 | Offset | Size | Description |
