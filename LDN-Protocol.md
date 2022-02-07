@@ -183,7 +183,7 @@ LDN version 3 and later:
 | --- | --- | --- |
 | 0x0 | 4 | Always 0 |
 | 0x4 | 32 | HMAC-SHA256 |
-| 0x24 | 12 | Unknown |
+| 0x24 | 12 | Always 0 |
 | 0x30 | 1 | Always 0 |
 | 0x31 | 1 | Always 0 |
 | 0x32 | 1 | P |
@@ -193,7 +193,7 @@ LDN version 3 and later:
 | 0x38 | 8 | Authentication token (see [advertisement frame](#advertisement-frame)) |
 | 0x40 | 8 | Authentication nonce (random) |
 | 0x48 | 8 | Device id |
-| 0x50 | 0x70 | Unknown |
+| 0x50 | 0x70 | Always 0 |
 | 0xC0 | 8*P | Unknown |
 | 0x100 | 8*Q | Unknown |
 | 0x140 | 0x1C0 | Unknown |
