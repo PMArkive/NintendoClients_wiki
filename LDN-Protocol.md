@@ -117,7 +117,7 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x35C | 412 | Padding (always 0) |
 | 0x4F8 | 8 | Authentication token (random) |
 
-The authentication token was added in LDN version 3. In previous versions it is set to 0.
+The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
 
 #### Participant Info
 | Offset | Size | Description |
@@ -184,7 +184,7 @@ LDN version 3 and later:
 | 0x0 | 4 | Unknown |
 | 0x4 | 32 | HMAC-SHA256 |
 | 0x24 | 20 | Unknown |
-| 0x38 | 8 | Authentication nonce (generated at start of session) |
+| 0x38 | 8 | Authentication token (see [advertisement frame](#advertisement-frame)) |
 | 0x40 | 8 | Authentication nonce (random) |
 | 0x48 | 8 | Device id |
 | 0x50 | 0x2B0 | Unknown |
