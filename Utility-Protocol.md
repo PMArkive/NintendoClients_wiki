@@ -1,5 +1,6 @@
 ## [[NEX Protocols]] > Utility (110)
 The following games have additional methods in the utility protocol:
+* [Mario Strikers: Battle League](Utility-Protocol-(MS:BL))
 * [Splatoon 2](Utility-Protocol-(Splatoon-2))
 * [Super Smash Bros. Ultimate](Utility-Protocol-(SSBU))
 
