@@ -3,6 +3,7 @@
 The following games have additional methods in the matchmake extension protocol:
 * [Mario Kart 8](Matchmake-Extension-Protocol-(MK8))
 * [Mario Kart 8 Deluxe](Matchmake-Extension-Protocol-(MK8D))
+* <a href="https://github.com/kinnay/NintendoClients/wiki/Matchmake-Extension-Protocol-(MS:BL)">Mario Strikers: Battle League</a>
 * [Monster Hunter XX (3DS)](Matchmake-Extension-Protocol-(MHXX))
 * [Pokemon X / Y](Matchmake-Extension-Protocol-(Pokemon-XY))
 * [Super Mario Bros. 35](Matchmake-Extension-Protocol-(SMB35))
