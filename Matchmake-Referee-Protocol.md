@@ -3,7 +3,7 @@
 Games that use [libeagle](Eagle-Protocol) use a [customized matchmake referee protocol](Matchmake-Referee-Protocol-(Eagle)).
 
 The following games have additional methods in the matchmake referee protocol:
-* <a href="https://github.com/kinnay/NintendoClients/wiki/Matchmake-Referee-Protocol-(Eagle)">Mario Strikers: Battle League</a>
+* <a href="https://github.com/kinnay/NintendoClients/wiki/Matchmake-Referee-Protocol-(MS:BL)">Mario Strikers: Battle League</a>
 
 The remainder of this page describe the standard matchmake referee protocol.
 
