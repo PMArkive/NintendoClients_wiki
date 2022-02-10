@@ -2,8 +2,9 @@
 
 The following games have additional methods in the ranking 2 protocol:
 
-* [Super Mario Bros. 35](Ranking-Protocol-2-(Eagle))
+* <a href="https://github.com/kinnay/NintendoClients/wiki/Ranking-Protocol-2-(MS:BL)">Mario Strikers: Battle League</a>
 * [PAC-MAN 99](Ranking-Protocol-2-(Eagle))
+* [Super Mario Bros. 35](Ranking-Protocol-2-(Eagle))
 
 This remainder of this page describes the methods that are not specific to any game.
 
