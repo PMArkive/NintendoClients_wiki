@@ -145,7 +145,7 @@ This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encryp
 | --- | --- | --- |
 | 0x0 | 1 | [LDN version](#ldn-versions) |
 | 0x1 | 1 | Payload size (`size & 0xFF`) |
-| 0x2 | 1 | Status code |
+| 0x2 | 1 | [Status code](#authentication-status-code) |
 | 0x3 | 1 | 0 = request, 1 = response |
 | 0x4 | 1 | Payload size (`size >> 8`) |
 | 0x5 | 3 | Padding (always 0) |
@@ -153,6 +153,18 @@ This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encryp
 | 0x28 | 16 | Network key |
 | 0x38 | 16 | Authentication key (random bytes) |
 | 0x48 | | Authentication payload ([request](#authentication-request) or [response](#authentication-response)) |
+
+#### Authentication Status Code
+This is set to 0 in an authentication request. In an authentication response, it is set to one of the following values:
+
+| Value | Description |
+| --- | --- |
+| 0 | Success |
+| 1 | Participation denied by policy |
+| 2 | Malformed authentication request |
+| 4 | Authentication request has invalid version number |
+| 5 | Network is full |
+| 6 | Authentication challenge is invalid |
 
 #### Authentication Request
 | Offset | Size | Description |
