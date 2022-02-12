@@ -214,7 +214,18 @@ The HMAC is calculated over bytes 0x30 - 0x300 and the key is `f84b487fb37251c26
 #### Challenge Response
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x100 | Unknown |
+| 0x0 | 4 | Always 0 |
+| 0x4 | 32 | HMAC-SHA256 |
+| 0x24 | 12 | Always 0 |
+| 0x30 | 1 | Always 0 |
+| 0x31 | 1 | Always 0 |
+| 0x32 | 6 | Padding (always 0) |
+| 0x38 | 8 | Authentication nonce from request |
+| 0x40 | 8 | Device id from request |
+| 0x48 | 8 | Own device id |
+| 0x50 | 0xB0 | Always 0 |
+
+The HMAC is calculated over bytes 0x30 - 0x100 and the key is `f84b487fb37251c263bf11609036589266af70ca79b44c93c7370c5769c0f602`.
 
 ## Session Info
 | Offset | Size | Description |
