@@ -46,7 +46,7 @@ When a suitable network has been found (by scanning for [advertisement frames](#
 
 1. The console joins the network using the open system authentication method. This is standard.
 2. The console sends an encrypted [authentication request](#authentication-frame) to the access point. If the console does not send an authentication request within 5 seconds after step 1, the access point disassociates the console from the network.
-3. The access point verifies the authentication request and sends an [authentication response](#authentication-frame) back to the console. If the console does not receive an authentication response from the access point within 700 milliseconds it reports an error.
+3. The access point verifies the authentication request and sends an [authentication response](#authentication-frame) back to the console. If the console does not receive an authentication response from the access point within 700 milliseconds it resends the authentication request. After three attempts it gives up.
 4. The console verifies the authentication response. If it is valid, and indicates success, the console is now part of the network and may communicate with other consoles.
 
 ## Encryption Keys
