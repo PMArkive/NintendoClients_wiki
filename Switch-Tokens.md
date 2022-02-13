@@ -10,12 +10,12 @@ Details on specific kinds of token:
 * [ID tokens](#id-tokens)
 
 ### Header
-The first part contains information about the JWT itself, such as the signature algorithm that's used.
+The first part contains metadata about the JWT, such as the signature algorithm that is used.
 
 | Field | Description |
 | --- | --- |
-| `jku` | **JWK Set URL:** The URL of a server that provides a [JWK set](#jwk-set). This server provides the public keys that are used to verify the signature in the JWT. |
-| `kid` | **Key ID:** The key id in the JWK set provided by the `jku` server. This is a uuid v4 on Nintendo's servers. |
+| `jku` | **JWK Set URL:** The URL of a server that provides a [JWK set](#jwk-set). This server provides the public keys that are used to verify the signature of the JWT. |
+| `kid` | **Key ID:** Selects a key from the JWK set provided by the `jku` server. This is a uuid v4 on Nintendo's servers. |
 | `alg` | **Algorithm:** Always `RS256`. |
 | `typ` | **Type:** Always `JWT`. Not present in tokens returned by baas server. |
 
@@ -23,10 +23,10 @@ Example:
 
 ```json
 {
-  "jku":"https://dcert-lp1.ndas.srv.nintendo.net/keys",
-  "kid":"2567fb65-eacb-48ba-9eb0-ed815a9f1a06",
-  "typ":"JWT",
-  "alg":"RS256"
+  "jku": "https://dcert-lp1.ndas.srv.nintendo.net/keys",
+  "kid": "2567fb65-eacb-48ba-9eb0-ed815a9f1a06",
+  "typ": "JWT",
+  "alg": "RS256"
 }
 ```
 
@@ -69,46 +69,26 @@ The baas server also returns the following fields:
 
 JWKs are described formally in [RFC 7517](https://tools.ietf.org/html/rfc7517) and [RFC 7518](https://tools.ietf.org/html/rfc7518).
 
-Most JWK sets are regenerated every 24 hours. The only exception is the JWK set for [baas session tokens](#baas-session-tokens), which never changes.
+Most JWK sets are regenerated every 24 hours. The only exception is the JWK set for [baas access tokens](#baas-access-tokens), which never changes.
+
+### Example
+```
+eyJqa3UiOiJodHRwczovL2RjZXJ0LWxwMS5uZGFzLnNydi5uaW50ZW5kby5uZXQva2V5cyIsImtpZCI6IjM2NzllMT
+g4LTI5ZWUtNDE4Zi04ZDkwLWI3MjRjYzg1MzQ0MSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2
+ODMzN2FjYTI4ODE1Y2JiIiwiaXNzIjoiZGF1dGgtbHAxLm5kYXMuc3J2Lm5pbnRlbmRvLm5ldCIsImF1ZCI6IjhmOD
+Q5YjVkMzQ3NzhkOGUiLCJleHAiOjE2MzI3NjMzMDEsImlhdCI6MTYzMjY3NjkwMSwianRpIjoiZTU5YTBiMGUtOTRl
+MS00NGFhLWI1ZGItMGZjMGNmNTAyYWRhIiwibmludGVuZG8iOnsic24iOiJYQVcxMDAxMjM0NTY3OCIsInBjIjoiSE
+FDIiwiZHQiOiJOWCBQcm9kIDEiLCJpc3QiOmZhbHNlfX0.Mdl42B_tWnQQZkpp0qkvEwpkAFGos1YQ8OBKDr_rJCQl
+NVZLrP6_sd53U8kvwI6TWbnuxFtNxcVJh21kbbY23WsjwQN9Ph2pbjEmneov5b5SfAjWSvfEqt_ViKFQVLv_MZZXQp
+BYZSQmJ3sA-BbOjeEO6JI5XI3_KR0uj9IxSH_LNSiEwMMNLkP0PcC3gO5cSKcmnb1NPW2BMMdlKOSIbxDSWE4sEuYt
+2Pl_u2F6hVMVeoC-4z43lIv2tv7aF9Pwv-D7MR-mOxQaxYVHw2Ux4FL0zPZOJMU6qPgfzACeItd6H_A4OBMKSQwBl4
+DEbSwdle5tph-ur01K91FhXhI6BA
+```
 
 ## DAuth Tokens
 | Field | Value |
 | --- | --- |
 | `jku` | https://dcert-lp1.ndas.srv.nintendo.net/keys |
-
-<details><summary>JWK set (click to show)</summary>
-
-```json
-{
-  "keys": [
-    {
-      "kty": "RSA",
-      "e": "AQAB",
-      "n": "upUROmsdoSEnbste9i0UDc2myVZBgd-YwAx_5oahwmaByq516fEzRSwnYyVOX_6Ni6rQQ8WvAUTXgIVsOl3bLHnIoYHFzzO1iBUNRCvrECjQS0oC73kA6aFHN--uIjgrLXsaeatbuFILLGCsnKVNYpweleZQtzh3ISBwscPo_xhs1GBxFBHpRXOxr7i1Rbtm-r2j0Dc2ATjVg4NxWKcRJ_LI-RBWqgb_QTungedwLJ_bhYq8UHzpWwpr5Tc9NH7swvxX1hifSDMhiZFRzXceLUTIpLzn16nhG_2nLMUqilfXUDYLr_eMGcIQCD5AezsrClFtYI4St6iFxjZ5PMqa2Q",
-      "alg": "RS256",
-      "use": "sig",
-      "kid": "942401dc-8828-4cae-a20f-85c017c97301"
-    },
-    {
-      "kty": "RSA",
-      "e": "AQAB",
-      "n": "qjk1pMUDyvMkomlEYuYJf-z1bF7HBl4x5YfWOW0lBTj0BYI2eDH7esMmUq0BOu8wU2dgIlWrqtcRHaBn0csiXUxX1BDZP3mJEh-6llvKdcc96wwo8LjPMSY3_CDnuNRYWC99TwMALkBv_UJ8oz9l60ksU8FNsrLdbRye_KrIqtshL-2g6pGHXbtBxkVjHCKd5SynEQ79llQmIfNo6YSSO7g2SQLRVbVKnaIAT1jzfG7JB9Xs5sWU6YrDf4zLakaO3avU8l7LyawKE58hoUAfCNXIgOve4ge2tmpLnbul2bpJuJ0DAPeu6lqMJjrCKS5sRSt_7BtytpnL3WvsHzBkhw",
-      "alg": "RS256",
-      "use": "sig",
-      "kid": "2567fb65-eacb-48ba-9eb0-ed815a9f1a06"
-    },
-    {
-      "kty": "RSA",
-      "e": "AQAB",
-      "n": "9_972w056UFjQD4V4FGv_daxmMB8cYHyFrKcClPez6F508t_kdUJpwBpcdP8pIvh2PrqH4hVFvGnUM8mseSAodOTHi8fn4DwAom-3WBGOj-gmrMwR3aGFNCzYWSsjCovKO3HHjTulMfNMzGaq-AdbGkUo3XSZY_Ukcg-0nVe8ctS_I-rRe24rKuphpsJSQUT6cBVCijuiixq4O6yLMXHHe52uGbyJEarW-LrAF0cbF_zoQurElUiAhTuTX8zmTPese0FVdSLYkrA3_U2lhoSEmNFTn470rq9fB_U9fkKhQaOqK_OMv_CjToctFaaCDMPbpD9-onD5YrQTc_eNGK2hQ",
-      "alg": "RS256",
-      "use": "sig",
-      "kid": "4eb067f1-fd36-4dd5-8625-fdf537dfd141"
-    }
-  ]
-}
-```
-</details>
 
 Payload fields:
 
