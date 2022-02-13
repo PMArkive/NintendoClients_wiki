@@ -1,9 +1,9 @@
-[[Server List]] > AAuth Server
+[Switch Servers](Server-List#switch) > Application Authentication
 ---
 
 URL: https://aauth-lp1.ndas.srv.nintendo.net
 
-The aauth server provides application authorization tokens. These are required to access game-specific servers, such as [NEX](NEX-Overview-(Game-Servers)).
+The aauth server provides application tokens. These are required to access game-specific servers, such as [NEX](NEX-Overview-(Game-Servers)) and [NPLN](NPLN-Servers).
 
 The aauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
