@@ -4,8 +4,7 @@ Replace '%' by one of the following:
 | Environment | Description |
 | --- | --- |
 | lp1 | Live production |
-| dd1 | Development |
-| jd1, sd1, sp1, dp1, td1, xd1 | ? |
+| dd1, jd1, sd1, sp1, dp1, td1, xd1 | Development |
 
 | Server | Description |
 | --- | --- |
