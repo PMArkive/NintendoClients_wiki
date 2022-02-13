@@ -3,6 +3,8 @@
 
 This page describes the protocol that is used to communicate with nearby consoles in LDN mode, which is the default mode for local multiplayer.
 
+Unless specified otherwise, everything is encoded in big-endian byte order.
+
 ## Table of Contents
 * [Overview](#overview)
 * [LDN versions](#ldn-versions)
@@ -86,8 +88,6 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 | 0xA | 2 | Padding (always 0) |
 | 0xC | | [Advertisement payload](#advertisement-payload) |
 
-Everything is encoded in big-endian byte order.
-
 ### Advertisement Payload
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encryp
 | 0x3 | 1 | 0 = request, 1 = response |
 | 0x4 | 1 | Payload size (`size >> 8`) |
 | 0x5 | 3 | Padding (always 0) |
-| 0x8 | 32 | [Session info](#session-info) |
+| 0x8 | 32 | [Session info](#session-info) in little-endian byte order |
 | 0x28 | 16 | Network key |
 | 0x38 | 16 | Authentication key (random bytes) |
 | 0x48 | | Authentication payload ([request](#authentication-request) or [response](#authentication-response)) |
