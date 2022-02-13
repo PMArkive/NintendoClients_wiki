@@ -3,13 +3,13 @@
 
 This server is used to check if the internet connection is working when you connect to a wifi network.
 
-The server supports both HTTP and HTTPS. The Switch uses the former.
+The server supports both HTTP and HTTPS. The Switch uses the plain HTTP.
 
 If HTTPS is used, the server certificate is signed by `Nintendo Class 2 CA - G3`.
 
 The following request is sent to the server by the Switch:
 
-```http
+```
 GET / HTTP/1.1
 Host: ctest.cdn.nintendo.net
 User-Agent: NX NIFM/00
@@ -19,7 +19,7 @@ Connection: keep-alive
 
 The server replies with the following response:
 
-```http
+```
 HTTP/1.1 200 OK
 Content-Length: 2
 Expires: Mon, 05 Apr 2021 14:52:05 GMT
@@ -35,7 +35,7 @@ ok
 
 If the user agent does not start with `NX NIFM/` the server sends the following response instead:
 
-```http
+```
 HTTP/1.1 403 Forbidden
 Server: AkamaiGHost
 Mime-Version: 1.0
