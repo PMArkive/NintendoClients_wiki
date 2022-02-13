@@ -1,4 +1,4 @@
-[[Server List]] > Account Server (Switch)
+[Switch Servers](Server-List#switch) > Nintendo Accounts
 ---
 
 This server is responsible for Nintendo accounts. Nintendo accounts are created off-device, and are required to use Nintendo Switch online services, including the eShop. For more information on Nintendo accounts, check out [Nintendo's support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/16005/).
