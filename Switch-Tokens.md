@@ -273,10 +273,6 @@ Payload fields:
 | `ai` | Application id (`%016x`) |
 | `av` | Application version (`%04x`) |
 | `at` | Application time (current timestamp) |
-| `di` | Device id (`%016x`) |
-| `dt` | Device type: `NX Prod 1` |
-| `pc` | Product code: `HAC` |
-| `sn` | Serial number |
 | `edi` | Unique id (copied from aauth token) |
 
 ### Example
