@@ -1,7 +1,7 @@
 [[Pia Overview]] > LDN Protocol
 ---
 
-This page describes the protocol that is used to communicate with nearby consoles in LDN mode, which is the default mode for local multiplayer.
+This page describes the protocol that is used to communicate with nearby consoles in LDN mode, which is the default mode for local multiplayer on Nintendo Switch.
 
 Unless specified otherwise, everything is encoded in big-endian byte order.
 
@@ -16,7 +16,7 @@ Unless specified otherwise, everything is encoded in big-endian byte order.
 * [Authentication frame](#authentication-frame)
 
 ## Overview
-LDN enables communication between nearby consoles. Because LDN operates at the data link layer, it requires a good understanding of the [IEEE 802.11 specification](https://ieeexplore.ieee.org/document/9363693).
+LDN enables communication between nearby consoles. LDN operates at the data link layer, so it requires a good understanding of the [IEEE 802.11 specification](https://ieeexplore.ieee.org/document/9363693).
 
 The host of the session acts as an access point and broadcasts a vendor-specific [action frame](#advertisement-frame) every 100 milliseconds. To find nearby consoles, the console scans for these action frames. During host migration the network is destroyed and a new network is created by the new host, after which all consoles reconnect.
 
