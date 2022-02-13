@@ -92,21 +92,12 @@ struct ieee80211_header {
     uint16_t sequence;
 };
 
-enum ieee80211_frame_type {
-    IEEE80211_TYPE_MANAGEMENT = 0
-};
+#define IEEE80211_FTYPE_MGMT 0x0000
+#define IEEE80211_STYPE_ACTION 0x00D0
 
-enum ieee80211_management_subtype {
-    IEEE80211_MANAGEMENT_ACTION = 13
+enum ieee80211_category {
+    WLAN_CATEGORY_VENDOR_SPECIFIC = 127
 };
-
-enum ieee80211_action_category {
-    IEEE80211_ACTION_VENDOR_SPECIFIC = 127
-};
-
-uint16_t swap16(uint16_t value) {
-    return (value >> 8) | (value << 8);
-}
 
 void process_ieee80211_packet(const uint8_t *data, size_t size) {
     size -= 4; // Remove frame checksum
@@ -116,24 +107,10 @@ void process_ieee80211_packet(const uint8_t *data, size_t size) {
     data += sizeof(struct ieee80211_header);
     size -= sizeof(struct ieee80211_header);
 
-    uint16_t frame_control = swap16(header->frame_control);
-
-    // Ignore packets with an invalid version number
-    int version = (frame_control >> 8) & 3;
-    if (version != 0) return;
-
     // Check if we received an action frame
-    int type = (frame_control >> 10) & 3;
-    int subtype = frame_control >> 12;
-    if (type == IEEE80211_TYPE_MANAGEMENT && subtype == IEEE80211_MANAGEMENT_ACTION) {
-        // Skip the HT control field if present
-        if ((frame_control >> 7) & 1) {
-            data += 4;
-            size -= 4;
-        }
-
+    if (header->frame_control == IEEE80211_FTYPE_MGMT | IEEE80211_STYPE_ACTION) {
         // Check if we received a vendor-specific action frame
-        if (data[0] == IEEE80211_ACTION_VENDOR_SPECIFIC) {
+        if (data[0] == WLAN_CATEGORY_VENDOR_SPECIFIC) {
             // Check if the organizationally unique identifier belongs to Nintendo
             if (data[1] == 0 && data[2] == 0x22 && data[3] == 0xAA) {
                 printf("Received action frame from Nintendo device: ");
@@ -201,7 +178,7 @@ int main() {
 ```
 
 ### Emulating LDN with NL80211
-While libpcap is useful for basic packet sniffing, it is not practical for full LDN emulation because it would require you to implement your own network stack including 802.11, IPv4 and UDP.
+While libpcap is useful for basic packet sniffing, it is not practical for LDN emulation because it would require you to implement your own network stack including 802.11, IPv4 and UDP.
 
 For full LDN emulation it is better to use a library that implements [NL80211](https://wireless.wiki.kernel.org/en/developers/documentation/nl80211), which gives fine grained control over your WLAN hardware on Linux. With this approach one can become part of a LDN network like a normal wireless network, after which one can use normal UDP sockets to communicate with other Switches.
 
