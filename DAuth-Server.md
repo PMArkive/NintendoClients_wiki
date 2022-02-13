@@ -1,9 +1,9 @@
-[[Server List]] > DAuth Server
+[Switch Servers](Server-List#switch) > Device Authentication
 ---
 
 URL: https://dauth-lp1.ndas.srv.nintendo.net
 
-Most Switch servers can only be accessed after obtaining a token from the dauth server. The dauth server only accepts requests with a valid client certificate. Every Switch has its own client certificate, which stored in [PRODINFO](https://switchbrew.org/wiki/Calibration).
+Almost all Switch servers can only be accessed after obtaining a token from the dauth server. The dauth server only accepts requests with a valid client certificate. Every Switch has its own client certificate, which stored in [PRODINFO](https://switchbrew.org/wiki/Calibration).
 
 ![](https://www.dropbox.com/s/cwubnhmd5neum9k/dauth.png?raw=1)
 
