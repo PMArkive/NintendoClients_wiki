@@ -3,13 +3,12 @@
 
 This server is responsible for Nintendo accounts. Nintendo accounts are created off-device, and are required to use Nintendo Switch online services, including the eShop. For more information on Nintendo accounts, check out [Nintendo's support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/16005/).
 
-This wiki page briefly describes the structure of the Nintendo account website, but mainly focuses on the API that may be used by Nintendo Switch games.
-
 The API takes form-encoded requests and responds with json-encoding.
 
 * [Website](#website)
 * [Headers](#headers)
 * [Methods](#methods)
+* [Known client ids](#known-client-ids)
 * [Errors](#errors)
 
 ## Website
@@ -27,6 +26,14 @@ On this website, one can either create a Nintendo account directly, or create a 
 | Content-Type | `application/x-www-form-urlencoded` |
 
 #### User Agents
+For browser requests made during authorization:
+
+| System Version | User agent |
+| --- | --- |
+| 13.1.0 - 13.2.1 | `Mozilla/5.0 (Nintendo Switch; LoginApplet; Nintendo Switch) AppleWebKit/606.4 (KHTML, like Gecko) NF/6.0.1.19.3 NintendoBrowser/5.1.0.21761` |
+
+For API requests made by the account sysmodule:
+
 | System Version | User agent |
 | --- | --- |
 | 9.0.0 - 9.2.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 9.3.0.0; Add-on 9.3.0.0)` |
@@ -41,9 +48,9 @@ On this website, one can either create a Nintendo account directly, or create a 
 
 | Method | URL |
 | --- | --- |
-| GET | `/api/1.0.0/users/<id>/qrcode_param` |
-| POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
 | GET | <code><a href="#get-connect100authorize">/connect/1.0.0/authorize</a></code> |
+| POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
+| GET | `/api/1.0.0/users/<id>/qrcode_param` |
 | GET | `/profile` |
 
 **api.accounts.nintendo.com:**
@@ -53,89 +60,18 @@ On this website, one can either create a Nintendo account directly, or create a 
 | GET | `/2.0.0/users/me` |
 
 ### GET /connect/1.0.0/authorize
+This method accepts [OAuth 2](https://oauth.net/2/) authorization requests. The following parameters may be provided in addition to standard OAuth parameters:
+
 | Param | Description |
 | --- | --- |
-| response_type | `code` |
-| code_challenge_method | `S256` |
-| scope | `nx` |
-| client_id | [Client id](#known-client-ids) |
-| state | |
-| code_challenge | |
 | theme | `register`, `intro`, `email_authentication` or `simple_authenticate` |
-| redirect_uri | [Redirect URI](#known-client-ids) |
-
-| Param | Description |
-| --- | --- |
-| response_type | `code` |
-| code_challenge_method | `S256` |
-| scope | `nx` |
-| client_id | [Client id](#known-client-ids) |
-| state | |
-| code_challenge | |
-| id_token_hint | |
-| redirect_uri | [Redirect URI](#known-client-ids) |
-
-| Param | Description |
-| --- | --- |
-| response_type | `id_token` |
-| claims | `{"links.nintendoNetwork.id":{"essential":true}}`|
-| scope | `user.links+user.links[].id` |
-| client_id | [Client id](#known-client-ids) |
-| state | |
-| id_token_hint | |
-| redirect_uri | [Redirect URI](#known-client-ids) |
-
-
-| Param | Description |
-| --- | --- |
-| response_type | `id_token` |
-| client_id | [Client id](#known-client-ids) |
-| scope | `openid` |
-| state | |
-| redirect_uri | [Redirect URI](#known-client-ids) |
-
-| Param | Description |
-| --- | --- |
-| response_type | `code+id_token` |
-| client_id | [Client id](#known-client-ids) |
-| id_token_hint | |
-| redirect_uri | [Redirect URI](#known-client-ids) |
-| scope | |
-| state | |
-| nonce | |
 
 ### POST /connect/1.0.0/api/token
-This method provides two grant types: `refresh_token` and `authorization_code`.
+This method accepts [OAuth 2](https://oauth.net/2/) token requests. The following parameters may be provided in addition to standard OAuth parameters:
 
 | Param | Description |
 | --- | --- |
-| grant_type | `authorization_code` |
-| client_id | Client id |
-| scope | Requested scope |
-| code_verifier | |
-| code | |
 | device_authentication_token | [Device token](DAuth-Server) |
-| redirect_uri | |
-
-The Nintendo Switch always requests the following scopes: `openid+offline+napps+urn:oauth:init-sso+user+user.birthday+user.email+user.links+user.links[].id+user.loginId+user.screenName+user.terms`.
-
-| Param | Description |
-| --- | --- |
-| grant_type | `refresh_token` |
-| client_id | Client id |
-| scope | Requested scope (optional) |
-| code_verifier | |
-| refresh_token | Refresh token |
-| device_authentication_token | [Device token](DAuth-Server) |
-
-Response on success:
-
-| Field | Description |
-| --- | --- |
-| token_type | `Bearer` |
-| expires_in | 900 |
-| scope | List of scopes |
-| access_token | Access token |
 
 ## Known Client IDs
 | Client ID | Name | Redirect URI |
@@ -195,7 +131,7 @@ Others:
 | access_denied | user_deleted | ? |
 | invalid_scope | | ? |
 | invalid_scope | scope_token_unknown | ? |
-| invalid_scope | scope_token_prohibited | ? |
+| invalid_scope | scope_token_prohibited | The requested scope is not authorized |
 | server_error | | ? |
 | login_required | | ? |
 | login_required | user_not_logged_in | ? |
