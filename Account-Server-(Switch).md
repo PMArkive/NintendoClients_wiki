@@ -43,7 +43,7 @@ On this website, one can either create a Nintendo account directly, or create a 
 | --- | --- |
 | GET | `/api/1.0.0/users/<id>/qrcode_param` |
 | POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
-| GET | `/connect/1.0.0/authorize` |
+| GET | <code><a href="#get-connect100authorize">/connect/1.0.0/authorize</a></code> |
 | GET | `/profile` |
 
 **api.accounts.nintendo.com:**
@@ -51,6 +51,58 @@ On this website, one can either create a Nintendo account directly, or create a 
 | Method | URL |
 | --- | --- |
 | GET | `/2.0.0/users/me` |
+
+### GET /connect/1.0.0/authorize
+| Param | Description |
+| --- | --- |
+| response_type | `code` |
+| code_challenge_method | `S256` |
+| scope | `nx` |
+| client_id | [Client id](#known-client-ids) |
+| state | |
+| code_challenge | |
+| theme | `register`, `intro`, `email_authentication` or `simple_authenticate` |
+| redirect_uri | [Redirect URI](#known-client-ids) |
+
+| Param | Description |
+| --- | --- |
+| response_type | `code` |
+| code_challenge_method | `S256` |
+| scope | `nx` |
+| client_id | [Client id](#known-client-ids) |
+| state | |
+| code_challenge | |
+| id_token_hint | |
+| redirect_uri | [Redirect URI](#known-client-ids) |
+
+| Param | Description |
+| --- | --- |
+| response_type | `id_token` |
+| claims | `{"links.nintendoNetwork.id":{"essential":true}}`|
+| scope | `user.links+user.links[].id` |
+| client_id | [Client id](#known-client-ids) |
+| state | |
+| id_token_hint | |
+| redirect_uri | [Redirect URI](#known-client-ids) |
+
+
+| Param | Description |
+| --- | --- |
+| response_type | `id_token` |
+| client_id | [Client id](#known-client-ids) |
+| scope | `openid` |
+| state | |
+| redirect_uri | [Redirect URI](#known-client-ids) |
+
+| Param | Description |
+| --- | --- |
+| response_type | `code+id_token` |
+| client_id | [Client id](#known-client-ids) |
+| id_token_hint | |
+| redirect_uri | [Redirect URI](#known-client-ids) |
+| scope | |
+| state | |
+| nonce | |
 
 ### POST /connect/1.0.0/api/token
 This method provides two grant types: `refresh_token` and `authorization_code`.
@@ -84,6 +136,15 @@ Response on success:
 | expires_in | 900 |
 | scope | List of scopes |
 | access_token | Access token |
+
+## Known Client IDs
+| Client ID | Name | Redirect URI |
+| --- | --- | --- |
+| `6ffd70c434d303c8` | NxAccount | nintendo://account.nx.sys |
+| `e56201e414c97a10` | NxShop | nintendo://shop.nx.sys |
+| `57d3dbaa12cb06a9` | NxFriends | nintendo://friends.nx.sys |
+| `48d6d1f020427ad7` | NxELicense | nintendo://e-license.nx.sys |
+| `f4e5f2f3e022208b` | NxLHub | nintendo://lhub.nx.sys |
 
 ## Errors
 On error, the server sends the following response:
