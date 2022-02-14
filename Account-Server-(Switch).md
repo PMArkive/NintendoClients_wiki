@@ -43,7 +43,7 @@ On this website, one can either create a Nintendo account directly, or create a 
 | --- | --- |
 | GET | `/api/1.0.0/users/<id>/qrcode_param` |
 | POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
-| POST | `/connect/1.0.0/authorize` |
+| GET | `/connect/1.0.0/authorize` |
 | GET | `/profile` |
 
 **api.accounts.nintendo.com:**
