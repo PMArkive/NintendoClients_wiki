@@ -6,7 +6,7 @@ This page describes the methods that are only seen in Mario Kart 8.
 | --- | --- |
 | 14 | GetCompetitionRankingScore |
 | 15 | [UploadCompetitionRankingScore](#15-uploadcompetitionrankingscore) |
-| 16 | GetCompetitionInfo |
+| 16 | [GetCompetitionInfo](#16-getcompetitioninfo) |
 
 # (15) UploadCompetitionRankingScore
 ## Request
