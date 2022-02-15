@@ -140,7 +140,7 @@ This method does not take any parameters.
 | [List]&lt;Uint32&gt; | Attributes |
 | [qBuffer] | Metadata |
 | Uint32 | Unknown |
-| [String] | Unknown |
+| [String] | Code |
 | [SimpleSearchDateTimeAttribute] | Datetime attribute |
 
 Revision 1:
@@ -166,7 +166,7 @@ Revision 1:
 | Uint32 | Unknown |
 | [PID] | Owner |
 | [List]&lt;[SimpleSearchCondition]&gt; | Conditions |
-| [String] | Unknown |
+| [String] | Code |
 | [ResultRange] | Result range |
 | [DateTime] | Datetime |
 
