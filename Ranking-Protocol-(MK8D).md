@@ -4,13 +4,24 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 
 | Method ID | Method Name |
 | --- | --- |
-| 16 | GetCompetitionRankingScore |
+| 16 | [GetCompetitionRankingScore](#16-getcompetitionrankingscore) |
 | 17 | UploadCompetitionRankingScore |
 | 18 | [GetCompetitionInfo](#18-getcompetitioninfo) |
 | 19 | UploadScorePack |
 | 20 | GetScorePack |
 | 21 | ExecuteDeleteScoreJob |
 | 22 | [GetCommonDataByPIDList](#22-getcommondatabypidlist) |
+
+# (16) GetCompetitionRankingScore
+## Request
+| Type | Description |
+| --- | --- |
+| [CompetitionRankingGetScoreParam] | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[CompetitionRankingScoreInfo]&gt; | Score info |
 
 # (18) GetCompetitionInfo
 ## Request
@@ -40,10 +51,34 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | --- | --- |
 | [List]&lt;[qBuffer]&gt; | Common data |
 
+## CompetitionRankingGetScoreParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [ResultRange] | Result range |
+
 ## CompetitionRankingInfo ([Structure])
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
+| Uint32 | Unknown |
+| [List]&lt;Uint32&gt; | Unknown |
+
+## CompetitionRankingScoreData ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [PID] | User id |
+| Uint32 | Unknown |
+| [DateTime] | Datetime |
+| Uint8 | Unknown |
+| [qBuffer] | Metadata |
+
+## CompetitionRankingScoreInfo ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [List]&lt;[CompetitionRankingScoreData]&gt; | Score data |
 | Uint32 | Unknown |
 | [List]&lt;Uint32&gt; | Unknown |
 
@@ -64,3 +99,7 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
 [ResultRange]: NEX-Common-Types#resultrange-structure
+
+[CompetitionRankingScoreData]: #competitionrankingscoredata-structure
+[CompetitionRankingScoreInfo]: #competitionrankingscoreinfo-structure
+[CompetitionRankingGetScoreParam]: #competitionrankinggetscoreparam-structure
