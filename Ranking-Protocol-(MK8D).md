@@ -5,7 +5,7 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | Method ID | Method Name |
 | --- | --- |
 | 16 | [GetCompetitionRankingScore](#16-getcompetitionrankingscore) |
-| 17 | UploadCompetitionRankingScore |
+| 17 | [UploadCompetitionRankingScore](#17-uploadcompetitionrankingscore) |
 | 18 | [GetCompetitionInfo](#18-getcompetitioninfo) |
 | 19 | UploadScorePack |
 | 20 | GetScorePack |
@@ -23,16 +23,27 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | --- | --- |
 | [List]&lt;[CompetitionRankingScoreInfo]&gt; | Score info |
 
+# (17) UploadCompetitionRankingScore
+## Request
+| Type | Description |
+| --- | --- |
+| [CompetitionRankingUploadScoreParam] | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Bool | Result |
+
 # (18) GetCompetitionInfo
 ## Request
 | Type | Description |
 | --- | --- |
-| [GetCompetitionInfoParam](#getcompetitioninfoparam-structure) | Param |
+| [CompetitionRankingInfoGetParam] | Param |
 
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[CompetitionRankingInfo](#competitionrankinginfo-structure)&gt; | Competition info |
+| [List]&lt;[CompetitionRankingInfo]&gt; | Competition info |
 
 # (22) GetCommonDataByPIDList
 ## Request
@@ -43,7 +54,7 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 ## Response
 | Type | Description |
 | --- | --- |
-| [CommonDataList](#commondatalist-structure) | Common data |
+| [CommonDataList] | Common data |
 
 # Types
 ## CommonDataList ([Structure])
@@ -64,6 +75,12 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | Uint32 | Unknown |
 | [List]&lt;Uint32&gt; | Unknown |
 
+## CompetitionRankingInfoGetParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint8 | Unknown |
+| [ResultRange] | Result range |
+
 ## CompetitionRankingScoreData ([Structure])
 | Type | Description |
 | --- | --- |
@@ -82,11 +99,17 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | Uint32 | Unknown |
 | [List]&lt;Uint32&gt; | Unknown |
 
-## GetCompetitionInfoParam ([Structure])
+## CompetitionRankingUploadScoreParam ([Structure])
 | Type | Description |
 | --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
 | Uint8 | Unknown |
-| [ResultRange] | Result range |
+| Uint32 | Unknown |
+| Bool | Unknown |
+| [qBuffer] | Unknown |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
@@ -100,6 +123,10 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 [PID]: NEX-Common-Types#pid
 [ResultRange]: NEX-Common-Types#resultrange-structure
 
+[CommonDataList]: #commondatalist-structure
+[CompetitionRankingInfo]: #competitionrankinginfo-structure
+[CompetitionRankingInfoGetParam]: #competitionrankinginfogetparam-structure
 [CompetitionRankingScoreData]: #competitionrankingscoredata-structure
 [CompetitionRankingScoreInfo]: #competitionrankingscoreinfo-structure
 [CompetitionRankingGetScoreParam]: #competitionrankinggetscoreparam-structure
+[CompetitionRankingUploadScoreParam]: #competitionrankinguploadscoreparam-structure
