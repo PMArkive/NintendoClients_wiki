@@ -11,11 +11,11 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | 58 | [SearchSimpleSearchObjectByObjectIds](#58-searchsimplesearchobjectbyobjectids) |
 | 59 | JoinMatchmakeSessionWithExtraParticipants |
 | 60 | [CustomGetSimplePlayingSession](#60-customgetsimpleplayingsession) |
-| 61 | CreateCompetition |
+| 61 | [CreateCompetition](#61-createcompetition) |
 | 62 | [DeleteCompetition](#62-deletecompetition) |
 | 63 | [RegisterFavoriteCompetition](#63-registerfavoritecompetition) |
 | 64 | [UnregisterFavoriteCompetition](#64-unregisterfavoritecompetition) |
-| 65 | GetFavoriteCompetition |
+| 65 | [GetFavoriteCompetition](#65-getfavoritecompetition) |
 | 66 | GetTeamParticipants |
 | 67 | FindCommunityByOwner |
 
@@ -84,6 +84,17 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[SimplePlayingSession]&gt; | Playing sessions |
 
+# (61) CreateCompetition
+## Request
+| Type | Description |
+| --- | --- |
+| [SimpleSearchObject] | Competition |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [SimpleSearchObject] | Competition |
+
 # (62) DeleteCompetition
 ## Request
 | Type | Description |
@@ -110,6 +121,15 @@ This method does not return anything.
 
 ## Response
 This method does not return anything.
+
+# (65) GetFavoriteCompetition
+## Request
+This method does not take any parameters.
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[SimpleSearchObject]&gt; | Favorite competitions |
 
 # Types
 ## SimpleSearchObject ([Structure])
