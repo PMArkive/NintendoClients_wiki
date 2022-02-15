@@ -135,7 +135,7 @@ This method does not take any parameters.
 ## SimpleSearchObject ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Object id |
 | [PID] | Owner |
 | [List]&lt;Uint32&gt; | Attributes |
 | [qBuffer] | Metadata |
@@ -163,7 +163,7 @@ Revision 1:
 ## SimpleSearchParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| Uint32 | Object id |
 | [PID] | Owner |
 | [List]&lt;[SimpleSearchCondition]&gt; | Conditions |
 | [String] | Code |
