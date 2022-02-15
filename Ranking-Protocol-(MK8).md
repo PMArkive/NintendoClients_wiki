@@ -28,7 +28,7 @@ This page describes the methods that are only seen in Mario Kart 8.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;CompetitionRankingInfo&gt; | Info |
+| [List]&lt;[CompetitionRankingInfo]&gt; | Info |
 
 # Types
 ## CompetitionRankingInfo ([Structure])
