@@ -70,12 +70,12 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
+| [PID] | Unknown |
 | [List]&lt;Uint32&gt; | Attributes |
 | [qBuffer] | Unknown |
 | Uint32 | Unknown |
 | [String] | Unknown |
-| [SimpleSearchDateTimeAttribute] | Date / time attribute |
+| [SimpleSearchDateTimeAttribute] | Datetime attribute |
 
 ## SimpleSearchDateTimeAttribute ([Structure])
 | Type | Description |
@@ -91,7 +91,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
+| [PID] | Unknown |
 | [List]&lt;[SimpleSearchCondition]&gt; | Conditions |
 | [String] | Unknown |
 | [ResultRange] | Result range |
