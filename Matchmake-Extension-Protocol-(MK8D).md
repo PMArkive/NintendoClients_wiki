@@ -4,11 +4,11 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 
 | Method ID | Method Name |
 | --- | --- |
-| 54 | CreateSimpleSearchObject |
-| 55 | UpdateSimpleSearchObject |
-| 56 | DeleteSimpleSearchObject |
-| 57 | SearchSimpleSearchObject |
-| 58 | SearchSimpleSearchObjectByObjectIds |
+| 54 | [CreateSimpleSearchObject](#54-createsimplesearchobject) |
+| 55 | [UpdateSimpleSearchObject](#55-updatesimplesearchobject) |
+| 56 | [DeleteSimpleSearchObject](#56-deletesimplesearchobject) |
+| 57 | [SearchSimpleSearchObject](#57-searchsimplesearchobject) |
+| 58 | [SearchSimpleSearchObjectByObjectIds](#58-searchsimplesearchobjectbyobjectids) |
 | 59 | JoinMatchmakeSessionWithExtraParticipants |
 | 60 | [CustomGetSimplePlayingSession](#60-customgetsimpleplayingsession) |
 | 61 | CreateCompetition |
@@ -18,6 +18,58 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | 65 | GetFavoriteCompetition |
 | 66 | GetTeamParticipants |
 | 67 | FindCommunityByOwner |
+
+# (54) CreateSimpleSearchObject
+## Request
+| Type | Description |
+| --- | --- |
+| [SimpleSearchObject] | Object |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+
+# (55) UpdateSimpleSearchObject
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+| [SimpleSearchObject] | New object |
+
+## Response
+This method does not return anything.
+
+# (56) DeleteSimpleSearchObject
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+
+## Response
+This method does not return anything.
+
+# (57) SearchSimpleSearchObject
+## Request
+| Type | Description |
+| --- | --- |
+| [SimpleSearchParam] | Param |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[SimpleSearchObject]&gt; | Objects |
+
+# (58) SearchSimpleSearchObjectByObjectIds
+## Request
+| Type | Description |
+| --- | --- |
+| [List]&lt;Uint32&gt; | Object ids |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[SimpleSearchObject]&gt; | Objects |
 
 # (60) CustomGetSimplePlayingSession
 ## Request
@@ -31,6 +83,56 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[SimplePlayingSession]&gt; | Playing sessions |
+
+# Types
+## SimpleSearchObject ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [PID] | Unknown |
+| [List]&lt;Uint32&gt; | Attributes |
+| [qBuffer] | Unknown |
+| Uint32 | Unknown |
+| [String] | Unknown |
+| [SimpleSearchDateTimeAttribute] | Datetime attribute |
+
+Revision 1:
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [DateTime] | Unknown |
+
+## SimpleSearchDateTimeAttribute ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| Uint32 | Unknown |
+| [DateTime] | Unknown |
+| [DateTime] | Unknown |
+
+## SimpleSearchParam ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+| [PID] | Unknown |
+| [List]&lt;[SimpleSearchCondition]&gt; | Conditions |
+| [String] | Unknown |
+| [ResultRange] | Result range |
+| [DateTime] | Unknown |
+
+## SimpleSearchCondition ([Structure])
+| Type | Description |
+| --- | --- |
+| Uint32 | Value |
+| Uint32 | Comparison operator |
+
+[SimpleSearchObject]: #simplesearchobject-structure
+[SimpleSearchDateTimeAttribute]: #simplesearchdatetimeattribute-structure
+[SimpleSearchParam]: #simplesearchparam-structure
+[SimpleSearchCondition]: #simplesearchcondition-structure
 
 [SimplePlayingSession]: Match-Making-Types#simpleplayingsession-structure
 
