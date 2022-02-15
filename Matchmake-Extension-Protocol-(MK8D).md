@@ -12,9 +12,9 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | 59 | JoinMatchmakeSessionWithExtraParticipants |
 | 60 | [CustomGetSimplePlayingSession](#60-customgetsimpleplayingsession) |
 | 61 | CreateCompetition |
-| 62 | DeleteCompetition |
-| 63 | RegisterFavoriteCompetition |
-| 64 | UnregisterFavoriteCompetition |
+| 62 | [DeleteCompetition](#62-deletecompetition) |
+| 63 | [RegisterFavoriteCompetition](#63-registerfavoritecompetition) |
+| 64 | [UnregisterFavoriteCompetition](#64-unregisterfavoritecompetition) |
 | 65 | GetFavoriteCompetition |
 | 66 | GetTeamParticipants |
 | 67 | FindCommunityByOwner |
@@ -83,6 +83,33 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[SimplePlayingSession]&gt; | Playing sessions |
+
+# (62) DeleteCompetition
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+
+## Response
+This method does not return anything.
+
+# (63) RegisterFavoriteCompetition
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+
+## Response
+This method does not return anything.
+
+# (64) UnregisterFavoriteCompetition
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Object id |
+
+## Response
+This method does not return anything.
 
 # Types
 ## SimpleSearchObject ([Structure])
