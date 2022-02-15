@@ -54,7 +54,7 @@ This page describes the methods that are only seen in Mario Kart 8.
 | Uint8 | Unknown |
 | Uint32 | Unknown |
 | Bool | Unknown |
-| [qBuffer] | Unknown |
+| [qBuffer] | Metadata |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string
