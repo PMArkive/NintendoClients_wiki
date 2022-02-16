@@ -159,7 +159,7 @@ Every error is encoded like this:
 ### Known Errors
 | Code | Dialog | Message |
 | --- | --- | --- 
-| 0004 | 2181-4004 | ? |
+| 0004 | 2181-4004 | Unauthorized device. |
 | 0007 | 2181-4007 | System update is required. |
 | 0008 | 2181-4008 | Device has been banned. |
 | 0009 | 2181-4009 | ? |
