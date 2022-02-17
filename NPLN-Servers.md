@@ -2,7 +2,7 @@ NPLN provides modern game services through [gRPC](https://grpc.io/). The decompi
 
 The NPLN server is at `https://<tenant id>.lp1.t.npln.srv.nintendo.net`. The tenant id is always `t-<server id>-lp1`.
 
-* [Overview](#overview)
+* [Metadata](#metadata)
 * [List of services](#list-of-services)
 * [List of games](#list-of-games)
 * [Useful tools](#useful-tools)
