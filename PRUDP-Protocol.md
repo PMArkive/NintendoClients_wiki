@@ -7,8 +7,6 @@ On the Nintendo Switch, NEX uses a WebSocket connection instead of UDP and the '
 * [Lite Format](#lite-format)
 * [Protocol Description](#protocol-description)
 
-To keep this page somewhat readable, features of PRUDP that aren't used by NEX are hidden and can be expanded by clicking on them.
-
 ## V0 Format
 This format is only used by the friends server and some 3DS games.
 
@@ -259,7 +257,7 @@ This field takes up two bytes in the packet header and is encoded like this: `(f
 * This field only takes up one byte in the header: `(flags << 3) | type`. Note that only 5 bits are left for the flags, but PRUDP V0 does not support aggregate acknowledgement anyway.
 </details>
 
-Even though PRUDP also supports unreliable data packets, these are never used by NEX. Only the SYN packet and acknowledgement packets are sent without FLAG_RELIABLE.
+Even though PRUDP also supports unreliable data packets, these are never used by NEX. Only SYN, PING and acknowledgement packets are sent without FLAG_RELIABLE.
 
 | Value | Type |
 | --- | --- |
@@ -311,12 +309,9 @@ This is an incrementing value used to ensure that packets arrive in correct orde
 
 In acknowledgement packets, the sequence id is set to the id of the packet that is acknowledged.
 
-<details><summary>Details on substreams and unreliable packets</summary><br>
-
 Every [reliable substream](#substreams) has its own stream of sequence ids. Unreliable ping and data packets both have their own stream of sequence ids as well.
 
 Normally, the sequence id starts at 1. However, the initial sequence id of unreliable data packets is a random value generated during the connection handshake (see [option 3](#optional-data)).
-</details>
 
 ### Fragment id
 Big data packets are split into smaller ones. The last fragment always has fragment id 0. Other fragments have an incrementing fragment id starting at 1.
@@ -381,9 +376,9 @@ If compression is enabled, packets are compressed with zlib before they are encr
 </details>
 
 ### Substreams
-<details><summary>NEX never uses more than one substream, so the substream id is always 0</summary><br>
-
 [V1](#v1-format) allows the connection to be divided into multiple reliable substreams. The maximum number of substreams is decided during the connection handshake (with [option 4](#optional-data)). Every substream has its own [RC4 streams](#encryption) and its own incrementing [sequence ids](#sequence-id). Substreams only cover reliable packets. Unreliable packets do not belong to a substream.
+
+NEX never uses more than one substream, so the substream id is always 0
 
 [Buffer]: NEX-Common-Types#buffer
 [PID]: NEX-Common-Types#pid
