@@ -252,11 +252,6 @@ The stream type is always RVSecure (0xA) in Nintendo games.
 ### Type and flags
 This field takes up two bytes in the packet header and is encoded like this: `(flags << 4) | type`.
 
-<details><summary>The original Quazal Rendez-Vous library encodes this field differently.</summary>
-
-* This field only takes up one byte in the header: `(flags << 3) | type`. Note that only 5 bits are left for the flags, but PRUDP V0 does not support aggregate acknowledgement anyway.
-</details>
-
 Even though PRUDP also supports unreliable data packets, these are never used by NEX. Only SYN, PING and acknowledgement packets are sent without FLAG_RELIABLE.
 
 | Value | Type |
@@ -274,6 +269,11 @@ Even though PRUDP also supports unreliable data packets, these are never used by
 | 0x004 | FLAG_NEED_ACK: This packet must be acknowledged |
 | 0x008 | FLAG_HAS_SIZE: This packet includes its payload size |
 | 0x200 | FLAG_MULTI_ACK: This packet acknowledges multiples packets at once. The payload contains information on which packets are acknowledged. |
+
+<details><summary>The original Quazal Rendez-Vous library encodes this field differently.</summary>
+
+* This field only takes up one byte in the header: `(flags << 3) | type`. Note that only 5 bits are left for the flags, but PRUDP V0 does not support aggregate acknowledgement anyway.
+</details>
 
 ### Aggregate acknowledgement
 To acknowledge multiple packets at once, send an unencrypted unreliable DATA packet with FLAG_MULTI_ACK.
