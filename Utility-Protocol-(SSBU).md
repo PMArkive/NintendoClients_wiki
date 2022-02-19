@@ -6,3 +6,4 @@ This page describes the methods that are only seen in SSBU.
 | --- | --- |
 | 9 | ? |
 | 10 | ? |
+| 11 | ? |
