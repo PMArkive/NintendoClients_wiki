@@ -4,9 +4,8 @@ This page describes the methods that are only seen in Nintendo Badge Arcade.
 
 | Method ID | Name |
 | --- | --- |
-| 9 | [GetMaintenanceStatus](#9-getmaintenancestatus) |
+| 9 | GetMaintenanceStatus |
 
-# (9) GetMaintenanceStatus
 ## Request
 This method does not take any parameters.
 
