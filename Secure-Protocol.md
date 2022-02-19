@@ -1,5 +1,7 @@
 ## [[NEX Protocols]] > Secure Connection (11)
 
+[Nintendo Badge Arcade](Secure-Protocol-(NBA)) extends this protocol with an additional method.
+
 | Method ID | Method Name |
 | --- | --- |
 | 1 | [Register](#1-register) |
