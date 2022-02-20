@@ -39,7 +39,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 ## Methods
 9.0.0 - 12.1.0:
 
-| Method | URL |
+| Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
@@ -47,7 +47,7 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 
 13.0.0 - 13.2.1:
 
-| Method | URL |
+| Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
