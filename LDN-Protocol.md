@@ -26,7 +26,7 @@ Also see: [[Local Wireless Communication on PC]].
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
-| 6.0.0 - 13.2.1 | 3 | Authentication frame was updated |
+| 6.0.0 - 13.2.1 | 3 | DRM was added to authentication frame |
 
 ## WLAN Channels
 The channel on which LDN operates can be specified by games. Allowed channels are:
@@ -180,7 +180,7 @@ LDN version 3 and later:
 | 0x40 | 0x24 | Always 0 |
 | 0x64 | 0x300 | [Authentication challenge](#challenge-request) (only present if enabled) |
 
-For games, the authentication challenge is always enabled.
+The challenge is always enabled for games, but not for system titles.
 
 #### Authentication Response
 LDN version 3 and later:
@@ -191,6 +191,8 @@ LDN version 3 and later:
 | 0x84 | 0x100 | [Challenge response](#challenge-response) (only present if enabled) |
 
 #### Challenge Request
+The challenge was added to the authentication frame in LDN version 3. Its purpose is to make sure that the game was purchased separately on all communicating consoles. If a single purchase is used on multiple consoles, an error dialog is shown.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Always 0 |
