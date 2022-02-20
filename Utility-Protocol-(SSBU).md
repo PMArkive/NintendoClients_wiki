@@ -86,7 +86,7 @@ This page describes the methods that are only seen in SSBU.
 | Type | Description |
 | --- | --- |
 | [UnknownStruct](#unknownstruct-structure) | Unknown |
-| Uint32 | Unknown |
+| Int32 | Unknown |
 
 ## UnknownStruct ([Structure])
 | Type | Description |
