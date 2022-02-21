@@ -1,4 +1,4 @@
-## [[NEX Protocols]] > [Data Store (115)](Data-Store-Protocol) > Pokemon X / Y
+## [[NEX Protocols]] > [Data Store](Data-Store-Protocol) > Pokemon X / Y (115)
 
 This page describes the methods that are only seen in Pokemon X and Y.
 
