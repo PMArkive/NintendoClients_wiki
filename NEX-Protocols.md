@@ -39,6 +39,11 @@ See also: [[RMC Protocol]]
 | 123 | [AA user](AA-User-Protocol) |
 | 124 | [Screening](Screening-Protocol) |
 
+## Game-Specific
+| ID | Game | Protocol |
+| --- | --- | --- |
+| 200 | Pokemon Bank | [Shop](Shop-Protocol-(Pokemon-Bank)) |
+
 ## Not provided by NEX
 Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX. The following protocols are not implemented by NEX, but may seen in Ubisoft games:
 
