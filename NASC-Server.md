@@ -119,6 +119,7 @@ Sometimes, `returncd` is set to `null` instead of an error code.
 | Code | Description |
 | --- | --- |
 | `001` | Success |
+| `102` | Device is banned |
 | `109` | Missing or malformed parameter in request |
 | `110` | Game server is no longer available |
 | `121` | Device certificate is invalid |
