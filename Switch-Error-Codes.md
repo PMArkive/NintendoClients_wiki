@@ -56,13 +56,27 @@
 | 2124-3121 | BaaS server returned invalid response but http status indicates success |
 
 ## AAuth Errors
-| Error code | Description |
-| --- | --- |
-| 2124-4605 | ROM ID has been banned (0105) |
-| 2124-4618 | Invalid parameter in request (0118) |
-| 2124-4799 | AAuth server returned invalid error code |
+These errors are shown when the [AAuth server](AAuth-Server) returns an error code.
+
+| Dialog | Code | Description |
+| --- | --- | --- |
+| 2124-4603 | 0103 | |
+| 2124-4605 | 0105 | ROM ID has been banned. |
+| 2124-4606 | 0106 | Unauthorized application. |
+| 2124-4607 | 0107 | |
+| 2124-4608 | 0108 | |
+| 2124-4609 | 0109 | Service closed. |
+| 2124-4610 | 0110 | |
+| 2124-4612 | 0112 | |
+| 2124-4613 | 0113 | |
+| 2124-4618 | 0118 | Invalid parameter in request. |
+| 2124-4620 | 0120 | |
+| 2124-4621 | 0121 | |
+| 2124-4799 | Other | AAuth server returned invalid error code |
 
 ## BaaS Errors
+These errors are related to the [Switch account server](BAAS-Server).
+
 | Error code | Description |
 | --- | --- |
 | 2124-5000 | `invalid_params` |
@@ -250,14 +264,42 @@
 | 2155-8191 | Curl multi returned an invalid error code |
 
 # DAuth Error Codes
+These errors are related to [device authentication](DAuth-Server).
+
 | Error code | Description |
 | --- | --- |
 | 2181-0100 | Server returned invalid error code |
 | 2181-3100 | Server returned invalid response |
-| 2181-4007 | Server returned error 0007 ("System update is required.") |
-| 2181-4008 | Server returned error 0008 ("Device has been banned.") |
-| 2181-4014 | Server returned error 0014 ("Invalid parameter in request.") |
-| 2181-4016 | Server returned error 0016 ("Invalid parameter in request.") |
+
+The following errors are shown when the DAuth server returns an error code:
+
+| Dialog | Code | Description |
+| --- | --- | --- |
+| 2181-4004 | 0004 | Unauthorized device. |
+| 2181-4007 | 0007 | System update is required. |
+| 2181-4008 | 0008 | Device has been banned. |
+| 2181-4009 | 0009 | |
+| 2181-4010 | 0010 | |
+| 2181-4011 | 0011 | |
+| 2181-4013 | 0013 | |
+| 2181-4014 | 0014 | Invalid parameter in request. |
+| 2181-4015 | 0015 | |
+| 2181-4016 | 0016 | Invalid parameter in request. |
+| 2181-4017 | 0017 | |
+| 2181-4018 | 0018 | |
+| 2181-4019 | 0019 | |
+| 2181-4020 | 0020 | |
+| 2181-4021 | 0021 | |
+| 2181-4022 | 0022 | |
+| 2181-4023 | 0023 | |
+| 2181-4024 | 0024 | |
+| 2181-4025 | 0025 | |
+| 2181-4026 | 0026 | |
+| 2181-4027 | 0027 | |
+| 2181-4028 | 0028 | |
+| 2181-4029 | 0029 | |
+| 2181-4030 | 0030 | |
+| 2181-4031 | 0031 | |
 
 # NEX Error Codes
 | Error code | Name |
