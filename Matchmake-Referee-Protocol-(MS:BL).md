@@ -8,3 +8,5 @@ This page describes the methods that are only seen in Mario Strikers: Battle Lea
 | 15 | GetClubStatsMulti |
 | 16 | EndRoundNoContest |
 | 17 | GetPlayerSeasonStats |
+| 18 | UpdateStatsForDebug |
+| 19 | UpdateClubStatsForDebug |
