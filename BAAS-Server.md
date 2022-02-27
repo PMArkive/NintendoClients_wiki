@@ -121,12 +121,12 @@ X-Amz-Cf-Id: WGSd3qu043Y9Co4sredK7gclrF4BMYPKQXytykkQfwEez4HYJmIbDw==
 ### POST /1.0.0/federation
 | Param | Description |
 | --- | --- |
-| id | |
-| password | |
+| id | Device account id |
+| password | Device account password |
 | idp | nintendoAccount |
-| idToken | |
+| idToken | ID token obtained from [accounts.nintendo.com](Account-Server-(Switch)) |
 | appAuthNToken | [AAuth token](AAuth-Server) optional |
-| skipOp2Verification | Unknown (optional) |
+| skipOp2Verification | Skip NSO verification (optional) |
 
 Response on success:
 
@@ -146,7 +146,7 @@ This method can be used to log in on a device account that was registered with <
 | id | Device account id |
 | password | Device account password |
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
-| skipOp2Verification | Unknown (optional) |
+| skipOp2Verification | Skip NSO verification (optional) |
 
 Response on success:
 
