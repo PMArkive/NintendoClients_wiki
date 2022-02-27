@@ -66,12 +66,16 @@ This method accepts [OAuth 2](https://oauth.net/2/) authorization requests. The 
 | --- | --- |
 | theme | `register`, `intro`, `email_authentication` or `simple_authenticate` |
 
+The Switch always requests the scope `nx`.
+
 ### POST /connect/1.0.0/api/token
 This method accepts [OAuth 2](https://oauth.net/2/) token requests. The following parameters may be provided in addition to standard OAuth parameters:
 
 | Param | Description |
 | --- | --- |
 | device_authentication_token | [Device token](DAuth-Server) |
+
+The Switch requests the scope `openid offline napps urn:oauth:init-sso user user.birthday user.email user.links user.links[].id user.loginId user.screenName user.terms`.
 
 ## Known Client IDs
 | Client ID | Name | Redirect URI |
