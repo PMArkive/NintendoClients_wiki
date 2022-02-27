@@ -118,14 +118,14 @@ X-Amz-Cf-Id: WGSd3qu043Y9Co4sredK7gclrF4BMYPKQXytykkQfwEez4HYJmIbDw==
 {"accessToken": "eyJqa3UiOiJodHRwczovL2UwZDY3YzUwOWZiMjAzODU4ZWJjYjJmZTNmODhjMmFhLmJhYXMubmludGVuZG8uY29tLzEuMC4wL2ludGVybmFsX2NlcnRpZmljYXRlcyIsImFsZyI6IlJTMjU2Iiwia2lkIjoiMzA4M2MxYjItNWQ2OC00MzRiLWJlMzItMTFmOTE1NTcwNTAwIn0.eyJzdWIiOiJlZDllMmYwNWQyODZmN2I4IiwiYXVkIjoiZWQ5ZTJmMDVkMjg2ZjdiOCIsImJzOnN0cyI6WzM4NV0sIm5pbnRlbmRvIjp7ImR0IjoiTlggUHJvZCAxIiwicGMiOiJIQUMiLCJkaSI6IjY4MzM3YWNhMjg4MTVjYmIiLCJzbiI6IlhBVzEwMDEyMzQ1Njc4IiwiaXN0IjpmYWxzZX0sImlzcyI6Imh0dHBzOi8vZTBkNjdjNTA5ZmIyMDM4NThlYmNiMmZlM2Y4OGMyYWEuYmFhcy5uaW50ZW5kby5jb20iLCJ0eXAiOiJ0b2tlbiIsImJzOmdydCI6MSwiZXhwIjoxNjMyNjg3NzAxLCJpYXQiOjE2MzI2NzY5MDEsImp0aSI6Ijg3OGQwNzM1LTU3MWEtNGI5NC04MmE2LTJiZjE4MzExNGRiMSJ9.oVn3eE81TJwApnNzhoUJTWhvJJasP5OpURctjSw-evHZVGXSnNbEcNHAGMHQu5QHU7IMiDlBaIM4hb0BU_l7h4EIPtZzZxys0tb4IbyHUD8SQdqjrA7GPadmfuJkIQYMJUUVikTIbAfmVuZ0asM1HjBUEpUjn9JzJgF6355oOePqrcQtWTWtsmthwPpfLj7RfPeGuXlc_89Yj6wBplDkpS3NQGrVULxLXoRBgi_cnhZpgnauorOkynby2EZC2UNfaMxpPXa5yNXPM2HQIiAlnd78Zk4Knl2ZH5xhKbtI6Fzeo0CmCCgzQYfYoh2xhR7WowVPpDNfZiwZ7XX0a3hZLw", "tokenType": "Bearer", "expiresIn": 10800}
 ```
 
-### POST /1.0.0/federation
+### POST /1.0.0/login
+This method can be used to log in on a device account that was registered with <code><a href="#post-100users">/1.0.0/users</a></code>. If an application token is provided, the server checks if the device account is linked against a Nintendo account, and if the account has a Nintendo Switch Online membership.
+
 | Param | Description |
 | --- | --- |
 | id | Device account id |
 | password | Device account password |
-| idp | nintendoAccount |
-| idToken | ID token obtained from [accounts.nintendo.com](Account-Server-(Switch)) |
-| appAuthNToken | [AAuth token](AAuth-Server) optional |
+| appAuthNToken | [AAuth token](AAuth-Server) (optional) |
 | skipOp2Verification | Skip NSO verification (optional) |
 
 Response on success:
@@ -138,14 +138,16 @@ Response on success:
 | accessToken | Authorization token for further requests |
 | tokenType | Authorization token type ("Bearer") |
 
-### POST /1.0.0/login
-This method can be used to log in on a device account that was registered with <code><a href="#post-100users">/1.0.0/users</a></code>. If an application token is provided, the server checks if the device account is linked against a Nintendo account, and if the account has a Nintendo Switch Online membership.
+### POST /1.0.0/federation
+This method is the same as [`/1.0.0/login`](#post-100login) except that it also takes an ID token that represents a Nintendo account. This is required to link the Nintendo account to the device.
 
 | Param | Description |
 | --- | --- |
 | id | Device account id |
 | password | Device account password |
-| appAuthNToken | [AAuth token](AAuth-Server) (optional) |
+| idp | nintendoAccount |
+| idToken | ID token obtained from [accounts.nintendo.com](Account-Server-(Switch)) |
+| appAuthNToken | [AAuth token](AAuth-Server) optional |
 | skipOp2Verification | Skip NSO verification (optional) |
 
 Response on success:
