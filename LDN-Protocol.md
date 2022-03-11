@@ -163,7 +163,7 @@ This is set to 0 in an authentication request. In an authentication response, it
 | 1 | Participation denied by policy |
 | 2 | Malformed authentication request |
 | 4 | Authentication request has invalid version number |
-| 5 | Network is full |
+| 5 | Authentication request is unexpected |
 | 6 | Authentication challenge is invalid |
 
 #### Authentication Request
