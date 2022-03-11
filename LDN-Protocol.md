@@ -7,11 +7,12 @@ Unless specified otherwise, everything is encoded in big-endian byte order.
 
 ## Table of Contents
 * [Overview](#overview)
-* [LDN versions](#ldn-versions)
+* [Changelog](#changelog)
 * [WLAN channels](#wlan-channels)
 * [SSID](#ssid)
 * [Authentication](#authentication)
-* [Encryption keys](#encryption-keys)<br><br>
+* [Encryption keys](#encryption-keys)
+* [IP stack](#ip-stack)<br><br>
 * [Advertisement frame](#advertisement-frame)
 * [Authentication frame](#authentication-frame)
 
@@ -22,7 +23,7 @@ The host of the session acts as an access point and broadcasts a vendor-specific
 
 Also see: [[Local Wireless Communication on PC]].
 
-## LDN Versions
+## Changelog
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
@@ -58,6 +59,8 @@ LDN supports three different security levels:
 2. Advertisement frames are encrypted, data frames are plaintext.
 3. Advertisement frames and data frames are both plaintext.
 
+The security level is specified during network creation and is broadcasted as part of the [advertisement frame](#advertisement-frame). In practice, the security level will always be set to 1, because security level 2 and 3 are only allowed during development.
+
 Given a 16-byte input key and a buffer of arbitrary size, encryption keys are derived as follows:
 
 1. `aes_kek_generation_source` is decrypted with master key generation 0.
@@ -73,6 +76,11 @@ For data frames, the input key is `f1e7018419a84f711da714c2cf919c9c` and the inp
 | 0x10 | N | Password specified by game (optional, up to 64 bytes) |
 
 For advertisement frames, [see below](#advertisement-frame).
+
+## IP Stack
+When a console joins the network, the access point immediately assigns it an unused IP address. After joining the network, the console reads its own IP address and the IP addresses of the other consoles from the next [advertisement frame](#advertisement-frame). It then keeps monitoring [advertisement frames](#advertisement-frame) to get notified when a console joins or leaves the network.
+
+IP addresses are of the form `169.254.X.Y` where X is a randomly generated during network creation, and Y is assigned to each station by the host. Because the host is always the first participant of the network, its IP address is always `169.254.X.1`. The broadcast address is `169.254.X.255`.
 
 ## Advertisement Frame
 This is a vendor-specific action frame that is broadcasted by the access point every 100 milliseconds.
