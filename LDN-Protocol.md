@@ -15,6 +15,7 @@ Unless specified otherwise, everything is encoded in big-endian byte order.
 * [IP stack](#ip-stack)<br><br>
 * [Advertisement frame](#advertisement-frame)
 * [Authentication frame](#authentication-frame)
+* [Disconnect frame](#disconnect-frame)
 
 ## Overview
 LDN enables communication between nearby consoles. LDN operates at the data link layer, so it requires a good understanding of the [IEEE 802.11 specification](https://ieeexplore.ieee.org/document/9363693).
@@ -236,6 +237,29 @@ The HMAC is calculated over bytes 0x30 - 0x300 and the key is `f84b487fb37251c26
 | 0x50 | 0xB0 | Always 0 |
 
 The HMAC is calculated over bytes 0x30 - 0x100 and the key is `f84b487fb37251c263bf11609036589266af70ca79b44c93c7370c5769c0f602`.
+
+## Disconnect Frame
+This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encrypted](#encryption-keys). This frame is sent when the access point disconnects a station from the network.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 3 | OUI (`00:22:AA`) |
+| 0x3 | 2 | Packet type (259 = disconnect) |
+| 0x5 | 1 | Padding (always 0) |
+| 0x6 | | [Disconnect data](#disconnect-data) |
+
+### Disconnect Data
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | [Disconnect reason](#disconnect-reason) |
+| 0x1 | 31 | Unused (always 0) |
+
+#### Disconnect Reason
+| Value | Description |
+| --- | --- |
+| 3 | Network is destroyed by host |
+| 4 | Network is destroyed forcefully (e.g. when the host closes the game during a match) |
+| 5 | Station is rejected by host |
 
 ## Session Info
 | Offset | Size | Description |
