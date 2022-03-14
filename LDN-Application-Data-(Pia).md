@@ -100,10 +100,10 @@ The application data depends on the game:
 ### Favorite Color
 | Value | Description | RGB | Color |
 | --- | --- | --- | --- |
-| 0 | Red | (210, 30, 20) | ![](https://www.dropbox.com/s/r1eb19w7e0wvmz6/red.png?raw=1) |
-| 1 | Orange | (255, 110, 25) | ![](https://www.dropbox.com/s/m61lzymcjwyc7lm/orange.png?raw=1) |
-| 2 | Yellow | (255, 216, 32) | ![](https://www.dropbox.com/s/vgk9p19nwwir4u9/yellow.png?raw=1) |
-| 3 | Light green | (120, 210, 32) | ![](https://www.dropbox.com/s/gc7fyolrw2tdcf2/green.png?raw=1) |
+| 0 | Red | (210, 30, 20) | ![](https://www.dropbox.com/s/860dasn9nzjfwq3/red.png?raw=1) |
+| 1 | Orange | (255, 110, 25) | ![](https://www.dropbox.com/s/1s3fbbgmhtepmqh/orange.png?raw=1) |
+| 2 | Yellow | (255, 216, 32) | ![](https://www.dropbox.com/s/arcskvtgjs3ltvy/yellow.png?raw=1) |
+| 3 | Light green | (120, 210, 32) | ![](https://www.dropbox.com/s/ra7tinvdgkspu2o/lightgreen.png?raw=1) |
 | 4 | Dark green | (0, 120, 48) | ![](https://www.dropbox.com/s/xuakk16bmz3qimp/darkgreen.png?raw=1) |
 | 5 | Dark blue | (10, 72, 188) | ![](https://www.dropbox.com/s/21kevqb9aelgoc9/darkblue.png?raw=1) |
 | 6 | Light blue | (60, 170, 222) | ![](https://www.dropbox.com/s/d7raj7nmakzviqh/lightblue.png?raw=1) |
