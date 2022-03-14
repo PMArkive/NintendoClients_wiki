@@ -103,4 +103,12 @@ The application data depends on the game:
 | 0 | Red | (210, 30, 20) | ![](https://www.dropbox.com/s/r1eb19w7e0wvmz6/red.png?raw=1) |
 | 1 | Orange | (255, 110, 25) | ![](https://www.dropbox.com/s/m61lzymcjwyc7lm/orange.png?raw=1) |
 | 2 | Yellow | (255, 216, 32) | ![](https://www.dropbox.com/s/vgk9p19nwwir4u9/yellow.png?raw=1) |
-| 3 | Green | (120, 210, 32) | ![](https://www.dropbox.com/s/gc7fyolrw2tdcf2/green.png?raw=1) |
+| 3 | Light green | (120, 210, 32) | ![](https://www.dropbox.com/s/gc7fyolrw2tdcf2/green.png?raw=1) |
+| 4 | Dark green | (0, 120, 48) | ![](https://www.dropbox.com/s/xuakk16bmz3qimp/darkgreen.png?raw=1) |
+| 5 | Dark blue | (10, 72, 188) | ![](https://www.dropbox.com/s/21kevqb9aelgoc9/darkblue.png?raw=1) |
+| 6 | Light blue | (60, 170, 222) | ![](https://www.dropbox.com/s/d7raj7nmakzviqh/lightblue.png?raw=1) |
+| 7 | Pink | (245, 90, 125) | ![](https://www.dropbox.com/s/rwtstvy6bsdqrsb/pink.png?raw=1) |
+| 8 | Purple | (115, 40, 173) | ![](https://www.dropbox.com/s/6cibn1csgy3ce5a/purple.png?raw=1) |
+| 9 | Brown | (72, 56, 24) | ![](https://www.dropbox.com/s/58j4q5co1rd7uw2/brown.png?raw=1) |
+| 10 | White | (224, 224, 224) | ![](https://www.dropbox.com/s/fftizy76n9y77fh/white.png?raw=1) |
+| 11 | Black | (24, 24, 20) | ![](https://www.dropbox.com/s/h42gwymxybxo772/black.png?raw=1) |
