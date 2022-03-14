@@ -33,13 +33,13 @@ The application data depends on the game:
 | 0x20 | 88 | [Mii info](#mii-info) |
 | 0x88 | 24 | Unknown |
 
-### Mii Info
+## Mii Info
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | Create id |
 | 0x10 | 11x2 | Mii name (wide chars) |
-| 0x26 | 1 | Font region |
-| 0x27 | 1 | Favorite color |
+| 0x26 | 1 | [Font region](#font-region) |
+| 0x27 | 1 | [Favorite color](#favorite-color) |
 | 0x28 | 1 | Gender |
 | 0x29 | 1 | Mii height |
 | 0x2A | 1 | Mii build |
@@ -88,3 +88,19 @@ The application data depends on the game:
 | 0x55 | 1 | Mole x |
 | 0x56 | 1 | Mole y |
 | 0x57 | 1 | Padding |
+
+### Font Region
+| Value | Description |
+| --- | --- |
+| 0 | Standard |
+| 1 | China |
+| 2 | Korea |
+| 3 | Taiwan |
+
+### Favorite Color
+| Value | Description | RGB | Color |
+| --- | --- | --- | --- |
+| 0 | Red | (210, 30, 20) | ![Red square](https://www.dropbox.com/s/r1eb19w7e0wvmz6/red.png?raw=1) |
+| 1 | Orange | (255, 110, 25) |
+| 2 | Yellow | (255, 216, 32) |
+| 3 | Green | (120, 210, 32) |
