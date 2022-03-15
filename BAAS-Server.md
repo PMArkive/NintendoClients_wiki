@@ -277,7 +277,7 @@ This method returns the JWK set for the session token that's issued by <code><a 
 | --- | --- |
 | self | [Extras](#user-extras) visible by no one |
 | favoriteFriends | [Extras](#user-extras) visible by best friends |
-| friends | [Extras](# visible by all friends |
+| friends | [Extras](#user-extras) visible by all friends |
 | foaf | [Extras](#user-extras) visible by friends of a friend |
 | everyone | [Extras](#user-extras) visible by everyone |
 
