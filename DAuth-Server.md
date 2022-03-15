@@ -131,6 +131,7 @@ This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a><
 | Client ID | Description |
 | --- | --- |
 | `146c8ac7b8a0db52` | SCSI storage |
+| `3117b250cab38f45` | Atum |
 | `41f4a6491028e3c4` | Pushmo and Tagaya |
 | `67bf9945b45248c6` | BCAT |
 | `6ac5a6873fe5f68c` | SATA storage |
