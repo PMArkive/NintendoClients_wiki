@@ -3,7 +3,7 @@
   * [[PRUDP Protocol]]
   * [[RMC Protocol]]
   * [NEX Services](NEX-Protocols)
-    * Common
+    * <details><summary>Common</summary>
       * [Account Management](Account-Management-Protocol)
       * [Friends](Friends-Protocol)
       * [Health](Health-Protocol)
@@ -18,6 +18,7 @@
       * [Remote Log Device](Remote-Log-Device-Protocol)
       * [Secure Connection](Secure-Protocol)
       * [Ticket Granting](Authentication-Protocol)
+</details>
     * Nintendo
       * [AA User](AA-User-Protocol)
       * [Data Store](Data-Store-Protocol)
