@@ -1,5 +1,5 @@
 * [[Home]]
-* [NEX](NEX-Overview)
+* [NEX](NEX-Overview-(Game-Servers))
   * [[PRUDP Protocol]]
   * [[RMC Protocol]]
   * [NEX Services](NEX-Protocols)
