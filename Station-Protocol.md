@@ -1,7 +1,7 @@
 [[Pia Protocols]] > Station Protocol
 ---
 
-| Message Type | Description |
+| Port | Description |
 | --- | --- |
 | 1 | [Connection request](#connection-request) |
 | 2 | [Connection response (denying)](#connection-response-denying)<br>[Connection response (accepted)](#connection-response-accepted) |
