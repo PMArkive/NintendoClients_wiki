@@ -2,8 +2,7 @@
 * [NEX](NEX-Overview-(Game-Servers))
   * [[PRUDP Protocol]]
   * [[RMC Protocol]]
-  * [NEX Services](NEX-Protocols) <details><summary>(expand)</summary>
-
+  * [NEX Services](NEX-Protocols)
       * [Account Management](Account-Management-Protocol)
       * [Friends](Friends-Protocol)
       * [Health](Health-Protocol)
@@ -18,9 +17,6 @@
       * [Remote Log Device](Remote-Log-Device-Protocol)
       * [Secure Connection](Secure-Protocol)
       * [Ticket Granting](Authentication-Protocol)
-
-</details>
-
     * Nintendo
       * [AA User](AA-User-Protocol)
       * [Data Store](Data-Store-Protocol)
@@ -50,3 +46,7 @@
       * [User Storage](User-Storage-Protocol)
       * [User Storage Admin](User-Storage-Admin-Protocol)
       * [Web Notification Storage](Web-Notification-Storage-Protocol)
+  * [[Kerberos Authentication]]
+* [Pia](Pia-Overview)
+  * [[Pia Protocol]]
+  * [Pia Services](Pia-Protocols)
