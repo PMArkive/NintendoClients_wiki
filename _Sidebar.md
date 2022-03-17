@@ -2,8 +2,7 @@
 * [NEX](NEX-Overview-(Game-Servers))
   * [[PRUDP Protocol]]
   * [[RMC Protocol]]
-  * [NEX Services](NEX-Protocols)
-    * <details><summary>Common</summary>
+  * [NEX Services](NEX-Protocols) <details><summary>(expand)</summary>
 
       * [Account Management](Account-Management-Protocol)
       * [Friends](Friends-Protocol)
