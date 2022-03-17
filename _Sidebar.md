@@ -3,6 +3,7 @@
   * [[PRUDP Protocol]]
   * [[RMC Protocol]]
   * [NEX Services](NEX-Protocols)
+    * Common
       * [Account Management](Account-Management-Protocol)
       * [Friends](Friends-Protocol)
       * [Health](Health-Protocol)
