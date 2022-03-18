@@ -1,4 +1,4 @@
-[[Server List]] > Title installation
+[Switch Servers](Server-List#switch) > Title installation
 ---
 
 ### aqua
