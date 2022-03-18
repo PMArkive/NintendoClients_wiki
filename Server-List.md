@@ -25,7 +25,7 @@ Replace '%' by one of the following:
 | - fw-api.%.nso.nintendo.net | NSO rewards |
 | - storage.%.scsi.srv.nintendo.net<br>- migration.%.scsi.srv.nintendo.net<br>- storage.%.sata.srv.nintendo.net<br>- permission.%.sata.srv.nintendo.net<br>- pp.%.sata.srv.nintendo.net<br>- scsi-policy-%.cdn.nintendo.net | [Online save storage](OLSC-Servers) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net | [eShop services](REST-Services) |
-| - bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net | eShop applet |
+| - bugyo.hac.%.eshop.nintendo.ent<br>- tagaya.hac.%.eshop.nintendo.net | [eShop applet](eShop-Applet-(Switch)) |
 | - api-%.frs.srv.nintendo.net | [Friends](Friends-API) |
 | - consumer.%.npns.srv.nintendo.net<br>- broker.%.npns.srv.nintendo.net<br>- provider-%.npns.srv.nintendo.net<br>- app-a03.%.npns.srv.nintendo.net<br>- app-b01.%.npns.srv.nintendo.net | [Push notifications](NPNS-Servers) |
 | - aqua.hac.%.d4c.nintendo.net<br>- atum.hac.%.d4c.nintendo.net<br>- atumn.hac.%.d4c.nintendo.net<br>- beach.hac.%.eshop.nintendo.net<br>- pearljam.hac.%.eshop.nintendo.net<br>- pushmo.hac.%.eshop.nintendo.net<br> - sun.hac.%.d4c.nintendo.net<br>- superfly.hac.%.d4c.nintendo.net | [Title installation](NIM-Servers) |
