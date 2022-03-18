@@ -198,7 +198,7 @@ Packets are encrypted and signed with the session key.
 | Mode | Session key |
 | --- | --- |
 | NEX | Obtained from server during [matchmaking](Match-Making-Types#matchmakesession-structure) |
-| LDN | ? |
+| LDN | ?  |
 | LAN | First 16 bytes of the HMAC-SHA256 of the [session param](LAN-Protocol#lansessioninfo), but slightly modified (the last byte is incremented by 1). The key is the same game-specific key that's used for the [crypto challenge](LAN-Protocol#crypto-challenge). |
 
 *Up to 5.6:*
@@ -223,9 +223,16 @@ The nonce depends on the network type and is generated as follows:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 3 | Some kind of crc32? |
+| 0x0 | 3 | First 3 bytes of CRC32 hash |
 | 0x3 | 1 | [Connection id](#header) |
 | 0x4 | 8 | Nonce from [header](#header) |
+
+The CRC32 hash is calculated over the following data:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Session id (see [application data](LDN-Application-Data-(Pia))) |
+| 0x4 | 6 | MAC address of source |
 
 *LAN:*
 
