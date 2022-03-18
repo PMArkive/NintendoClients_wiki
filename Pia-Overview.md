@@ -15,6 +15,14 @@ Pia supports three different network types.
   </tr>
 </table>
 
+With Pia version 6, a new game server technology was introduced:
+
+<table>
+  <tr>
+    <td><b><a href="NPLN-Servers">NPLN</a></b></td><td>Matchmaking is done by game servers. This mode often requires NAT traversal.</td>
+  </tr>
+</table>
+
 ### Protocol
 All peer-to-peer packets are sent through UDP. The packet format is described [here](Pia-Protocol). Once a connection between consoles has been established they talk to each other through a bunch of [protocols](Pia-Protocols). Most of these are only used internally by Pia to set up and manage the connections. The following protocols may be used to exchange game-specific data:
 
