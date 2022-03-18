@@ -18,6 +18,7 @@
       * [Remote Log Device](Remote-Log-Device-Protocol)
       * [Secure Connection](Secure-Protocol)
       * [Ticket Granting](Authentication-Protocol)
+      * [Internal](NEX-Internal-Protocols)
     * Nintendo
       * [AA User](AA-User-Protocol)
       * [Data Store](Data-Store-Protocol)
