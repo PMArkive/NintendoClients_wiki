@@ -81,7 +81,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 5.18 - 5.21 | 4 |
 | 5.23 - 5.26 | 5 |
 | 5.27 - 5.39 | 9 |
-| 6.19 | 11 |
+| 6.16 | 11 |
 
 ### Connection ID
 During connection establishment, the console that wants to connect to another console must set this field to 1, and the console that answers the connection request must set this field to 0. After a connection has been established both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
