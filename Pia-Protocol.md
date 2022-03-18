@@ -67,7 +67,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- |
 | 5.11 - 5.17 | 3 |
 | 5.18 - 5.21 | 4 |
-| 5.23 - 5.25 | 5 |
+| 5.23 - 5.26 | 5 |
 | 5.27 - 5.31 | 9 |
 
 ### Connection ID
