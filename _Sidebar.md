@@ -48,6 +48,18 @@
       * [User Storage Admin](User-Storage-Admin-Protocol)
       * [Web Notification Storage](Web-Notification-Storage-Protocol)
   * [[Kerberos Authentication]]
+  * [[Hpp Server]]
 * [Pia](Pia-Overview)
   * [[Pia Protocol]]
   * [Pia Services](Pia-Protocols)
+* [Switch Servers](Server-List#switch)
+  * [Application Authentication](AAuth-Server)
+  * [Connection Test](Connection-Test)
+  * [Device Authentication](DAuth-Server)
+  * [Game Servers (NEX)](NEX-Overview-(Game-Servers))
+  * [Game Servers (NPLN)](NLPN-Servers)
+  * [Nintendo Accounts](Account-Server-(Switch))
+  * [Switch Accounts](BAAS-Server)
+* Other Pages
+  * [[Wii U Error Codes]]
+  * [[Switch Error Codes]]
