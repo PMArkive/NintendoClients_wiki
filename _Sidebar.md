@@ -53,6 +53,8 @@
 * [Pia](Pia-Overview)
   * [[Pia Protocol]]
   * [Pia Services](Pia-Protocols)
+  * [[LAN Protocol]]
+  * [[LDN Protocol]]
 * [Switch Servers](Server-List#switch)
   * [Application Authentication](AAuth-Server)
   * [Connection Test](Connection-Test)
