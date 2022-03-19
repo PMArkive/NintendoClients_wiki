@@ -1,6 +1,6 @@
 These packets are sent directly from one console to another through UDP, with no server in between. Everything is encoded in big-endian byte order.
 
-All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [packet signature](#encryption).
+All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes an unencrypted footer or [packet signature](#encryption).
 
 ## Header
 *Up to 5.6:*
