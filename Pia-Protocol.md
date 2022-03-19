@@ -102,7 +102,7 @@ This part of the packet may be [encrypted](#encryption). A packet may contain mo
 
 All messages are padded such that their size is a multiple of 4 bytes.
 
-*Up to 5.3:*
+*Up to 5.4:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -131,7 +131,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
-*5.11:*
+*5.11 - 5.12:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -159,7 +159,23 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
-*5.18:*
+*5.18 - 5.26:*
+
+Fields that are not present are copied from the previous message.
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Flags indicating which of the following fields are present. |
+| Uint8 | [Message flags](#message-flags). *Only present if `flags & 1`.* |
+| Uint16 | Payload size. *Only present if `flags & 2`.* |
+| Uint8 | [Protocol type](Pia-Protocols). *Only present if `flags & 4`.* |
+| Uint24 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
+| Uint64 | [Destination](#destination). *Only present if `flags & 8`.* |
+| Uint64 | [Source station id](#station-id). *Only present if `flags & 16`.* |
+| Bytes | Payload (protocol-specific) |
+| | Padding |
+
+*5.27 - 6.16:*
 
 Fields that are not present are copied from the previous message.
 
