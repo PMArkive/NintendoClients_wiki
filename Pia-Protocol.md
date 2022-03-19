@@ -55,10 +55,10 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
-| 0x5 | 4 | Unknown |
-| 0x9 | 4 | Unknown |
+| 0x5 | 4 | Destination variable id |
+| 0x9 | 4 | Source variable id |
 | 0xD | 2 | Packet id |
-| 0xF | 1 | Unknown |
+| 0xF | 1 | Footer size |
 | 0x10 | 8 | [AES-GCM nonce](#encryption) |
 | 0x18 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
