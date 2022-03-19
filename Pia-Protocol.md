@@ -32,7 +32,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (3 or 4) |
 | 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
@@ -43,7 +43,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (5) |
 | 0x5 | 1 | [Connection id](#connection-id) |
 | 0x6 | 2 | [Packet id](#packet-id) |
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
@@ -54,7 +54,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (9) |
 | 0x5 | 4 | Destination variable id |
 | 0x9 | 4 | Source variable id |
 | 0xD | 2 | [Packet id](#packet-id) |
@@ -67,7 +67,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11) |
 | 0x5 | 2 | Destination variable id |
 | 0x7 | 2 | Source variable id |
 | 0x9 | 2 | [Packet id](#packet-id) |
