@@ -55,8 +55,8 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (9) |
-| 0x5 | 4 | Destination variable id |
-| 0x9 | 4 | Source variable id |
+| 0x5 | 4 | Destination [variable id](#variable-id) |
+| 0x9 | 4 | Source [variable id](#variable-id) |
 | 0xD | 2 | [Packet id](#packet-id) |
 | 0xF | 1 | Footer size |
 | 0x10 | 8 | [AES-GCM nonce](#encryption) |
@@ -68,8 +68,8 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11) |
-| 0x5 | 2 | Destination variable id |
-| 0x7 | 2 | Source variable id |
+| 0x5 | 2 | Destination [variable id](#variable-id) |
+| 0x7 | 2 | Source [variable id](#variable-id) |
 | 0x9 | 2 | [Packet id](#packet-id) |
 | 0xB | 1 | Footer size |
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
