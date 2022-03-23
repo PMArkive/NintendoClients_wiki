@@ -90,6 +90,14 @@ During connection establishment, the console that wants to connect to another co
 ### Packet ID
 This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
 
+### Variable ID
+In Pia version 5.27 and later, each station is given a constant id and variable id. The constant id uniquely identifies a user and never changes, even across sessions. The variable id identifies a user within the current session. The user generates it at the start of the session.
+
+| Mode | Constant ID |
+| --- | --- |
+| NEX | Principal id |
+| LDN | MAC address |
+
 ### RTT Calculation
 The session timer contains the number of milliseconds since the start of the session. Every client has its own session timer (they are independent from each other). Aside from its own session timer, every client also keeps track of the session timers of all other clients. When A sends a packet to B the RTT timer is what A belives the session timer of B to be. Hopefully, an example will make this clear:
 
