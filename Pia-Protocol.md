@@ -179,7 +179,6 @@ Fields that are not present are copied from the previous message.
 | Uint8 | [Protocol type](Pia-Protocols). *Only present if `flags & 4`.* |
 | Uint24 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint64 | [Destination](#destination). *Only present if `flags & 8`.* |
-| Uint64 | [Source station id](#station-id). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
