@@ -228,6 +228,7 @@ Packets are encrypted and signed with the session key.
 *Up to 5.6:*
 
 If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The HMAC-MD5 of the whole packet (both header and encrypted payload) is appended to the packet.
+
 *5.7 and later:*
 
 If encryption is enabled, the [messages](#messages) are encrypted with AES-GCM. The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
