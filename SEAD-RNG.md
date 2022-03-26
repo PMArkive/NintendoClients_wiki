@@ -1,4 +1,4 @@
-SEAD is Nintendo's private standard library. It is used by various first party games and by the [Pia](Pia-Overview) library as well.
+SEAD is Nintendo's private standard library. It is used by various first party games and the [Pia](Pia-Overview) library uses it as well.
 
 Its random number generator works as follows:
 ```python
