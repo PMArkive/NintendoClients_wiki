@@ -2,38 +2,7 @@ The page describes how [ENL](ENL-Protocol) generates the game-specific key for t
 
 ### Algorithm
 
-To generate the key, ENL uses the random number generator provided by SEAD (Nintendo's private standard library), with a game-specific seed. It also uses a table of 32-bit integers provided by the game.
-
-The random number generator works as follows:
-```python
-class Random:
-    def __init__(self, seed):
-        multiplier = 0x6C078965
-        
-        temp = seed
-        self.state = []
-        for i in range(1, 5):
-            temp ^= temp >> 30
-            temp = (temp * multiplier + i) & 0xFFFFFFFF
-            self.state.append(temp)
-    
-    # Returns a random 32-bit integer
-    def u32(self):
-        temp = self.state[0]
-        temp = (temp ^ (temp << 11)) & 0xFFFFFFFF
-        temp ^= temp >> 8
-        temp ^= self.state[3]
-        temp ^= self.state[3] >> 19
-        self.state[0] = self.state[1]
-        self.state[1] = self.state[2]
-        self.state[2] = self.state[3]
-        self.state[3] = temp
-        return temp
-    
-    # Returns a random integer smaller than 'max'
-    def uint(self, max):
-        return (self.u32() * max) >> 32
-```
+To generate the key, ENL uses the random number generator provided by [SEAD](SEAD-RNG), with a game-specific seed. It also uses a table of 32-bit integers provided by the game.
 
 For each byte in the key ENL generates two random numbers: an index into the provided table and a 'byte index' or shift amount. ENL always generates 4 bytes at once and stores them into the key in little endian byte order. In Python, this could look as follows:
 ```python
