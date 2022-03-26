@@ -1,4 +1,4 @@
-The page describes how [ENL](ENL-Protocol) generates the game-specific key for the [Pia](Pia-Game-Keys).
+The page describes how [ENL](ENL-Protocol) generates the game-specific key for [Pia](Pia-Game-Keys) in LDN and LAN mode.
 
 ### Algorithm
 
