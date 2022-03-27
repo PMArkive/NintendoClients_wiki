@@ -101,7 +101,7 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 32 | [Session info](#session-info) |
-| 0x20 | 1 | [LDN version](#ldn-versions) |
+| 0x20 | 1 | [LDN version](#changelog) |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
 | 0x22 | 2 | Advertisement data size |
 | 0x24 | 4 | Nonce for AES-CTR algorithm |
@@ -152,7 +152,7 @@ This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encryp
 ### Authentication Data
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | [LDN version](#ldn-versions) |
+| 0x0 | 1 | [LDN version](#changelog) |
 | 0x1 | 1 | Payload size (`size & 0xFF`) |
 | 0x2 | 1 | [Status code](#authentication-status-code) |
 | 0x3 | 1 | 0 = request, 1 = response |
