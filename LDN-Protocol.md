@@ -103,7 +103,7 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 | 0x0 | 32 | [Session info](#session-info) |
 | 0x20 | 1 | [LDN version](#ldn-versions) |
 | 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
-| 0x22 | 2 | Advertisement daa size |
+| 0x22 | 2 | Advertisement data size |
 | 0x24 | 4 | Nonce for AES-CTR algorithm |
 | 0x28 | 32 | SHA-256 hash, calculated over the whole advertisement payload with the hash set to zero |
 | 0x48 | | [Advertisement data](#advertisement-data) |
