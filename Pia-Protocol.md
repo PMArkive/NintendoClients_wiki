@@ -213,7 +213,11 @@ Fields that are not present are copied from the previous message.
 | 0x10 | The message payload is zlib-compressed |
 
 ### Station index
-Every console in a mesh gets its own station index. Consoles that haven't joined a mesh yet have this field set to 0xFD. This is not the same as the [station id](#station-id).
+Every console in a mesh gets its own station index. The following station index values are special:
+
+* **253:** Invalid. Used for consoles that haven't joined a mesh yet.
+* **254:** Represents the host of the mesh.
+* **255:** Used for broadcast messages.
 
 ### Station id
 This is a unique id per station. In NEX mode, it is the principal id (pid). In LDN and LAN mode, it is generated based on the local address of the station.
