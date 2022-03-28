@@ -85,12 +85,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.16 | 11 |
 
 ### Connection ID
-During connection establishment, both consoles generate a random number between 2 and 255. This will be the connection id in any further packets.
-
-There are a few special cases:
-* If the sending console has no yet joined a mesh, the connection id is set to 1, regardless of whether a connection has been established
-* If no connection has been established yet, the connection id is set to 0
-* In broadcast packets, and packets that are sent to the monitoring server, the connection id is set to 0
+During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.
 
 ### Packet ID
 This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
