@@ -88,7 +88,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.
 
 ### Packet ID
-This should be 0 during connection establishment. After a connection has been established this should be an incrementing number starting at 1.
+If the connection id is 0, the packet id is also 0. If the connection id is not 0, the packet id is an incrementing number starting at 1.
 
 ### Variable ID
 In Pia version 5.27 and later, each station is given a constant id and variable id. The constant id uniquely identifies a user and never changes, even across sessions. The variable id identifies a user within the current session. The user generates it at the start of the session.
