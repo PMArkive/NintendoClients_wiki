@@ -113,7 +113,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x1 | 1 | [Source station index](#station-index) |
 | 0x2 | 2 | Payload size |
 | 0x4 | 4 | [Destination](#destination) |
-| 0x8 | 4 | [Source station id](#station-id) |
+| 0x8 | 4 | [Source constant id](#constant-id) |
 | 0xC | 2 | [Protocol type](Pia-Protocols) |
 | 0xE | 2 | Protocol port (protocol-specific) |
 | 0x10 | 4 | Reserved (always 0) |
@@ -127,7 +127,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x0 | 1 | [Message flags](#message-flags) |
 | 0x1 | 2 | Payload size |
 | 0x3 | 8 | [Destination](#destination) |
-| 0xB | 8 | [Source station id](#station-id) |
+| 0xB | 8 | [Source constant id](#constant-id) |
 | 0x13 | 1 | [Protocol type](Pia-Protocols) |
 | 0x14 | 1 | Protocol port (protocol-specific) |
 | 0x15 | 3 | Padding (always 0) |
@@ -144,7 +144,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x4 | 1 | [Protocol type](Pia-Protocols) |
 | 0x5 | 1 | Protocol port (protocol-specific) |
 | 0x6 | 8 | [Destination](#destination) |
-| 0xE | 8 | [Source station id](#station-id) |
+| 0xE | 8 | [Source constant id](#constant-id) |
 | 0x16 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -158,7 +158,7 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | 0x4 | 1 | [Protocol type](Pia-Protocols) |
 | 0x5 | 3 | Protocol port (protocol-specific) |
 | 0x8 | 8 | [Destination](#destination) |
-| 0x10 | 8 | [Source station id](#station-id) |
+| 0x10 | 8 | [Source constant id](#constant-id) |
 | 0x18 | | Payload (protocol-specific) |
 | | | Padding |
 
@@ -174,7 +174,7 @@ Fields that are not present are copied from the previous message.
 | Uint8 | [Protocol type](Pia-Protocols). *Only present if `flags & 4`.* |
 | Uint24 | Protocol port (protocol-specific). *Only present if `flags & 4`.* |
 | Uint64 | [Destination](#destination). *Only present if `flags & 8`.* |
-| Uint64 | [Source station id](#station-id). *Only present if `flags & 16`.* |
+| Uint64 | [Source constant id](#constant-id). *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
@@ -208,11 +208,11 @@ Every console in a mesh gets its own station index. The following station index 
 * **254:** Represents the host of the mesh.
 * **255:** Used for broadcast messages.
 
-### Station id
-This is a unique id per station. In NEX mode, it is the principal id (pid). In LDN and LAN mode, it is generated based on the local address of the station.
+### Constant id
+The constant id never changes. In NEX mode, it is the principal id (pid). In LDN and LAN mode, it is generated based on the local address of the station.
 
 ### Destination
-The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [station id](#station-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
+The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [constant id](#constant-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
 
 ## Encryption
 Packets are encrypted and signed with the [session key](#session-key).
