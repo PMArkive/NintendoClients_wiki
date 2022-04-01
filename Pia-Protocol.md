@@ -196,11 +196,10 @@ Fields that are not present are copied from the previous message.
 ### Message flags
 | Mask | Description |
 | --- | --- |
-| 0x1 | Determines what's stored in the [destination](#destination) field |
-| 0x2 | This packet is supposed to be relayed to another console |
-| 0x4 | This packet was relayed through another console |
+| 0x1 | The message is sent to multiple consoles (multicast) |
+| 0x2 | The message should be relayed to another console |
+| 0x4 | The message was relayed through another console |
 | 0x8 | Unknown |
-| 0x10 | The message payload is zlib-compressed |
 
 ### Station index
 Every console in a mesh gets its own station index. The following station index values are special:
@@ -213,7 +212,7 @@ Every console in a mesh gets its own station index. The following station index 
 This is a unique id per station. In NEX mode, it is the principal id (pid). In LDN and LAN mode, it is generated based on the local address of the station.
 
 ### Destination
-The content of this field depends on the [message flags](#message-flags). If the flag is cleared, this field contains the [station id](#station-id) of the destination console. If the flag is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
+The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [station id](#station-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
 
 ## Encryption
 Packets are encrypted and signed with the [session key](#session-key).
