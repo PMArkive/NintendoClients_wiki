@@ -199,7 +199,7 @@ Fields that are not present are copied from the previous message.
 | 0x1 | The message is sent to multiple consoles (multicast) |
 | 0x2 | The message should be relayed to another console |
 | 0x4 | The message was relayed through another console |
-| 0x8 | Unknown |
+| 0x8 | The message may not be bundled with other messages in a single packet |
 
 ### Station index
 Every console in a mesh gets its own station index. The following station index values are special:
