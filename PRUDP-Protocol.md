@@ -252,7 +252,9 @@ The stream type is always RVSecure (0xA) in Nintendo games.
 ### Type and flags
 This field takes up two bytes in the packet header and is encoded like this: `(flags << 4) | type`.
 
-Even though PRUDP also supports unreliable data packets, these are never used by NEX. Only SYN, PING and acknowledgement packets are sent without FLAG_RELIABLE.
+Even though PRUDP also supports unreliable data packets, these are never used by NEX. SYN, PING and acknowledgement packets are always sent without FLAG_RELIABLE.
+
+DISCONNECT packets may be reliable (graceful disconnect) or unreliable (forced disconnect).
 
 | Value | Type |
 | --- | --- |
