@@ -57,7 +57,7 @@ The following methods return a device token as JWT:
 | POST | <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code> |
 | POST | <code><a href="#post-439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7device_auth_token">/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token</a></code> |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cddevice_auth_token) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cddevice_auth_token) |
 | POST | <code><a href="#post-v5device_auth_token">/v5/device_auth_token</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
@@ -67,7 +67,7 @@ The following methods return a different kind of device token:
 | Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
 | POST | <code><a href="#post-v5edge_token">/v5/edge_token</a></code> |
 | POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
 | POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
@@ -77,7 +77,7 @@ In API version 3 and later, one must perform a cryptographic challenge to obtain
 | Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
 | POST | <code><a href="#post-v5challenge">/v5/challenge</a></code> |
 | POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
@@ -127,7 +127,7 @@ This is an improved version of [`/v1/device_auth_token`](#post-v1device_auth_tok
 
 | Param | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
+| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
 | client_id | Application-specific [client id](#known-client-ids) |
 | key_generation | [Master key revision](#master-key-revisions) |
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
@@ -141,13 +141,13 @@ The key for the AES-CMAC is calculated as follows:
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 
 ### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
 
 ### POST /v5/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
 
 ### POST /v6/device_auth_token
-This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token), but the `ist` parameter was added.
+This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token), but the `ist` parameter was added.
 
 | Param | Description |
 | --- | --- |
@@ -162,7 +162,7 @@ This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b72
 This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
 
 ### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
-This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
 
 Response on success:
 
@@ -172,13 +172,13 @@ Response on success:
 | dtoken | Device token |
 
 ### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
 
 ### POST /v5/edge_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
 
 ### POST /v6/edge_token
-This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token), but an `ist` parameter was added.
+This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token), but an `ist` parameter was added.
 
 | Param | Description |
 | --- | --- |
@@ -215,16 +215,16 @@ Response:
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
 ### POST /v4/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### POST /v5/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### POST /v6/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### POST /v7/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### Master Key Revisions
 | System version | Key generation |
