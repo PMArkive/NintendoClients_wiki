@@ -50,37 +50,37 @@ The X-Nintendo-PowerState header is only present on system version 7.0.0 and lat
 | 14.0.0 - 14.1.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 14.3.0.0)` |
 
 ## Methods
+In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
+
+| Method | Path |
+| --- | --- |
+| POST | [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#challenge-request) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#challenge-request) |
+| POST | [`/v5/challenge`](#challenge-request) |
+| POST | [`/v6/challenge`](#challenge-request) |
+| POST | [`/v7/challenge`](#challenge-request) |
+
 The following methods return a device token as JWT:
 
 | Method | Path |
 | --- | --- |
-| POST | <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code> |
-| POST | <code><a href="#post-439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7device_auth_token">/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token</a></code> |
-| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cddevice_auth_token) |
-| POST | <code><a href="#post-v5device_auth_token">/v5/device_auth_token</a></code> |
-| POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
-| POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
+| POST | [`/v1/device_auth_token`](#device-token-request) |
+| POST | [`/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token`](#device-token-request) |
+| POST | [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#device-token-request) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#device-token-request) |
+| POST | [`/v5/device_auth_token`](#device-token-request) |
+| POST | [`/v6/device_auth_token`](#device-token-request) |
+| POST | [`/v7/device_auth_token`](#device-token-request) |
 
 The following methods return a different kind of device token:
 
 | Method | Path |
 | --- | --- |
-| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
-| POST | <code><a href="#post-v5edge_token">/v5/edge_token</a></code> |
-| POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
-| POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
-
-In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
-
-| Method | Path |
-| --- | --- |
-| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#post-v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
-| POST | <code><a href="#post-v5challenge">/v5/challenge</a></code> |
-| POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
-| POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
+| POST | [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#edge-token-request) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#edge-token-request) |
+| POST | [`/v5/edge_token`](#edge-token-request) |
+| POST | [`/v6/edge_token`](#edge-token-request) |
+| POST | [`/v7/edge_token`](#edge-token-request) |
 
 #### System Versions
 | System | API |
@@ -104,7 +104,19 @@ In API version 3 and later, one must perform a cryptographic challenge to obtain
 | v6 | The `ist` parameter was added. |
 | v7 | The `vendor_id` parameter was added to the edge token request. |
 
-### POST /v1/device_auth_token
+## Challenge Request
+| Param | Description |
+| --- | --- |
+| key_generation | [Master key revision](#master-key-revisions) |
+
+Response:
+
+| Field | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge (32 bytes) |
+| data | Base64-encoded AES key required for MAC calculation (16 bytes) |
+
+## Device Token Request
 This method returns a device token as JWT.
 
 | Param | Description |
@@ -119,11 +131,8 @@ Response on success:
 | expires_in | Expiration in seconds (86400) |
 | device_auth_token | Device token |
 
-### POST /439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token
-Nothing was changed.
-
-### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token
-A challenge was added and the format of the system version parameter was changed.
+### Version 3
+A challenge was added and the format of the system version parameter was changed:
 
 | Param | Description |
 | --- | --- |
@@ -140,14 +149,8 @@ The key for the AES-CMAC is calculated as follows:
 
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 
-### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token
-Nothing was changed.
-
-### POST /v5/device_auth_token
-Nothing was changed.
-
-### POST /v6/device_auth_token
-The `ist` parameter was added:
+### Version 6
+An `ist` parameter was added:
 
 | Param | Description |
 | --- | --- |
@@ -158,11 +161,8 @@ The `ist` parameter was added:
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
-### POST /v7/device_auth_token
-Nothing was changed.
-
-### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
-This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+## Edge Token Request
+This method returns a different kind of device token. Up to v6, it takes the same parameters as [`/device_auth_token`](#device-token-request).
 
 Response on success:
 
@@ -171,26 +171,8 @@ Response on success:
 | expires_in | Expiration in seconds (86400) |
 | dtoken | Device token |
 
-### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token
-Nothing was changed.
-
-### POST /v5/edge_token
-Nothing was changed.
-
-### POST /v6/edge_token
-The `ist` parameter was added:
-
-| Param | Description |
-| --- | --- |
-| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
-| client_id | Application-specific [client id](#known-client-ids) |
-| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
-| key_generation | [Master key revision](#master-key-revisions) |
-| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
-| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
-
-### POST /v7/edge_token
-The `vendor_id` parameter was added:
+### Version 7
+A `vendor_id` parameter was added:
 
 | Param | Description |
 | --- | --- |
@@ -201,30 +183,6 @@ The `vendor_id` parameter was added:
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | vendor_id | `akamai`, `llnw` or `lumen` |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
-
-### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge
-| Param | Description |
-| --- | --- |
-| key_generation | [Master key revision](#master-key-revisions) |
-
-Response:
-
-| Field | Description |
-| --- | --- |
-| challenge | Base64-encoded challenge (32 bytes) |
-| data | Base64-encoded AES key required for MAC calculation (16 bytes) |
-
-### POST /v4/challenge
-Nothing was changed.
-
-### POST /v5/challenge
-Nothing was changed.
-
-### POST /v6/challenge
-Nothing was changed.
-
-### POST /v7/challenge
-Nothing was changed.
 
 ### Master Key Revisions
 | System version | Key generation |
