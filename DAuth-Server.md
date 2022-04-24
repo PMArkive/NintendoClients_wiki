@@ -120,10 +120,10 @@ Response on success:
 | device_auth_token | Device token |
 
 ### POST /439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token
-This is the same as [`/v1/device_auth_token`](#post-v1device_auth_token).
+Nothing was changed.
 
 ### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token
-This is an improved version of [`/v1/device_auth_token`](#post-v1device_auth_token).
+A challenge was added and the format of the system version parameter was changed.
 
 | Param | Description |
 | --- | --- |
@@ -141,13 +141,13 @@ The key for the AES-CMAC is calculated as follows:
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 
 ### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+Nothing was changed.
 
 ### POST /v5/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+Nothing was changed.
 
 ### POST /v6/device_auth_token
-This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token), but the `ist` parameter was added.
+The `ist` parameter was added:
 
 | Param | Description |
 | --- | --- |
@@ -159,7 +159,7 @@ This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b72
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
 ### POST /v7/device_auth_token
-This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
+Nothing was changed.
 
 ### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
 This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
@@ -172,13 +172,13 @@ Response on success:
 | dtoken | Device token |
 
 ### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+Nothing was changed.
 
 ### POST /v5/edge_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+Nothing was changed.
 
 ### POST /v6/edge_token
-This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token), but an `ist` parameter was added.
+The `ist` parameter was added:
 
 | Param | Description |
 | --- | --- |
@@ -190,7 +190,7 @@ This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b72
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
 ### POST /v7/edge_token
-This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a></code>, but a `vendor_id` parameter was added:
+The `vendor_id` parameter was added:
 
 | Param | Description |
 | --- | --- |
@@ -215,16 +215,16 @@ Response:
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
 ### POST /v4/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+Nothing was changed.
 
 ### POST /v5/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+Nothing was changed.
 
 ### POST /v6/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+Nothing was changed.
 
 ### POST /v7/challenge
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+Nothing was changed.
 
 ### Master Key Revisions
 | System version | Key generation |
