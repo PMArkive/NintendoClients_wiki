@@ -11,10 +11,19 @@ Because the certificate is signed by Nintendo there is only one way to get a val
 
 The dauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
+* [Changelog](#changelog)
 * [Headers](#headers)
 * [Methods](#methods)
 * [Errors](#errors)
 * [Examples](#examples)
+
+## Changelog
+| API | Description |
+| --- | --- |
+| v1 | Initial version. |
+| v2 | The API path is obfuscated with random hex string. |
+| v3 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. |
+| v7 | The `vendor_id` parameter was added to the edge token request. |
 
 ## Headers
 | Header | Description |
@@ -35,6 +44,7 @@ The X-Nintendo-PowerState header is only present on system version 9.0.0 and lat
 | 2.0.0 - 2.3.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 1.3.0.0; Add-on 1.3.0.0)` |
 | 3.0.0 - 3.0.2 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 3.4.0.0; Add-on 3.4.0.0)` |
 | 4.0.0 - 4.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 4.4.0.0; Add-on 4.4.0.0)` |
+| 5.0.0 - 5.0.2 | `libcurl (nnDauth; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 5.3.0.0; Add-on 5.3.0.0)` |
 | 9.0.0 - 9.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 9.3.0.0)` |
 | 10.0.0 - 10.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 10.4.0.0)` |
 | 11.0.0 - 11.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 11.4.0.0)` |
@@ -56,10 +66,11 @@ The X-Nintendo-PowerState header is only present on system version 9.0.0 and lat
 | --- | --- |
 | POST | <code><a href="#post-439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7device_auth_token">/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token</a></code> |
 
-5.0.0:
+5.0.0 - 5.0.2:
 
 | Method | Path |
 | --- | --- |
+| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token</a></code> |
 
 9.0.0 - 12.1.0:
@@ -78,7 +89,25 @@ The X-Nintendo-PowerState header is only present on system version 9.0.0 and lat
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
 | POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
 
-### POST /v6/challenge
+### POST /v1/device_auth_token
+This method returns a device token as JWT.
+
+| Param | Description |
+| --- | --- |
+| client_id | Application-specific [client id](#known-client-ids) |
+| system_version | System version (`%08x`) |
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| device_auth_token | Device token |
+
+### POST /439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token
+This was probably an attempt to hide dauth. It is exactly the same as <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code>.
+
+### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge
 | Param | Description |
 | --- | --- |
 | key_generation | [Master key revision](#master-key-revisions) |
@@ -90,16 +119,34 @@ Response:
 | challenge | Base64-encoded challenge (32 bytes) |
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
-### POST /v1/device_auth_token
+### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token
+
 This method returns a device token as JWT.
 
 | Param | Description |
 | --- | --- |
+| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
 | client_id | Application-specific [client id](#known-client-ids) |
-| system_version | System version (`%08x`) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
-### POST /439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token
-This was probably an attempt to hide dauth. It is exactly the same as <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code>.
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| device_auth_token | Device token |
+
+The key for the AES-CMAC is calculated as follows:
+1. The `aes_kek_generation_source` is decrypted with the master key.
+2. The dauth key source is decrypted with the key from step 1.
+3. The key from the `data` field of the challenge is decrypted with the key from step 2.
+
+The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
+
+### POST /v6/challenge
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### POST /v6/device_auth_token
 This method returns a device token as JWT.
@@ -159,6 +206,7 @@ This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a><
 ### Master Key Revisions
 | System version | Key generation |
 | --- | --- |
+| 5.0.0 | 5 |
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
 | 13.0.0 - 13.2.1 | 13 |
