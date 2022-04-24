@@ -70,16 +70,27 @@ The X-Nintendo-PowerState header is only present on system version 7.0.0 and lat
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
 | POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
 
-#### Changelog
-| API | System | Changelog |
-| --- | --- | --- |
-| v1 | 1.0.0 - 3.0.0 | Initial version. |
-| v2 | 3.0.1 - 4.1.0 | The API path is obfuscated with random hex string. |
-| v3 | 5.0.0 - 6.1.0 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. Also, the `edge_token` route was added. |
-| v4 | 6.2.0 | Unknown difference. |
-| v5 | 7.0.0 - 8.1.1 | |
-| v6 | 9.0.0 - 12.1.0 | |
-| v7 | 13.0.0 - 14.1.1 | The `vendor_id` parameter was added to the edge token request. |
+#### System Versions
+| System | API |
+| --- | --- |
+| 1.0.0 - 3.0.0 | v1 |
+| 3.0.1 - 4.1.0 | v2 |
+| 5.0.0 - 6.1.0 | v3 |
+| 6.2.0 | v4 |
+| 7.0.0 - 8.1.1 | v5 |
+| 9.0.0 - 12.1.0 | v6 |
+| 13.0.0 - 14.1.1 | v7 |
+
+#### API Changes
+| API | Changelog |
+| --- | --- |
+| v1 | Initial version. |
+| v2 | The API path is obfuscated with random hex string. |
+| v3 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. Also, the `edge_token` route was added. |
+| v4 | Unknown difference. |
+| v5 | The `X-Nintendo-PowerState` header was added. The API path is no longer obfuscated. |
+| v6 | The `ist` parameter was added. |
+| v7 | The `vendor_id` parameter was added to the edge token request. |
 
 ### POST /v1/device_auth_token
 This method returns a device token as JWT.
@@ -220,6 +231,8 @@ This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a><
 | 5.0.0 - 5.1.0 | 5 |
 | 6.0.0 - 6.1.0 | 6 |
 | 6.2.0 | 7 |
+| 7.0.0 - 8.0.1 | 8 |
+| 8.1.0 - 8.1.1 | 9 |
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
 | 13.0.0 - 13.2.1 | 13 |
