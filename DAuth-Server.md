@@ -50,25 +50,37 @@ The X-Nintendo-PowerState header is only present on system version 7.0.0 and lat
 | 14.0.0 - 14.1.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 14.3.0.0)` |
 
 ## Methods
+The following methods return a device token as JWT:
+
 | Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code> |
 | POST | <code><a href="#post-439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7device_auth_token">/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token</a></code> |
-| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token</a></code> |
-| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token</a></code> |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
 | POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cddevice_auth_token) |
-| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
-| POST | <code><a href="#post-v5challenge">/v5/challenge</a></code> |
 | POST | <code><a href="#post-v5device_auth_token">/v5/device_auth_token</a></code> |
-| POST | <code><a href="#post-v5edge_token">/v5/edge_token</a></code> |
-| POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
-| POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
-| POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
+
+The following methods return a different kind of device token:
+
+| Method | Path |
+| --- | --- |
+| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token</a></code> |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
+| POST | <code><a href="#post-v5edge_token">/v5/edge_token</a></code> |
+| POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
 | POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
+
+In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
+
+| Method | Path |
+| --- | --- |
+| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
+| POST | <code><a href="#post-v5challenge">/v5/challenge</a></code> |
+| POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
+| POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
 
 #### System Versions
 | System | API |
@@ -108,7 +120,87 @@ Response on success:
 | device_auth_token | Device token |
 
 ### POST /439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token
-This was probably an attempt to hide dauth. It is exactly the same as <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code>.
+This is the same as [`/v1/device_auth_token`](#post-v1device_auth_token).
+
+### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token
+This is an improved version of [`/v1/device_auth_token`](#post-v1device_auth_token).
+
+| Param | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
+| client_id | Application-specific [client id](#known-client-ids) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+The key for the AES-CMAC is calculated as follows:
+1. The `aes_kek_generation_source` is decrypted with the master key.
+2. The dauth key source is decrypted with the key from step 1.
+3. The key from the `data` field of the challenge is decrypted with the key from step 2.
+
+The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
+
+### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+
+### POST /v5/device_auth_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+
+### POST /v6/device_auth_token
+This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token), but the `ist` parameter was added.
+
+| Param | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
+| client_id | Application-specific [client id](#known-client-ids) |
+| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+### POST /v7/device_auth_token
+This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
+
+### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
+This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| dtoken | Device token |
+
+### POST /v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+
+### POST /v5/edge_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+
+### POST /v6/edge_token
+This method is similar to [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token), but an `ist` parameter was added.
+
+| Param | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
+| client_id | Application-specific [client id](#known-client-ids) |
+| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+### POST /v7/edge_token
+This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a></code>, but a `vendor_id` parameter was added:
+
+| Param | Description |
+| --- | --- |
+| challenge | Base64-encoded challenge |
+| client_id | Application-specific [client id](#known-client-ids) |
+| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
+| key_generation | [Master key revision](#master-key-revisions) |
+| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
+| vendor_id | `akamai`, `llnw` or `lumen` |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
 ### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge
 | Param | Description |
@@ -122,108 +214,17 @@ Response:
 | challenge | Base64-encoded challenge (32 bytes) |
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
-### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token
-
-This method returns a device token as JWT.
-
-| Param | Description |
-| --- | --- |
-| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
-| client_id | Application-specific [client id](#known-client-ids) |
-| key_generation | [Master key revision](#master-key-revisions) |
-| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
-| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
-
-Response on success:
-
-| Field | Description |
-| --- | --- |
-| expires_in | Expiration in seconds (86400) |
-| device_auth_token | Device token |
-
-The key for the AES-CMAC is calculated as follows:
-1. The `aes_kek_generation_source` is decrypted with the master key.
-2. The dauth key source is decrypted with the key from step 1.
-3. The key from the `data` field of the challenge is decrypted with the key from step 2.
-
-The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
-
-### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
-This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
-
-Response on success:
-
-| Field | Description |
-| --- | --- |
-| expires_in | Expiration in seconds (86400) |
-| dtoken | Device token |
-
 ### POST /v4/challenge
 This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
-### POST /v4/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
-
-### POST /v4/device_auth_token
-This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+### POST /v5/challenge
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### POST /v6/challenge
 This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
-### POST /v6/device_auth_token
-This method returns a device token as JWT.
-
-| Param | Description |
-| --- | --- |
-| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
-| client_id | Application-specific [client id](#known-client-ids) |
-| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
-| key_generation | [Master key revision](#master-key-revisions) |
-| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
-| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
-
-Response on success:
-
-| Field | Description |
-| --- | --- |
-| expires_in | Expiration in seconds (86400) |
-| device_auth_token | Device token |
-
-The key for the AES-CMAC is calculated as follows:
-1. The `aes_kek_generation_source` is decrypted with the master key.
-2. The dauth key source is decrypted with the key from step 1.
-3. The key from the `data` field of the challenge is decrypted with the key from step 2.
-
-The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
-
-### POST /v6/edge_token
-This method returns a different kind of device token. It takes the same parameters as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
-
-Response on success:
-
-| Field | Description |
-| --- | --- |
-| expires_in | Expiration in seconds (86400) |
-| dtoken | Device token |
-
 ### POST /v7/challenge
-This is the same as <code><a href="#post-v6challenge">/v6/challenge</a></code>.
-
-### POST /v7/device_auth_token
-This is the same as <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code>.
-
-### POST /v7/edge_token
-This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a></code>. The only difference is that a `vendor_id` parameter was added:
-
-| Param | Description |
-| --- | --- |
-| challenge | Base64-encoded challenge |
-| client_id | Application-specific [client id](#known-client-ids) |
-| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
-| key_generation | [Master key revision](#master-key-revisions) |
-| system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
-| vendor_id | `akamai`, `llnw` or `lumen` |
-| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
 
 ### Master Key Revisions
 | System version | Key generation |
