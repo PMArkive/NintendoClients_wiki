@@ -11,19 +11,10 @@ Because the certificate is signed by Nintendo there is only one way to get a val
 
 The dauth server takes form-encoded requests and responds with json-encoding. It uses base64url, and the client does not add any padding characters.
 
-* [Changelog](#changelog)
 * [Headers](#headers)
 * [Methods](#methods)
 * [Errors](#errors)
 * [Examples](#examples)
-
-## Changelog
-| API | Description |
-| --- | --- |
-| v1 | Initial version. |
-| v2 | The API path is obfuscated with random hex string. |
-| v3 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. |
-| v7 | The `vendor_id` parameter was added to the edge token request. |
 
 ## Headers
 | Header | Description |
@@ -31,11 +22,11 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | Host | `dauth-lp1.ndas.srv.nintendo.net` |
 | User-Agent | [User agent](#user-agents) |
 | Accept | `*/*` |
-| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) (9.0.0 and later)|
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) (7.0.0 and later, see note below)|
 | Content-Length | Content length |
 | Content-Type | `application/x-www-form-urlencoded` |
 
-The X-Nintendo-PowerState header is only present on system version 9.0.0 and later.
+The X-Nintendo-PowerState header is only present on system version 7.0.0 and later. In 7.0.0, there is a space between `X-Nintendo-PowerState` and the colon. This was fixed in 7.0.1.
 
 #### User Agents
 | System Version | User agent |
@@ -44,7 +35,12 @@ The X-Nintendo-PowerState header is only present on system version 9.0.0 and lat
 | 2.0.0 - 2.3.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 1.3.0.0; Add-on 1.3.0.0)` |
 | 3.0.0 - 3.0.2 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 3.4.0.0; Add-on 3.4.0.0)` |
 | 4.0.0 - 4.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 4.4.0.0; Add-on 4.4.0.0)` |
-| 5.0.0 - 5.0.2 | `libcurl (nnDauth; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 5.3.0.0; Add-on 5.3.0.0)` |
+| 5.0.0 - 5.1.0 | `libcurl (nnDauth; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 5.3.0.0; Add-on 5.3.0.0)` |
+| 6.0.0 - 6.1.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 6.4.0.0; Add-on 6.4.0.0)` |
+| 6.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 6.4.0.0)` |
+| 7.0.0 - 7.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 7.3.0.0)` |
+| 8.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 8.2.99.0)` |
+| 8.0.1 - 8.1.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 8.2.0.0)` |
 | 9.0.0 - 9.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 9.3.0.0)` |
 | 10.0.0 - 10.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 10.4.0.0)` |
 | 11.0.0 - 11.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 11.4.0.0)` |
@@ -54,40 +50,36 @@ The X-Nintendo-PowerState header is only present on system version 9.0.0 and lat
 | 14.0.0 - 14.1.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 14.3.0.0)` |
 
 ## Methods
-1.0.0 - 3.0.0:
-
 | Method | Path |
 | --- | --- |
 | POST | <code><a href="#post-v1device_auth_token">/v1/device_auth_token</a></code> |
-
-3.0.1 - 4.1.0:
-
-| Method | Path |
-| --- | --- |
 | POST | <code><a href="#post-439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7device_auth_token">/439528b578b74475d24ec19264097f17d2cc578c8584816b644e7b7fa93044d7/device_auth_token</a></code> |
-
-5.0.0 - 5.0.2:
-
-| Method | Path |
-| --- | --- |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge</a></code> |
 | POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token</a></code> |
-
-9.0.0 - 12.1.0:
-
-| Method | Path |
-| --- | --- |
+| POST | <code><a href="#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token">/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token</a></code> |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/challenge`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdchallenge) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/device_auth_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cddevice_auth_token) |
+| POST | [`/v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cd/edge_token`](#v4-fb411cdeda62ff6da97e57c29d6300bc12b6b709869e56906aec88cb42a299cdedge_token) |
+| POST | <code><a href="#post-v5challenge">/v5/challenge</a></code> |
+| POST | <code><a href="#post-v5device_auth_token">/v5/device_auth_token</a></code> |
+| POST | <code><a href="#post-v5edge_token">/v5/edge_token</a></code> |
 | POST | <code><a href="#post-v6challenge">/v6/challenge</a></code> |
 | POST | <code><a href="#post-v6device_auth_token">/v6/device_auth_token</a></code> |
 | POST | <code><a href="#post-v6edge_token">/v6/edge_token</a></code> |
-
-13.0.0 - 14.1.1:
-
-| Method | Path |
-| --- | --- |
 | POST | <code><a href="#post-v7challenge">/v7/challenge</a></code> |
 | POST | <code><a href="#post-v7device_auth_token">/v7/device_auth_token</a></code> |
 | POST | <code><a href="#post-v7edge_token">/v7/edge_token</a></code> |
+
+#### Changelog
+| API | System | Changelog |
+| --- | --- | --- |
+| v1 | 1.0.0 - 3.0.0 | Initial version. |
+| v2 | 3.0.1 - 4.1.0 | The API path is obfuscated with random hex string. |
+| v3 | 5.0.0 - 6.1.0 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. Also, the `edge_token` route was added. |
+| v4 | 6.2.0 | Unknown difference. |
+| v5 | 7.0.0 - 8.1.1 | |
+| v6 | 9.0.0 - 12.1.0 | |
+| v7 | 13.0.0 - 14.1.1 | The `vendor_id` parameter was added to the edge token request. |
 
 ### POST /v1/device_auth_token
 This method returns a device token as JWT.
@@ -144,6 +136,25 @@ The key for the AES-CMAC is calculated as follows:
 3. The key from the `data` field of the challenge is decrypted with the key from step 2.
 
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
+
+### POST /v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token
+This method returns a different kind of device token. It takes the same parameters as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| dtoken | Device token |
+
+### POST /v4/challenge
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
+
+### POST /v4/device_auth_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/device_auth_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404device_auth_token).
+
+### POST /v4/device_auth_token
+This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/edge_token`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404edge_token).
 
 ### POST /v6/challenge
 This is the same as [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge).
@@ -206,7 +217,9 @@ This method is similar to <code><a href="#post-v6edge_token">/v6/edge_token</a><
 ### Master Key Revisions
 | System version | Key generation |
 | --- | --- |
-| 5.0.0 | 5 |
+| 5.0.0 - 5.1.0 | 5 |
+| 6.0.0 - 6.1.0 | 6 |
+| 6.2.0 | 7 |
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
 | 13.0.0 - 13.2.1 | 13 |
