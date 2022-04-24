@@ -184,7 +184,7 @@ A `vendor_id` parameter was added:
 | vendor_id | `akamai`, `llnw` or `lumen` |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
 
-### Master Key Revisions
+## Master Key Revisions
 | System version | Key generation |
 | --- | --- |
 | 5.0.0 - 5.1.0 | 5 |
@@ -197,7 +197,7 @@ A `vendor_id` parameter was added:
 | 13.0.0 - 13.2.1 | 13 |
 | 14.0.0 - 14.1.1 | 14 |
 
-### Known Client IDs
+## Known Client IDs
 | Client ID | Description |
 | --- | --- |
 | `146c8ac7b8a0db52` | SCSI storage |
