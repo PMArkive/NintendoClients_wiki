@@ -50,6 +50,7 @@
       * [Web Notification Storage](Web-Notification-Storage-Protocol)
   * [[Kerberos Authentication]]
   * [[Hpp Server]]
+* [NPLN](NPLN-Servers)
 * [Pia](Pia-Overview)
   * [[Pia Protocol]]
   * [Pia Services](Pia-Protocols)
