@@ -136,7 +136,7 @@ A challenge was added and the format of the system version parameter was changed
 
 | Param | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#post-v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404challenge)) |
+| challenge | Base64-encoded challenge (retrieved from [`/v3-59ed5fa1c25bb2aea8c4d73d74b919a94d89ed48d6865b728f63547943b17404/challenge`](#challenge-request)) |
 | client_id | Application-specific [client id](#known-client-ids) |
 | key_generation | [Master key revision](#master-key-revisions) |
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
