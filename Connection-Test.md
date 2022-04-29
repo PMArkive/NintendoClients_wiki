@@ -3,7 +3,7 @@
 
 This server is used to check if the internet connection is working when you connect to a wifi network.
 
-The server supports both HTTP and HTTPS. The Switch uses the plain HTTP.
+The server supports both HTTP and HTTPS. The Switch uses plain HTTP.
 
 If HTTPS is used, the server certificate is signed by `Nintendo Class 2 CA - G3`.
 
