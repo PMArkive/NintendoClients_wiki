@@ -121,6 +121,8 @@ The data value never changes. The challenge value is valid for one minute.
 ## Device Token Request
 This method returns a device token as JWT.
 
+### Version 1
+
 | Param | Description |
 | --- | --- |
 | client_id | Application-specific [client id](#known-client-ids) |
