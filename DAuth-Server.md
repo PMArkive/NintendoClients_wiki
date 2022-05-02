@@ -238,7 +238,7 @@ Every error is encoded like this:
 | 0011 | 2181-4011 | ? |
 | 0013 | 2181-4013 | ? |
 | 0014 | 2181-4014 | Invalid parameter in request. |
-| 0015 | 2181-4015 | ? |
+| 0015 | 2181-4015 | Invalid parameter in request. |
 | 0016 | 2181-4016 | Invalid parameter in request. |
 | 0017 | 2181-4017 | ? |
 | 0018 | 2181-4018 | ? |
