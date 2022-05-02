@@ -116,6 +116,8 @@ Response:
 | challenge | Base64-encoded challenge (32 bytes) |
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
+The data value never changes. The challenge value is valid for one minute.
+
 ## Device Token Request
 This method returns a device token as JWT.
 
