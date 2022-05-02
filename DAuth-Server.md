@@ -230,18 +230,27 @@ Every error is encoded like this:
 | message | Error message |
 
 ### Known Errors
-| Code | Dialog | Message | Description |
-| --- | --- | --- | --- |
-| 0004 | 2181-4004 | Unauthorized device. | The device certificate was issued for a different environment. |
+| Code | Description |
+| --- | --- |
+| 0004 | The device certificate belongs to a different environment. |
+| 0007 | A system update is required. |
+| 0008 | The device certificate is banned. |
+| 0014 | Generic error. |
+| 0015 | The challenge has expired. |
+| 0016 | The challenge was requested with a different key generation. |
+
+| Code | Dialog | Message |
+| --- | --- | --- |
+| 0004 | 2181-4004 | Unauthorized device. |
 | 0007 | 2181-4007 | System update is required. |
 | 0008 | 2181-4008 | Device has been banned. |
 | 0009 | 2181-4009 | ? |
 | 0010 | 2181-4010 | ? |
 | 0011 | 2181-4011 | ? |
 | 0013 | 2181-4013 | ? |
-| 0014 | 2181-4014 | Invalid parameter in request. | Generic error. |
-| 0015 | 2181-4015 | Invalid parameter in request. | The challenge has expired. |
-| 0016 | 2181-4016 | Invalid parameter in request. | The challenge belongs to a different device. |
+| 0014 | 2181-4014 | Invalid parameter in request. |
+| 0015 | 2181-4015 | Invalid parameter in request. |
+| 0016 | 2181-4016 | Invalid parameter in request. |
 | 0017 | 2181-4017 | ? |
 | 0018 | 2181-4018 | ? |
 | 0019 | 2181-4019 | ? |
