@@ -267,7 +267,7 @@ For more detailed descriptions, see below.
 | 0008 | The device certificate is banned. |
 | 0014 | Generic error. |
 | 0015 | The challenge has expired. |
-| 0016 | The challenge was requested with a different key generation. |
+| 0016 | The MAC is wrong. |
 
 ## Examples
 Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server rejects the request:
