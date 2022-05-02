@@ -230,14 +230,7 @@ Every error is encoded like this:
 | message | Error message |
 
 ### Known Errors
-| Code | Description |
-| --- | --- |
-| 0004 | The device certificate belongs to a different environment. |
-| 0007 | A system update is required. |
-| 0008 | The device certificate is banned. |
-| 0014 | Generic error. |
-| 0015 | The challenge has expired. |
-| 0016 | The challenge was requested with a different key generation. |
+For more detailed descriptions, see below.
 
 | Code | Dialog | Message |
 | --- | --- | --- |
@@ -266,6 +259,15 @@ Every error is encoded like this:
 | 0029 | 2181-4029 | ? |
 | 0030 | 2181-4030 | ? |
 | 0031 | 2181-4031 | ? |
+
+| Code | Description |
+| --- | --- |
+| 0004 | The device certificate belongs to a different environment. |
+| 0007 | A system update is required. |
+| 0008 | The device certificate is banned. |
+| 0014 | Generic error. |
+| 0015 | The challenge has expired. |
+| 0016 | The challenge was requested with a different key generation. |
 
 ## Examples
 Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server rejects the request:
