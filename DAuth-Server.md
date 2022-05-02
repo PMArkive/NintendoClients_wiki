@@ -99,7 +99,7 @@ The following methods return a different kind of device token:
 | v1 | Initial version. |
 | v2 | The API path is obfuscated with random hex string. |
 | v3 | The challenge was added and the format of the system version parameter was changed. Device authentication now requires knowledge of the master key, and the client can no longer fake an unreleased system version. Also, the `edge_token` route was added. |
-| v4 | Unknown difference. |
+| v4 | The prefix of the system version digest was changed. |
 | v5 | The `X-Nintendo-PowerState` header was added. The API path is no longer obfuscated. |
 | v6 | The `ist` parameter was added. |
 | v7 | The `vendor_id` parameter was added to the edge token request. |
