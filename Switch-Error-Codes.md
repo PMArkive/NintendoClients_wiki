@@ -278,7 +278,7 @@ The following errors are shown when the DAuth server returns an error code:
 | 2181-4004 | 0004 | Unauthorized device. |
 | 2181-4007 | 0007 | System update is required. |
 | 2181-4008 | 0008 | Device has been banned. |
-| 2181-4009 | 0009 | |
+| 2181-4009 | 0009 | Internal Server Error. |
 | 2181-4010 | 0010 | |
 | 2181-4011 | 0011 | |
 | 2181-4013 | 0013 | |
