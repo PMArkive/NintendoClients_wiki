@@ -283,7 +283,7 @@ The following errors are shown when the DAuth server returns an error code:
 | 2181-4011 | 0011 | |
 | 2181-4013 | 0013 | |
 | 2181-4014 | 0014 | Invalid parameter in request. |
-| 2181-4015 | 0015 | |
+| 2181-4015 | 0015 | Invalid parameter in request. |
 | 2181-4016 | 0016 | Invalid parameter in request. |
 | 2181-4017 | 0017 | |
 | 2181-4018 | 0018 | |
