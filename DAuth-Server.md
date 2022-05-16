@@ -386,7 +386,7 @@ X-Nintendo-Used-Directive: global auth
 X-Nintendo-Request-Host-Header: dauth-dd1.ndas.srv.nintendo.net
 X-Nintendo-Request-SNI: dauth-dd1.ndas.srv.nintendo.net
 
-{"expires_in": 86400, "dtoken": "exp=1632763301~acl=%2F%2A~data=sub=68337aca28815cbb.sn=XAW10012345678.id=a73ff2b9-e772-4dc6-a01e-0861227bd202~hmac=bb7c0f27edddeb50777ec6a2fba6deacd8b8fc04faeaaaa864027c54767dea6c"}
+{"expires_in":86400,"dtoken":"exp=1632763301~acl=%2F%2A~data=sub=68337aca28815cbb.sn=XAW10012345678.id=a73ff2b9-e772-4dc6-a01e-0861227bd202~hmac=bb7c0f27edddeb50777ec6a2fba6deacd8b8fc04faeaaaa864027c54767dea6c"}
 ```
 
 Example of an error response:
@@ -409,5 +409,5 @@ Cache-Control: no-cache
 X-Request-Id: 84a8a661-a312-480a-b389-35cf83106b51
 X-Runtime: 0.007699
 
-{"errors": [{"code": "0014", "message": "Invalid parameter in request."}]}
+{"errors":[{"code":"0014","message":"Invalid parameter in request."}]}
 ```
