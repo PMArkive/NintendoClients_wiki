@@ -239,7 +239,7 @@ For more detailed descriptions, see below.
 | 0004 | 2181-4004 | Unauthorized device. |
 | 0007 | 2181-4007 | System update is required. |
 | 0008 | 2181-4008 | Device has been banned. |
-| 0009 | 2181-4009 | ? |
+| 0009 | 2181-4009 | Internal Server Error. |
 | 0010 | 2181-4010 | ? |
 | 0011 | 2181-4011 | ? |
 | 0013 | 2181-4013 | ? |
@@ -267,6 +267,7 @@ For more detailed descriptions, see below.
 | 0004 | The device certificate belongs to a different environment. |
 | 0007 | A system update is required. |
 | 0008 | The device certificate is banned. |
+| 0009 | An internal server error has occurred. |
 | 0014 | Generic error. |
 | 0015 | The challenge has expired. |
 | 0016 | The MAC is wrong. |
