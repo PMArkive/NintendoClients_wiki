@@ -234,6 +234,8 @@ Every error is encoded like this:
 ### Known Errors
 For more detailed descriptions, see below.
 
+Most errors use HTTP status code 400. The only known exception is error 0009, which uses status code 500.
+
 | Code | Dialog | Message |
 | --- | --- | --- |
 | 0004 | 2181-4004 | Unauthorized device. |
