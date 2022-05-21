@@ -93,8 +93,6 @@ If the source or target pid is invalid, the `%retval%` field is set to `Core::Ac
 # (4) GetPID
 This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. On all normal accounts the username is the same as the user pid.
 
-All game servers have a bunch of special users. Normally, the password of the guest account is `MMQea3n!fsik`, but Nintendo has changed this password on all Wii U and 3DS servers except for the friend server. On Switch servers, the guest account has been deleted.
-
 Usernames are not case sensitive.
 
 Returns 0 if the username does not exist.
