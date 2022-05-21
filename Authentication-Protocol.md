@@ -99,30 +99,6 @@ Usernames are not case sensitive.
 
 Returns 0 if the username does not exist.
 
-#### 3DS / Wii U:
-| PID | Name |
-| --- | --- |
-| 1 | Quazal Authentication |
-| 2 | Quazal Rendez-Vous |
-| 100 | guest |
-| 101 | Administrator |
-| 102 | eval |
-| 103 | SandboxProbe |
-| 104 | LobbyAdministrator |
-| 110 | BackgroundPlayer0 |
-
-#### Switch:
-| PID | Name |
-| --- | --- |
-| 243564795342340018 | Quazal Authentication |
-| 257049437023956657 | Quazal Rendez-Vous |
-| 564330319085596911 | guest |
-| 584465510887342041 | Administrator |
-| 621476855497894457 | eval |
-| 693188807183308752 | SandboxProbe |
-| 1279596992968541952 | LobbyAdministrator |
-| 1405107338776927048 | BackgroundPlayer0 |
-
 ## Request
 | Type | Name | Description |
 | --- | --- | --- |
