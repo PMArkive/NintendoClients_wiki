@@ -1,4 +1,4 @@
-[NEX Overview](NEX-Overview-(Game-Servers)) > Kerberos Authentication
+[NEX](NEX-Overview-(Game-Servers)) > Kerberos Authentication
 ---
 
 This page describes how user authentication works on game servers.
