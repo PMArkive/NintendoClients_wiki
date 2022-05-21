@@ -91,7 +91,7 @@ If the source or target pid is invalid, the `%retval%` field is set to `Core::Ac
 | [String] | pSourceKey | **Only present on Switch.** If this is a non-empty hex string, key derivation is skipped and this string is used as the key to decrypt the ticket instead. |
 
 # (4) GetPID
-This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. On all normal accounts the username is the same as the user pid.
+This is the reverse of the [GetName](#5-getname) method. It looks up the pid that belongs to a given username. On all normal accounts the username is the same as the user pid. Each game server also provides a bunch of [special users](Kerberos-Authentication#special-users).
 
 Usernames are not case sensitive.
 
