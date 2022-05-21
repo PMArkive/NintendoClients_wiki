@@ -41,6 +41,6 @@ The underlying protocol varies per game and platform. Originally, the purpose of
 </table>
 
 ### Authentication
-Every game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [authentication service](Authentication-Protocol).
+Every game server actually consists of two servers: an authentication server and a secure server. After retrieving login information elsewhere, NEX connects to the authentication server. This server only provides a single service: the [ticket granting service](Authentication-Protocol).
 
 For more details on authentication and the steps that are required to connect to the secure server, read the page about [kerberos authentication](Kerberos-Authentication).
