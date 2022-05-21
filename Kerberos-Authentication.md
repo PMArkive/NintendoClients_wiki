@@ -1,11 +1,15 @@
+[NEX Overview](NEX-Overview-(Game-Servers)) > Kerberos Authentication
+---
+
 This page describes how user authentication works on game servers.
 
 Before reading this page, make sure you have a basic understanding of how the game servers work in general.
 
-# Overview
-As explained on the [game server overview](NEX-Overview-(Game-Servers)) page, every game server has an authentication server and a secure server.
+## Overview
+NEX uses a form of Kerberos authentication. To log in on a game server, one must first connect to the authentication server. This server only provides a single service: the [ticket granting service](Authentication-Protocol). The ticket granting service provides the location of the secure server, and a ticket that is required to establish a connection with the secure server. This is explained in more detail below.
 
-The authentication server only provides a single service: the [authentication service](Authentication-Protocol). To log in on a game server, you first need to know your username and password. These are obtained in a platform-specific way. Game server accounts are separate from other Nintendo accounts. Username and password are generated automatically and can not be changed by normal users.
+## Credentials
+Game server accounts are separate from other Nintendo accounts. Username and password are generated automatically and can not be changed by normal users. Credentials are obtained in a platform specific way:
 
 <table>
   <tr>
