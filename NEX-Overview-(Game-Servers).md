@@ -1,9 +1,11 @@
 NEX is Nintendo's networking library for game servers. Almost all 3DS, Wii U and Switch games with online features use NEX.
 
-Nintendo hasn't written it from scratch. It's based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+Nintendo hasn't written it from scratch. It is based on [Quazal Rendez-Vous](http://web.archive.org/web/20180823162719/http://quazal.com/rendez-vous.htm), so some things like the [[PRUDP Protocol]] may be seen in other games that use Quazal.
+
+In 2021, Nintendo released [NPLN](NPLN-Overview), which is a modern replacement for NEX.
 
 ### Finding the game servers
-To connect to a game server, you first need to find it. Every platform has its own way to find a game server. A list of game server ids can be found here: [[Game Server List]].
+Every platform has its own way to find a game server. A list of game server ids can be found [here](Game-Server-List).
 
 <table>
   <tr>
