@@ -8,6 +8,8 @@ Before reading this page, make sure you have a basic understanding of how the ga
 ## Overview
 NEX uses a form of Kerberos authentication. To log in on a game server, one must first connect to the authentication server. This server only provides a single service: the [ticket granting service](Authentication-Protocol). The ticket granting service provides the location of the secure server, and a ticket that is required to establish a connection with the secure server. This is explained in more detail below.
 
+![](https://www.dropbox.com/s/0wjj7trxgek7z8u/kerberos_basic.png?raw=1)
+
 ## Credentials
 Game server accounts are separate from other Nintendo accounts. Username and password are generated automatically and can not be changed by normal users. Credentials are obtained in a platform specific way:
 
