@@ -18,7 +18,7 @@ The following metadata fields may be included in requests:
 
 The `npln-tenant-id` field is always required. The `authorization` and `uid` fields are only required if the request requires authorization.
 
-If the metadata is invalid, the server returns status code 12 (Unimplemented) or 14 (Unavailable).
+If the metadata is invalid, the server returns status code 12 (Unimplemented) on production servers, or 14 (Unavailable) on development servers.
 
 The official library sets the user agent to `grpc-c++/1.31.1 grpc-c/11.0.0 (nintendo; chttp2)`.
 
