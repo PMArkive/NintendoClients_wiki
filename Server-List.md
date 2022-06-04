@@ -44,6 +44,7 @@ Replace '%' by one of the following:
 | - %.nso.nintendo.net | NSO applet |
 | - mii-secure-%.cdn.nintendo.net | Mii images |
 | - sprofile-%.cdn.nintendo.net | |
+| - veer.hac.lp1.d4c.nintendo.net | |
 
 ## Wii U
 | Server | Description |
