@@ -71,7 +71,7 @@ These errors are shown when the [AAuth server](AAuth-Server) returns an error co
 | 2124-4613 | 0113 | |
 | 2124-4618 | 0118 | Invalid parameter in request. |
 | 2124-4620 | 0120 | |
-| 2124-4621 | 0121 | |
+| 2124-4621 | 0121 | Region mismatch. |
 | 2124-4799 | Other | AAuth server returned invalid error code |
 
 ## BaaS Errors
