@@ -29,3 +29,4 @@ Welcome to the NintendoClients wiki!
 * [[Data Store Codes]]
 * [[DDL Parse Trees]]
 * [Capture the flag](https://nintendo-ctf.com)
+* [Playground](https://nintendo-playground.com)
