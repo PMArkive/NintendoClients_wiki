@@ -165,7 +165,7 @@ Every error is encoded like this:
 | 0113 | 2124-4613 | ? |
 | 0118 | 2124-4618 | Invalid parameter in request. |
 | 0120 | 2124-4620 | ? |
-| 0121 | 2124-4621 | ? |
+| 0121 | 2124-4621 | Region mismatch. |
 
 ## Examples
 The `/v1/time` request is very simple:
