@@ -43,6 +43,7 @@ Services are never modified in a backward incompatible way, but new methods and 
 | --- | ---
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
+| Monster Hunter Rise: Sunbreak Demo | `bc33b7d4` |
 | Pokemon Legends: Arceus | `e047112f` |
 
 ## Useful Tools
