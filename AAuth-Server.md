@@ -161,7 +161,7 @@ Every error is encoded like this:
 | 0109 | 2124-4609 | Service closed. |
 | 0110 | 2124-4610 | ? |
 | 0111 | 2124-3001 | Application update is required. |
-| 0112 | 2124-4612 | ? |
+| 0112 | 2124-4612 | Internal Server Error. |
 | 0113 | 2124-4613 | ? |
 | 0118 | 2124-4618 | Invalid parameter in request. |
 | 0120 | 2124-4620 | ? |
