@@ -83,7 +83,7 @@ Response on success:
 | application_auth_token | Application token |
 | settings | Settings (see below) |
 | online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
-| policy_handler | `SYSTEM` or `GAME_SERVER` (not present if online play policy is `FREE`) |
+| policy_handler | `SYSTEM` or `GAME_SERVER` (only present if membership is required) |
 
 The settings field contains a list of objects with the following fields:
 
