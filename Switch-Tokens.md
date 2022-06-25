@@ -120,7 +120,7 @@ Payload fields:
         "sn": "XAW10012345678",
         "pc": "HAC",
         "dt": "NX Prod 1",
-        "ist" :false
+        "ist": false
     }
 }
 ```
@@ -146,7 +146,22 @@ Payload fields:
 | `at` | Application time (current timestamp) |
 | `edi` | Unique id (32 hex digits) |
 | `opp` | Online play policy: `MEMBERSHIP_REQUIRED` or `FREE` |
+
+Only present if online play policy is `MEMBERSHIP_REQUIRED`:
+
+| Field | Description |
+| --- | --- |
 | `ph` | Policy handler: `SYSTEM` or `GAME_SERVER` |
+
+Only present for system titles:
+
+| Field | Description |
+| --- | --- |
+| `di` | Device id |
+| `sn` | Serial number |
+| `pc` | Product code (`HAC`) |
+| `dt` | Device type (`NX Prod 1`) |
+| `ist` | IsT (bool) |
 
 ### Example
 ```json
