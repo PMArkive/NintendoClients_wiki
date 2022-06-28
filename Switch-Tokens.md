@@ -69,7 +69,7 @@ The baas server also returns the following fields:
 
 JWKs are described formally in [RFC 7517](https://tools.ietf.org/html/rfc7517) and [RFC 7518](https://tools.ietf.org/html/rfc7518).
 
-Most JWKs are regenerated every 24 hours. The only exception is the JWK for BaaS [access](#baas-access-tokens) and [user](#baas-user-tokens) tokens, which never changes. To ensure that all valid tokens can be verified, even after the a new JWK is generated, the JWK set contains the three previous JWKs as well.
+Most JWKs are regenerated every 24 hours. The only exception is the JWK for BaaS [access](#baas-access-tokens) and [user](#baas-user-tokens) tokens, which never changes. To ensure that all valid tokens can be verified, even after a new JWK is generated, the JWK set contains the two previous JWKs as well.
 
 ### Example
 ```
