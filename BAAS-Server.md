@@ -316,8 +316,8 @@ On error, the server sends the following response:
 | --- | --- |
 | status | HTTP status code |
 | errorCode | Error name |
-| title | Error description |
-| detail | Error description |
+| title | Error title |
+| detail | Error details |
 | instance | Path of the request that failed |
 | type | `https://baas.nintendo.com/errors/1.0.0/<status>/<errorCode>` |
 
