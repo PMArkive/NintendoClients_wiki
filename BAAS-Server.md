@@ -349,6 +349,6 @@ On error, the server sends the following response:
 | 409 | user_link_already_exists | ? | ? |
 | 412 | precondition_failed | ? | ? |
 | 422 | friend_code_unregenerable_state | ? | ? |
-| 500 | internal_server_error | ? | ? |
+| 500 | internal_server_error | Internal Server Error | Internal Server Error |
 | 502 | could_not_confirm_membership | ? | ? |
 | 503 | under_maintenance | ? | ? |
