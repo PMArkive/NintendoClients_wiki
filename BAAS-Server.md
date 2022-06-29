@@ -348,6 +348,7 @@ On error, the server sends the following response:
 | 409 | resource_already_exists | ? | ? |
 | 409 | user_link_already_exists | ? | ? |
 | 412 | precondition_failed | ? | ? |
+| 415 | unsupported_media_type | Unsupported Media Type | unsupported media type |
 | 422 | friend_code_unregenerable_state | ? | ? |
 | 500 | internal_server_error | Internal Server Error | Internal Server Error |
 | 502 | could_not_confirm_membership | ? | ? |
