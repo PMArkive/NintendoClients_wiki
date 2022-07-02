@@ -25,7 +25,7 @@ The following headers are only sent in POST, PUT, PATCH and DELETE requests.
 | Header | Description |
 | --- | --- |
 | Content-Length | Content length |
-| Content-Type | `application/x-www-form-urlencoded` |
+| Content-Type | `application/x-www-form-urlencoded`, `application/json` or `application/json-patch+json` |
 
 ### User Agents
 The user agents below are taken from the account sysmodule. If the request is made by the friends sysmodule replace `nnAccount` by `nnFriends`.
@@ -57,24 +57,27 @@ The following methods require an anonymous access token:
 | POST | <code><a href="#post-100federation">/1.0.0/federation</a></code> |
 | POST | <code><a href="#post-100users">/1.0.0/users</a></code> |
 
-The following methods require a user access token: ?
+The following methods require a user access token:
+
+| Method | URL |
+| --- | --- |
+| GET | /1.0.0/users |
+| GET | [`/1.0.0/users/<id>`](#get-100usersid) |
+| PATCH | [`/1.0.0/users/<id>`](#patch-100usersid) |
+| DELETE | [`/1.0.0/users/<id>/device_accounts/<id>`](#delete-100usersiddevice_accountsid) |
+| POST | [`/1.0.0/users/<id>/generate_code`](#post-100usersidgenerate_code) |
+| POST | `/1.0.0/image_upload` |
 
 The following methods need more research:
 
 | Method | URL |
 | --- | --- |
-| GET | `/1.0.0/users` |
-| GET | `/1.0.0/users/<id>` |
-| PATCH | `/1.0.0/users/<id>` |
 | PATCH | `/1.0.0/users/<id>/device_accounts/<id>` |
-| DELETE | `/1.0.0/users/<id>/device_accounts/<id>` |
 | POST | `/1.0.0/users/<id>/link` |
 | POST | `/1.0.0/users/<id>/unlink` |
 | GET | `/1.0.0/users/<id>/blocks` |
 | POST | `/1.0.0/users/<id>/blocks` |
 | DELETE | `/1.0.0/users/<id>/blocks/<id>` |
-| POST | `/1.0.0/users/<id>/generate_code` |
-| POST | `/1.0.0/image_upload` |
 | PUT | `/1.0.0/push_channels/<id>/<id>` |
 | POST | `/2.0.0/friend_requests` |
 | PATCH | `/2.0.0/friend_requests/<id>` |
@@ -150,8 +153,8 @@ Response on success:
 | expiresIn | Expiration in seconds (10800) |
 | user | [User information](#user-information) |
 | idToken | ID token (for game servers) |
-| accessToken | Authorization token for further requests |
-| tokenType | Authorization token type ("Bearer") |
+| accessToken | Access token for user |
+| tokenType | `Bearer` |
 
 ### POST /1.0.0/federation
 This method is the same as [`/1.0.0/login`](#post-100login) except that it also takes an ID token that represents a Nintendo account. This is required to link the Nintendo account to the device.
@@ -172,8 +175,8 @@ Response on success:
 | expiresIn | Expiration in seconds (10800) |
 | user | [User information](#user-information) |
 | idToken | ID token (for game servers) |
-| accessToken | Authorization token for further requests |
-| tokenType | Authorization token type ("Bearer") |
+| accessToken | Access token for user |
+| tokenType | `Bearer` |
 
 ### POST /1.0.0/users
 This method registers a new user on the server. This method does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
@@ -210,11 +213,37 @@ Connection: keep-alive
 {"id":"f09c3d45cc3432c6","etag":"\"4d20053b9c0fcf9a\"","nickname":"","country":"","birthday":"0000-00-00","thumbnailUrl":"","deviceAccounts":[{"id":"7c23fd7c9b37b0cb","password":"0mr1prbsNFzRs0dRCHXRUNECGd1kJVg3Lq6zn0nR"}],"links":{},"permissions":{"personalAnalytics":true,"personalNotification":true,"friendRequestReception":true,"friends":"EVERYONE","presence":"FRIENDS","presenceUpdatedAt":1633432210,"personalAnalyticsUpdatedAt":1633432210,"personalNotificationUpdatedAt":1633432210},"extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"presence":{"state":"OFFLINE","extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"updatedAt":1632676901,"logoutAt":0},"deleted":false,"blocksUpdatedAt":1632676901,"friendsUpdatedAt":1632676901,"createdAt":1632676901,"updatedAt":1632676901}
 ```
 
+### GET /1.0.0/users/&lt;id&gt;
+This method does not take any parameters and simply returns the [user information](#user-information) for the given user. If the access token does not belong to the given user, this method returns [`insufficient_scope`](#errors).
+
+### PATCH /1.0.0/users/&lt;id&gt;
+This method updates the given user. The following JSON patch paths are known to work:
+
+* `/nickname`
+* `/country`
+* `/birthday`
+* `/thumbnailUrl`
+* `/permissions/personalAnalytics`
+* `/permissions/personalNotification`
+* `/permissions/friendRequestReception`
+* `/permissions/friends`
+* `/permissions/presence`
+
+### DELETE /1.0.0/users/&lt;id&gt;/device_accounts/&lt;id&gt;
+Delete the given device account. This method does not take any parameters. Returns HTTP status 204 on success.
+
 ### GET /1.0.0/certificates
 This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
 
 ### GET /1.0.0/internal_certificates
 This method returns the JWK set for the access token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
+
+### POST /1.0.0/users/&lt;id&gt;/generate_code
+Generates a new friend code. Returns the new [user information](#user-information) on success. After generating a friend code, one cannot generate a new friend code for 24 hours.
+
+| Param | Description |
+| --- | --- |
+| type | `NX` |
 
 ## User information
 | Field | Description |
@@ -275,7 +304,7 @@ The password is only present once, when the account is created.
 | personalAnalytics | Bool |
 | personalNotification | Bool |
 | friendRequestReception | Bool |
-| friends | `EVERYONE` |
+| friends | `EVERYONE`, `FRIENDS` or `SELF` |
 | presence | `FRIENDS`, `FAVORITE_FRIENDS` or `SELF` |
 | presenceUpdatedAt | Timestamp |
 | personalAnalyticsUpdatedAt | Timestamp |
@@ -351,7 +380,7 @@ On error, the server sends the following response:
 | 400 | linked_user_not_found | Linked User Not Found | linked user not found |
 | 400 | invalid_friend_code_format | ? | ? |
 | 400 | user_link_not_exist | ? | ? |
-| 400 | invalid_raw_content | ? | ? |
+| 400 | invalid_raw_content | Invalid Raw Content | invalid raw content |
 | 401 | invalid_token | Token is invalid | The access token was invalid |
 | 403 | insufficient_scope | Token is insufficient | The access token does not have sufficient scope |
 | 403 | forbidden | ? | ? |
@@ -365,7 +394,7 @@ On error, the server sends the following response:
 | 409 | user_link_already_exists | ? | ? |
 | 412 | precondition_failed | ? | ? |
 | 415 | unsupported_media_type | Unsupported Media Type | unsupported media type |
-| 422 | friend_code_unregenerable_state | ? | ? |
+| 422 | friend_code_unregenerable_state | Friend Code Unregenerable State | |
 | 500 | internal_server_error | Internal Server Error | Internal Server Error |
 | 502 | could_not_confirm_membership | ? | ? |
 | 503 | under_maintenance | ? | ? |
