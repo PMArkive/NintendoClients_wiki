@@ -158,7 +158,7 @@ An `ist` parameter was added:
 
 | Param | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge (retrieved from <code><a href="#post-v6challenge">/v6/challenge</a></code>) |
+| challenge | Base64-encoded [challenge](#challenge-request) |
 | client_id | Application-specific [client id](#known-client-ids) |
 | ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
 | key_generation | [Master key revision](#master-key-revisions) |
