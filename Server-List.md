@@ -14,14 +14,14 @@ Replace '%' by one of the following:
 | - dcert-%.ndas.srv.nintendo.net<br>- acert-%.ndas.srv.nintendo.net | [JWK servers](Switch-Tokens) |
 | - e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com<br>- cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com<br>- cdn-image-e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com | [Switch accounts](BAAS-Server) |
 | - accounts.nintendo.com<br>- cdn.accounts.nintendo.com<br>- api.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb.accounts.nintendo.com<br>- e97b8a9d672e4ce4845ec6947cd66ef6-sb-api.accounts.nintendo.com | [Nintendo accounts](Account-Server-(Switch)) |
-| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers](NEX-Overview-(Game-Servers)) |
+| - t-&lt;game id&gt;-%.%.t.npln.srv.nintendo.net | [Game servers (NPLN)](NPLN-Servers) |
+| - g&lt;game server id&gt;-%.s.n.srv.nintendo.net | [Game servers (NEX)](NEX-Overview-(Game-Servers)) |
 | - g&lt;game server id&gt;-%.r.n.srv.nintendo.net | P2P relay |
 | - g&lt;game server id&gt;-%.p.srv.nintendo.net | [P2P monitoring](Monitoring-Data-Protocol) |
 | - nncs1-%.n.n.srv.nintendo.net<br>- nncs2-%.n.n.srv.nintendo.net | [NAT check server](NAT-Check-Server) |
 | - api-%.znc.srv.nintendo.net<br>- web-%.znc.srv.ninendo.net | [Smartphone services](ZNC-Server) |
 | - api.hac.%.acbaa.srv.nintendo.net | <a href="https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server">Animal Crossing API</a> |
 | - d7d-&lt;server name&gt;.g.%.e.srv.nintendo.net | [Eagle (relay servers)](Eagle-Protocol) |
-| - t-&lt;game id&gt;-%.%.t.npln.srv.nintendo.net | [gRPC services](https://github.com/kinnay/NPLN-Protocols/wiki/NPLN-Overview) |
 | - fw-api.%.nso.nintendo.net | NSO rewards |
 | - storage.%.scsi.srv.nintendo.net<br>- migration.%.scsi.srv.nintendo.net<br>- storage.%.sata.srv.nintendo.net<br>- permission.%.sata.srv.nintendo.net<br>- pp.%.sata.srv.nintendo.net<br>- scsi-policy-%.cdn.nintendo.net | [Online save storage](OLSC-Servers) |
 | - ecs-%.hac.shop.nintendo.net<br>- ias-%.hac.shop.nintendo.net | [eShop services](REST-Services) |
