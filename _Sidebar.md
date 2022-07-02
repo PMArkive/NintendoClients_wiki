@@ -68,7 +68,7 @@
   * [Connection Test](Connection-Test)
   * [Device Authentication](DAuth-Server)
   * [Game Servers (NEX)](NEX-Overview-(Game-Servers))
-  * [Game Servers (NPLN)](NLPN-Servers)
+  * [Game Servers (NPLN)](NPLN-Servers)
   * [Nintendo Accounts](Account-Server-(Switch))
   * [Switch Accounts](BAAS-Server)
 * Other Pages
