@@ -61,7 +61,7 @@ The following methods require a user access token:
 
 | Method | URL |
 | --- | --- |
-| GET | /1.0.0/users |
+| GET | `/1.0.0/users` |
 | GET | [`/1.0.0/users/<id>`](#get-100usersid) |
 | PATCH | [`/1.0.0/users/<id>`](#patch-100usersid) |
 | DELETE | [`/1.0.0/users/<id>/device_accounts/<id>`](#delete-100usersiddevice_accountsid) |
