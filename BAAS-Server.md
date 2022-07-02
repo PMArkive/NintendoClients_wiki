@@ -18,7 +18,7 @@ This server takes form-encoded requests and responds with json-encoding.
 | User-Agent | [User agent](#user-agents) |
 | Accept | `*/*` |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
-| Authorization | Access token received from <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> or <code><a href="#post-100federation">/1.0.0/federation</a></code>, prefixed with `Bearer `. The only method that does not require this header is <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>. |
+| Authorization | Access token received from <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> or <code><a href="#post-100federation">/1.0.0/federation</a></code>, prefixed with `Bearer `. Depends on the method. |
 
 The following headers are only sent in POST, PUT, PATCH and DELETE requests.
 
@@ -41,12 +41,28 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | 14.0.0 - 14.1.2 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 14.3.0.0; Add-on 14.3.0.0)` |
 
 ## Methods
+The following methods do not require an access token:
+
 | Method | URL |
 | --- | --- |
-| POST | <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> |
+| POST | [`/1.0.0/application/token`](#post-100applicationtoken) |
+| GET | <code><a href="#get-100certificates">/1.0.0/certificates</a></code> |
+| GET | <code><a href="#get-100internal_certificates">/1.0.0/internal_certificates</a></code> |
+
+The following methods require an anonymous access token:
+
+| Method | URL |
+| --- | --- |
 | POST | <code><a href="#post-100login">/1.0.0/login</a></code> |
 | POST | <code><a href="#post-100federation">/1.0.0/federation</a></code> |
 | POST | <code><a href="#post-100users">/1.0.0/users</a></code> |
+
+The following methods require a user access token: ?
+
+The following methods need more research:
+
+| Method | URL |
+| --- | --- |
 | GET | `/1.0.0/users` |
 | GET | `/1.0.0/users/<id>` |
 | PATCH | `/1.0.0/users/<id>` |
@@ -68,15 +84,13 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | GET | `/2.0.0/users/<id>/friend_requests/inbox` |
 | GET | `/2.0.0/users/<id>/friend_requests/outbox` |
 | GET | `/2.0.0/users/<id>/relationships/<id>` |
-| GET | <code><a href="#get-100certificates">/1.0.0/certificates</a></code> |
-| GET | <code><a href="#get-100internal_certificates">/1.0.0/internal_certificates</a></code> |
 
 ### POST /1.0.0/application/token
-This method provides an access token that's required for all other methods.
+This method provides an anonymous access token.
 
 | Param | Description |
 | --- | --- |
-| grantType | "public_client" |
+| grantType | `public_client` |
 | assertion | Device token obtained from [dauth server](DAuth-Server) |
 
 Response on success:
@@ -84,8 +98,8 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expiresIn | Expiration in seconds (10800) |
-| accessToken | Authorization token for further requests |
-| tokenType | Authorization token type ("Bearer") |
+| accessToken | The anonymous access token |
+| tokenType | `Bearer` |
 
 Example:
 
@@ -200,7 +214,7 @@ Connection: keep-alive
 This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
 
 ### GET /1.0.0/internal_certificates
-This method returns the JWK set for the session token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>.
+This method returns the JWK set for the access token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
 
 ## User information
 | Field | Description |
