@@ -121,7 +121,7 @@ The data value never changes, but it depends on the given key generation. It is 
 ## Device Token Request
 This method returns a device token as JWT.
 
-### Version 1
+### Version 1 - 2
 
 | Param | Description |
 | --- | --- |
@@ -135,7 +135,7 @@ Response on success:
 | expires_in | Expiration in seconds (86400) |
 | device_auth_token | Device token |
 
-### Version 3
+### Version 3 - 5
 A challenge was added and the format of the system version parameter was changed:
 
 | Param | Description |
@@ -153,7 +153,7 @@ The key for the AES-CMAC is calculated as follows:
 
 The dauth key source is: `8be45abcf987021523ca4f5e2300dbf0`
 
-### Version 6
+### Version 6 - 7
 An `ist` parameter was added:
 
 | Param | Description |
