@@ -5,7 +5,7 @@ URL: https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
 
 The baas server manages user accounts and friendships on the Nintendo Switch.
 
-This server takes form-encoded requests and responds with json-encoding.
+Depending on the method, this server takes form or json encoded requests. The server always responds with json encoding.
 
 * [Headers](#headers)
 * [Methods](#methods)
