@@ -237,6 +237,8 @@ This method returns the JWK set for the access token that's issued by <code><a h
 | updatedAt | Timestamp |
 
 #### Device account
+The password is only present once, when the account is created.
+
 | Field | Description |
 | --- | --- |
 | id | Device account id (16 hex digits) |
