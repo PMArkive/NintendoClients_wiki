@@ -47,7 +47,7 @@ The X-Nintendo-PowerState header is only present on system version 7.0.0 and lat
 | 12.0.0 - 12.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 12.3.0.0)` |
 | 13.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.3.0.0)` |
 | 13.1.0 - 13.2.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 13.4.0.0)` |
-| 14.0.0 - 14.1.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 14.3.0.0)` |
+| 14.0.0 - 14.1.2 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 14.3.0.0)` |
 
 ## Methods
 In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
@@ -91,7 +91,7 @@ The following methods return a different kind of device token:
 | 6.2.0 | v4 |
 | 7.0.0 - 8.1.1 | v5 |
 | 9.0.0 - 12.1.0 | v6 |
-| 13.0.0 - 14.1.1 | v7 |
+| 13.0.0 - 14.1.2 | v7 |
 
 #### API Changes
 | API | Changelog |
@@ -199,7 +199,7 @@ A `vendor_id` parameter was added:
 | 9.0.0 - 9.0.1 | 10 |
 | 9.1.0 - 12.1.0 | 11 |
 | 13.0.0 - 13.2.1 | 13 |
-| 14.0.0 - 14.1.1 | 14 |
+| 14.0.0 - 14.1.2 | 14 |
 
 ## Known Client IDs
 | Client ID | Description | Edge |
