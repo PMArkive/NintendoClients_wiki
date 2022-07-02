@@ -232,18 +232,18 @@ This method updates the given user. The following JSON patch paths are known to 
 ### DELETE /1.0.0/users/&lt;id&gt;/device_accounts/&lt;id&gt;
 Delete the given device account. This method does not take any parameters. Returns HTTP status 204 on success.
 
-### GET /1.0.0/certificates
-This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
-
-### GET /1.0.0/internal_certificates
-This method returns the JWK set for the access token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
-
 ### POST /1.0.0/users/&lt;id&gt;/generate_code
 Generates a new friend code. Returns the new [user information](#user-information) on success. After generating a friend code, one cannot generate a new friend code for 24 hours.
 
 | Param | Description |
 | --- | --- |
 | type | `NX` |
+
+### GET /1.0.0/certificates
+This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
+
+### GET /1.0.0/internal_certificates
+This method returns the JWK set for the access token that's issued by <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
 
 ## User information
 | Field | Description |
