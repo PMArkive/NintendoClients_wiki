@@ -35,23 +35,51 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 | 12.0.0 - 12.1.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 12.3.0.0; Add-on 12.3.0.0)` |
 | 13.0.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.3.0.0; Add-on 13.3.0.0)` |
 | 13.1.0 - 13.2.1 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 13.4.0.0; Add-on 13.4.0.0)` |
-| 14.0.0 - 14.1.1 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 14.3.0.0; Add-on 14.3.0.0)` |
+| 14.0.0 - 14.1.2 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 14.3.0.0; Add-on 14.3.0.0)` |
 
 ## Methods
-| Method | URL |
-| --- | --- |
-| GET | <code><a href="#post-v1admin">/v1/time</a></code> |
-| POST | <code><a href="#post-v3challenge">/v3/challenge</a></code> |
-| POST | <code><a href="#post-v3application_auth_token">/v3/application_auth_token</a></code> |
+The following method returns a timestamp and your ip address:
 
-### GET /v1/time
+| Method | Path |
+| --- | --- |
+| GET | [`/v1/time`](#time-request) |
+
+In API version 3, one must solve a cryptographic challenge to prove that the gamecard is inserted. This is not required for digital titles.
+
+| Method | Path |
+| --- | --- |
+| POST | [`/v3/challenge`](#challenge-request) |
+
+The following methods return an application token as JWT:
+
+| Method | Path |
+| --- | --- |
+| POST | [`/v1/application_auth_token`](#application-token-request) |
+| POST | [`/v2-44cd4221f90742b5f37a4948b37dacf024d0bb14dde86db0af20ec300a36a0fe/application_auth_token`](#application-token-request) |
+| POST | [`/v3/application_auth_token`](#application-token-request) |
+
+#### System Versions
+| System | API |
+| --- | --- |
+| 1.0.0 - 4.1.0 | v1 |
+| 5.0.0 - 8.1.1 | v2 |
+| 9.0.0 - 14.1.2 | v3 |
+
+#### API Changes
+| API | Changelog |
+| --- | --- |
+| v1 | Initial version. |
+| v2 | The API path is obfuscated with a random hex string. The `environment` parameter was removed. The online play policy was added. For digital titles, the certificate is encrypted with a random key. The `NO_CERT` media type was added. |
+| v3 | The API path is no longer obfuscated. The challenge was added for gamecards. |
+
+## Time Request
 This method is unrelated to aauth. It returns a `text/plain` document that contains two lines:
 1. The current server time in milliseconds
 2. The external IP address of the client
 
 It also returns this information in the `X-NINTENDO-UNIXTIME` and `X-NINTENDO-GLOBAL-IP` headers.
 
-### POST /v3/challenge
+## Challenge Request
 This request is only required if the media type is `GAMECARD`.
 
 | Param | Description |
@@ -67,17 +95,26 @@ Response on success:
 | value | Base64-encoded (16 bytes) |
 | seed | Base64-encoded (15 bytes) |
 
-### POST /v3/application_auth_token
-The following parameters are always present:
+The seed value never changes. It is even consistent across environments.
+
+## Application Token Request
+This method returns an application token as JWT. Certificates can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool). For digital titles, always dump the base ticket and do not remove console specific data.
+
+### Version 1
 
 | Param | Description |
 | --- | --- |
 | application_id | Title id (`%016x`) |
 | application_version | Title version (`%08x`) |
+| environment | `lp1` |
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
-| media_type | <code><a href="gamecard">GAMECARD</a></code>, <code><a href="#digital">DIGITAL</a></code>, <code><a href="#system">SYSTEM</a></code> or <code><a href="#no_cert">NO_CERT</a></code> |
+| media_type | `GAMECARD`, `DIGITAL` or `SYSTEM` |
 
-Depending on the media type, additional parameters may be included in the request (see below).
+If the media type is `GAMECARD` or `DIGITAL`:
+
+| Param | Description |
+| --- | --- |
+| cert | Base64-encoded application certificate (only present if the media type is `GAMECARD` or `DIGITAL`) |
 
 Response on success:
 
@@ -86,8 +123,6 @@ Response on success:
 | expires_in | Expiration in seconds (86400) |
 | application_auth_token | Application token |
 | settings | Settings (see below) |
-| online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
-| policy_handler | `SYSTEM` or `GAME_SERVER` (only present if membership is required) |
 
 The settings field contains a list of objects with the following fields:
 
@@ -98,29 +133,36 @@ The settings field contains a list of objects with the following fields:
 
 The purpose of these fields is unknown. I have only seen an empty list so far.
 
-#### GAMECARD
-Certificates can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool).
+### Version 2
+The environment parameter was removed, the cert_key parameter was added, and the online play policy was added to the response.
+
+The `NO_CERT` media type is used if the Switch does not have a valid ticket for a digital title. On production systems, this can only happen if the title was installed through unofficial means, which is usually a piracy attempt. Using `NO_CERT` will ban your device.
 
 | Param | Description |
 | --- | --- |
-| gvt | Base64-encoded challenge reply, based on the seed and value from <code><a href="#post-v3challenge">/v3/challenge</a></code> (88 bytes) |
+| application_id | Title id (`%016x`) |
+| application_version | Title version (`%08x`) |
+| device_auth_token | Device token from [dauth server](DAuth-Server) |
+| media_type | `GAMECARD`, `DIGITAL`, `SYSTEM` or `NO_CERT` |
+
+If the media type is `GAMECARD`:
+
+| Param | Description |
+| --- | --- |
 | cert | Base64-encoded gamecard certificate (512 bytes) |
 
-The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
-
-#### DIGITAL
-Tickets can be dumped with [nxdumptool](https://github.com/DarkMatterCore/nxdumptool). Always dump the base ticket, and do not remove console specific data.
-
-The ticket is not sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA-OAEP with SHA256.
+If the media type is `DIGITAL`:
 
 | Param | Description |
 | --- | --- |
 | cert | Encrypted ticket (base64) |
 | cert_key | Encrypted key (base64) |
 
+For digital titles, the ticket is no longer sent to the server in plain text. Instead, it is encrypted with AES-CBC with a random key. The key itself is then encrypted with RSA-OAEP with SHA256.
+
 Public exponent: `65537`
 
-Public modulus:
+Modulus:
 ```
 2903599220185509629948246004681271806662185201109683699434876284
 9306378942456577312580648895443616535088601867223713942187399041
@@ -134,11 +176,25 @@ Public modulus:
 98870089661523253199182993983393803812441
 ```
 
-#### SYSTEM
-This media type is used for system titles. It does not include any additional parameters.
+Response on success:
 
-#### NO_CERT
-This media type is used if the Switch does not have a valid ticket for a digital title. This can only happen if the title was installed through unofficial means, which is usually a piracy attempt. Using `NO_CERT` will ban your device.
+| Field | Description |
+| --- | --- |
+| expires_in | Expiration in seconds (86400) |
+| application_auth_token | Application token |
+| settings | Settings |
+| online_play_policy | `MEMBERSHIP_REQUIRED` or `FREE` |
+| policy_handler | `SYSTEM` or `GAME_SERVER` (only present if membership is required) |
+
+### Version 3
+A challenge is now required if the media type is `GAMECARD`:
+
+| Param | Description |
+| --- | --- |
+| gvt | Base64-encoded challenge reply, based on the seed and value from [`/v3/challenge`](#challenge-request) (88 bytes) |
+| cert | Base64-encoded gamecard certificate (512 bytes) |
+
+The `gvt` parameter is calculated with <code><a href="https://switchbrew.org/wiki/Lotus3#ChallengeCardExistence">ChallengeCardExistence</a></code>. I have no idea how this works.
 
 ## Errors
 On error, the server sends the following response:
