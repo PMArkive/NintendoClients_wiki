@@ -78,7 +78,7 @@ A Kerberos ticket, which the **source user** receives from the authentication se
 2. The principal id of the **target user**.
 3. The internal ticket.
 
-After decrypting the Kerberos ticket, the **source user** sends the internal ticket to the target user during connection establishment. The internal ticket contains the following information, encrypted with the **target key**:
+After decrypting the Kerberos ticket, the **source user** sends the internal ticket to the **target user** during connection establishment. The internal ticket contains the following information, encrypted with the **target key**:
 
 1. The time at which the ticket was issued. If the ticket is older than 2 minutes, the **target user** aborts the connection.
 2. The principal id of the **source user**. This way, the **target user** knows who is connecting.
@@ -99,7 +99,7 @@ To figure out if it needs to request a new ticket with the **[RequestTicket](Aut
 ## Token Authentication
 On Switch servers, authentication works slightly differently. Special accounts, such as **guest**, still use [password-based authentication](#password-authentication), but normal users must provide an id token to log in. If an id token is not provided, or if it is invalid, the server refuses to hand out a ticket and returns an error code instead.
 
-Because there is no way to give a token to **[ValidateAndRequestTicket](Authentication-Protocol#1-login)** and **[RequestTicket](AuthenticationProtocol#3-requestticket)**, these methods cannot be used to for a normal user account on Switch servers. Instead, one of the following methods must be used, depending on the NEX version:
+Because there is no way to give a token to **[ValidateAndRequestTicket](Authentication-Protocol#1-login)** and **[RequestTicket](AuthenticationProtocol#3-requestticket)**, these methods cannot be used for a normal user account on Switch servers. Instead, one of the following methods must be used, depending on the NEX version:
 
 1. **[ValidateAndRequestTicketWithCustomData](Authentication-Protocol#2-loginex)** (before NEX 4.4.0). The id token is sent to the server in the AuthenticationInfo parameter. If the id token is valid, the **source key** is sent to the client in the response, along with ticket.
 2. **[ValidateAndRequestTicketWithParam](Authentication-Protocol#6-validateandrequestticketwithparam)** (NEX 4.4.0 and later). This method is the same as above, but with slightly different request and response parameters.
@@ -159,7 +159,7 @@ The date time is used to check ticket expiration. A ticket is valid for exactly 
 * **Source user:** the user that requests the ticket, i.e. the user that wants to establish a connection with a target user.
 * **Target key:** a key that is only known by the target user (always derived from its password).
 * **Target user:** the user that the source user wants to establish a connection with. In practice, the target user is always Quazal Rendez-Vous (which represents the secure server).
-* **Ticket granting server:** the service that generates the tickets. This service is provided by the authentication server.
+* **Ticket granting service:** the service that generates the tickets. This service is provided by the authentication server.
 
 ## Exercise
 Suppose we want to log in on a Switch server as guest. We received the following ticket from the authentication server:
