@@ -82,7 +82,7 @@ The application data depends on the game:
 | 0x8 | 11x2 | Nickname (wide chars) |
 | 0x1E | 2 | Padding |
 | 0x20 | 88 | [Mii info](#mii-info) |
-| 0x88 | 24 | Unknown |
+| 0x78 | 16 | Unknown |
 
 ## Mii Info
 | Offset | Size | Description |
