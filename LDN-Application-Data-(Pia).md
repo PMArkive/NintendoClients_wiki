@@ -63,7 +63,17 @@ The application data starts with a short header, which is followed by game-speci
 ### Application Data
 The application data depends on the game:
 
+* [Mario Kart 8 Deluxe](#mario-kart-8-deluxe)
 * [Super Mario Maker 2](#super-mario-maker-2)
+
+## Mario Kart 8 Deluxe
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown |
+| 0x1 | 33 | Nickname |
+| 0x22 | 2 | Padding |
+| 0x24 | 88 | [Mii info](#mii-info) |
+| 0x7C | 4 | Unknown |
 
 ## Super Mario Maker 2
 | Offset | Size | Description |
