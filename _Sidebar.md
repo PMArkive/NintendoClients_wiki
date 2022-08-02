@@ -74,5 +74,6 @@
 * Other Pages
   * [[Wii U Error Codes]]
   * [[Switch Error Codes]]
+  * [Title Database](https://kinnay.github.io)
   * [Capture the flag](https://nintendo-ctf.com)
   * [Playground](https://nintendo-playground.com)
