@@ -72,8 +72,8 @@
   * [Nintendo Accounts](Account-Server-(Switch))
   * [Switch Accounts](BAAS-Server)
 * Other Pages
+  * [Title Database](https://kinnay.github.io)
   * [[Wii U Error Codes]]
   * [[Switch Error Codes]]
-  * [Title Database](https://kinnay.github.io)
   * [Capture the flag](https://nintendo-ctf.com)
   * [Playground](https://nintendo-playground.com)
