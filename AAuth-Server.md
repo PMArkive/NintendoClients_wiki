@@ -213,7 +213,7 @@ Every error is encoded like this:
 ### Known Errors
 | Code | Dialog | Message |
 | --- | --- | --- |
-| 0103 | 2124-4603 | ? |
+| 0103 | 2124-4603 | Device token expired. |
 | 0105 | 2124-4605 | ROM ID has been banned. |
 | 0106 | 2124-4606 | Unauthorized application. |
 | 0107 | 2124-4607 | ? |
