@@ -52,6 +52,7 @@ Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX.
 | 12 | Back end management |
 | 16 | [Simple authentication](Simple-Authentication-Protocol) |
 | 17 | Siege |
+| 26 | Competition |
 | 28 | Client settings |
 | 29 | [Ubi account management](Ubi-Account-Management-Protocol) |
 | 30 | Geo localization |
@@ -69,6 +70,7 @@ Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX.
 | 51 | Title storage |
 | 53 | [User storage](User-Storage-Protocol) |
 | 55 | [Player stats](Player-Stats-Protocol) |
+| 60 | Spark |
 | 71 | [Offline game notifications](Offline-Game-Notification-Protocol) |
 | 72 | [User account management](User-Account-Management-Protocol) |
 | 84 | Siege admin |
