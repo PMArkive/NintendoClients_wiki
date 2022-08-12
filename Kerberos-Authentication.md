@@ -41,7 +41,7 @@ Game server accounts are separate from other Nintendo accounts. Username and pas
 There's also a bunch of [special accounts](#special-accounts) on all game servers.
 
 ## Special Accounts
-The password of the guest account is `MMQea3n!fsik`, but Nintendo has changed this password on all Wii U and 3DS servers except for the friend server. On Switch servers, the guest account has been deleted.
+The password of the guest account is `MMQea3n!fsik`, but Nintendo has changed this password on all Wii U and 3DS servers except for the friend server. On Switch servers, all accounts except for Quazal Rendez-Vous and SandboxProbe are deleted.
 
 The Quazal Authentication account represents the authentication server, and the Quazal Rendez-Vous account represents the secure server. This is relevant for [Kerberos authentication](#kerberos-tickets).
 
