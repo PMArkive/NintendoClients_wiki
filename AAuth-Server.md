@@ -128,10 +128,10 @@ The settings field contains a list of objects with the following fields:
 
 | Field | Description |
 | --- | --- |
-| nas:client_id | Unknown |
-| nas:redirect_uri | Unknown |
+| nas:client_id | 16 hex digits |
+| nas:redirect_uri | `nintendo://<title id>.app` |
 
-The purpose of these fields is unknown. I have only seen an empty list so far.
+For most titles, the settings list is empty.
 
 ### Version 2
 The environment parameter was removed, the cert_key parameter was added, and the online play policy was added to the response.
