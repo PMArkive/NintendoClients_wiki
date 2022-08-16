@@ -263,6 +263,7 @@ DISCONNECT packets may be reliable (graceful disconnect) or unreliable (forced d
 | 2 | DATA |
 | 3 | DISCONNECT |
 | 4 | PING |
+| 5 | USER |
 
 | Mask | Description |
 | --- | --- |
