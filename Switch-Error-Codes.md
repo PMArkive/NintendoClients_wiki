@@ -60,14 +60,14 @@ These errors are shown when the [AAuth server](AAuth-Server) returns an error co
 
 | Dialog | Code | Description |
 | --- | --- | --- |
-| 2124-4603 | 0103 | |
+| 2124-4603 | 0103 | Device token expired. |
 | 2124-4605 | 0105 | ROM ID has been banned. |
 | 2124-4606 | 0106 | Unauthorized application. |
 | 2124-4607 | 0107 | |
 | 2124-4608 | 0108 | |
 | 2124-4609 | 0109 | Service closed. |
 | 2124-4610 | 0110 | |
-| 2124-4612 | 0112 | |
+| 2124-4612 | 0112 | Internal Server Error. |
 | 2124-4613 | 0113 | |
 | 2124-4618 | 0118 | Invalid parameter in request. |
 | 2124-4620 | 0120 | |
