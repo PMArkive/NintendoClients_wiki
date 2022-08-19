@@ -6,6 +6,7 @@
 | 2155-XXXX | [Curl (http requests)](#curl-error-codes) |
 | 2181-XXXX | [DAuth (device authentication)](#dauth-error-codes) |
 | 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 2321-XXXX | NPLN (new game servers) |
 | 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
 | 2623-XXXX | [Eagle (relay servers)](#eagle-error-codes) |
 | 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
