@@ -75,5 +75,4 @@
   * [Title Database](https://kinnay.github.io)
   * [[Wii U Error Codes]]
   * [[Switch Error Codes]]
-  * [Capture the flag](https://nintendo-ctf.com)
   * [Playground](https://nintendo-playground.com)
