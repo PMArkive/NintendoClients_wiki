@@ -28,5 +28,4 @@ Welcome to the NintendoClients wiki!
 * [[Mario Kart 8 Protocol]]
 * [[Data Store Codes]]
 * [[DDL Parse Trees]]
-* [Capture the flag](https://nintendo-ctf.com)
 * [Playground](https://nintendo-playground.com)
