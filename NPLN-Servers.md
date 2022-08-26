@@ -35,6 +35,20 @@ Services are never modified in a backward incompatible way, but new methods and 
 * `nn.npln.matchmaking.v1.GameSessionService`
 * `nn.npln.matchmaking.v1.Matchmaker`
 * `nn.npln.messaging.v1.Messaging`
+* `nn.npln.ugcstore.v1.Screening`
+* `nn.npln.ugcstore.v1.Ugcstore`
+
+Splatoon 3 also implements some custom services:
+
+* `nn.npln.toyohr.v1.Canola`
+* `nn.npln.toyohr.v1.CloudSave`
+* `nn.npln.toyohr.v1.CoopScenario`
+* `nn.npln.toyohr.v1.FestService`
+* `nn.npln.toyohr.v1.GameRecord`
+* `nn.npln.toyohr.v1.Locker`
+* `nn.npln.toyohr.v1.Replay`
+* `nn.npln.toyohr.v1.Schedule`
+* `nn.npln.toyohr.v1.UserScreening`
 
 ## List of games
 * [SDK version table](https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1)
