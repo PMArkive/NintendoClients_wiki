@@ -148,13 +148,24 @@ This method can be used to log in on a device account that was registered with <
 
 Response on success:
 
-| Param | Description |
+| Field | Description |
 | --- | --- |
 | expiresIn | Expiration in seconds (10800) |
 | user | [User information](#user-information) |
 | idToken | ID token (for game servers) |
 | accessToken | Access token for user |
 | tokenType | `Bearer` |
+| summary | See below |
+
+The summary field is only present if an app token is provided where the policy handler is set to `GAME_SERVER` and the user has an NSO membership. It looks as follows:
+
+```json
+"summary": {
+    "nintendo": {
+        "hasMembership": true
+    }
+}
+```
 
 ### POST /1.0.0/federation
 This method is the same as [`/1.0.0/login`](#post-100login) except that it also takes an ID token that represents a Nintendo account. This is required to link the Nintendo account to the device.
@@ -167,16 +178,6 @@ This method is the same as [`/1.0.0/login`](#post-100login) except that it also 
 | idToken | ID token obtained from [accounts.nintendo.com](Account-Server-(Switch)) |
 | appAuthNToken | [AAuth token](AAuth-Server) optional |
 | skipOp2Verification | Skip NSO verification (optional) |
-
-Response on success:
-
-| Param | Description |
-| --- | --- |
-| expiresIn | Expiration in seconds (10800) |
-| user | [User information](#user-information) |
-| idToken | ID token (for game servers) |
-| accessToken | Access token for user |
-| tokenType | `Bearer` |
 
 ### POST /1.0.0/users
 This method registers a new user on the server. This method does not take any parameters. On success, the response contains the new [user information](#user-information) and HTTP status code 201.
