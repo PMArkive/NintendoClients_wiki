@@ -248,7 +248,7 @@ Most errors use HTTP status code 400. The only known exception is error 0009, wh
 | 0014 | 2181-4014 | Invalid parameter in request. |
 | 0015 | 2181-4015 | Invalid parameter in request. |
 | 0016 | 2181-4016 | Invalid parameter in request. |
-| 0017 | 2181-4017 | ? |
+| 0017 | 2181-4017 | This device might be broken. |
 | 0018 | 2181-4018 | ? |
 | 0019 | 2181-4019 | ? |
 | 0020 | 2181-4020 | ? |
