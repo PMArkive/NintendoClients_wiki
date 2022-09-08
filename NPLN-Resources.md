@@ -1,3 +1,6 @@
+[NPLN](NPLN-Overview) > Resources
+---
+
 NPLN identifies resources by name. A resource name is a path-like string that uniquely identifies a resource, even across tenants. This page lists currently known resource names.
 
 The server always sends the full resource name, but the client may use `current` to refer to the currently active resource (e.g. `tenants/current`).
