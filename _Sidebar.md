@@ -51,6 +51,7 @@
   * [[Kerberos Authentication]]
   * [[Hpp Server]]
 * [NPLN](NPLN-Servers)
+  * [Resources](NPLN-Resources)
 * [Pia](Pia-Overview)
   * [[Pia Protocol]]
   * [Pia Services](Pia-Protocols)
